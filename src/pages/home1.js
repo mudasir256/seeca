@@ -1,7 +1,7 @@
 import React from 'react';
 import Loader from '../components/common/Loader';
 import Menu from '../components/home1/Menu';
-import Navbar from '../components/home1/Navbar';
+import Navbar from '../components/home_preview/Navbar';
 import Header from '../components/home1/Header';
 import Experience from '../components/home1/Experience';
 import Services from '../components/home1/Services';
@@ -15,11 +15,12 @@ import Chat from '../components/home1/Chat';
 import Footer from '../components/home1/Footer';
 import { Helmet } from 'react-helmet';
 
+
 function Home1() {
   return (
     <>
       <Helmet>
-        <link
+      <link
           rel="stylesheet"
           type="text/css"
           href="/home1/assets/css/home_1_style.css"
@@ -27,11 +28,11 @@ function Home1() {
         <script src="/common/assets/js/common_js.js"></script>
         <script src="/home1/assets/js/home_1_scripts.js"></script>
       </Helmet>
-      <body className="home-style1">
+      <body className="">
         <Loader />
         <Menu />
         <div className="smooth-scroll-content" id="scrollsmoother-container">
-          <Navbar />
+        <Navbar />
           <Header />
           <main>
             <Experience />

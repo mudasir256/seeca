@@ -1,6 +1,15 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages';
 import Home1 from './pages/home1';
+import Home1RTL from './pages/home1-rtl';
+import Home2 from './pages/home2';
+import Home3 from './pages/home3_construction';
+import Home4 from './pages/home4_personal_architect';
+import Home5 from './pages/home5_residence';
+import Home6 from './pages/home6_furniture';
+import Home7 from './pages/home7_landscape';
+import Home8 from './pages/home8_portfolio';
 import AboutPage from './pages/innerpages/about';
 import BlogPage from './pages/innerpages/blog';
 import ContactPage from './pages/innerpages/contact';
@@ -14,7 +23,16 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home1 />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/home1" element={<Home1 />} />
+        <Route path="/home1-rtl" element={<Home1RTL />} />
+        <Route path="/home2" element={<Home2 />} />
+        <Route path="/home3_construction" element={<Home3 />} />
+        <Route path="/home4_personal_architect" element={<Home4 />} />
+        <Route path="/home5_residence" element={<Home5 />} />
+        <Route path="/home6_furniture" element={<Home6 />} />
+        <Route path="/home7_landscape" element={<Home7 />} />
+        <Route path="/home8_portfolio" element={<Home8 />} />
         <Route path="/innerpages/about" element={<AboutPage />} />
         <Route path="/innerpages/blog" element={<BlogPage />} />
         <Route path="/innerpages/contact" element={<ContactPage />} />

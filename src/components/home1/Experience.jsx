@@ -4,7 +4,7 @@ function Experience() {
   return (
     <section className="tc-experience-style1 section-padding-x">
       <div className="container-fluid">
-        <div className="row justify-content-between align-items-center">
+        <div className="row justify-content-center align-items-center">
           <div className="col-lg-2">
             <div className="exp-num mb-100 wow zoomIn" data-wow-delay="0.3s">
               <h5 className="fsz-18 text-uppercase">

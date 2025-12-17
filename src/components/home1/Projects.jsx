@@ -1,5 +1,5 @@
 import React from 'react';
-import data1 from '../../data/home1/projects';
+import data1 from '../../data/home1/projects/projects1';
 function Projects() {
   return (
     <section className="tc-projects-style1">
