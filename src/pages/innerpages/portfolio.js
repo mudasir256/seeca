@@ -1,41 +1,31 @@
 import React from 'react';
-import Loader from '../../components/common/Loader';
+import PageLayout from '../../components/common/PageLayout';
 import Footer from '../../components/innerpage/Footer';
 import Menu from '../../components/innerpage/Menu';
-import Navbar2 from '../../components/innerpage/Navbar2';
+import Navbar from '../../components/home_preview/Navbar';
 import StartButton from '../../components/home5_residence/StartButton';
 import Header from '../../components/innerpage/portfolio/Header';
 import Cases from '../../components/innerpage/portfolio/Cases';
 import LatestCases from '../../components/innerpage/portfolio/LatestCases';
-import { Helmet } from 'react-helmet';
 
 function PortfolioPage() {
   return (
-    <>
-      <Helmet>
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="/innerpages/assets/css/innerpages.css"
-        />
-        <script src="/common/assets/js/common_js.js"></script>
-        <script src="/innerpages/assets/js/innerpages.js"></script>
-      </Helmet>
-      <body className="inner-pages-style1 portfolio-pg-style1">
-        <Loader />
-        <Menu />
-        <div className="smooth-scroll-content" id="scrollsmoother-container">
-          <Navbar2 />
-          <Header />
-          <main>
-            <Cases />
-            <LatestCases />
-          </main>
-          <Footer />
-        </div>
-        <StartButton />
-      </body>
-    </>
+    <PageLayout
+      cssFiles={[
+        '/common/assets/css/navbar-global.css',
+        '/innerpages/assets/css/innerpages.css',
+      ]}
+      bodyClassName="inner-pages-style1 portfolio-pg-style1"
+      fixedElements={<><Menu /><Navbar /></>}
+    >
+      <Header />
+      <main>
+        <Cases />
+        <LatestCases />
+      </main>
+      <Footer />
+      <StartButton />
+    </PageLayout>
   );
 }
 

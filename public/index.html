@@ -90,32 +90,23 @@
     <script defer src="/common/assets/js/lib/jquery.counterup.js"></script>
     <script defer src="/common/assets/js/lib/parallaxie.js"></script>
 
-    <!-- <script defer src="/common/assets/js/gsap_lib/gsap.min.js"></script>
-    <script
-      defer
-      src="/common/assets/js/gsap_lib/ScrollSmoother.min.js"
-    ></script>
-    <script
-      defer
-      src="/common/assets/js/gsap_lib/ScrollTrigger.min.js"
-    ></script>
-    <script defer src="/common/assets/js/gsap_lib/SplitText.min.js"></script> -->
+    <!-- GSAP and ScrollSmoother - Always loaded for smooth scrolling -->
+    <script defer src="/common/assets/js/gsap_lib/gsap.min.js"></script>
+    <script defer src="/common/assets/js/gsap_lib/ScrollSmoother.min.js"></script>
+    <script defer src="/common/assets/js/gsap_lib/ScrollTrigger.min.js"></script>
+    <script defer src="/common/assets/js/gsap_lib/SplitText.min.js"></script>
+    
+    <!-- Mixitup for portfolio/blog pages -->
     <script>
+      // Load mixitup for specific pages
       if (
-        window.location.pathname == '/innerpages/portfolio' ||
-        window.location.pathname == '/innerpages/blog'
+        window.location.pathname === '/innerpages/portfolio' ||
+        window.location.pathname === '/innerpages/blog'
       ) {
-        document.write(
-          '<script src="/common/assets/js/lib/mixitup.min.js" defer><\/script>'
-        );
-      }
-      if (window.location.pathname !== '/home8_portfolio') {
-        document.write(
-          '<script defer src="/common/assets/js/gsap_lib/gsap.min.js"><\/script>',
-          ' <script defer  src="/common/assets/js/gsap_lib/ScrollSmoother.min.js"><\/script>',
-          ' <script defer  src="/common/assets/js/gsap_lib/ScrollTrigger.min.js"><\/script>',
-          ' <script defer  src="/common/assets/js/gsap_lib/SplitText.min.js"><\/script>'
-        );
+        var script = document.createElement('script');
+        script.src = '/common/assets/js/lib/mixitup.min.js';
+        script.defer = true;
+        document.head.appendChild(script);
       }
     </script>
   </head>

@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST='{"components/innerpage/blog/FilterPosts.tsx -> mixitup":{"id":3080,"files":["static/chunks/294fa709.3be97f9603fa372e.js"]},"components/innerpage/portfolio/LatestCases.tsx -> mixitup":{"id":3080,"files":["static/chunks/294fa709.3be97f9603fa372e.js"]}}';

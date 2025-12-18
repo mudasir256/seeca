@@ -1,17 +1,30 @@
-import React from 'react';
-import demos from '../../data/main-page/demos';
-import pages from '../../data/main-page/innerpages';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import demos from '../../data/main-page/demos.json';
+import pages from '../../data/main-page/innerpages.json';
 function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY || window.pageYOffset;
+      setIsScrolled(scrollPosition > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark tc-navbar-preview">
+    <nav className={`navbar navbar-expand-lg navbar-dark tc-navbar-preview ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container-fluid content">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           <img
             src="/home_preview/assets/img/logo.png"
             alt=""
             className="logo"
           />
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -38,9 +51,9 @@ function Navbar() {
               <ul className="dropdown-menu">
                 {demos.map((item, i) => (
                   <li key={i}>
-                    <a className="dropdown-item" href={item.link}>
+                    <Link className="dropdown-item" to={item.link}>
                       {item.title}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -58,9 +71,9 @@ function Navbar() {
               <ul className="dropdown-menu">
                 {pages.map((item, i) => (
                   <li key={i}>
-                    <a className="dropdown-item" href={item.link}>
+                    <Link className="dropdown-item" to={item.link}>
                       {item.title}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -77,28 +90,19 @@ function Navbar() {
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <a
-                    className="dropdown-item"
-                    href="../innerpages/portfolio.html"
-                  >
+                  <Link className="dropdown-item" to="/innerpages/portfolio">
                     page portfolio
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    className="dropdown-item"
-                    href="../innerpages/single_project.html"
-                  >
+                  <Link className="dropdown-item" to="/innerpages/single_project">
                     page single project
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    className="dropdown-item"
-                    href="../innerpages/single_project2.html"
-                  >
+                  <Link className="dropdown-item" to="/innerpages/single_project2">
                     page single project 2
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -114,17 +118,14 @@ function Navbar() {
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="../innerpages/blog.html">
+                  <Link className="dropdown-item" to="/innerpages/blog">
                     page blog
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    className="dropdown-item"
-                    href="../innerpages/single_post.html"
-                  >
+                  <Link className="dropdown-item" to="/innerpages/single_post">
                     page single post
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
