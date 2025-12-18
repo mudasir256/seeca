@@ -5,7 +5,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-dark tc-navbar-style1 section-padding-x">
       <div className="container-fluid content">
         <a className="navbar-brand" href="#">
-          <img src="/home1/assets/img/logo.png" alt="" className="logo" />
+          <img src="/home1/assets/img/logo.png" alt="" className="logo" style={{ maxHeight: '200px' }} />
         </a>
         <button
           className="navbar-toggler"

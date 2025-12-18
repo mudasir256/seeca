@@ -2191,3 +2191,12 @@ input:focus {
 .hover-bg-black:hover * {
   color: #fff;
 }
+
+.hover-bg-green2:hover {
+  background-color: #73bf44 !important;
+  border-color: #73bf44 !important;
+  color: #fff !important;
+}
+.hover-bg-green2:hover * {
+  color: #fff !important;
+}

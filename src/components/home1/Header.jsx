@@ -1,9 +1,111 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import data from '../../data/home1/header-slider';
+
 function Header() {
+  const swiperRef = useRef(null);
+  const sliderRef = useRef(null);
+
+  useEffect(() => {
+    let retryCount = 0;
+    const maxRetries = 50; // Maximum 5 seconds wait time
+    
+    // Wait for Swiper to be available and DOM to be ready
+    const initSwiper = () => {
+      if (typeof window === 'undefined' || !window.Swiper) {
+        // If Swiper is not loaded yet, wait a bit and try again
+        retryCount++;
+        if (retryCount < maxRetries) {
+          setTimeout(initSwiper, 100);
+        }
+        return;
+      }
+
+      if (!sliderRef.current || swiperRef.current) {
+        return; // Already initialized or element not ready
+      }
+
+      const sliderElement = sliderRef.current;
+      const wrapper = sliderElement.querySelector('.swiper-wrapper');
+      
+      // Ensure wrapper and slides exist
+      if (!wrapper || !wrapper.querySelector('.swiper-slide')) {
+        retryCount++;
+        if (retryCount < maxRetries) {
+          setTimeout(initSwiper, 100);
+        }
+        return;
+      }
+
+      const Swiper = window.Swiper;
+      
+      // Find pagination and navigation elements
+      const paginationEl = sliderElement.querySelector('.swiper-pagination');
+      const nextEl = sliderElement.querySelector('.swiper-button-next');
+      const prevEl = sliderElement.querySelector('.swiper-button-prev');
+      
+      // Initialize Swiper
+      try {
+        swiperRef.current = new Swiper(sliderElement, {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          centeredSlides: true,
+          speed: 1500,
+          parallax: true,
+          pagination: paginationEl ? {
+            el: paginationEl,
+            type: 'fraction',
+          } : false,
+          navigation: (nextEl && prevEl) ? {
+            nextEl: nextEl,
+            prevEl: prevEl,
+          } : false,
+          mousewheel: false,
+          keyboard: true,
+          autoplay: {
+            delay: 6000,
+          },
+          loop: true,
+          on: {
+            init: function () {
+              const swiper = this;
+              // Set parallax for images
+              for (let i = 0; i < swiper.slides.length; i++) {
+                const imgElement = swiper.slides[i].querySelector('.img');
+                if (imgElement) {
+                  imgElement.setAttribute('data-swiper-parallax', 0.75 * swiper.width);
+                }
+              }
+            },
+            resize: function () {
+              this.update();
+            },
+          },
+        });
+      } catch (error) {
+        console.error('Error initializing Swiper:', error);
+      }
+    };
+
+    // Initialize after React has rendered
+    const timer = setTimeout(initSwiper, 100);
+
+    // Cleanup function
+    return () => {
+      clearTimeout(timer);
+      if (swiperRef.current) {
+        try {
+          swiperRef.current.destroy(true, true);
+        } catch (e) {
+          console.warn('Error destroying Swiper:', e);
+        }
+        swiperRef.current = null;
+      }
+    };
+  }, []);
+
   return (
     <header className="tc-header-style1">
-      <div className="header-slider">
+      <div className="header-slider" ref={sliderRef}>
         <div className="swiper-wrapper">
           {data.map((item, i) => (
             <div key={i} className="swiper-slide">
