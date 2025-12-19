@@ -7,7 +7,7 @@ import Portfolio from '../components/home4_personal_architect/Portfolio';
 import Clients from '../components/home4_personal_architect/Clients';
 import Career from '../components/home4_personal_architect/Career';
 import Insatgram from '../components/home4_personal_architect/Insatgram';
-import Footer from '../components/home4_personal_architect/Footer';
+import Footer from '../components/home1/Footer';
 import Blog from '../components/home4_personal_architect/Blog';
 import Contact from '../components/home4_personal_architect/Contact';
 

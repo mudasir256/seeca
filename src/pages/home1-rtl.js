@@ -12,6 +12,7 @@ import Awards from '../components/home1-rtl/Awards';
 import Team from '../components/home1-rtl/Team';
 import Blog from '../components/home1-rtl/Blog';
 import Chat from '../components/home1-rtl/Chat';
+import Footer from '../components/home1/Footer';
 
 function Home1RTL() {
   return (
@@ -35,6 +36,7 @@ function Home1RTL() {
         <Blog />
         <Chat />
       </main>
+      <Footer />
     </PageLayout>
   );
 }

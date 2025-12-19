@@ -11,7 +11,7 @@ import Apartments from '../components/home5_residence/Apartments';
 import Testimonials from '../components/home5_residence/Testimonials';
 import Services from '../components/home5_residence/Services';
 import Blog from '../components/home5_residence/Blog';
-import Footer from '../components/home5_residence/Footer';
+import Footer from '../components/home1/Footer';
 
 function Home5() {
   return (

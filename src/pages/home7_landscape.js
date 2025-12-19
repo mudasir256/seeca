@@ -9,7 +9,7 @@ import Project from '../components/home7_landscape/Project';
 import Process from '../components/home7_landscape/Process';
 import Testimonials from '../components/home7_landscape/Testimonials';
 import Blog from '../components/home7_landscape/Blog';
-import Footer from '../components/home7_landscape/Footer';
+import Footer from '../components/home1/Footer';
 
 function Home7() {
   return (

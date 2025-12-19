@@ -13,7 +13,7 @@ import Trade from '../components/home6_furniture/Trade';
 import Blog from '../components/home6_furniture/Blog';
 import Subscribe from '../components/home6_furniture/Subscribe';
 import Instagram from '../components/home6_furniture/Instagram';
-import Footer from '../components/home6_furniture/Footer';
+import Footer from '../components/home1/Footer';
 
 function Home6() {
   return (

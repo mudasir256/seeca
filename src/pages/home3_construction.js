@@ -10,7 +10,7 @@ import Portfolio from '../components/home3_construction/Portfolio';
 import Partners from '../components/home3_construction/Partners';
 import Blog from '../components/home3_construction/Blog';
 import Contact from '../components/home3_construction/Contact';
-import Footer from '../components/home3_construction/Footer';
+import Footer from '../components/home1/Footer';
 
 function Home3() {
   return (

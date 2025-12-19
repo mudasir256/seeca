@@ -1,6 +1,6 @@
 import React from 'react';
 import PageLayout from '../../components/common/PageLayout';
-import Footer from '../../components/innerpage/Footer';
+import Footer from '../../components/home1/Footer';
 import Menu from '../../components/innerpage/Menu';
 import Navbar from '../../components/home_preview/Navbar';
 import StartButton from '../../components/home5_residence/StartButton';

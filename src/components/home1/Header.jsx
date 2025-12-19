@@ -100,8 +100,111 @@ function Header() {
   }, []);
 
   return (
-    <header className="tc-header-style1">
-      <div className="header-slider" ref={sliderRef}>
+    <>
+      <style dangerouslySetInnerHTML={{__html: `
+        @media (max-width: 991px) {
+          .tc-header-style1 .header-slider .slider-card .info {
+            text-align: center;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            bottom: auto !important;
+            padding-left: 30px !important;
+            padding-right: 30px !important;
+          }
+          .tc-header-style1 .header-slider .slider-card .info h1 {
+            font-size: 56px !important;
+            line-height: 1.2;
+          }
+          .tc-header-style1 .header-slider .slider-card .info h5 {
+            font-size: 22px !important;
+            margin-top: 15px !important;
+          }
+          .tc-header-style1 .header-slider .slider-card .info .text {
+            font-size: 15px !important;
+            line-height: 1.6;
+          }
+          .tc-header-style1 .header-slider .slider-card .info .butn {
+            font-size: 13px;
+            padding: 10px 25px;
+          }
+        }
+        @media (max-width: 767px) {
+          .tc-header-style1 .header-slider .slider-card .info {
+            text-align: center;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            bottom: auto !important;
+            padding-left: 40px !important;
+            padding-right: 40px !important;
+            padding-bottom: 0 !important;
+          }
+          .tc-header-style1 .header-slider .slider-card .info .row {
+            flex-direction: column;
+            align-items: center;
+          }
+          .tc-header-style1 .header-slider .slider-card .info .col-lg-6,
+          .tc-header-style1 .header-slider .slider-card .info .col-lg-3 {
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+          }
+          .tc-header-style1 .header-slider .slider-card .info h1 {
+            font-size: 42px !important;
+            line-height: 1.2;
+            text-align: center;
+          }
+          .tc-header-style1 .header-slider .slider-card .info h5 {
+            font-size: 20px !important;
+            margin-top: 12px !important;
+            text-align: center;
+          }
+          .tc-header-style1 .header-slider .slider-card .info .text {
+            font-size: 14px !important;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 20px;
+          }
+          .tc-header-style1 .header-slider .slider-card .info .butn {
+            margin-top: 20px !important;
+            font-size: 12px;
+            padding: 10px 20px;
+            display: inline-block;
+          }
+        }
+        @media (max-width: 575px) {
+          .tc-header-style1 .header-slider .slider-card .info {
+            text-align: center;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            bottom: auto !important;
+            padding-left: 30px !important;
+            padding-right: 30px !important;
+            padding-bottom: 0 !important;
+          }
+          .tc-header-style1 .header-slider .slider-card .info h1 {
+            font-size: 32px !important;
+            line-height: 1.2;
+            text-align: center;
+          }
+          .tc-header-style1 .header-slider .slider-card .info h5 {
+            font-size: 18px !important;
+            margin-top: 10px !important;
+            text-align: center;
+          }
+          .tc-header-style1 .header-slider .slider-card .info .text {
+            font-size: 13px !important;
+            line-height: 1.6;
+            text-align: center;
+          }
+          .tc-header-style1 .header-slider .slider-card .info .butn {
+            margin-top: 15px !important;
+            font-size: 11px;
+            padding: 8px 18px;
+          }
+        }
+      `}} />
+      <header className="tc-header-style1">
+        <div className="header-slider" ref={sliderRef}>
         <div className="swiper-wrapper">
           {data.map((item, i) => (
             <div key={i} className="swiper-slide">
@@ -146,6 +249,7 @@ function Header() {
         <div className="swiper-pagination"></div>
       </div>
     </header>
+    </>
   );
 }
 

@@ -91,7 +91,7 @@ function Footer() {
           color: #73bf44;
         }
         .tc-footer-style1 .map-container {
-          height: 400px;
+          height: 280px;
           border-radius: 8px;
           overflow: hidden;
         }
@@ -159,9 +159,62 @@ function Footer() {
           .tc-footer-style1 .top-content {
             padding: 60px 0 40px;
           }
+          .tc-footer-style1 .top-content .row {
+            margin-left: -15px;
+            margin-right: -15px;
+          }
+          .tc-footer-style1 .top-content .row > [class*="col-"] {
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-bottom: 40px;
+          }
+          .tc-footer-style1 .logo-section {
+            margin-bottom: 0;
+          }
+          .tc-footer-style1 .logo-section .logo {
+            max-height: 50px;
+            margin-bottom: 15px;
+          }
+          .tc-footer-style1 .logo-section .company-name {
+            font-size: 13px;
+            margin-bottom: 20px;
+          }
+          .tc-footer-style1 .logo-section .service-desc {
+            font-size: 13px;
+            margin-bottom: 25px;
+          }
+          .tc-footer-style1 .contact-section {
+            margin-bottom: 30px;
+          }
+          .tc-footer-style1 .contact-section h5 {
+            font-size: 16px;
+            margin-bottom: 15px;
+          }
+          .tc-footer-style1 .contact-item {
+            font-size: 13px;
+            margin-bottom: 12px;
+          }
+          .tc-footer-style1 .contact-item i {
+            font-size: 14px;
+            margin-right: 10px;
+          }
           .tc-footer-style1 .map-container {
-            height: 300px;
-            margin-top: 30px;
+            height: 220px;
+            margin-top: 0;
+          }
+          .tc-footer-style1 .foot {
+            padding: 25px 0;
+          }
+          .tc-footer-style1 .foot p {
+            font-size: 12px;
+            margin-bottom: 10px;
+          }
+          .tc-footer-style1 .foot-links {
+            justify-content: flex-start;
+            gap: 15px;
+          }
+          .tc-footer-style1 .foot-links a {
+            font-size: 12px;
           }
           .whatsapp-float {
             bottom: 20px;
@@ -172,14 +225,180 @@ function Footer() {
         }
         @media (max-width: 767px) {
           .tc-footer-style1 .top-content {
-            padding: 50px 0 30px;
+            padding: 40px 0 30px;
           }
-          .tc-footer-style1 .foot-links {
-            justify-content: flex-start;
-            margin-top: 15px;
+          .tc-footer-style1 .top-content .row {
+            margin-left: -10px;
+            margin-right: -10px;
+          }
+          .tc-footer-style1 .top-content .row > [class*="col-"] {
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-bottom: 35px;
+          }
+          .tc-footer-style1 .logo-section .logo {
+            max-height: 45px;
+            margin-bottom: 12px;
+          }
+          .tc-footer-style1 .logo-section .company-name {
+            font-size: 12px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+          }
+          .tc-footer-style1 .logo-section .service-desc {
+            font-size: 12px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+          }
+          .tc-footer-style1 .foot-social {
+            gap: 12px;
+          }
+          .tc-footer-style1 .foot-social a {
+            width: 36px;
+            height: 36px;
+          }
+          .tc-footer-style1 .foot-social a i {
+            font-size: 14px;
+          }
+          .tc-footer-style1 .contact-section {
+            margin-bottom: 25px;
+          }
+          .tc-footer-style1 .contact-section h5 {
+            font-size: 15px;
+            margin-bottom: 12px;
+          }
+          .tc-footer-style1 .contact-item {
+            font-size: 12px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+          }
+          .tc-footer-style1 .contact-item i {
+            font-size: 13px;
+            margin-right: 8px;
+            margin-top: 2px;
+          }
+          .tc-footer-style1 .contact-item .contact-text {
+            word-break: break-word;
           }
           .tc-footer-style1 .map-container {
             height: 250px;
+            margin-top: 0;
+          }
+          .tc-footer-style1 .foot {
+            padding: 20px 0;
+          }
+          .tc-footer-style1 .foot .row {
+            margin-left: -10px;
+            margin-right: -10px;
+          }
+          .tc-footer-style1 .foot .row > [class*="col-"] {
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+          .tc-footer-style1 .foot p {
+            font-size: 11px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            text-align: center;
+          }
+          .tc-footer-style1 .foot-links {
+            justify-content: center;
+            margin-top: 0;
+            gap: 10px;
+            flex-wrap: wrap;
+          }
+          .tc-footer-style1 .foot-links a {
+            font-size: 11px;
+          }
+          .tc-footer-style1 .foot-links a:not(:last-child)::after {
+            margin-left: 10px;
+          }
+        }
+        @media (max-width: 575px) {
+          .tc-footer-style1 .top-content {
+            padding: 30px 0 25px;
+          }
+          .tc-footer-style1 .top-content .row {
+            margin-left: -8px;
+            margin-right: -8px;
+          }
+          .tc-footer-style1 .top-content .row > [class*="col-"] {
+            padding-left: 8px;
+            padding-right: 8px;
+            margin-bottom: 30px;
+          }
+          .tc-footer-style1 .logo-section .logo {
+            max-height: 40px;
+            margin-bottom: 10px;
+          }
+          .tc-footer-style1 .logo-section .company-name {
+            font-size: 11px;
+            margin-bottom: 12px;
+          }
+          .tc-footer-style1 .logo-section .service-desc {
+            font-size: 11px;
+            margin-bottom: 18px;
+          }
+          .tc-footer-style1 .foot-social {
+            gap: 10px;
+          }
+          .tc-footer-style1 .foot-social a {
+            width: 32px;
+            height: 32px;
+          }
+          .tc-footer-style1 .foot-social a i {
+            font-size: 12px;
+          }
+          .tc-footer-style1 .contact-section {
+            margin-bottom: 20px;
+          }
+          .tc-footer-style1 .contact-section h5 {
+            font-size: 14px;
+            margin-bottom: 10px;
+          }
+          .tc-footer-style1 .contact-item {
+            font-size: 11px;
+            margin-bottom: 8px;
+          }
+          .tc-footer-style1 .contact-item i {
+            font-size: 12px;
+            margin-right: 6px;
+          }
+          .tc-footer-style1 .map-container {
+            height: 180px;
+          }
+          .tc-footer-style1 .foot {
+            padding: 18px 0;
+          }
+          .tc-footer-style1 .foot .row {
+            margin-left: -8px;
+            margin-right: -8px;
+          }
+          .tc-footer-style1 .foot .row > [class*="col-"] {
+            padding-left: 8px;
+            padding-right: 8px;
+          }
+          .tc-footer-style1 .foot p {
+            font-size: 10px;
+            margin-bottom: 12px;
+          }
+          .tc-footer-style1 .foot-links {
+            gap: 8px;
+          }
+          .tc-footer-style1 .foot-links a {
+            font-size: 10px;
+          }
+          .tc-footer-style1 .foot-links a:not(:last-child)::after {
+            margin-left: 8px;
+          }
+          .whatsapp-float {
+            bottom: 15px;
+            right: 15px;
+            width: 40px;
+            height: 40px;
+          }
+          .whatsapp-float i {
+            font-size: 20px;
           }
         }
       `}} />
@@ -187,7 +406,7 @@ function Footer() {
         <div className="container">
           <div className="top-content section-padding">
             <div className="row gx-5">
-              <div className="col-lg-4">
+              <div className="col-12 col-md-6 col-lg-4">
                 <div className="logo-section">
                   <img
                     src="/home_preview/assets/img/logo.png"
@@ -220,7 +439,7 @@ function Footer() {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4">
+              <div className="col-12 col-md-6 col-lg-4">
                 <div className="contact-section">
                   <h5>Head Office</h5>
                   <div className="contact-item">
@@ -256,7 +475,7 @@ function Footer() {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4">
+              <div className="col-12 col-md-12 col-lg-4">
                 <div className="map-container">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.1234567890123!2d74.3589!3d31.5204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190483e57107d9%3A0x1234567890abcdef!2s903-C%2C%20Maulana%20Shaukat%20Ali%20Road%2C%20Faisal%20Town%2C%20Lahore!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
@@ -271,10 +490,10 @@ function Footer() {
           </div>
           <div className="foot">
             <div className="row">
-              <div className="col-lg-6">
+              <div className="col-12 col-lg-6">
                 <p>Copyright © 2025 SEECA by <span style={{ color: '#73bf44' }}>CLAPIT.SOLUTIONS</span> All Rights Reserved.</p>
               </div>
-              <div className="col-lg-6">
+              <div className="col-12 col-lg-6">
                 <div className="foot-links">
                   <a href="#">Terms of use</a>
                   <a href="#">Privacy Environmental Policy</a>

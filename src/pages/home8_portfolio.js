@@ -11,6 +11,7 @@ import Partners from '../components/home8_portfolio/Partners';
 import Team from '../components/home8_portfolio/Team';
 import Contact from '../components/home8_portfolio/Contact';
 import Control from '../components/home8_portfolio/Control';
+import Footer from '../components/home1/Footer';
 
 function Home8() {
   return (
@@ -35,6 +36,7 @@ function Home8() {
         </div>
         <Control />
       </main>
+      <Footer />
     </PageLayout>
   );
 }

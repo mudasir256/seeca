@@ -9,7 +9,7 @@ import Award from '../components/home2/Award';
 import Testimonials from '../components/home2/Testimonials';
 import Blog from '../components/home2/Blog';
 import Contact from '../components/home2/Contact';
-import Footer from '../components/home2/Footer';
+import Footer from '../components/home1/Footer';
 
 function Home2() {
   return (
