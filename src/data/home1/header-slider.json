@@ -1,20 +1,20 @@
 [
   {
-    "title": "archin",
-    "subTitle": "Architecture Design  Studio",
-    "desc": " We collaborate with clients to create buildings and environments in dialogue with culture and place. And become one of the country's leading architectural practices",
+    "title": "Architecture",
+    "subTitle": "Architecture Design Studio",
+    "desc": "Architecture refers to both the process and the product of planning, designing, and constructing buildings or other physical structures.",
     "img": "/home1/assets/img/head_slide1.jpg"
   },
   {
-    "title": "time",
-    "subTitle": "Sustainable Material Resource",
-    "desc": " We collaborate with clients to create buildings and environments in dialogue with culture and place. And become one of the country's leading architectural practices",
+    "title": "Interior",
+    "subTitle": "Interior Design Studio",
+    "desc": "Interior design is the art and science of enhancing the interior of a building to achieve a healthier and more aesthetically pleasing environment for the people using the space.",
     "img": "/home1/assets/img/head_slide2.png"
   },
   {
-    "title": "shape",
-    "subTitle": "Architecture Language Signature",
-    "desc": " We collaborate with clients to create buildings and environments in dialogue with culture and place. And become one of the country's leading architectural practices",
+    "title": "Sustainability",
+    "subTitle": "Sustainable Design",
+    "desc": "Sustainability focuses on meeting the needs of the present without compromising the ability of future generations to meet their needs.",
     "img": "/home1/assets/img/head_slide3.png"
   }
 ]

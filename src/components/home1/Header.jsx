@@ -9,10 +9,8 @@ function Header() {
     let retryCount = 0;
     const maxRetries = 50; // Maximum 5 seconds wait time
     
-    // Wait for Swiper to be available and DOM to be ready
     const initSwiper = () => {
       if (typeof window === 'undefined' || !window.Swiper) {
-        // If Swiper is not loaded yet, wait a bit and try again
         retryCount++;
         if (retryCount < maxRetries) {
           setTimeout(initSwiper, 100);
@@ -21,13 +19,12 @@ function Header() {
       }
 
       if (!sliderRef.current || swiperRef.current) {
-        return; // Already initialized or element not ready
+        return;
       }
 
       const sliderElement = sliderRef.current;
       const wrapper = sliderElement.querySelector('.swiper-wrapper');
       
-      // Ensure wrapper and slides exist
       if (!wrapper || !wrapper.querySelector('.swiper-slide')) {
         retryCount++;
         if (retryCount < maxRetries) {
@@ -38,7 +35,6 @@ function Header() {
 
       const Swiper = window.Swiper;
       
-      // Find pagination and navigation elements
       const paginationEl = sliderElement.querySelector('.swiper-pagination');
       const nextEl = sliderElement.querySelector('.swiper-button-next');
       const prevEl = sliderElement.querySelector('.swiper-button-prev');
@@ -116,7 +112,7 @@ function Header() {
                 <div className="info section-padding-x pb-70">
                   <div className="row align-items-end gx-5">
                     <div className="col-lg-6 offset-lg-2">
-                      <h1 data-swiper-parallax="-2000" className="js-title">
+                      <h1 data-swiper-parallax="-2000" className="js-title" style={{ fontSize: '100px' }}>
                         {item.title}
                       </h1>
                       <h5 className="fsz-30 mt-30 fw-400">{item.subTitle}</h5>

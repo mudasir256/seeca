@@ -1,30 +1,52 @@
 [
   {
-    "title": "Townhouse in San Joe",
-    "sub1": "Architecture",
-    "sub2": "Furniture",
-    "desc": "This area will is short description of project, you can select to show or hide it,  this a sample short paragraph for this.",
-    "img": "/home1/assets/img/projects/proj1.jpg"
+    "title": "Calrom – Askari Tower, Lahore",
+    "sub1": "Office",
+    "sub2": "Commercial",
+    "desc": "Introducing the design of the working area of a multi-international office with the concept of cool and calming colors. Where creativity thrives and innovation sparks. Welcome to the epitome of cool office vibes.",
+    "img": "/home1/assets/img/projects/proj1.jpg",
+    "client": "Ms Mehwish Fatima",
+    "location": "Lahore",
+    "area": "18000 Sqft"
   },
   {
-    "title": "Homestay Rennovation and Interior Design",
-    "sub1": "Furniture",
-    "sub2": "Furniture",
-    "desc": "This area will is short description of project, you can select to show or hide it,  this a sample short paragraph for this.",
-    "img": "/home1/assets/img/projects/proj2.jpg"
+    "title": "React Outlet – Lahore",
+    "sub1": "Retail",
+    "sub2": "Commercial",
+    "desc": "The idea was to create a contemporary design that is one of its kind. Sharp straight lines in dark tones are used for design which is set against the background of delicately curved panels in softer tones making the display stand out but at the same time balancing it as well. Each frame for display is customized specifically for a purpose making sure to display all varieties of merchandise, from short and long garments to shoes and accessories.",
+    "img": "/home1/assets/img/projects/proj2.jpg",
+    "client": "Mr. Masroor Bhatti",
+    "location": "LAHORE",
+    "area": "3600 Sqft"
   },
   {
-    "title": "Homestay Rennovation and Interior Design",
-    "sub1": "Furniture",
-    "sub2": "Furniture",
-    "desc": "This area will is short description of project, you can select to show or hide it,  this a sample short paragraph for this.",
-    "img": "/home1/assets/img/projects/proj3.jpg"
+    "title": "ZAK Shinwari – Sialkot",
+    "sub1": "Restaurant",
+    "sub2": "Hospitality",
+    "desc": "The idea behind this luxury fine dine was \"Renaissance\". A fusion of culture with modernism. Culture may or may not directly effect our architecture. It depends upon how we approach it. The food of Afghanistan is now served in modern luxury interior so you can enjoy it whilst forgetting the dark times.",
+    "img": "/home1/assets/img/projects/proj3.jpg",
+    "client": "Mr. Zulfiqar Butt",
+    "location": "Sialkot",
+    "area": "6000 Sqft"
   },
   {
-    "title": "Townhouse in San Joe",
-    "sub1": "Furniture",
-    "sub2": "Architecture",
-    "desc": "This area will is short description of project, you can select to show or hide it,  this a sample short paragraph for this.",
-    "img": "/home1/assets/img/projects/proj1.jpg"
+    "title": "Ignition Pro – Gulberg, Lahore",
+    "sub1": "Commercial",
+    "sub2": "Interior Design",
+    "desc": "Balancing the colours of the logo with the space to keep it simple and clean while not making it boring is the main idea of the design. Using red as a prominent colour to make the space more vibrant.",
+    "img": "/home1/assets/img/projects/proj1.jpg",
+    "client": "Mr. Hamza Atiq",
+    "location": "LAHORE",
+    "area": "9000 Sqft"
+  },
+  {
+    "title": "Asian Bistro – Islamabad",
+    "sub1": "Restaurant",
+    "sub2": "Hospitality",
+    "desc": "The idea was to design a space along contemporary Asian inspired interior design. It has an ambiance that is raw, elemental, and creative, featuring a live digital mural wall and a unique bar design as well as a life sized cherry blossom tree running along the ceiling. In short, the space is innovative and one of its kind, sure to attract visitors for the value of its exquisite experience.",
+    "img": "/home1/assets/img/projects/proj2.jpg",
+    "client": "Mr. Mian Fahad",
+    "location": "Islamabad",
+    "area": "2250 Sqft"
   }
 ]

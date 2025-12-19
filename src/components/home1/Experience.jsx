@@ -1,6 +1,39 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { logos } from './partner';
 
 function Experience() {
+  const duplicatedLogos = [...logos, ...logos];
+  const scrollRef = useRef(null);
+  
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+    
+    let animationId;
+    let position = 0;
+    const speed = 2; 
+    const totalWidth = scrollContainer.scrollWidth / 2;
+    
+    const scroll = () => {
+      position += speed;
+      
+      if (position >= totalWidth) {
+        position = 0;
+      }
+      
+      if (scrollContainer) {
+        scrollContainer.style.transform = `translateX(-${position}px)`;
+      }
+      
+      animationId = requestAnimationFrame(scroll);
+    };
+    
+    scroll(); 
+    
+    return () => {
+      cancelAnimationFrame(animationId);
+    };
+  }, []);
   return (
     <section 
       className="tc-experience-style1 section-padding-x"
@@ -40,26 +73,11 @@ function Experience() {
           zIndex: 0
         }}
       />
-      {/* <div 
-        className="d-none d-md-block"
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 'clamp(200px, 32vw, 450px)',
-          width: 'clamp(220px, 24vw, 350px)',
-          height: 'clamp(220px, 24vw, 350px)',
-          background: 'rgba(115, 191, 68, 0.3)',
-          filter: 'blur(60px)',
-          borderRadius: '400px',
-          pointerEvents: 'none',
-          zIndex: 0
-        }}
-      /> */}
       <div 
         className="d-none d-md-block"
         style={{
           position: 'absolute',
-          bottom: 0,
+          top: '20%',
           left: 'clamp(150px, 20vw, 250px)',
           width: 'clamp(200px, 21vw, 300px)',
           height: 'clamp(200px, 21vw, 300px)',
@@ -92,11 +110,10 @@ function Experience() {
           </div>
           <div className="col-lg-3">
             <div className="info wow fadeInUp" data-wow-delay="0.3s">
-              <h3 className="fsz-45 fw-600 mb-30"> Est. 1986 </h3>
+              <h3 className="fsz-45 fw-600 mb-30"> Est. 2010 </h3>
               <div className="text fsz-15 color-666">
-                Archin Studio is an archiectural practice based in Boston. We
-                cut ourteeth on designing and creating buildings that are both
-                beautiful and sustainable.
+      
+SEECA (SEE Consultants & Architects) with expert interior designers and professional architects in Lahore providing high-quality designing services for the Commercial (includes malls, shops, stores, multiplexes, exhibitions), Institutional (includes schools, colleges, training centers) Residential (Independent houses, flats, farm houses), and corporate offices.
               </div>
               <a
                 href="#"
@@ -112,10 +129,10 @@ function Experience() {
             <div className="rotate-txt justify-content-lg-end">
               <ul>
                 <li>
-                  <a href="#"> hello@archinstudio.co </a>
+                  <a href="#"> info@seeca.pk</a>
                 </li>
                 <li>
-                  <a href="#"> (054) 3256 78 87 </a>
+                  <a href="#"> +92 333 1498340 </a>
                 </li>
               </ul>
             </div>
@@ -135,6 +152,58 @@ function Experience() {
           WebkitMaskSize: 'contain',
         }}
       />
+
+      {/* Our Partners Section */}
+      <div className="container-fluid" style={{ position: 'relative', zIndex: 1, marginTop: '80px' }}>
+        <div className="row justify-content-center">
+          <div className="col-12">
+            <h2 className="text-center fsz-45 fw-600 mb-50" style={{ color: '#1a1a1a' }}>
+              Our Partners
+            </h2>
+            
+            <div className="relative overflow-hidden w-100" style={{ position: 'relative' }}>
+              <div 
+                ref={scrollRef}
+                className="d-flex"
+                style={{ willChange: 'transform', width: 'fit-content' }}
+              >
+                {duplicatedLogos.map((logo, index) => (
+                  <div
+                    key={`logo-${index}`}
+                    className="flex-shrink-0 d-flex align-items-center justify-content-center"
+                    style={{ 
+                      margin: '0 48px',
+                      width: '140px',
+                      height: '80px'
+                    }}
+                  >
+                    <img
+                      src={logo.logo}
+                      alt={logo.name}
+                      style={{ 
+                        height: '80px',
+                        width: 'auto',
+                        objectFit: 'contain',
+                        filter: 'grayscale(100%)',
+                        opacity: 0.7,
+                        transition: 'all 0.3s ease'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.target.style.filter = 'grayscale(0%)';
+                        e.target.style.opacity = '1';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.target.style.filter = 'grayscale(100%)';
+                        e.target.style.opacity = '0.7';
+                      }}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

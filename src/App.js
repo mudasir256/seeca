@@ -18,9 +18,64 @@ import SinglePost from './pages/innerpages/single_post';
 import SingleProject from './pages/innerpages/single_project';
 import SingleProject2 from './pages/innerpages/single_project2';
 
+function WhatsAppFloat() {
+  return (
+    <>
+      <style dangerouslySetInnerHTML={{__html: `
+        .whatsapp-float-global {
+          position: fixed;
+          bottom: 30px;
+          right: 30px;
+          z-index: 9999;
+          width: 50px;
+          height: 50px;
+          border-radius: 8px;
+          background: #73bf44;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          text-decoration: none;
+          box-shadow: 0 4px 15px rgba(115, 191, 68, 0.4);
+          transition: all 0.3s ease;
+        }
+        .whatsapp-float-global:hover {
+          background: #8dd65a;
+          transform: translateY(-3px);
+          box-shadow: 0 6px 20px rgba(115, 191, 68, 0.6);
+        }
+        .whatsapp-float-global i {
+          font-size: 24px;
+        }
+        @media (max-width: 767px) {
+          .whatsapp-float-global {
+            bottom: 20px;
+            right: 20px;
+            width: 45px;
+            height: 45px;
+          }
+          .whatsapp-float-global i {
+            font-size: 22px;
+          }
+        }
+      `}} />
+      <a
+        href="https://wa.me/923331498340"
+        className="whatsapp-float-global"
+        aria-label="WhatsApp"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i className="fab fa-whatsapp"></i>
+      </a>
+    </>
+  );
+}
+
 function App() {
   return (
     <Router>
+      <WhatsAppFloat />
       <Routes>
         <Route path="/" element={<Home1 />} />
         <Route path="/home-preview" element={<Home />} />

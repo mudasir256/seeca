@@ -64,12 +64,12 @@ function Navbar() {
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <Link className="dropdown-item" to="/innerpages/about">
+                  <Link className="dropdown-item" to="/">
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/innerpages/process">
+                  <Link className="dropdown-item" to="/">
                     Our Process
                   </Link>
                 </li>
@@ -87,39 +87,39 @@ function Navbar() {
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <Link className="dropdown-item" to="/innerpages/architecture">
+                  <Link className="dropdown-item" to="/">
                     Architecture
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/innerpages/interior-design">
+                  <Link className="dropdown-item" to="/">
                     Interior Design
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/innerpages/construction">
+                  <Link className="dropdown-item" to="/">
                     Construction
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/innerpages/building-sustainability">
+                  <Link className="dropdown-item" to="/">
                     Building Sustainability
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/innerpages/smart-building-technologies">
+                  <Link className="dropdown-item" to="/">
                     Smart Building Technologies
                   </Link>
                 </li>
               </ul>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/innerpages/portfolio">
+              <Link className="nav-link" to="/">
                 PORTFOLIO
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/innerpages/contact">
+              <Link className="nav-link" to="/">
                 CONTACT US
               </Link>
             </li>

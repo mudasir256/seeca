@@ -11,7 +11,6 @@ import Projects from '../components/home1/Projects';
 import Testimonials from '../components/home1/Testimonials';
 import Team from '../components/home1/Team';
 import Blog from '../components/home1/Blog';
-import Chat from '../components/home1/Chat';
 import Footer from '../components/home1/Footer';
 
 function Home1() {
@@ -33,7 +32,6 @@ function Home1() {
         <Awards />
         <Team />
         <Blog />
-        <Chat />
       </main>
       <Footer />
     </PageLayout>

@@ -1,23 +1,92 @@
 [
   {
-    "img": "/home1/assets/img/blog/blog1.jpg",
+    "slug": "modern-architecture-trends-2024",
+    "title": "Modern Architecture Trends for 2024",
+    "description": "Discover the latest trends in modern architecture, from sustainable design to innovative materials and smart building technologies that are shaping the future of construction.",
+    "coverImage": "/home1/assets/img/blog/blog1.jpg",
     "num": "25",
     "history": "december <br /> 2023",
-    "title": "How to handle the day light in Vray for best reality",
     "subTitle": "Architecture, Guide"
   },
   {
-    "img": "/home1/assets/img/blog/blog2.jpg",
+    "slug": "sustainable-building-design",
+    "title": "Sustainable Building Design: A Complete Guide",
+    "description": "Learn how to incorporate sustainable practices into your building designs, including energy efficiency, eco-friendly materials, and green building certifications.",
+    "coverImage": "/home1/assets/img/blog/blog2.jpg",
     "num": "16",
     "history": "december <br /> 2023",
-    "title": "Top 10 Wooden Architecture Building 2023",
-    "subTitle": "Inspiration"
+    "subTitle": "Sustainability, Design"
   },
   {
-    "img": "/home1/assets/img/blog/blog1.jpg",
-    "num": "25",
-    "history": "december <br /> 2023",
-    "title": "How to handle the day light in Vray for best reality",
-    "subTitle": "Architecture, Guide"
+    "slug": "interior-design-inspiration",
+    "title": "Top 10 Interior Design Inspiration Ideas",
+    "description": "Explore creative interior design ideas that transform spaces into beautiful, functional environments for modern living and working.",
+    "coverImage": "/home1/assets/img/blog/blog1.jpg",
+    "num": "12",
+    "history": "november <br /> 2023",
+    "subTitle": "Interior Design, Inspiration"
+  },
+  {
+    "slug": "smart-home-technology",
+    "title": "Integrating Smart Home Technology in Modern Design",
+    "description": "Discover how to seamlessly integrate smart home technology into architectural and interior design projects for enhanced comfort and efficiency.",
+    "coverImage": "/home1/assets/img/blog/blog2.jpg",
+    "num": "08",
+    "history": "november <br /> 2023",
+    "subTitle": "Technology, Innovation"
+  },
+  {
+    "slug": "commercial-space-planning",
+    "title": "Effective Commercial Space Planning Strategies",
+    "description": "Learn the key principles of commercial space planning to create efficient, productive, and aesthetically pleasing work environments.",
+    "coverImage": "/home1/assets/img/blog/blog1.jpg",
+    "num": "30",
+    "history": "october <br /> 2023",
+    "subTitle": "Commercial, Planning"
+  },
+  {
+    "slug": "residential-architecture-tips",
+    "title": "Essential Tips for Residential Architecture Projects",
+    "description": "Expert advice on planning and executing successful residential architecture projects, from concept to completion with practical insights.",
+    "coverImage": "/home1/assets/img/blog/blog2.jpg",
+    "num": "22",
+    "history": "october <br /> 2023",
+    "subTitle": "Residential, Tips"
+  },
+  {
+    "slug": "luxury-interior-design",
+    "title": "Luxury Interior Design: Creating Elegant Spaces",
+    "description": "Explore the principles of luxury interior design and learn how to create elegant, sophisticated spaces that reflect timeless beauty and style.",
+    "coverImage": "/home1/assets/img/blog/blog1.jpg",
+    "num": "15",
+    "history": "september <br /> 2023",
+    "subTitle": "Luxury, Interior Design"
+  },
+  {
+    "slug": "green-building-materials",
+    "title": "Green Building Materials: Sustainable Choices",
+    "description": "A comprehensive guide to eco-friendly building materials that reduce environmental impact while maintaining quality and durability.",
+    "coverImage": "/home1/assets/img/blog/blog2.jpg",
+    "num": "05",
+    "history": "september <br /> 2023",
+    "subTitle": "Sustainability, Materials"
+  },
+  {
+    "slug": "office-design-trends",
+    "title": "Modern Office Design Trends for 2024",
+    "description": "Discover the latest office design trends that promote productivity, collaboration, and employee well-being in contemporary workspaces.",
+    "coverImage": "/home1/assets/img/blog/blog1.jpg",
+    "num": "28",
+    "history": "august <br /> 2023",
+    "subTitle": "Office Design, Trends"
+  },
+  {
+    "slug": "kitchen-renovation-guide",
+    "title": "Complete Guide to Kitchen Renovation",
+    "description": "Step-by-step guide to planning and executing a successful kitchen renovation, from layout design to material selection and finishing touches.",
+    "coverImage": "/home1/assets/img/blog/blog2.jpg",
+    "num": "18",
+    "history": "august <br /> 2023",
+    "subTitle": "Renovation, Guide"
   }
 ]
