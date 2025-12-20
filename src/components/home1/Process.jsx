@@ -77,9 +77,18 @@ function Process() {
             border-radius: 20px;
             overflow: hidden;
             transform: rotate(0deg) scale(1) !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
           }
           .tc-process-style1 .img img {
             transform: rotate(0deg) !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
           }
           .process-btn-green {
             padding: 14px 30px !important;
@@ -134,9 +143,18 @@ function Process() {
             height: 250px !important;
             border-radius: 15px;
             transform: rotate(0deg) scale(1) !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
           }
           .tc-process-style1 .img img {
             transform: rotate(0deg) !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
           }
           .process-btn-green {
             padding: 12px 25px !important;
@@ -202,9 +220,18 @@ function Process() {
             height: 220px !important;
             border-radius: 12px;
             transform: rotate(0deg) scale(1) !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
           }
           .tc-process-style1 .img img {
             transform: rotate(0deg) !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
           }
           .process-btn-green {
             padding: 11px 20px !important;
