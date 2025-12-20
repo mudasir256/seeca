@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.a9041707.css","mappings":"AACA,KAEE,kCAAmC,CACnC,iCAAkC,CAFlC,QAGF","sources":["index.css"],"sourcesContent":["/* Global styles - most styling is handled by component CSS files */\r\nbody {\r\n  margin: 0;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n}\r\n"],"names":[],"sourceRoot":""}
