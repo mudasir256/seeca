@@ -40,9 +40,22 @@ function Experience() {
         @media (max-width: 991px) {
           .tc-experience-style1 .img {
             transform: rotate(0deg) scale(1) !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            height: auto !important;
+            min-height: 300px !important;
+            margin-bottom: 30px;
           }
           .tc-experience-style1 .img img {
             transform: rotate(0deg) !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            width: 100% !important;
+            height: auto !important;
+            max-height: 400px !important;
+            object-fit: contain !important;
           }
           .tc-experience-style1 .rotate-txt {
             display: none !important;
@@ -51,9 +64,22 @@ function Experience() {
         @media (max-width: 767px) {
           .tc-experience-style1 .img {
             transform: rotate(0deg) scale(1) !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            height: auto !important;
+            min-height: 250px !important;
+            margin-bottom: 25px;
           }
           .tc-experience-style1 .img img {
             transform: rotate(0deg) !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            width: 100% !important;
+            height: auto !important;
+            max-height: 350px !important;
+            object-fit: contain !important;
           }
           .tc-experience-style1 .rotate-txt {
             display: none !important;
@@ -62,9 +88,22 @@ function Experience() {
         @media (max-width: 575px) {
           .tc-experience-style1 .img {
             transform: rotate(0deg) scale(1) !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            height: auto !important;
+            min-height: 200px !important;
+            margin-bottom: 20px;
           }
           .tc-experience-style1 .img img {
             transform: rotate(0deg) !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            width: 100% !important;
+            height: auto !important;
+            max-height: 300px !important;
+            object-fit: contain !important;
           }
           .tc-experience-style1 .rotate-txt {
             display: none !important;
@@ -135,7 +174,7 @@ function Experience() {
               <h2 className="num" style={{ color: '#73bf44' }}> 15 </h2>
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="col-12 col-md-6 col-lg-3">
             <div className="img wow">
               <img
                 src="/home1/assets/img/exp.png"
@@ -174,7 +213,7 @@ function Experience() {
           </div>
         </div>
       </div>
-      {/* <img src="/home1/assets/img/c_line.png" alt="" className="c-line wow" /> */}
+
       <div 
         className="c-line wow" 
         style={{ 
