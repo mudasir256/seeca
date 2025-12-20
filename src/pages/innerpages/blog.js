@@ -3,7 +3,7 @@ import PageLayout from '../../components/common/PageLayout';
 import Footer from '../../components/home1/Footer';
 import Menu from '../../components/innerpage/Menu';
 import Navbar from '../../components/home_preview/Navbar';
-import Header from '../../components/innerpage/blog/Header';
+import Header from '../../components/innerpage/contact/Header';
 import Slider from '../../components/innerpage/blog/Slider';
 import LatestPosts from '../../components/innerpage/blog/LatestPosts';
 import FilterPosts from '../../components/innerpage/blog/FilterPosts';
@@ -19,7 +19,11 @@ function BlogPage() {
       bodyClassName="inner-pages-style1 blog-pg-style1"
       fixedElements={<><Menu /><Navbar /></>}
     >
-      <Header />
+      <Header
+        title="Blog"
+        description="Stay updated with our latest news, insights, and architectural trends"
+        backgroundImage="/home_preview/assets/img/pages/blog.jpg"
+      />
       <main>
         <Slider />
         <LatestPosts />

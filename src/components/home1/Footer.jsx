@@ -491,7 +491,7 @@ function Footer() {
           <div className="foot">
             <div className="row">
               <div className="col-12 col-lg-6">
-                <p>Copyright © 2025 SEECA by <span style={{ color: '#73bf44' }}>CLAPIT.SOLUTIONS</span> All Rights Reserved.</p>
+                <p>Copyright © 2025 SEECA by <span style={{ color: '#73bf44' }}> <a href="https://clapit.solutions" target="_blank" rel="noopener noreferrer"> CLAPIT.SOLUTIONS </a></span> All Rights Reserved.</p>
               </div>
               <div className="col-12 col-lg-6">
                 <div className="foot-links">

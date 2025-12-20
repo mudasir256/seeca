@@ -4,7 +4,7 @@ import Footer from '../../components/home1/Footer';
 import Menu from '../../components/innerpage/Menu';
 import Navbar from '../../components/home_preview/Navbar';
 import StartButton from '../../components/home5_residence/StartButton';
-import Header from '../../components/innerpage/portfolio/Header';
+import Header from '../../components/innerpage/contact/Header';
 import Cases from '../../components/innerpage/portfolio/Cases';
 import LatestCases from '../../components/innerpage/portfolio/LatestCases';
 
@@ -18,7 +18,11 @@ function PortfolioPage() {
       bodyClassName="inner-pages-style1 portfolio-pg-style1"
       fixedElements={<><Menu /><Navbar /></>}
     >
-      <Header />
+      <Header
+        title="Portfolio"
+        description="Explore our exceptional portfolio of architectural and design projects"
+        backgroundImage="/home_preview/assets/img/pages/portfolio.jpg"
+      />
       <main>
         <Cases />
         <LatestCases />

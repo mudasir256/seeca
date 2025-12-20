@@ -4,7 +4,7 @@ import Footer from '../../components/home1/Footer';
 import Menu from '../../components/innerpage/Menu';
 import Navbar from '../../components/home_preview/Navbar';
 import StartButton from '../../components/home5_residence/StartButton';
-import Header from '../../components/innerpage/services/Header';
+import Header from '../../components/innerpage/contact/Header';
 import Services from '../../components/innerpage/services/Services';
 import Process from '../../components/innerpage/services/Process';
 import Testimonials from '../../components/innerpage/services/Testimonials';
@@ -19,7 +19,11 @@ function ServicesPage() {
       bodyClassName="inner-pages-style1 services-pg-style1"
       fixedElements={<><Menu /><Navbar /></>}
     >
-      <Header />
+      <Header
+        title="Our Services"
+        description="We provide comprehensive architecture and design services to bring your vision to life"
+        backgroundImage="/home_preview/assets/img/pages/services.jpg"
+      />
       <main>
         <Services />
         <Process />

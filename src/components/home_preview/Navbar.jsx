@@ -191,7 +191,7 @@ function Navbar() {
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/innerpages/process">
+                  <Link className="dropdown-item" to="/innerpages/our-process">
                     Our Process
                   </Link>
                 </li>
@@ -241,18 +241,18 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/innerpages/contact">
-                CONTACT US
+              <Link className="nav-link" to="/innerpages/blog">
+                BLOGS
               </Link>
             </li>
           </ul>
           <div className="nav-side">
             <a
-              href="#"
+              href="/innerpages/contact"
               className="butn hover-bg-black text-capitalize  rounded-pill text-white"
               style={{ backgroundColor: '#73bf44' }}
             >
-              <span> Purchase Now </span>
+              <span> CONTACT US </span>
             </a>
           </div>
         </div>

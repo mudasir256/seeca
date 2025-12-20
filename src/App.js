@@ -14,6 +14,12 @@ import BlogPage from './pages/innerpages/blog';
 import ContactPage from './pages/innerpages/contact';
 import PortfolioPage from './pages/innerpages/portfolio';
 import ServicesPage from './pages/innerpages/services';
+import ArchitecturePage from './pages/innerpages/architecture';
+import InteriorDesignPage from './pages/innerpages/interior-design';
+import ConstructionPage from './pages/innerpages/construction';
+import BuildingSustainabilityPage from './pages/innerpages/building-sustainability';
+import SmartBuildingTechnologiesPage from './pages/innerpages/smart-building-technologies';
+import OurProcessPage from './pages/innerpages/our-process';
 import SinglePost from './pages/innerpages/single_post';
 import SingleProject from './pages/innerpages/single_project';
 import SingleProject2 from './pages/innerpages/single_project2';
@@ -93,6 +99,12 @@ function App() {
         <Route path="/innerpages/contact" element={<ContactPage />} />
         <Route path="/innerpages/portfolio" element={<PortfolioPage />} />
         <Route path="/innerpages/services" element={<ServicesPage />} />
+        <Route path="/innerpages/architecture" element={<ArchitecturePage />} />
+        <Route path="/innerpages/interior-design" element={<InteriorDesignPage />} />
+        <Route path="/innerpages/construction" element={<ConstructionPage />} />
+        <Route path="/innerpages/building-sustainability" element={<BuildingSustainabilityPage />} />
+        <Route path="/innerpages/smart-building-technologies" element={<SmartBuildingTechnologiesPage />} />
+        <Route path="/innerpages/our-process" element={<OurProcessPage />} />
         <Route path="/innerpages/single_post" element={<SinglePost />} />
         <Route path="/innerpages/single_project" element={<SingleProject />} />
         <Route
