@@ -35,6 +35,42 @@ function Experience() {
     };
   }, []);
   return (
+    <>
+      <style dangerouslySetInnerHTML={{__html: `
+        @media (max-width: 991px) {
+          .tc-experience-style1 .img {
+            transform: rotate(0deg) scale(1) !important;
+          }
+          .tc-experience-style1 .img img {
+            transform: rotate(0deg) !important;
+          }
+          .tc-experience-style1 .rotate-txt {
+            display: none !important;
+          }
+        }
+        @media (max-width: 767px) {
+          .tc-experience-style1 .img {
+            transform: rotate(0deg) scale(1) !important;
+          }
+          .tc-experience-style1 .img img {
+            transform: rotate(0deg) !important;
+          }
+          .tc-experience-style1 .rotate-txt {
+            display: none !important;
+          }
+        }
+        @media (max-width: 575px) {
+          .tc-experience-style1 .img {
+            transform: rotate(0deg) scale(1) !important;
+          }
+          .tc-experience-style1 .img img {
+            transform: rotate(0deg) !important;
+          }
+          .tc-experience-style1 .rotate-txt {
+            display: none !important;
+          }
+        }
+      `}} />
     <section 
       className="tc-experience-style1 section-padding-x"
       style={{
@@ -112,8 +148,7 @@ function Experience() {
             <div className="info wow fadeInUp" data-wow-delay="0.3s">
               <h3 className="fsz-45 fw-600 mb-30"> Est. 2010 </h3>
               <div className="text fsz-15 color-666">
-      
-SEECA (SEE Consultants & Architects) with expert interior designers and professional architects in Lahore providing high-quality designing services for the Commercial (includes malls, shops, stores, multiplexes, exhibitions), Institutional (includes schools, colleges, training centers) Residential (Independent houses, flats, farm houses), and corporate offices.
+                SEECA (SEE Consultants & Architects) with expert interior designers and professional architects in Lahore providing high-quality designing services for the Commercial (includes malls, shops, stores, multiplexes, exhibitions), Institutional (includes schools, colleges, training centers) Residential (Independent houses, flats, farm houses), and corporate offices.
               </div>
               <a
                 href="#"
@@ -205,6 +240,7 @@ SEECA (SEE Consultants & Architects) with expert interior designers and professi
         </div>
       </div>
     </section>
+    </>
   );
 }
 

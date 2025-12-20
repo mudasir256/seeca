@@ -76,6 +76,10 @@ function Process() {
             height: 300px !important;
             border-radius: 20px;
             overflow: hidden;
+            transform: rotate(0deg) scale(1) !important;
+          }
+          .tc-process-style1 .img img {
+            transform: rotate(0deg) !important;
           }
           .process-btn-green {
             padding: 14px 30px !important;
@@ -129,6 +133,10 @@ function Process() {
             margin-top: 30px !important;
             height: 250px !important;
             border-radius: 15px;
+            transform: rotate(0deg) scale(1) !important;
+          }
+          .tc-process-style1 .img img {
+            transform: rotate(0deg) !important;
           }
           .process-btn-green {
             padding: 12px 25px !important;
@@ -193,6 +201,10 @@ function Process() {
             margin-top: 25px !important;
             height: 220px !important;
             border-radius: 12px;
+            transform: rotate(0deg) scale(1) !important;
+          }
+          .tc-process-style1 .img img {
+            transform: rotate(0deg) !important;
           }
           .process-btn-green {
             padding: 11px 20px !important;

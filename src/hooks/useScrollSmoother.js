@@ -241,12 +241,14 @@ export const useScrollSmoother = (containerId = 'scrollsmoother-container', enab
           // Create new smoother for this route
           let smoother;
           try {
+            const isMobile = window.innerWidth <= 991;
             smoother = window.ScrollSmoother.create({
               content: `#${containerId}`,
-              smooth: 2,
+              smooth: isMobile ? 1.5 : 2,
               normalizeScroll: true,
               ignoreMobileResize: true,
               effects: true,
+              smoothTouch: isMobile ? 0.1 : false,
             });
             smootherRef.current = smoother;
             window.scrollSmootherInstance = smoother;

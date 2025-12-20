@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo, useMemo } from 'react';
 import PageLayout from '../components/common/PageLayout';
 import Menu from '../components/home1/Menu';
 import Navbar from '../components/home_preview/Navbar';
@@ -13,14 +13,25 @@ import Team from '../components/home1/Team';
 import Blog from '../components/home1/Blog';
 import Footer from '../components/home1/Footer';
 
-function Home1() {
+// Memoize CSS files array to prevent recreation
+const CSS_FILES = [
+  '/common/assets/css/navbar-global.css',
+  '/home1/assets/css/home_1_style.css',
+];
+
+const Home1 = memo(() => {
+  // Memoize fixed elements to prevent recreation
+  const fixedElements = useMemo(() => (
+    <>
+      <Menu />
+      <Navbar />
+    </>
+  ), []);
+
   return (
     <PageLayout
-      cssFiles={[
-        '/common/assets/css/navbar-global.css',
-        '/home1/assets/css/home_1_style.css',
-      ]}
-      fixedElements={<><Menu /><Navbar /></>}
+      cssFiles={CSS_FILES}
+      fixedElements={fixedElements}
     >
       <Header />
       <main>
@@ -36,6 +47,8 @@ function Home1() {
       <Footer />
     </PageLayout>
   );
-}
+});
+
+Home1.displayName = 'Home1';
 
 export default Home1;
