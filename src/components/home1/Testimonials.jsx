@@ -1,26 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
-// Testimonials data
-const testimonialsData = [
-  {
-    text: "The entire team tactfully delivered a project of exceptional quality while staying on schedule and under budget. More than what I'm expected. I'm really satisfied and recommended!.",
-    name: "M. Salah",
-    role: "Dash Private Villa Project Investor",
-    img: "/home1/assets/img/team/team1.jpg"
-  },
-  {
-    text: "The entire team tactfully delivered a project of exceptional quality while staying on schedule and under budget. More than what I'm expected. I'm really satisfied and recommended!.",
-    name: "M. Salah",
-    role: "Dash Private Villa Project Investor",
-    img: "/home1/assets/img/team/team1.jpg"
-  },
-  {
-    text: "The entire team tactfully delivered a project of exceptional quality while staying on schedule and under budget. More than what I'm expected. I'm really satisfied and recommended!.",
-    name: "M. Salah",
-    role: "Dash Private Villa Project Investor",
-    img: "/home1/assets/img/team/team1.jpg"
-  }
-];
+import testimonialsData from '../../data/home1/testimonials.json';
 
 function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -143,11 +122,13 @@ function Testimonials() {
           justify-content: center;
           margin-bottom: 20px;
           overflow: hidden;
+          flex-shrink: 0;
         }
         .testimonial-avatar img {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          border-radius: 50%;
         }
         .testimonial-avatar-icon {
           width: 100%;
@@ -155,6 +136,7 @@ function Testimonials() {
           display: flex;
           align-items: center;
           justify-content: center;
+          border-radius: 50%;
         }
         .testimonial-avatar-icon svg {
           width: 40px;
