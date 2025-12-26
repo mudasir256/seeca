@@ -16,7 +16,7 @@ function Starting() {
           </span>
         </a>
       </div>
-      <p className="fixed-txt"> © 2023 Archin Design Studio </p>
+      <p className="fixed-txt"> © 2023 SEECA Design Studio </p>
       <div className="fixed-nav">
         <a href="#" className="logo">
           <img src="/home8_portfolio/assets/img/logo.png" alt="" />

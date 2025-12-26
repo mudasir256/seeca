@@ -75,7 +75,7 @@ function Navbar() {
             </ul>
             <ul className="links">
               <li>
-                <a href="#"> hello@archingarden.com </a>
+                <a href="#"> hello@SEECAgarden.com </a>
               </li>
               <li>
                 <a href="#"> (+068) 5681 96 96 </a>

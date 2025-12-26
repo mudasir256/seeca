@@ -5,6 +5,7 @@ import Navbar from '../components/home_preview/Navbar';
 import Header from '../components/home1/Header';
 import Experience from '../components/home1/Experience';
 import Services from '../components/home1/Services';
+import Statistics from '../components/common/Statistics';
 import Process from '../components/home1/Process';
 import Awards from '../components/home1/Awards';
 import Projects from '../components/home1/Projects';
@@ -36,7 +37,8 @@ const Home1 = memo(() => {
       <Header />
       <main>
         <Experience />
-        <Services />
+        <Services removeTopPadding={true} />
+        <Statistics />
         <Process />
         <Projects />
         <Testimonials />

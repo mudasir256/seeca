@@ -43,7 +43,7 @@ function Experience() {
             <div className="rotate-txt justify-content-lg-end">
               <ul>
                 <li>
-                  <a href="#"> hello@archinstudio.co </a>
+                  <a href="#"> hello@SEECAstudio.co </a>
                 </li>
                 <li>
                   <a href="#"> (054) 3256 78 87 </a>

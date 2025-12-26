@@ -5,9 +5,11 @@ import Menu from '../../components/innerpage/Menu';
 import Navbar from '../../components/home_preview/Navbar';
 import StartButton from '../../components/home5_residence/StartButton';
 import Header from '../../components/innerpage/contact/Header';
-import Services from '../../components/innerpage/services/Services';
-import Process from '../../components/innerpage/services/Process';
-import Testimonials from '../../components/innerpage/services/Testimonials';
+import Services from '../../components/home1/Services';
+import Process from '../../components/home1/Process';
+import Testimonials from '../../components/home1/Testimonials';
+import Statistics from '../../components/common/Statistics';
+import Footer1 from '../../components/home1/Footer';
 
 function ServicesPage() {
   return (
@@ -22,17 +24,18 @@ function ServicesPage() {
       <Header
         title="Our Services"
         description="We provide comprehensive architecture and design services to bring your vision to life"
-        backgroundImage="/home_preview/assets/img/pages/services.jpg"
+        backgroundImage="/home_preview/assets/img/cad-inner-banner-3.jpg"
       />
       <main>
         <Services />
-        <Process />
-        <Testimonials />
+        <div style={{ paddingTop: '100px' }}>
+          <Process />
+          <Statistics />
+          <Testimonials />
+        </div>
       </main>
       <Footer />
-      <StartButton />
     </PageLayout>
   );
 }
-
 export default ServicesPage;

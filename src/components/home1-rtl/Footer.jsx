@@ -40,7 +40,7 @@ function Footer() {
                     <a href="#">غرفة 505، 49 شارع بريمر، بوسطن، MA 02108</a>
                   </li>
                   <li>
-                    <a href="#"> contact@archinstudio.co </a>
+                    <a href="#"> contact@SEECAstudio.co </a>
                   </li>
                   <li>
                     <a href="#"> (054) 3256 78 87 </a>
@@ -70,7 +70,7 @@ function Footer() {
                     <a href="#">2221 دكتور برودواي، بورتلاند، أو 97201</a>
                   </li>
                   <li>
-                    <a href="#"> contact@archinstudio.co </a>
+                    <a href="#"> contact@SEECAstudio.co </a>
                   </li>
                   <li>
                     <a href="#"> (021) 4246 63 68 </a>

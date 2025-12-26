@@ -10,7 +10,7 @@ function Footer() {
               <div className="info-side">
                 <div className="text fsz-24 color-333 lh-3 fw-600">
                   We believe that architecture has the power to shape lives and
-                  uplift communities. Archin&lsquo;s philosophy is passion for
+                  uplift communities. SEECA&lsquo;s philosophy is passion for
                   innovation, sustainablity and t imeless aesthetics
                 </div>
                 <div className="foot-social mt-50">
@@ -40,7 +40,7 @@ function Footer() {
                     <a href="#">Room 505, 49 Brimmer st, Boston, MA 02108</a>
                   </li>
                   <li>
-                    <a href="#"> contact@archinstudio.co </a>
+                    <a href="#"> contact@SEECAstudio.co </a>
                   </li>
                   <li>
                     <a href="#"> (054) 3256 78 87 </a>
@@ -70,7 +70,7 @@ function Footer() {
                     <a href="#">2221 Sw Broadway Dr, Portland, OR 97201</a>
                   </li>
                   <li>
-                    <a href="#"> contact@archinstudio.co </a>
+                    <a href="#"> contact@SEECAstudio.co </a>
                   </li>
                   <li>
                     <a href="#"> (021) 4246 63 68 </a>
@@ -94,7 +94,7 @@ function Footer() {
         <div className="foot">
           <div className="row">
             <div className="col-lg-6">
-              <p className="fsz-13">© 2023 Archin Studio. All Right Reserved</p>
+              <p className="fsz-13">© 2023 SEECA Studio. All Right Reserved</p>
             </div>
             <div className="col-lg-6">
               <div className="foot-links mt-4 mt-lg-0">

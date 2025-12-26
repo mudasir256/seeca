@@ -227,7 +227,6 @@ function Experience() {
         }}
       />
 
-      {/* Our Partners Section */}
       <div className="container-fluid" style={{ position: 'relative', zIndex: 1, marginTop: '80px' }}>
         <div className="row justify-content-center">
           <div className="col-12">
@@ -258,17 +257,8 @@ function Experience() {
                         height: '80px',
                         width: 'auto',
                         objectFit: 'contain',
-                        filter: 'grayscale(100%)',
                         opacity: 0.7,
                         transition: 'all 0.3s ease'
-                      }}
-                      onMouseEnter={(e) => {
-                        e.target.style.filter = 'grayscale(0%)';
-                        e.target.style.opacity = '1';
-                      }}
-                      onMouseLeave={(e) => {
-                        e.target.style.filter = 'grayscale(100%)';
-                        e.target.style.opacity = '0.7';
                       }}
                     />
                   </div>

@@ -5,6 +5,9 @@ import Menu from '../../components/innerpage/Menu';
 import Navbar from '../../components/home_preview/Navbar';
 import StartButton from '../../components/home5_residence/StartButton';
 import Header from '../../components/innerpage/contact/Header';
+import BuildingSustainabilityContent from '../../components/innerpage/building-sustainability/BuildingSustainabilityContent';
+import Testimonials from '../../components/home1/Testimonials';
+import ContactSection from '../../components/innerpage/building-sustainability/ContactSection';
 
 function BuildingSustainabilityPage() {
   return (
@@ -19,17 +22,12 @@ function BuildingSustainabilityPage() {
       <Header
         title="Building Sustainability"
         description="Designing eco-friendly and sustainable buildings for a better future"
-        backgroundImage="/home_preview/assets/img/architecturecontact.jpg"
+        backgroundImage="/home_preview/assets/img/slider-3-scaled.jpg"
       />
       <main>
-        <div className="container section-padding">
-          <div className="row">
-            <div className="col-12">
-              <h2>Building Sustainability Services</h2>
-              <p>Content coming soon...</p>
-            </div>
-          </div>
-        </div>
+        <BuildingSustainabilityContent />
+        <Testimonials />
+        <ContactSection />
       </main>
       <Footer />
       <StartButton />

@@ -7,7 +7,7 @@ function Services() {
         <div className="row gx-0">
           <div className="col-lg-7">
             <h2 className="fsz-45 fw-500 mb-50">
-              Archin’s
+              SEECA’s
               <span className="sub-font fst-italic color-orange1 fw-400">
                 services
               </span>

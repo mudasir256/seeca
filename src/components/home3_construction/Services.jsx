@@ -19,7 +19,7 @@ function Services() {
                 className="text fsz-18 mt-4 mt-lg-0 pe-lg-5 wow fadeInUp slow"
                 data-wow-delay="0.4s"
               >
-                ARCHIN Constructions has a passion for perfection. We see great
+                SEECA Constructions has a passion for perfection. We see great
                 value in focusing on the finer details that can make a big
                 difference to the end result
               </div>

@@ -55,7 +55,7 @@ function Footer() {
                       <a href="#"> (054) 3256 78 87 </a>
                     </li>
                     <li>
-                      <a href="#"> hello@archinfurniture.com </a>
+                      <a href="#"> hello@SEECAfurniture.com </a>
                     </li>
                     <li>
                       <a href="#"> 9:00AM - 9:00PM Everyday </a>
@@ -86,7 +86,7 @@ function Footer() {
           </div>
           <div className="copy text-center mt-50">
             <p className="color-666">
-              © 2023 Archin Furniture. All Right Reserved
+              © 2023 SEECA Furniture. All Right Reserved
             </p>
           </div>
         </div>

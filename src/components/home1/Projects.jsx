@@ -116,6 +116,7 @@ function Projects() {
           position: relative;
           min-height: 600px;
           padding: 40px 0;
+          
         }
         .projects-circular-slider-container {
           position: relative;
@@ -185,12 +186,12 @@ function Projects() {
           justify-content: center;
         }
         .project-card-modern {
-          background: rgba(255, 255, 255, 0.95);
+          background: rgba(26, 26, 26, 0.95);
           backdrop-filter: blur(10px);
           border: 1px solid rgba(115, 191, 68, 0.2);
           border-radius: 24px;
           overflow: hidden;
-          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
           transition: all 0.5s ease;
           display: flex;
           flex-direction: column;
@@ -274,7 +275,7 @@ function Projects() {
         .project-card-title {
           font-size: 22px;
           font-weight: 700;
-          color: #1a1a1a;
+          color: #fff;
           margin-bottom: 12px;
           line-height: 1.3;
           transition: all 0.3s ease;
@@ -291,7 +292,7 @@ function Projects() {
         }
         .project-card-desc {
           font-size: 14px;
-          color: #666;
+          color: #ccc;
           line-height: 1.6;
           display: -webkit-box;
           -webkit-line-clamp: 4;
@@ -396,6 +397,12 @@ function Projects() {
         .project-nav-btn svg {
           width: 20px;
           height: 20px;
+          color: #73bf44;
+          stroke: #73bf44;
+        }
+        .project-nav-btn:hover svg {
+          color: #fff;
+          stroke: #fff;
         }
         .project-slider-pagination {
           display: flex;
@@ -456,6 +463,14 @@ function Projects() {
         }
         .project-mobile-nav-btn:hover {
           background: #73bf44;
+          color: #fff;
+        }
+        .project-mobile-nav-btn,
+        .project-mobile-nav-btn * {
+          color: #73bf44;
+        }
+        .project-mobile-nav-btn:hover,
+        .project-mobile-nav-btn:hover * {
           color: #fff;
         }
         .projects-bg-shades {
@@ -795,19 +810,53 @@ function Projects() {
         .tc-projects-style1 {
           position: relative;
           overflow: hidden;
+          background: #0f0f0f;
+          padding: 120px 0;
+          border-radius: 40px 40px 0 0;
+        }
+        .tc-projects-style1 .title h2 {
+          color: #fff !important;
+        }
+        .tc-projects-style1 .title {
+          color: #fff !important;
+        }
+        .tc-projects-style1 .nav-pills .nav-link {
+          color: #fff !important;
+        }
+        .tc-projects-style1 .nav-pills button.nav-link {
+          color: #fff !important;
+        }
+        .tc-projects-style1 button.nav-link {
+          color: #fff !important;
         }
         .projects-tabs-btn {
-          color: #1a1a1a;
+          color: #fff !important;
           transition: all 0.3s ease;
         }
+        .tc-projects-style1 button:not(.active):not(:hover) {
+          color: #fff !important;
+        }
         .projects-tabs-btn.active,
-        .projects-tabs-btn:hover {
+        .projects-tabs-btn:hover,
+        .tc-projects-style1 .nav-pills .nav-link.active,
+        .tc-projects-style1 .nav-pills button.nav-link.active,
+        .tc-projects-style1 button.nav-link.active,
+        .tc-projects-style1 .nav-pills .nav-link:hover,
+        .tc-projects-style1 .nav-pills button.nav-link:hover,
+        .tc-projects-style1 button.nav-link:hover {
           color: #73bf44 !important;
         }
         .projects-see-all-btn {
           color: #73bf44 !important;
           border-color: #73bf44 !important;
           transition: all 0.3s ease;
+        }
+        .projects-see-all-btn span {
+          color: #73bf44 !important;
+        }
+        .projects-see-all-btn i,
+        .projects-see-all-btn .ti-arrow-top-right {
+          color: #73bf44 !important;
         }
         .projects-see-all-btn:hover {
           background-color: #73bf44 !important;
@@ -818,17 +867,26 @@ function Projects() {
         .projects-see-all-btn:hover i {
           color: #fff !important;
         }
+        .project-slider-counter {
+          color: #73bf44;
+        }
+        .tc-projects-style1 .tabs-links {
+          color: #fff;
+        }
+        .tc-projects-style1 .tabs-links * {
+          color: #fff;
+        }
       `}} />
-    <section className="tc-projects-style1">
-      <div className="container">
-        <div className="title mb-70">
-          <h2 className="fsz-45"> Featured Projects </h2>
+    <section className="tc-projects-style1" >
+      <div className="container" >
+        <div className="title mb-70" style={{ textAlign: 'center', }}>
+          <h2 className="fsz-40"> Featured Projects </h2>
         </div>
-        <div className="tabs-links mb-50">
-          <div className="row align-items-center">
-            <div className="col-lg-9">
-              <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                <li className="nav-item" role="presentation">
+        <div className="tabs-links mb-50" style={{ textAlign: 'center',  }}>
+          <div className="row align-items-center" style={{ justifyContent: 'center', display: 'flex', flexWrap: 'wrap', }}>
+            <div className="col-lg-9" style={{ textAlign: 'center',  flexWrap: 'wrap'}}>
+              <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist" style={{  width: `110%` }}>
+                <li className="nav-item" role="presentation" style={{ margin: '0 10px' }}>
                   <button
                       className={`nav-link projects-tabs-btn ${activeTab === 'pills-proj1' ? 'active' : ''}`}
                     id="pills-proj1-tab"
@@ -929,6 +987,7 @@ function Projects() {
                         return (
                           <div
                             key={index}
+                            style={{ backgroundColor: 'transparent', borderRadius: '240px' }}
                             className={`project-slide-card ${position} ${isAnimating ? 'animating' : ''}`}
                             onClick={() => {
                               if (position.startsWith("next")) {
@@ -943,7 +1002,7 @@ function Projects() {
                               }
                             }}
                           >
-                            <div className="project-card-wrapper">
+                            <div className="project-card-wrapper" >
                               <div className={`project-card-modern ${isActive ? 'active' : 'inactive'}`}>
                                 <div className="project-card-img">
                                   <img src={item.img} alt={item.title} />

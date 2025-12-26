@@ -40,7 +40,7 @@ function About() {
               <span> About Studio </span>
             </a>
             <h1>
-              Archin Design <br /> Studio
+              SEECA Design <br /> Studio
             </h1>
             <span className="num mt-40"> 01 </span>
           </div>

@@ -32,7 +32,7 @@ function Blog() {
                     href="#"
                     className="title fsz-24 text-uppercase hover-brown1 d-block"
                   >
-                    ACTUAL CONSTRUCTION NEWS OF archin RESIDENCES
+                    ACTUAL CONSTRUCTION NEWS OF SEECA RESIDENCES
                   </a>
                   <small className="fsz14 text-uppercase mt-15 color-brown1 fw-300">
                     News
@@ -58,7 +58,7 @@ function Blog() {
                     href="#"
                     className="title fsz-24 text-uppercase hover-brown1 d-block"
                   >
-                    archin apartment: mortgage program from 0.01%
+                    SEECA apartment: mortgage program from 0.01%
                   </a>
                   <small className="fsz14 text-uppercase mt-15 color-brown1 fw-300">
                     News, Offers
@@ -80,7 +80,7 @@ function Blog() {
                     href="#"
                     className="title fsz-24 text-uppercase hover-brown1 d-block"
                   >
-                    No fee car spot when buy aparment at Archin
+                    No fee car spot when buy aparment at SEECA
                   </a>
                   <small className="fsz14 text-uppercase mt-15 color-brown1 fw-300">
                     News

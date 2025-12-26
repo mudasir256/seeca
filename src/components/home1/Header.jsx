@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import data from '../../data/home1/header-slider';
 
 function Header() {
@@ -225,15 +226,15 @@ function Header() {
                         <div className="text fsz-17 fw-300 lh-4">
                           {item.desc}
                         </div>
-                        <a
-                          href="#"
+                        <Link
+                          to="/innerpages/services"
                           className="butn border rounded-pill mt-60 hover-bg-white"
                         >
                           <span>
                             Our Services
                             <i className="small ms-1 ti-arrow-top-right"></i>
                           </span>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>

@@ -29,7 +29,7 @@ function Home() {
         <Experience />
         <Services />
         <Process />
-        <Projects />
+        <Projects /> 
         <Testimonials />
         <Awards />
         <Team />

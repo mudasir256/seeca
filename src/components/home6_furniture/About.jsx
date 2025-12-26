@@ -34,7 +34,7 @@ function About() {
             define spaces
           </h2>
           <p className="js-splittext-lines">
-            Choose furniture you can have for life! At Archin, we are proud
+            Choose furniture you can have for life! At SEECA, we are proud
             <br /> to work with premium quality local materials to create unique
             wood furniture <br /> that will be with you for every milestone
           </p>

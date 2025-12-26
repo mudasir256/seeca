@@ -24,7 +24,7 @@ function PortfolioPage() {
         backgroundImage="/home_preview/assets/img/pages/portfolio.jpg"
       />
       <main>
-        <Cases />
+        {/* <Cases /> */}
         <LatestCases />
       </main>
       <Footer />

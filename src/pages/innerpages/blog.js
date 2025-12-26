@@ -25,8 +25,6 @@ function BlogPage() {
         backgroundImage="/home_preview/assets/img/pages/blog.jpg"
       />
       <main>
-        <Slider />
-        <LatestPosts />
         <FilterPosts />
       </main>
       <Footer />

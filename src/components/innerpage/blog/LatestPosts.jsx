@@ -2,8 +2,56 @@ import React from 'react';
 
 function LatestPosts() {
   return (
-    <section className="tc-latest-posts-style1">
-      <div className="container">
+    <>
+      <style dangerouslySetInnerHTML={{__html: `
+        .tc-latest-posts-style1 {
+          position: relative;
+          overflow: hidden;
+        }
+        .tc-latest-posts-style1 .cont h3 a:hover,
+        .tc-latest-posts-style1 .cont h3 a.hover-orange1:hover {
+          color: #73bf44 !important;
+        }
+        .tc-latest-posts-style1 .tags a.color-orange1 {
+          color: #73bf44 !important;
+        }
+        .tc-latest-posts-style1 .tags a.color-orange1:hover {
+          color: #73bf44;
+        }
+      `}} />
+      <section className="tc-latest-posts-style1">
+        {/* Blurred circular gradient backgrounds */}
+        <div 
+          className="d-none d-md-block"
+          style={{
+            position: 'absolute',
+            top: 0,
+            right: 0,
+            width: 'clamp(300px, 35vw, 500px)',
+            height: 'clamp(180px, 25vh, 300px)',
+            background: 'rgba(115, 191, 68, 0.2)',
+            filter: 'blur(60px)',
+            borderRadius: '500px',
+            pointerEvents: 'none',
+            zIndex: 0
+          }}
+        />
+        <div 
+          className="d-none d-md-block"
+          style={{
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            width: 'clamp(250px, 28vw, 400px)',
+            height: 'clamp(250px, 28vw, 400px)',
+            background: 'rgba(115, 191, 68, 0.15)',
+            filter: 'blur(60px)',
+            borderRadius: '350px',
+            pointerEvents: 'none',
+            zIndex: 0
+          }}
+        />
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div className="content">
           <div className="title mb-70 wow fadeInUp slow" data-wow-delay="0.2s">
             <div className="row">
@@ -102,8 +150,9 @@ function LatestPosts() {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   );
 }
 

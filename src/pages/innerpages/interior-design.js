@@ -5,6 +5,9 @@ import Menu from '../../components/innerpage/Menu';
 import Navbar from '../../components/home_preview/Navbar';
 import StartButton from '../../components/home5_residence/StartButton';
 import Header from '../../components/innerpage/contact/Header';
+import InteriorDesignContent from '../../components/innerpage/interior-design/InteriorDesignContent';
+import Testimonials from '../../components/home1/Testimonials';
+import ContactSection from '../../components/innerpage/interior-design/ContactSection';
 
 function InteriorDesignPage() {
   return (
@@ -19,17 +22,12 @@ function InteriorDesignPage() {
       <Header
         title="Interior Design"
         description="Transforming spaces into beautiful, functional environments that reflect your style and needs"
-        backgroundImage="/home_preview/assets/img/architecturecontact.jpg"
+        backgroundImage="/home_preview/assets/img/Slider-1-scaled.jpg"
       />
       <main>
-        <div className="container section-padding">
-          <div className="row">
-            <div className="col-12">
-              <h2>Interior Design Services</h2>
-              <p>Content coming soon...</p>
-            </div>
-          </div>
-        </div>
+        <InteriorDesignContent />
+        <Testimonials />
+        <ContactSection />
       </main>
       <Footer />
       <StartButton />

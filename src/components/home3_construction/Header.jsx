@@ -17,7 +17,7 @@ function Header() {
                       <div className="title-side">
                         <h3> {item.type} </h3>
                         <a href="#" className="t-link">
-                          more about <br /> archin
+                          more about <br /> SEECA
                         </a>
                       </div>
                     </div>

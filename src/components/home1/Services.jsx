@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Services() {
+function Services({ removeTopPadding = false }) {
   return (
     <>
-    <section className="tc-services-style1-modern" style={{ position: 'relative', overflow: 'hidden' }}>
+    <section className="tc-services-style1-modern" style={{ position: 'relative', overflow: 'hidden', background: '#f8f9fa' }}>
       <div 
         className="d-none d-md-block"
         style={{
@@ -50,17 +51,41 @@ function Services() {
         }}
       />
 
-      <div className="content " style={{ position: 'relative', zIndex: 1, paddingBottom: '10px'}}>
+      <div className="content " style={{ position: 'relative', zIndex: 1, paddingTop: removeTopPadding ? '0' : '60px', paddingBottom: '60px'}}>
         <div className="container">
-          <div className="services-modern-title text-center">
-            <div className="title-badge wow fadeInUp" data-wow-delay="0.1s">
+          <div className="services-modern-title text-center mb-50">
+            <div className="title-badge wow fadeInUp" data-wow-delay="0.1s" style={{
+              display: 'inline-block',
+              padding: '8px 20px',
+              background: 'rgba(115, 191, 68, 0.1)',
+              border: '1px solid rgba(115, 191, 68, 0.2)',
+              borderRadius: '30px',
+              fontSize: '12px',
+              fontWeight: '600',
+              color: '#73bf44',
+              textTransform: 'uppercase',
+              letterSpacing: '2px',
+              marginBottom: '20px'
+            }}>
               <span>Our Expertise</span>
             </div>
-            <h2 className="services-title-main wow fadeInUp" data-wow-delay="0.2s">What Can We Offer</h2>
-            <p className="title-subtitle wow fadeInUp" data-wow-delay="0.3s">
+            <h2 className="services-title-main wow fadeInUp" data-wow-delay="0.2s" style={{
+              fontSize: '52px',
+              fontWeight: '800',
+              color: '#1a1a1a',
+              marginBottom: '20px',
+              lineHeight: '1.2',
+              letterSpacing: '-1px'
+            }}>What Can We Offer</h2>
+            <p className="title-subtitle wow fadeInUp" data-wow-delay="0.3s" style={{
+              fontSize: '17px',
+              color: '#666',
+              maxWidth: '700px',
+              margin: '0 auto',
+              lineHeight: '1.7'
+            }}>
               Discover our comprehensive range of professional services designed to bring your vision to life
             </p>
-            <div className="title-underline wow fadeInUp" data-wow-delay="0.4s"></div>
           </div>
           
           <style dangerouslySetInnerHTML={{__html: `
@@ -69,50 +94,51 @@ function Services() {
               margin-bottom: 20px;
             }
             .service-card-compact-inner {
-              background: #FFFFFF;
-              border-radius: 16px;
-              padding: 20px;
+              background: rgba(26, 26, 26, 0.95);
+              border-radius: 20px;
+              padding: 28px;
               height: 100%;
               display: flex;
               flex-direction: column;
               position: relative;
               overflow: hidden;
               transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-              box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+              cursor: pointer;
             }
             .service-card-compact-inner:hover {
-              transform: translateY(-5px);
-              box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+              transform: translateY(-8px);
+              box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
             }
             .service-icon-compact {
-              width: 50px;
-              height: 50px;
-              border-radius: 12px;
+              width: 60px;
+              height: 60px;
+              border-radius: 14px;
               display: flex;
               align-items: center;
               justify-content: center;
-              font-size: 24px;
+              font-size: 28px;
               color: #FFFFFF;
               transition: all 0.4s ease;
-              margin-bottom: 15px;
+              margin-bottom: 20px;
             }
             .service-card-compact:hover .service-icon-compact {
-              transform: translateY(-3px) scale(1.1);
+              transform: translateY(-5px) scale(1.15);
             }
             .service-title-compact {
-              font-size: 20px;
+              font-size: 22px;
               font-weight: 700;
-              color: #1a1a1a;
-              margin-bottom: 12px;
+              color: #ffffff;
+              margin-bottom: 16px;
               line-height: 1.3;
             }
             .service-image-compact {
               width: 100%;
-              height: 140px;
-              border-radius: 12px;
+              height: 160px;
+              border-radius: 14px;
               overflow: hidden;
-              margin-bottom: 15px;
-              background: #f5f5f5;
+              margin-bottom: 18px;
+              background: #2a2a2a;
             }
             .service-image-compact img {
               width: 100%;
@@ -124,23 +150,24 @@ function Services() {
               transform: scale(1.08);
             }
             .service-description-compact {
-              font-size: 13px;
-              line-height: 1.6;
-              color: #666;
-              margin-bottom: 15px;
+              font-size: 14px;
+              line-height: 1.7;
+              color: #cccccc;
+              margin-bottom: 20px;
               flex-grow: 1;
             }
             .service-read-more-compact {
               display: inline-flex;
               align-items: center;
-              gap: 6px;
-              font-size: 12px;
+              gap: 8px;
+              font-size: 13px;
               font-weight: 600;
-              color: #1a1a1a;
+              color: #ffffff;
               text-transform: uppercase;
-              letter-spacing: 0.5px;
+              letter-spacing: 0.8px;
               text-decoration: none;
               transition: all 0.3s ease;
+              margin-top: auto;
             }
             .service-read-more-compact i {
               font-size: 14px;
@@ -241,27 +268,97 @@ function Services() {
               color: #9b59b6;
             }
             .service-row-bottom {
-              margin-top: 50px;
+              margin-top: 30px;
+            }
+            .services-cta-wrapper {
+              margin-top: 40px !important;
+            }
+            .services-cta-btn {
+              padding: 16px 40px;
+              font-size: 15px;
+              font-weight: 600;
+              border-radius: 50px;
+              transition: all 0.3s ease;
+            }
+            .services-cta-btn:hover {
+              transform: translateY(-2px);
+              box-shadow: 0 8px 25px rgba(115, 191, 68, 0.4);
             }
             @media screen and (max-width: 991px) {
               .service-row-bottom {
-                margin-top: 30px;
+                margin-top: 20px;
+              }
+              .service-card-compact-inner {
+                padding: 24px;
+              }
+              .service-icon-compact {
+                width: 55px;
+                height: 55px;
+                font-size: 26px;
+              }
+              .service-title-compact {
+                font-size: 20px;
+              }
+              .service-image-compact {
+                height: 150px;
               }
             }
-            .services-cta-wrapper {
-              margin-top: 0 !important;
+            @media screen and (max-width: 767px) {
+              .service-card-compact-inner {
+                padding: 20px;
+              }
+              .service-icon-compact {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                margin-bottom: 15px;
+              }
+              .service-title-compact {
+                font-size: 18px;
+                margin-bottom: 12px;
+              }
+              .service-image-compact {
+                height: 140px;
+                margin-bottom: 15px;
+              }
+              .service-description-compact {
+                font-size: 13px;
+                margin-bottom: 15px;
+              }
+              .service-read-more-compact {
+                font-size: 12px;
+              }
             }
-            .services-cta-btn.mt-80 {
-              margin-top: 0 !important;
+            @media screen and (max-width: 575px) {
+              .service-card-compact {
+                margin-bottom: 20px;
+              }
+              .service-card-compact-inner {
+                padding: 18px;
+                border-radius: 16px;
+              }
+              .service-icon-compact {
+                width: 45px;
+                height: 45px;
+                font-size: 22px;
+              }
+              .service-title-compact {
+                font-size: 17px;
+              }
+              .service-image-compact {
+                height: 120px;
+              }
             }
           `}} />
           <div className="services-modern-grid">
             <div className="row g-3">
               {/* Top Row - 3 Cards */}
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <div
+                <Link
+                  to="/innerpages/architecture"
                   className="service-card-compact card-1 wow fadeInUp"
                   data-wow-delay="0.1s"
+                  style={{ textDecoration: 'none', display: 'block' }}
                 >
                   <div className="service-card-compact-inner">
                     <div className="service-icon-compact">
@@ -270,25 +367,27 @@ function Services() {
                     <h5 className="service-title-compact">Architecture</h5>
                     <div className="service-image-compact">
                       <img
-                        src="/home1/assets/img/services/ser1.jpg"
+                        src="/home_preview/assets/img/Architecture-scaled.jpg"
                         alt="Architecture"
                       />
                     </div>
                     <p className="service-description-compact">
                       We will help you to get the result you dreamed of.
                     </p>
-                    <a href="#" className="service-read-more-compact">
+                    <div className="service-read-more-compact">
                       <span>READ MORE</span>
                       <i className="ti-arrow-top-right"></i>
-                    </a>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
 
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <div
+                <Link
+                  to="/innerpages/interior-design"
                   className="service-card-compact card-2 wow fadeInUp"
                   data-wow-delay="0.2s"
+                  style={{ textDecoration: 'none', display: 'block' }}
                 >
                   <div className="service-card-compact-inner">
                     <div className="service-icon-compact">
@@ -297,25 +396,27 @@ function Services() {
                     <h5 className="service-title-compact">Interior Design</h5>
                     <div className="service-image-compact">
                       <img
-                        src="/home1/assets/img/services/ser2.jpg"
+                        src="/home_preview/assets/img/Slider-1-scaled.jpg"
                         alt="Interior Design"
                       />
                     </div>
                     <p className="service-description-compact">
                       Individual, aesthetically stunning solutions for customers.
                     </p>
-                    <a href="#" className="service-read-more-compact">
+                    <div className="service-read-more-compact">
                       <span>READ MORE</span>
                       <i className="ti-arrow-top-right"></i>
-                    </a>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
 
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <div
+                <Link
+                  to="/innerpages/construction"
                   className="service-card-compact card-3 wow fadeInUp"
                   data-wow-delay="0.3s"
+                  style={{ textDecoration: 'none', display: 'block' }}
                 >
                   <div className="service-card-compact-inner">
                     <div className="service-icon-compact">
@@ -324,26 +425,28 @@ function Services() {
                     <h5 className="service-title-compact">Construction</h5>
                     <div className="service-image-compact">
                       <img
-                        src="/home1/assets/img/services/ser3.jpg"
+                        src="/home_preview/assets/img/Construction-scaled.jpg"
                         alt="Construction"
                       />
                     </div>
                     <p className="service-description-compact">
                       We create and produce our product design lines.
                     </p>
-                    <a href="#" className="service-read-more-compact">
+                    <div className="service-read-more-compact">
                       <span>READ MORE</span>
                       <i className="ti-arrow-top-right"></i>
-                    </a>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
 
               {/* Bottom Row - 2 Cards (Centered) */}
               <div className="col-lg-4 col-md-6 col-sm-12 offset-lg-2 service-row-bottom">
-                <div
+                <Link
+                  to="/innerpages/building-sustainability"
                   className="service-card-compact card-4 wow fadeInUp"
                   data-wow-delay="0.4s"
+                  style={{ textDecoration: 'none', display: 'block' }}
                 >
                   <div className="service-card-compact-inner">
                     <div className="service-icon-compact">
@@ -352,25 +455,27 @@ function Services() {
                     <h5 className="service-title-compact">Building Sustainability</h5>
                     <div className="service-image-compact">
                       <img
-                        src="/home1/assets/img/services/ser4.jpg"
+                        src="/home_preview/assets/img/Evening-View-scaled.jpg"
                         alt="Building Sustainability"
                       />
                     </div>
                     <p className="service-description-compact">
                       We will help you to get the result you dreamed of.
                     </p>
-                    <a href="#" className="service-read-more-compact">
+                    <div className="service-read-more-compact">
                       <span>READ MORE</span>
                       <i className="ti-arrow-top-right"></i>
-                    </a>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
 
               <div className="col-lg-4 col-md-6 col-sm-12 service-row-bottom">
-                <div
+                <Link
+                  to="/innerpages/smart-building-technologies"
                   className="service-card-compact card-5 wow fadeInUp"
                   data-wow-delay="0.5s"
+                  style={{ textDecoration: 'none', display: 'block' }}
                 >
                   <div className="service-card-compact-inner">
                     <div className="service-icon-compact">
@@ -379,26 +484,26 @@ function Services() {
                     <h5 className="service-title-compact">Smart Building Technologies</h5>
                     <div className="service-image-compact">
                       <img
-                        src="/home1/assets/img/services/ser1.jpg"
+                        src="/home_preview/assets/img/Smart-Technologies-scaled.jpg"
                         alt="Smart Building Technologies"
                       />
                     </div>
                     <p className="service-description-compact">
                       Individual, aesthetically stunning solutions for customers.
                     </p>
-                    <a href="#" className="service-read-more-compact">
+                    <div className="service-read-more-compact">
                       <span>READ MORE</span>
                       <i className="ti-arrow-top-right"></i>
-                    </a>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
 
           <div className="text-center services-cta-wrapper">
-            <a
-              href="#"
+            <Link
+              to="/innerpages/contact"
               className="butn rounded-pill text-white services-cta-btn"
               style={{ backgroundColor: '#73bf44' }}
             >
@@ -406,7 +511,7 @@ function Services() {
                 Get A Free Quote Now
                 <i className="small ms-1 ti-arrow-top-right"></i>
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

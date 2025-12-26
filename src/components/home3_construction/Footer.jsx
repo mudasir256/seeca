@@ -46,7 +46,7 @@ function Footer() {
                       <a href="#"> 49 Brimmer St, Boston, MA 02108 </a>
                     </li>
                     <li>
-                      <a href="#"> hello@archinconstruction.com </a>
+                      <a href="#"> hello@SEECAconstruction.com </a>
                     </li>
                     <li>
                       <a href="#"> (054) 3256 78 87 </a>
@@ -62,7 +62,7 @@ function Footer() {
                       <a href="#">2221 Sw Broadway Dr, Portland, OR 97201</a>
                     </li>
                     <li>
-                      <a href="#"> contact@archinconstruction.com </a>
+                      <a href="#"> contact@SEECAconstruction.com </a>
                     </li>
                     <li>
                       <a href="#"> (021) 4246 63 68 </a>
@@ -139,7 +139,7 @@ function Footer() {
             </div>
             <div className="col-lg-4 mt-4 mt-lg-0">
               <p className="color-999">
-                © 2023 Archin Construction. All Right Reserved
+                © 2023 SEECA Construction. All Right Reserved
               </p>
             </div>
           </div>

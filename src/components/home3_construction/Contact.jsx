@@ -32,7 +32,7 @@ function Contact() {
                         </a>
                       </li>
                       <li>
-                        <a href="#"> hello@archinconstruction.com </a>
+                        <a href="#"> hello@SEECAconstruction.com </a>
                       </li>
                       <li>
                         <a href="#"> (054) 3256 78 87 </a>
@@ -50,7 +50,7 @@ function Contact() {
                         </a>
                       </li>
                       <li>
-                        <a href="#"> contact@archinconstruction.com </a>
+                        <a href="#"> contact@SEECAconstruction.com </a>
                       </li>
                       <li>
                         <a href="#"> (021) 4246 63 68 </a>

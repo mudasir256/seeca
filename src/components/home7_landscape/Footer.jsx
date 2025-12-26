@@ -107,7 +107,7 @@ function Footer() {
                     </a>
                   </li>
                   <li>
-                    <a href="#"> hello@archingarden.com </a>
+                    <a href="#"> hello@SEECAgarden.com </a>
                   </li>
                 </ul>
               </div>
@@ -125,7 +125,7 @@ function Footer() {
                     <i className="fab fa-tiktok"></i>
                   </a>
                 </div>
-                <p> © 2023 Archin Garden Studio. All Right Reserved </p>
+                <p> © 2023 SEECA Garden Studio. All Right Reserved </p>
               </div>
             </div>
           </div>

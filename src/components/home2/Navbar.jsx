@@ -26,7 +26,7 @@ function Navbar() {
               </a>
             </div>
             <div className="links-item">
-              <a href="#"> hello@archininterior.com </a>
+              <a href="#"> hello@SEECAinterior.com </a>
               <a href="#"> (+706) 856 0195 </a>
             </div>
           </div>

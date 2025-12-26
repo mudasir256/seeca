@@ -5,6 +5,9 @@ import Menu from '../../components/innerpage/Menu';
 import Navbar from '../../components/home_preview/Navbar';
 import StartButton from '../../components/home5_residence/StartButton';
 import Header from '../../components/innerpage/contact/Header';
+import WorkingProcess from '../../components/innerpage/our-process/WorkingProcess';
+import Advantages from '../../components/innerpage/our-process/Advantages';
+import Skills from '../../components/innerpage/our-process/Skills';
 
 function OurProcessPage() {
   return (
@@ -22,14 +25,9 @@ function OurProcessPage() {
         backgroundImage="/home_preview/assets/img/architecturecontact.jpg"
       />
       <main>
-        <div className="container section-padding">
-          <div className="row">
-            <div className="col-12">
-              <h2>Our Process</h2>
-              <p>Content coming soon...</p>
-            </div>
-          </div>
-        </div>
+        <Advantages />
+        <WorkingProcess />
+        <Skills />
       </main>
       <Footer />
       <StartButton />

@@ -2,11 +2,85 @@ import React from 'react';
 
 function Process() {
   return (
-    <section className="tc-process-style2">
-      <div className="container">
+    <>
+      <style dangerouslySetInnerHTML={{__html: `
+        .tc-process-style2 .accordion-button:not(.collapsed) {
+          color: #73bf44 !important;
+        }
+        .tc-process-style2 .accordion-button:not(.collapsed) h3 {
+          color: #73bf44 !important;
+        }
+        .tc-process-style2 .accordion-button:not(.collapsed) .num {
+          color: #73bf44 !important;
+        }
+      `}} />
+    <section 
+      className="tc-process-style2"
+      style={{
+        position: 'relative',
+        overflow: 'hidden'
+      }}
+    >
+      {/* Blurred circular gradient backgrounds */}
+      <div 
+        className="d-none d-md-block"
+        style={{
+          position: 'absolute',
+          top: 0,
+          right: 0,
+          width: 'clamp(300px, 35vw, 500px)',
+          height: 'clamp(180px, 25vh, 300px)',
+          background: 'rgba(115, 191, 68, 0.3)',
+          filter: 'blur(60px)',
+          borderRadius: '500px',
+          pointerEvents: 'none',
+          zIndex: 0
+        }}
+      />
+      <div 
+        className="d-none d-md-block"
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          right: 'clamp(200px, 38vw, 550px)',
+          width: 'clamp(250px, 28vw, 400px)',
+          height: 'clamp(250px, 28vw, 400px)',
+          background: 'rgba(115, 191, 68, 0.2)',
+          filter: 'blur(60px)',
+          borderRadius: '350px',
+          pointerEvents: 'none',
+          zIndex: 0
+        }}
+      />
+      <div 
+        className="d-none d-md-block"
+        style={{
+          position: 'absolute',
+          top: '20%',
+          left: 'clamp(150px, 20vw, 250px)',
+          width: 'clamp(200px, 21vw, 300px)',
+          height: 'clamp(200px, 21vw, 300px)',
+          background: 'rgba(115, 191, 68, 0.2)',
+          filter: 'blur(60px)',
+          borderRadius: '300px',
+          pointerEvents: 'none',
+          zIndex: 0
+        }}
+      />
+      
+      <div 
+        className="container"
+        style={{
+          position: 'relative',
+          zIndex: 1
+        }}
+      >
         <h2 className="fsz-45 fw-500 mb-80 text-center">
           Our Approach
-          <span className="sub-font fst-italic color-orange1 fw-400">
+          <span 
+            className="sub-font fst-italic fw-400"
+            style={{ color: '#73bf44' }}
+          >
             process
           </span>
         </h2>
@@ -23,7 +97,7 @@ function Process() {
                         data-bs-toggle="collapse"
                         data-bs-target="#collapseOne"
                       >
-                        <span className="num"> 1 / </span> <h3> Survey </h3>
+                        <span className="num"> 1 / </span> <h3> Integrity </h3>
                       </button>
                     </div>
                     <div
@@ -33,11 +107,7 @@ function Process() {
                     >
                       <div className="accordion-body">
                         <div className="text">
-                          After surveying and obtaining the necessary
-                          information, we will create a preliminary design
-                          including technical drawings, 3D images of the
-                          interior and provide a 3D VR experience to help
-                          customers get a visual view of their project.
+                        Integrity is being true to ourselves by being true to our clients. This means maintaining always a professional and collaborative attitude and consistently delivering beyond expectations.
                         </div>
                       </div>
                     </div>
@@ -50,7 +120,7 @@ function Process() {
                         data-bs-toggle="collapse"
                         data-bs-target="#collapseTwo"
                       >
-                        <span className="num"> 2 / </span> <h3> Design </h3>
+                        <span className="num"> 2 / </span> <h3> Humanity </h3>
                       </button>
                     </div>
                     <div
@@ -60,11 +130,7 @@ function Process() {
                     >
                       <div className="accordion-body">
                         <div className="text">
-                          After surveying and obtaining the necessary
-                          information, we will create a preliminary design
-                          including technical drawings, 3D images of the
-                          interior and provide a 3D VR experience to help
-                          customers get a visual view of their project.
+                        Humanity describes that we work for people within the national and international context.  Each of our projects, no matter the scale, is designed by people and for people.
                         </div>
                       </div>
                     </div>
@@ -77,7 +143,7 @@ function Process() {
                         data-bs-toggle="collapse"
                         data-bs-target="#collapseThree"
                       >
-                        <span className="num"> 3 / </span> <h3> Implement </h3>
+                        <span className="num"> 3 / </span> <h3> Creativity </h3>
                       </button>
                     </div>
                     <div
@@ -87,11 +153,7 @@ function Process() {
                     >
                       <div className="accordion-body">
                         <div className="text">
-                          After surveying and obtaining the necessary
-                          information, we will create a preliminary design
-                          including technical drawings, 3D images of the
-                          interior and provide a 3D VR experience to help
-                          customers get a visual view of their project.
+                        Creativity is the soul of every idea which translates not only into design, but also drives the pursuit of solutions to simple or complex problems through innovative technologies.
                         </div>
                       </div>
                     </div>
@@ -104,7 +166,7 @@ function Process() {
                         data-bs-toggle="collapse"
                         data-bs-target="#collapseFour"
                       >
-                        <span className="num"> 4 / </span> <h3> Handover </h3>
+                        <span className="num"> 4 / </span> <h3> Sustainability </h3>
                       </button>
                     </div>
                     <div
@@ -114,11 +176,7 @@ function Process() {
                     >
                       <div className="accordion-body">
                         <div className="text">
-                          After surveying and obtaining the necessary
-                          information, we will create a preliminary design
-                          including technical drawings, 3D images of the
-                          interior and provide a 3D VR experience to help
-                          customers get a visual view of their project.
+                        The sustainability of every project is something we would not overlook. It is useful to grow the company and build a sustainable and environment friendly society.
                         </div>
                       </div>
                     </div>
@@ -126,7 +184,7 @@ function Process() {
                 </div>
                 <a
                   href="#"
-                  className="butn bg-white rounded-pill mt-50 hover-bg-black"
+                  className="butn bg-white rounded-pill mt-50 hover-bg-green2"
                 >
                   <span>
                     Get A Free Quotes
@@ -151,7 +209,7 @@ function Process() {
                     alt=""
                     className="img-cover"
                   />
-                  <span className="txt sub-font"> Handover </span>
+                  <span className="txt sub-font"      style={{ color: '#73bf44' }}> Handover </span>
                 </div>
                 <div className="img" data-lag="0.3">
                   <img
@@ -167,7 +225,7 @@ function Process() {
                     alt=""
                     className="img-cover"
                   />
-                  <span className="txt sub-font"> Implement </span>
+                  <span className="txt sub-font" style={{ marginRight: '50px' }}> Implement </span>
                 </div>
               </div>
             </div>
@@ -179,8 +237,13 @@ function Process() {
         alt=""
         className="bg"
         data-speed="1.2"
+        style={{
+          position: 'absolute',
+          zIndex: 0
+        }}
       />
     </section>
+    </>
   );
 }
 

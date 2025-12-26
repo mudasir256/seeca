@@ -15,7 +15,7 @@ function Services() {
               </div>
               <div className="col-lg-5">
                 <h6 className="color-brown1 text-uppercase fsz-24 lh-4 js-splittext-lines">
-                  20+ premium and essential services in archin, constributing to
+                  20+ premium and essential services in SEECA, constributing to
                   enhancing resident’s life experience
                 </h6>
               </div>

@@ -10,7 +10,7 @@ function Contact() {
               <h3 className="fsz-45 fw-500">Let us helps build your dream!</h3>
               <h6 className="fsz-21 fw-400 mt-50"> (054) 3256 78 87 </h6>
               <p className="fsz-14 color-666 mt-15">
-                49 Brimmer St, Boston, MA 02108 <br /> hello@archin.co
+                49 Brimmer St, Boston, MA 02108 <br /> hello@SEECA.co
               </p>
             </div>
           </div>

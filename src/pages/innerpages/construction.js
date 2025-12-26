@@ -5,6 +5,9 @@ import Menu from '../../components/innerpage/Menu';
 import Navbar from '../../components/home_preview/Navbar';
 import StartButton from '../../components/home5_residence/StartButton';
 import Header from '../../components/innerpage/contact/Header';
+import ConstructionContent from '../../components/innerpage/construction/ConstructionContent';
+import Testimonials from '../../components/home1/Testimonials';
+import ContactSection from '../../components/innerpage/construction/ContactSection';
 
 function ConstructionPage() {
   return (
@@ -19,17 +22,12 @@ function ConstructionPage() {
       <Header
         title="Construction"
         description="Delivering high-quality construction services with precision, safety, and excellence"
-        backgroundImage="/home_preview/assets/img/architecturecontact.jpg"
+        backgroundImage="/home_preview/assets/img/Slider-4-scaled.jpg"
       />
       <main>
-        <div className="container section-padding">
-          <div className="row">
-            <div className="col-12">
-              <h2>Construction Services</h2>
-              <p>Content coming soon...</p>
-            </div>
-          </div>
-        </div>
+        <ConstructionContent />
+        <Testimonials />
+        <ContactSection />
       </main>
       <Footer />
       <StartButton />

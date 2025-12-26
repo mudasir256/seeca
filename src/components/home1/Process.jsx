@@ -4,6 +4,10 @@ function Process() {
   return (
     <>
       <style dangerouslySetInnerHTML={{__html: `
+        .tc-process-style1 {
+          padding-top: 60px !important;
+          padding-bottom: 80px !important;
+        }
         .tc-process-style1 .accordion-item .accordion-button:not(.collapsed) h3 {
           color: #73bf44 !important;
         }
@@ -45,9 +49,10 @@ function Process() {
         /* Mobile Responsive Styles */
         @media screen and (max-width: 991px) {
           .tc-process-style1 {
-            padding: 80px 0 60px !important;
-            margin-top: -20px !important;
-            border-radius: 30px 30px 0 0 !important;
+            padding-top: 0 !important;
+            padding-bottom: 60px !important;
+            margin-top: 0 !important;
+            border-radius: 0 !important;
           }
           .tc-process-style1 .title {
             margin-bottom: 50px !important;
@@ -105,9 +110,10 @@ function Process() {
         
         @media screen and (max-width: 767px) {
           .tc-process-style1 {
-            padding: 60px 0 50px !important;
-            margin-top: -15px !important;
-            border-radius: 25px 25px 0 0 !important;
+            padding-top: 0 !important;
+            padding-bottom: 50px !important;
+            margin-top: 0 !important;
+            border-radius: 0 !important;
           }
           .tc-process-style1 .title {
             margin-bottom: 40px !important;
@@ -185,9 +191,10 @@ function Process() {
         
         @media screen and (max-width: 575px) {
           .tc-process-style1 {
-            padding: 50px 0 40px !important;
-            margin-top: -10px !important;
-            border-radius: 20px 20px 0 0 !important;
+            padding-top: 0 !important;
+            padding-bottom: 40px !important;
+            margin-top: 0 !important;
+            border-radius: 0 !important;
           }
           .tc-process-style1 .title {
             margin-bottom: 35px !important;

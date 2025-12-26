@@ -16,7 +16,7 @@ function About() {
                 </div>
                 <div className="text fsz-18 mb-15">
                   With the foundations built upon family and an ethos of hard
-                  work and integrity, Archin Contractors Co. has become a
+                  work and integrity, SEECA Contractors Co. has become a
                   leading contractor in North Carolina of United States.
                 </div>
                 <a

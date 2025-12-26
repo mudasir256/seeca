@@ -14,7 +14,7 @@ function Contact() {
             <div className="section-body">
               <div className="text fsz-16">
                 2221 Sw Broadway Dr, Portland, OR 97201 <br />
-                hello@archinstudio.co
+                hello@SEECAstudio.co
               </div>
               <a
                 href="#"

@@ -1,14 +1,81 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import testimonialsData from '../../data/home1/testimonials.json';
 
 function Testimonials() {
+
   const [currentIndex, setCurrentIndex] = useState(0);
+  const marqSwiperRef = useRef(null);
+  const marqSliderRef = useRef(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonialsData.length);
     }, 5000);
     return () => clearInterval(interval);
+  }, []);
+
+  // Initialize marquee slider
+  useEffect(() => {
+    let retryCount = 0;
+    const maxRetries = 50;
+    
+    const initMarqSwiper = () => {
+      if (typeof window === 'undefined' || !window.Swiper) {
+        retryCount++;
+        if (retryCount < maxRetries) {
+          setTimeout(initMarqSwiper, 100);
+        }
+        return;
+      }
+
+      if (!marqSliderRef.current || marqSwiperRef.current) {
+        return;
+      }
+
+      const sliderElement = marqSliderRef.current;
+      const wrapper = sliderElement.querySelector('.swiper-wrapper');
+      
+      if (!wrapper || !wrapper.querySelector('.swiper-slide')) {
+        retryCount++;
+        if (retryCount < maxRetries) {
+          setTimeout(initMarqSwiper, 100);
+        }
+        return;
+      }
+
+      const Swiper = window.Swiper;
+      
+      try {
+        marqSwiperRef.current = new Swiper(sliderElement, {
+          slidesPerView: "auto",
+          spaceBetween: 140,
+          centeredSlides: true,
+          speed: 10000,
+          autoplay: {
+            delay: 1,
+            disableOnInteraction: true,
+          },
+          loop: true,
+          allowTouchMove: false,
+        });
+      } catch (error) {
+        console.error('Error initializing marquee Swiper:', error);
+      }
+    };
+
+    const timer = setTimeout(initMarqSwiper, 200);
+
+    return () => {
+      clearTimeout(timer);
+      if (marqSwiperRef.current) {
+        try {
+          marqSwiperRef.current.destroy(true, true);
+        } catch (e) {
+          console.warn('Error destroying marquee Swiper:', e);
+        }
+        marqSwiperRef.current = null;
+      }
+    };
   }, []);
 
   const goToSlide = (index) => {
@@ -198,10 +265,10 @@ function Testimonials() {
           transform: translateY(-50%) scale(1.1);
         }
         .testimonials-nav-btn.prev {
-          left: 0;
+          left: 8px;
         }
         .testimonials-nav-btn.next {
-          right: 0;
+          right: 8px;
         }
         @media (min-width: 768px) {
           .testimonials-nav-btn {
@@ -243,24 +310,54 @@ function Testimonials() {
           background: rgba(115, 191, 68, 0.5);
         }
         .tc-testimonials-style1 .c-line {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 25%;
+          z-index: 5;
+          pointer-events: none;
           filter: hue-rotate(120deg) saturate(1.8) brightness(1.1);
           opacity: 0.8;
         }
         .marq-slider {
-          margin-top: 60px;
+          position: relative;
+          overflow: hidden;
+          padding-top: 100px;
+        }
+        .marq-slider .swiper-wrapper {
+          transition-timing-function: linear !important;
+          position: relative;
+          display: flex;
+          align-items: center;
+        }
+        .marq-slider .swiper-wrapper .swiper-slide {
+          width: max-content !important;
+          flex-shrink: 0;
         }
         .marq-slider .swiper-slide a {
-          color: #666;
+          font-size: 150px;
+          font-weight: 500;
+          -webkit-text-stroke: 1px #000;
+          color: transparent;
           text-decoration: none;
           transition: color 0.3s ease;
-          font-weight: 500;
+          white-space: nowrap;
+          display: block;
+          line-height: 1;
         }
         .marq-slider .swiper-slide a:hover {
-          color: #73bf44;
+          color: #000;
         }
         @media (max-width: 991px) {
           .tc-testimonials-style1 {
             padding: 80px 0 60px;
+          }
+          .tc-testimonials-style1 .c-line {
+            width: 15%;
+          }
+          .marq-slider .swiper-slide a {
+            font-size: 50px;
           }
           .testimonials-header h2 {
             font-size: 36px;
@@ -273,7 +370,7 @@ function Testimonials() {
             padding: 40px 30px;
           }
           .testimonial-text {
-            font-size: 16px;
+            font-size: 14px;
           }
           .testimonials-nav-btn {
             width: 40px;
@@ -283,15 +380,21 @@ function Testimonials() {
             padding: 0 50px;
           }
           .testimonials-nav-btn.prev {
-            left: 0;
+            left: 2px;
           }
           .testimonials-nav-btn.next {
-            right: 0;
+            right: 2px;
           }
         }
         @media (max-width: 767px) {
           .tc-testimonials-style1 {
             padding: 60px 0 50px;
+          }
+          .tc-testimonials-style1 .c-line {
+            width: 10%;
+          }
+          .marq-slider .swiper-slide a {
+            font-size: 35px;
           }
           .testimonials-header {
             margin-bottom: 40px;
@@ -325,7 +428,7 @@ function Testimonials() {
             height: 18px;
           }
           .testimonial-text {
-            font-size: 15px;
+            font-size: 13px;
             line-height: 1.7;
             margin-bottom: 25px;
             padding: 0 10px;
@@ -344,10 +447,10 @@ function Testimonials() {
             padding: 0 50px;
           }
           .testimonials-nav-btn.prev {
-            left: 10px;
+            left: 8px;
           }
           .testimonials-nav-btn.next {
-            right: 10px;
+            right: 8px;
           }
           .testimonials-dots {
             bottom: 20px;
@@ -356,6 +459,12 @@ function Testimonials() {
         @media (max-width: 575px) {
           .tc-testimonials-style1 {
             padding: 50px 0 40px;
+          }
+          .tc-testimonials-style1 .c-line {
+            width: 8%;
+          }
+          .marq-slider .swiper-slide a {
+            font-size: 30px;
           }
           .testimonials-header h2 {
             font-size: 28px;
@@ -378,7 +487,7 @@ function Testimonials() {
             height: 30px;
           }
           .testimonial-text {
-            font-size: 14px;
+            font-size: 12px;
             margin-bottom: 20px;
           }
           .testimonials-dots {
@@ -473,8 +582,28 @@ function Testimonials() {
           </div>
         </div>
       </div>
-      <div className="marq-slider">
+
+
+     <div className="marq-slider d-none d-md-block" ref={marqSliderRef}>
         <div className="swiper-wrapper">
+          <div className="swiper-slide">
+            <a href="#"> Creative </a>
+          </div>
+          <div className="swiper-slide">
+            <a href="#"> Flexiable </a>
+          </div>
+          <div className="swiper-slide">
+            <a href="#"> Dedicated </a>
+          </div>
+          <div className="swiper-slide">
+            <a href="#"> Creative </a>
+          </div>
+          <div className="swiper-slide">
+            <a href="#"> Flexiable </a>
+          </div>
+          <div className="swiper-slide">
+            <a href="#"> Dedicated </a>
+          </div>
           <div className="swiper-slide">
             <a href="#"> Creative </a>
           </div>
@@ -487,6 +616,7 @@ function Testimonials() {
         </div>
       </div>
       <img src="/home1/assets/img/c_line3.png" alt="" className="c-line" />
+
     </section>
     </>
   );

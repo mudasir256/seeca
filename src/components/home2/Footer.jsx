@@ -34,7 +34,7 @@ function Footer() {
                     <a href="#"> 952 Bad Hill St, Asheville, NC 28803 </a>
                   </li>
                   <li>
-                    <a href="#"> contact@archininterior.com </a>
+                    <a href="#"> contact@SEECAinterior.com </a>
                   </li>
                   <li>
                     <a href="#"> (+706) 856 01 95 </a>
@@ -98,7 +98,7 @@ function Footer() {
             </div>
             <div className="col-lg-3">
               <p className="copy">
-                © 2023 Archin Interior Studio. <br /> All Right Reserved
+                © 2023 SEECA Interior Studio. <br /> All Right Reserved
               </p>
             </div>
             <div className="col-lg-5">

@@ -20,7 +20,7 @@ function About() {
                   </defs>
                   <text>
                     <textPath xlinkHref="#textcircle" textLength="900">
-                      Landscape design - archin Studio -
+                      Landscape design - SEECA Studio -
                     </textPath>
                   </text>
                 </svg>
@@ -35,7 +35,7 @@ function About() {
           <div className="col-lg-5">
             <div className="info wow fadeInUp slow" data-wow-delay="0.2s">
               <div className="text fsz-25 fw-500 mb-20">
-                Archin Design Studio is a landscape design and construction firm
+                SEECA Design Studio is a landscape design and construction firm
                 based in Portland, Oregon that creates residential outdoor
                 living spaces and gardens. We strive to create meaningful spaces
                 that fulfill our clients visions and function great for years to

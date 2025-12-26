@@ -44,8 +44,73 @@ function FilterPosts() {
   };
 
   return (
-    <section className="tc-filter-posts-style1">
-      <div className="container">
+    <>
+      <style dangerouslySetInnerHTML={{__html: `
+        .tc-filter-posts-style1 {
+          position: relative;
+          overflow: hidden;
+        }
+        .tc-filter-posts-style1 .filter-btn.active {
+          color: #73bf44 !important;
+        }
+        .tc-filter-posts-style1 .filter-btn:hover {
+          color: #73bf44;
+          border-color: rgba(115, 191, 68, 0.3);
+        }
+        .tc-filter-posts-style1 .post-card .title a:hover,
+        .tc-filter-posts-style1 .post-card .title a.hover-orange1:hover {
+          color: #73bf44 !important;
+        }
+        .tc-filter-posts-style1 .post-card .tags a.color-orange1 {
+          color: #73bf44 !important;
+        }
+        .tc-filter-posts-style1 .post-card .tags a.color-orange1:hover {
+          color: #73bf44;
+        }
+        .tc-filter-posts-style1 .butn.color-orange1,
+        .tc-filter-posts-style1 .butn.border-orange1,
+        .tc-filter-posts-style1 .butn.hover-bg-orange1 {
+          color: #73bf44 !important;
+          border-color: #73bf44 !important;
+        }
+        .tc-filter-posts-style1 .butn.hover-bg-orange1:hover {
+          background: #73bf44 !important;
+          color: #fff !important;
+        }
+      `}} />
+      <section className="tc-filter-posts-style1">
+        {/* Blurred circular gradient backgrounds */}
+        <div 
+          className="d-none d-md-block"
+          style={{
+            position: 'absolute',
+            top: 0,
+            right: 0,
+            width: 'clamp(300px, 35vw, 500px)',
+            height: 'clamp(180px, 25vh, 300px)',
+            background: 'rgba(115, 191, 68, 0.2)',
+            filter: 'blur(60px)',
+            borderRadius: '500px',
+            pointerEvents: 'none',
+            zIndex: 0
+          }}
+        />
+        <div 
+          className="d-none d-md-block"
+          style={{
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            width: 'clamp(250px, 28vw, 400px)',
+            height: 'clamp(250px, 28vw, 400px)',
+            background: 'rgba(115, 191, 68, 0.15)',
+            filter: 'blur(60px)',
+            borderRadius: '350px',
+            pointerEvents: 'none',
+            zIndex: 0
+          }}
+        />
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div className="filter-row wow fadeInUp slow" data-wow-delay="0.2s">
           <div className="row align-items-center">
             <div className="col-lg-9">
@@ -170,8 +235,9 @@ function FilterPosts() {
             <span> Load More (6) </span>
           </a>
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   );
 }
 

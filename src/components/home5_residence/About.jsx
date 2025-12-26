@@ -34,7 +34,7 @@ function About() {
               </div>
               <div className="col-lg-3">
                 <h6 className="color-brown1 text-uppercase fsz-24 lh-4 js-splittext-lines">
-                  archin rising above THE urbanLANDSCAPE and becomes A VISIBLE
+                  SEECA rising above THE urbanLANDSCAPE and becomes A VISIBLE
                   METAPHOR FOR THE DIZZYING SUCCESS OF ITS INHABITANTS.
                 </h6>
                 <p
@@ -42,7 +42,7 @@ function About() {
                   data-wow-delay="0.2s"
                 >
                   With amenities & services a 5* hotel at the lower levels of
-                  building. Archin will bring the best best experience for you
+                  building. SEECA will bring the best best experience for you
                   freedom enjoy the life
                 </p>
                 <a

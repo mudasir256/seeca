@@ -26,7 +26,7 @@ function Trade() {
                     </defs>
                     <text>
                       <textPath xlinkHref="#textcircle" textLength="900">
-                        archin design service - trade program -
+                        SEECA design service - trade program -
                       </textPath>
                     </text>
                   </svg>

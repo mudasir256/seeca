@@ -116,7 +116,7 @@ function Header() {
           <a href="#"> +75 6531 86 86 </a>
         </p>
         <p>
-          <a href="#"> hello@archinstore.com </a>
+          <a href="#"> hello@SEECAstore.com </a>
         </p>
       </div>
       <div className="arrows">

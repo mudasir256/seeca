@@ -53,7 +53,7 @@ function SideMenu() {
               <div className="col-lg-6">
                 <a href="#">
                   <i className="fal fa-envelope me-2 mt-4 mt-lg-0"></i>
-                  contact@archin.co
+                  contact@SEECA.co
                 </a>
               </div>
             </div>

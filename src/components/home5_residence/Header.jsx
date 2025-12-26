@@ -6,7 +6,7 @@ function Header() {
       <div className="container">
         <div className="main-content">
           <div className="title">
-            <h1> the archin </h1>
+            <h1> the SEECA </h1>
           </div>
           <h4 className="fsz-24 text-uppercase mt-30 lh-4">
             the new highlight <br /> in the city

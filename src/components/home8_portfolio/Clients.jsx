@@ -46,7 +46,7 @@ function Clients() {
                       <div className="clients-card">
                         <div className="info">
                           <div className="text fsz-25 fw-500 mb-20 lh-4">
-                            “Archin - an architecture studio with passionate,
+                            “SEECA - an architecture studio with passionate,
                             profressional and full creativity. The entire team
                             tactfully delivered a project of exceptional quality
                             while staying on schedule and under budget. More
@@ -74,7 +74,7 @@ function Clients() {
                       <div className="clients-card">
                         <div className="info">
                           <div className="text fsz-25 fw-500 mb-20 lh-4">
-                            “Archin - an architecture studio with passionate,
+                            “SEECA - an architecture studio with passionate,
                             profressional and full creativity. The entire team
                             tactfully delivered a project of exceptional quality
                             while staying on schedule and under budget. More

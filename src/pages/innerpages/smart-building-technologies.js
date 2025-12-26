@@ -5,6 +5,9 @@ import Menu from '../../components/innerpage/Menu';
 import Navbar from '../../components/home_preview/Navbar';
 import StartButton from '../../components/home5_residence/StartButton';
 import Header from '../../components/innerpage/contact/Header';
+import SmartBuildingTechnologiesContent from '../../components/innerpage/smart-building-technologies/SmartBuildingTechnologiesContent';
+import Testimonials from '../../components/home1/Testimonials';
+import ContactSection from '../../components/innerpage/smart-building-technologies/ContactSection';
 
 function SmartBuildingTechnologiesPage() {
   return (
@@ -19,17 +22,12 @@ function SmartBuildingTechnologiesPage() {
       <Header
         title="Building Technologies"
         description="Integrating cutting-edge technology to create intelligent and efficient buildings"
-        backgroundImage="/home_preview/assets/img/architecturecontact.jpg"
+        backgroundImage="/home_preview/assets/img/Slider-scaled.jpg"
       />
       <main>
-        <div className="container section-padding">
-          <div className="row">
-            <div className="col-12">
-              <h2>Smart Building Technologies Services</h2>
-              <p>Content coming soon...</p>
-            </div>
-          </div>
-        </div>
+        <SmartBuildingTechnologiesContent />
+        <Testimonials />
+        <ContactSection />
       </main>
       <Footer />
       <StartButton />

@@ -2,13 +2,85 @@ import React from 'react';
 
 function Projects() {
   return (
-    <section className="tc-projects-style2">
-      <div className="container">
+    <>
+      <style dangerouslySetInnerHTML={{__html: `
+        .tc-projects-style2 .nav-link.active {
+          color: #73bf44 !important;
+          background-color: transparent !important;
+        }
+        .tc-projects-style2 .nav-link:hover {
+          color: #73bf44 !important;
+        }
+      `}} />
+    <section 
+      className="tc-projects-style2"
+      style={{
+        position: 'relative',
+        overflow: 'hidden'
+      }}
+    >
+      {/* Blurred circular gradient backgrounds */}
+      <div 
+        className="d-none d-md-block"
+        style={{
+          position: 'absolute',
+          top: 0,
+          right: 0,
+          width: 'clamp(300px, 35vw, 500px)',
+          height: 'clamp(180px, 25vh, 300px)',
+          background: 'rgba(115, 191, 68, 0.3)',
+          filter: 'blur(60px)',
+          borderRadius: '500px',
+          pointerEvents: 'none',
+          zIndex: 0
+        }}
+      />
+      <div 
+        className="d-none d-md-block"
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          right: 'clamp(200px, 38vw, 550px)',
+          width: 'clamp(250px, 28vw, 400px)',
+          height: 'clamp(250px, 28vw, 400px)',
+          background: 'rgba(115, 191, 68, 0.2)',
+          filter: 'blur(60px)',
+          borderRadius: '350px',
+          pointerEvents: 'none',
+          zIndex: 0
+        }}
+      />
+      <div 
+        className="d-none d-md-block"
+        style={{
+          position: 'absolute',
+          top: '20%',
+          left: 'clamp(150px, 20vw, 250px)',
+          width: 'clamp(200px, 21vw, 300px)',
+          height: 'clamp(200px, 21vw, 300px)',
+          background: 'rgba(115, 191, 68, 0.2)',
+          filter: 'blur(60px)',
+          borderRadius: '300px',
+          pointerEvents: 'none',
+          zIndex: 0
+        }}
+      />
+      
+      <div 
+        className="container"
+        style={{
+          position: 'relative',
+          zIndex: 1
+        }}
+      >
         <div className="row align-items-center">
           <div className="col-lg-8">
             <h2 className="fsz-45 fw-500">
               Latest{' '}
-              <span className="sub-font fst-italic color-orange1 fw-400">
+              <span 
+                className="sub-font fst-italic fw-400"
+                style={{ color: '#73bf44' }}
+              >
                 projects
               </span>
             </h2>
@@ -16,7 +88,7 @@ function Projects() {
           <div className="col-lg-4 text-lg-end mt-4 mt-lg-0">
             <a
               href="#"
-              className="butn borderd border rounded-pill hover-bg-black"
+              className="butn borderd border rounded-pill hover-bg-green2"
             >
               <span>
                 See All Projects
@@ -100,9 +172,9 @@ function Projects() {
                           className="bg"
                         />
                       </div>
-                      <div className="arrow">
+                      {/* <div className="arrow">
                         <i className="fal fa-long-arrow-right ico-45"></i>
-                      </div>
+                      </div> */}
                     </a>
                     <div className="info">
                       <div className="tags">
@@ -161,9 +233,9 @@ function Projects() {
                           className="bg"
                         />
                       </div>
-                      <div className="arrow">
+                      {/* <div className="arrow">
                         <i className="fal fa-long-arrow-right ico-45"></i>
-                      </div>
+                      </div> */}
                     </a>
                     <div className="info">
                       <div className="tags">
@@ -192,9 +264,9 @@ function Projects() {
                           className="bg"
                         />
                       </div>
-                      <div className="arrow">
+                      {/* <div className="arrow">
                         <i className="fal fa-long-arrow-right ico-45"></i>
-                      </div>
+                      </div> */}
                     </a>
                     <div className="info">
                       <div className="tags">
@@ -241,9 +313,9 @@ function Projects() {
                           className="bg"
                         />
                       </div>
-                      <div className="arrow">
+                      {/* <div className="arrow">
                         <i className="fal fa-long-arrow-right ico-45"></i>
-                      </div>
+                      </div> */}
                     </a>
                     <div className="info">
                       <div className="tags">
@@ -359,6 +431,7 @@ function Projects() {
         </div>
       </div>
     </section>
+    </>
   );
 }
 
