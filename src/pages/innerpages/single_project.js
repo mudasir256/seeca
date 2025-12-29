@@ -1,15 +1,24 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import PageLayout from '../../components/common/PageLayout';
 import Footer from '../../components/home1/Footer';
 import Menu from '../../components/innerpage/Menu';
 import Navbar from '../../components/home_preview/Navbar';
 import StartButton from '../../components/home5_residence/StartButton';
+import Header from '../../components/innerpage/contact/Header';
 import Project from '../../components/innerpage/single_project/Project';
-import Testimonials from '../../components/innerpage/single_project/Testimonials';
-import RelatedProjects from '../../components/innerpage/single_project/RelatedProjects';
-import Chat from '../../components/innerpage/single_project/Chat';
+import Testimonials from '../../components/home1/Testimonials';
+import ContactSection from '../../components/innerpage/architecture/ContactSection';
 
 function SingleProject() {
+  const location = useLocation();
+  const project = location.state?.project;
+
+  // Default header values
+  const headerTitle = project?.title || 'Project Details';
+  const headerDescription = project?.desc || 'Discover the details of our exceptional project';
+  const headerBackgroundImage = project?.img || '/home_preview/assets/img/pages/portfoliobg.jpg';
+
   return (
     <PageLayout
       cssFiles={[
@@ -19,11 +28,15 @@ function SingleProject() {
       bodyClassName="inner-pages-style1 s-project-pg-style1"
       fixedElements={<><Menu /><Navbar /></>}
     >
+      <Header
+        title={headerTitle}
+        description={headerDescription}
+        backgroundImage={headerBackgroundImage}
+      />
       <main>
         <Project />
         <Testimonials />
-        <RelatedProjects />
-        <Chat />
+        <ContactSection />
       </main>
       <Footer />
       <StartButton />

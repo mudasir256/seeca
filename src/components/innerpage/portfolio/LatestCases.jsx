@@ -1,34 +1,68 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
-import data from '../../../data/innerpages/portfolio/latestcases';
+import { useNavigate } from 'react-router-dom';
+import data from '../../../data/home1/projects/projects1.json';
 import mixitup from 'mixitup';
 function LatestCases() {
   const [activeFilter, setActiveFilter] = useState('All');
   const mixitupContainerRef = useRef(null);
+  const navigate = useNavigate();
+
+  // Category mapping: maps data categories to filter categories
+  const getFilterClasses = (item) => {
+    const classes = [];
+    const sub1 = item.sub1?.toLowerCase() || '';
+    const sub2 = item.sub2?.toLowerCase().replace(/\s+/g, '') || '';
+    
+    // Map sub1 and sub2 to filter categories
+    if (sub1.includes('office') || sub1.includes('commercial') || sub2.includes('commercial')) {
+      classes.push('Commercial');
+    }
+    if (sub1.includes('restaurant') || sub2.includes('hospitality')) {
+      classes.push('Hospitality');
+    }
+    if (sub2.includes('interiordesign') || sub1.includes('interior')) {
+      classes.push('Interior');
+    }
+    if (sub1.includes('retail')) {
+      classes.push('Commercial');
+    }
+    
+    // Always add the original sub2 class for backward compatibility
+    if (item.sub2) {
+      classes.push(item.sub2.replace(/\s+/g, ''));
+    }
+    
+    return classes.join(' ');
+  };
 
   useEffect(() => {
     const initializeMixitup = () => {
-      mixitup(mixitupContainerRef.current, {
-        load: {
-          sort: 'order:asc',
-        },
-        animation: {
-          duration: 700,
-        },
-        classNames: {
-          block: 'filter',
-          elementFilter: 'filter-btn',
-          elementSort: 'sort-btn',
-        },
-        selectors: {
-          target: '.mix-item',
-        },
-      });
+      if (mixitupContainerRef.current) {
+        mixitup(mixitupContainerRef.current, {
+          load: {
+            sort: 'order:asc',
+          },
+          animation: {
+            duration: 700,
+          },
+          classNames: {
+            block: 'filter',
+            elementFilter: 'filter-btn',
+            elementSort: 'sort-btn',
+          },
+          selectors: {
+            target: '.mix-item',
+          },
+        });
+      }
     };
 
     initializeMixitup();
   }, []);
-  const handleFilterClick = (filter) => {
+  
+  const handleFilterClick = (filter, e) => {
+    e.preventDefault();
     setActiveFilter(filter);
 
     // Remove 'active' class from all filter buttons
@@ -36,8 +70,8 @@ function LatestCases() {
       btn.classList.remove('active');
     });
 
-    // Add 'active' class to the clicked filter button, if it exists
-    const clickedButton = document.querySelector(`[data-filter="${filter}"]`);
+    // Add 'active' class to the clicked filter button
+    const clickedButton = e.currentTarget;
     if (clickedButton) {
       clickedButton.classList.add('active');
     }
@@ -94,6 +128,28 @@ function LatestCases() {
           color: #fff;
           box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
         }
+        .tc-latest-cases-style1 .case-card {
+          cursor: pointer;
+        }
+        .tc-latest-cases-style1 .case-card .text {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          line-height: 1.6;
+          max-height: calc(1.6em * 3);
+        }
+        .tc-latest-cases-style1 .case-card .title {
+          font-size: 20px !important;
+          line-height: 1.3;
+        }
+        .tc-latest-cases-style1 .case-card .title a {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: block;
+        }
       `}} />
       <section className="tc-latest-cases-style1">
         {/* Blurred circular gradient backgrounds */}
@@ -139,7 +195,7 @@ function LatestCases() {
               >
                 <div className="links">
                 <a
-                  onClick={() => handleFilterClick('All')}
+                  onClick={(e) => handleFilterClick('All', e)}
                   className={`filter-btn ${
                     activeFilter === 'All' ? 'active' : ''
                   }`}
@@ -150,7 +206,7 @@ function LatestCases() {
                 </a>
                 <a
                   href="#0"
-                  onClick={() => handleFilterClick('Architecture')}
+                  onClick={(e) => handleFilterClick('Architecture', e)}
                   className={`filter-btn ${
                     activeFilter === 'Architecture' ? 'active' : ''
                   }`}
@@ -160,7 +216,7 @@ function LatestCases() {
                 </a>
                 <a
                   href="#0"
-                  onClick={() => handleFilterClick('Interior')}
+                  onClick={(e) => handleFilterClick('Interior', e)}
                   className={`filter-btn ${
                     activeFilter === 'Interior' ? 'active' : ''
                   }`}
@@ -170,7 +226,7 @@ function LatestCases() {
                 </a>
                 <a
                   href="#0"
-                  onClick={() => handleFilterClick('Landscape')}
+                  onClick={(e) => handleFilterClick('Landscape', e)}
                   className={`filter-btn ${
                     activeFilter === 'Landscape' ? 'active' : ''
                   }`}
@@ -180,7 +236,7 @@ function LatestCases() {
                 </a>
                 <a
                   href="#0"
-                  onClick={() => handleFilterClick('Furniture')}
+                  onClick={(e) => handleFilterClick('Furniture', e)}
                   className={`filter-btn ${
                     activeFilter === 'Furniture' ? 'active' : ''
                   }`}
@@ -206,26 +262,28 @@ function LatestCases() {
             >
               <div className="row mixitup" ref={mixitupContainerRef}>
                 {data.map((item, i) => (
-                  <div key={i} className={`col-lg-4 mix-item ${item.subTitle}`}>
-                    <div className="case-card">
-                      <a href={item.img} className="img" data-fancybox="cases">
+                  <div key={i} className={`col-lg-4 mix-item ${getFilterClasses(item)}`}>
+                    <div 
+                      className="case-card"
+                      onClick={() => navigate('/innerpages/single_project', { state: { project: item } })}
+                    >
+                      <div className="img">
                         <img src={item.img} alt="" className="img-cover" />
-                      </a>
+                      </div>
                       <div className="info">
                         <div className="tags mb-30">
-                          <a href="#"> {item.subTitle.split('<br />')[0]} </a>
-                          {item.subTitle.split('<br />')[1] && (
-                            <a href="#"> {item.subTitle.split('<br />')[1]} </a>
+                          <a href="#" onClick={(e) => e.preventDefault()}> {item.sub1} </a>
+                          {item.sub2 && (
+                            <a href="#" onClick={(e) => e.preventDefault()}> {item.sub2} </a>
                           )}
                         </div>
-                        <h3 className="title fsz-35 mb-20">
-                          <a href="#" className="hover-orange1">
+                        <h3 className="title mb-20">
+                          <a href="#" className="hover-orange1" onClick={(e) => e.preventDefault()}>
                             {item.title}
                           </a>
                         </h3>
                         <div className="text color-666">
-                          {item.desc.split('<br />')[0]}
-                          <br /> {item.desc.split('<br />')[1]}
+                          {item.desc}
                         </div>
                       </div>
                     </div>

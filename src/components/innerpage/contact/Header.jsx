@@ -84,6 +84,9 @@ function Header({
           letter-spacing: 3px;
           text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
           animation: fadeInUp 1s ease-out 0.2s both;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
         .tc-contact-header .info .text {
           font-size: 18px;
@@ -92,6 +95,12 @@ function Header({
           max-width: 700px;
           margin: 0 auto;
           animation: fadeInUp 1s ease-out 0.4s both;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
         @media (max-width: 991px) {
           .tc-contact-header {
@@ -104,9 +113,18 @@ function Header({
           .tc-contact-header .info h1 {
             font-size: 56px;
             margin-bottom: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
           .tc-contact-header .info .text {
             font-size: 16px;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
           }
         }
         @media (max-width: 767px) {
@@ -121,10 +139,19 @@ function Header({
             font-size: 42px;
             margin-bottom: 18px;
             letter-spacing: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
           .tc-contact-header .info .text {
             font-size: 15px;
             line-height: 1.7;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
           }
         }
         @media (max-width: 575px) {
@@ -139,10 +166,19 @@ function Header({
             font-size: 32px;
             margin-bottom: 15px;
             letter-spacing: 1px;
+            white-space: normal;
+            overflow: visible;
+            text-overflow: clip;
           }
           .tc-contact-header .info .text {
             font-size: 14px;
             line-height: 1.6;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
           }
         }
       `}} />
