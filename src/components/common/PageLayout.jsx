@@ -32,23 +32,28 @@ const SMOOTH_SCROLL_STYLES = `
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  /* Mobile optimizations */
+  /* Mobile optimizations - Native smooth scrolling only */
   @media (max-width: 991px) {
     html, body {
       -webkit-overflow-scrolling: touch;
       overflow-scrolling: touch;
+      scroll-behavior: smooth;
     }
     .smooth-scroll-content {
       -webkit-overflow-scrolling: touch;
       overflow-scrolling: touch;
-      will-change: transform;
-      transform: translateZ(0);
-      -webkit-transform: translateZ(0);
+      /* Remove GPU acceleration on mobile - use native scrolling */
     }
     /* Improve touch scrolling performance */
     * {
       -webkit-tap-highlight-color: transparent;
       touch-action: pan-y;
+    }
+    /* Ensure ScrollSmoother container doesn't interfere on mobile */
+    #scrollsmoother-container {
+      position: relative !important;
+      transform: none !important;
+      -webkit-transform: none !important;
     }
   }
   @media (prefers-reduced-motion: reduce) {

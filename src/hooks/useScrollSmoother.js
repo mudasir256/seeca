@@ -238,26 +238,34 @@ export const useScrollSmoother = (containerId = 'scrollsmoother-container', enab
             return;
           }
 
-          // Create new smoother for this route
+          // Better mobile detection - check for touch device and screen size
+          const isMobile = window.innerWidth <= 991;
+          const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+          const isMobileDevice = isMobile || isTouchDevice;
+          
+          // Completely disable ScrollSmoother on mobile - use native scrolling instead
+          if (isMobileDevice) {
+            // On mobile, just use native smooth scrolling via CSS
+            // Don't create ScrollSmoother instance at all
+            smootherRef.current = null;
+            window.scrollSmootherInstance = null;
+            return;
+          }
+
+          // Create new smoother for this route - ONLY on desktop/web
           let smoother;
           let resizeTimeout;
           let handleResize;
           
           try {
-            // Better mobile detection - check for touch device and screen size
-            const isMobile = window.innerWidth <= 991;
-            const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-            const isMobileDevice = isMobile || isTouchDevice;
-            
-            // Optimized settings for mobile
+            // Only create ScrollSmoother on desktop/web screens
             smoother = window.ScrollSmoother.create({
               content: `#${containerId}`,
-              smooth: isMobileDevice ? 1.2 : 2,
+              smooth: 2,
               normalizeScroll: true,
               ignoreMobileResize: true,
-              effects: !isMobileDevice, // Disable effects on mobile for better performance
-              smoothTouch: isMobileDevice ? 0.3 : false, // Increased from 0.1 for smoother mobile experience
-              ease: isMobileDevice ? 'power1.out' : 'power2.out',
+              effects: true,
+              ease: 'power2.out',
             });
             smootherRef.current = smoother;
             window.scrollSmootherInstance = smoother;
@@ -265,7 +273,7 @@ export const useScrollSmoother = (containerId = 'scrollsmoother-container', enab
             // Setup animations after smoother is created
             setupAnimations(smoother);
             
-            // Handle mobile resize and orientation changes for better performance
+            // Handle resize and orientation changes
             handleResize = () => {
               clearTimeout(resizeTimeout);
               resizeTimeout = setTimeout(() => {
@@ -279,7 +287,7 @@ export const useScrollSmoother = (containerId = 'scrollsmoother-container', enab
               }, 150);
             };
             
-            // Add resize listener for mobile optimization
+            // Add resize listener
             window.addEventListener('resize', handleResize, { passive: true });
             window.addEventListener('orientationchange', handleResize, { passive: true });
             

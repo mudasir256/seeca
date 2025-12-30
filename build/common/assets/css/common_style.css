@@ -2202,23 +2202,25 @@ input:focus {
 }
 
 /* ========= [ * Mobile Smooth Scroll Optimizations ]  =========*/
-/* Enhanced smooth scrolling for mobile devices */
+/* Native smooth scrolling for mobile devices - GSAP ScrollSmoother disabled */
 @media (max-width: 991px) {
   html, body {
     -webkit-overflow-scrolling: touch;
     overflow-scrolling: touch;
     scroll-behavior: smooth;
+    /* Ensure native scrolling works smoothly */
+    overscroll-behavior: none;
   }
   
   #scrollsmoother-container,
   .smooth-scroll-content {
     -webkit-overflow-scrolling: touch;
     overflow-scrolling: touch;
-    will-change: transform;
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+    /* Remove any transforms that ScrollSmoother might have applied */
+    position: relative !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    will-change: auto !important;
   }
   
   /* Improve touch scrolling performance */
@@ -2227,10 +2229,10 @@ input:focus {
     touch-action: pan-y;
   }
   
-  /* Optimize images for smooth scrolling */
-  img {
-    will-change: auto;
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
+  /* Ensure body scrolls natively on mobile */
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
