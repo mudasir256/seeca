@@ -153,15 +153,19 @@ $(function () {
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
   
     // create the smooth scroller FIRST!
+    // Mobile-optimized settings
+    const isMobile = window.innerWidth <= 991;
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    const isMobileDevice = isMobile || isTouchDevice;
+    
     const smoother = ScrollSmoother.create({
       content: "#scrollsmoother-container",
-      smooth: 2,
+      smooth: isMobileDevice ? 1.2 : 2,
       normalizeScroll: true,
       ignoreMobileResize: true,
-      effects: true,
-      //preventDefault: true,
-      //ease: 'power4.out',
-      //smoothTouch: 0.1,
+      effects: !isMobileDevice, // Disable effects on mobile for better performance
+      smoothTouch: isMobileDevice ? 0.3 : false, // Optimized for mobile touch
+      ease: isMobileDevice ? 'power1.out' : 'power2.out',
     });
   
     // smoother.effects("img", { speed: "auto" });

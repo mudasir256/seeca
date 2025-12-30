@@ -240,21 +240,55 @@ export const useScrollSmoother = (containerId = 'scrollsmoother-container', enab
 
           // Create new smoother for this route
           let smoother;
+          let resizeTimeout;
+          let handleResize;
+          
           try {
+            // Better mobile detection - check for touch device and screen size
             const isMobile = window.innerWidth <= 991;
+            const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            const isMobileDevice = isMobile || isTouchDevice;
+            
+            // Optimized settings for mobile
             smoother = window.ScrollSmoother.create({
               content: `#${containerId}`,
-              smooth: isMobile ? 1.5 : 2,
+              smooth: isMobileDevice ? 1.2 : 2,
               normalizeScroll: true,
               ignoreMobileResize: true,
-              effects: true,
-              smoothTouch: isMobile ? 0.1 : false,
+              effects: !isMobileDevice, // Disable effects on mobile for better performance
+              smoothTouch: isMobileDevice ? 0.3 : false, // Increased from 0.1 for smoother mobile experience
+              ease: isMobileDevice ? 'power1.out' : 'power2.out',
             });
             smootherRef.current = smoother;
             window.scrollSmootherInstance = smoother;
             
             // Setup animations after smoother is created
             setupAnimations(smoother);
+            
+            // Handle mobile resize and orientation changes for better performance
+            handleResize = () => {
+              clearTimeout(resizeTimeout);
+              resizeTimeout = setTimeout(() => {
+                if (smoother && isMounted) {
+                  try {
+                    smoother.refresh();
+                  } catch (e) {
+                    // Ignore refresh errors
+                  }
+                }
+              }, 150);
+            };
+            
+            // Add resize listener for mobile optimization
+            window.addEventListener('resize', handleResize, { passive: true });
+            window.addEventListener('orientationchange', handleResize, { passive: true });
+            
+            // Store cleanup function
+            smoother._resizeCleanup = () => {
+              window.removeEventListener('resize', handleResize);
+              window.removeEventListener('orientationchange', handleResize);
+              clearTimeout(resizeTimeout);
+            };
           } catch (e) {
             console.warn('Failed to create ScrollSmoother:', e);
           }
@@ -276,6 +310,11 @@ export const useScrollSmoother = (containerId = 'scrollsmoother-container', enab
         cancelAnimationFrame(rafId);
       }
 
+      // Cleanup resize listeners
+      if (smootherRef.current && smootherRef.current._resizeCleanup) {
+        smootherRef.current._resizeCleanup();
+      }
+      
       // Cleanup is handled in useLayoutEffect above
       // Just clear refs here
       scrollTriggersRef.current = [];

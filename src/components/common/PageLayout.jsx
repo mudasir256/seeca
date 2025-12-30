@@ -11,19 +11,45 @@ const SMOOTH_SCROLL_STYLES = `
   html {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
   }
   body {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     overflow-x: hidden;
+    position: relative;
   }
   .smooth-scroll-content {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+    will-change: scroll-position;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
   * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+  /* Mobile optimizations */
+  @media (max-width: 991px) {
+    html, body {
+      -webkit-overflow-scrolling: touch;
+      overflow-scrolling: touch;
+    }
+    .smooth-scroll-content {
+      -webkit-overflow-scrolling: touch;
+      overflow-scrolling: touch;
+      will-change: transform;
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+    }
+    /* Improve touch scrolling performance */
+    * {
+      -webkit-tap-highlight-color: transparent;
+      touch-action: pan-y;
+    }
   }
   @media (prefers-reduced-motion: reduce) {
     html, body, .smooth-scroll-content {

@@ -2200,3 +2200,37 @@ input:focus {
 .hover-bg-green2:hover * {
   color: #fff !important;
 }
+
+/* ========= [ * Mobile Smooth Scroll Optimizations ]  =========*/
+/* Enhanced smooth scrolling for mobile devices */
+@media (max-width: 991px) {
+  html, body {
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+  
+  #scrollsmoother-container,
+  .smooth-scroll-content {
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    will-change: transform;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  
+  /* Improve touch scrolling performance */
+  * {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: pan-y;
+  }
+  
+  /* Optimize images for smooth scrolling */
+  img {
+    will-change: auto;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+}
