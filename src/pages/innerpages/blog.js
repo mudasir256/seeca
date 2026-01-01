@@ -22,7 +22,7 @@ function BlogPage() {
       <Header
         title="Blog"
         description="Stay updated with our latest news, insights, and architectural trends"
-        backgroundImage="/home_preview/assets/img/pages/blog.jpg"
+        backgroundImage="/home_preview/assets/img/blogbg.jpg"
       />
       <main>
         <FilterPosts />

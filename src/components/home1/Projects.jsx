@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import data1 from '../../data/home1/projects/projects1';
 
 const truncateToWords = (text, limit) => {
@@ -11,6 +12,7 @@ const truncateToWords = (text, limit) => {
 function Projects() {
   // Ensure data1 is an array
   const projectsData = Array.isArray(data1) ? data1 : [];
+  const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [touchStart, setTouchStart] = useState(0);
@@ -951,7 +953,11 @@ function Projects() {
             <div className="col-lg-3 mt-4 mt-lg-0 text-lg-end">
               <a
                 href="#"
-                  className="butn border rounded-pill projects-see-all-btn"
+                className="butn border rounded-pill projects-see-all-btn"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate('/innerpages/portfolio');
+                }}
               >
                 <span>
                   See All Projects
@@ -989,13 +995,19 @@ function Projects() {
                             key={index}
                             style={{ backgroundColor: 'transparent', borderRadius: '240px' }}
                             className={`project-slide-card ${position} ${isAnimating ? 'animating' : ''}`}
-                            onClick={() => {
-                              if (position.startsWith("next")) {
+                            onClick={(e) => {
+                              // Only navigate if clicking on the card itself, not on navigation buttons
+                              if (e.target.closest('.project-nav-btn') || e.target.closest('.project-mobile-nav-btn') || e.target.closest('.project-view-btn')) {
+                                return;
+                              }
+                              if (position === "active") {
+                                // Navigate to detail page when clicking active card
+                                navigate('/innerpages/single_project', { state: { project: item } });
+                              } else if (position.startsWith("next")) {
                                 const nextCount = parseInt(position.split("-")[1]) || 1;
                                 const targetIndex = (currentIndex + nextCount) % projectsData.length;
                                 goToSlide(targetIndex);
-                              }
-                              if (position.startsWith("prev")) {
+                              } else if (position.startsWith("prev")) {
                                 const prevCount = parseInt(position.split("-")[1]) || 1;
                                 const targetIndex = (currentIndex - prevCount + projectsData.length) % projectsData.length;
                                 goToSlide(targetIndex);
@@ -1014,14 +1026,33 @@ function Projects() {
                                     <a href="#">{item.sub2}</a>
                                   </div>
                                   <h3 className="project-card-title">
-                                    <a href="#">{item.title}</a>
+                                    <a 
+                                      href="#"
+                                      onClick={(e) => {
+                                        e.preventDefault();
+                                        e.stopPropagation();
+                                        if (isActive) {
+                                          navigate('/innerpages/single_project', { state: { project: item } });
+                                        }
+                                      }}
+                                    >
+                                      {item.title}
+                                    </a>
                                   </h3>
                                   <div className="project-card-desc">
                                     {item.desc}
                                   </div>
                                   {isActive && (
                                     <div className="project-card-footer active">
-                                      <a href={item.img} className="project-view-btn" data-fancybox="proj">
+                                      <a 
+                                        href="#" 
+                                        className="project-view-btn"
+                                        onClick={(e) => {
+                                          e.preventDefault();
+                                          e.stopPropagation();
+                                          navigate('/innerpages/single_project', { state: { project: item } });
+                                        }}
+                                      >
                                         <span>See Detail</span>
                                         <div className="project-view-btn-icon">
                                           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1119,13 +1150,19 @@ function Projects() {
                           <div
                             key={index}
                             className={`project-slide-card ${position} ${isAnimating ? 'animating' : ''}`}
-                            onClick={() => {
-                              if (position.startsWith("next")) {
+                            onClick={(e) => {
+                              // Only navigate if clicking on the card itself, not on navigation buttons
+                              if (e.target.closest('.project-nav-btn') || e.target.closest('.project-mobile-nav-btn') || e.target.closest('.project-view-btn')) {
+                                return;
+                              }
+                              if (position === "active") {
+                                // Navigate to detail page when clicking active card
+                                navigate('/innerpages/single_project', { state: { project: item } });
+                              } else if (position.startsWith("next")) {
                                 const nextCount = parseInt(position.split("-")[1]) || 1;
                                 const targetIndex = (currentIndex + nextCount) % projectsData.length;
                                 goToSlide(targetIndex);
-                              }
-                              if (position.startsWith("prev")) {
+                              } else if (position.startsWith("prev")) {
                                 const prevCount = parseInt(position.split("-")[1]) || 1;
                                 const targetIndex = (currentIndex - prevCount + projectsData.length) % projectsData.length;
                                 goToSlide(targetIndex);
@@ -1144,14 +1181,33 @@ function Projects() {
                                     <a href="#">{item.sub2}</a>
                                   </div>
                                   <h3 className="project-card-title">
-                                    <a href="#">{item.title}</a>
+                                    <a 
+                                      href="#"
+                                      onClick={(e) => {
+                                        e.preventDefault();
+                                        e.stopPropagation();
+                                        if (isActive) {
+                                          navigate('/innerpages/single_project', { state: { project: item } });
+                                        }
+                                      }}
+                                    >
+                                      {item.title}
+                                    </a>
                                   </h3>
                                   <div className="project-card-desc">
                                     {item.desc}
                                   </div>
                                   {isActive && (
                                     <div className="project-card-footer active">
-                                      <a href={item.img} className="project-view-btn" data-fancybox="proj">
+                                      <a 
+                                        href="#" 
+                                        className="project-view-btn"
+                                        onClick={(e) => {
+                                          e.preventDefault();
+                                          e.stopPropagation();
+                                          navigate('/innerpages/single_project', { state: { project: item } });
+                                        }}
+                                      >
                                         <span>See Detail</span>
                                         <div className="project-view-btn-icon">
                                           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -2,9 +2,11 @@
 import mixitup from 'mixitup';
 import data from '../../../data/innerpages/blog/filter';
 import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 function FilterPosts() {
   const [activeFilter, setActiveFilter] = useState('All');
   const mixitupContainerRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const initializeMixitup = () => {
@@ -201,23 +203,46 @@ function FilterPosts() {
                 <div
                   className="post-card mt-70 wow fadeInUp slow"
                   data-wow-delay="0.2s"
+                  onClick={() => navigate('/innerpages/single_post', { state: { blog: item } })}
+                  style={{ cursor: 'pointer' }}
                 >
-                  <a
-                    href="#"
+                  <div
                     className="img th-280 radius-7 overflow-hidden d-block"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      navigate('/innerpages/single_post', { state: { blog: item } });
+                    }}
+                    style={{ cursor: 'pointer' }}
                   >
                     <img src={item.img} alt="" className="img-cover" />
-                  </a>
+                  </div>
                   <div className="info pt-30">
                     <div className="tags color-666 text-uppercase fsz-12">
-                      <a href="#" className="color-orange1">
+                      <a 
+                        href="#" 
+                        className="color-orange1"
+                        onClick={(e) => e.preventDefault()}
+                      >
                         {item.subTitle}
                       </a>
                       <span className="circle icon-3 bg-666 rounded-circle mx-3"></span>
-                      <a href="#"> {item.history} </a>
+                      <a 
+                        href="#"
+                        onClick={(e) => e.preventDefault()}
+                      > 
+                        {item.history} 
+                      </a>
                     </div>
                     <h3 className="title mt-15">
-                      <a href="#" className="hover-orange1 fsz-24">
+                      <a 
+                        href="#" 
+                        className="hover-orange1 fsz-24"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          navigate('/innerpages/single_post', { state: { blog: item } });
+                        }}
+                      >
                         {item.title}
                       </a>
                     </h3>
