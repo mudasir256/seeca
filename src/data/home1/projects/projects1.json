@@ -21,74 +21,794 @@
     ]
   },
   {
-    "title": "React Outlet – Lahore",
-    "sub1": "Retail",
+    "title": "ReactOutlet – Lahore",
+    "sub1": "Office",
     "sub2": "Commercial",
     "desc": "The idea was to create a contemporary design that is one of its kind. Sharp straight lines in dark tones are used for design which is set against the background of delicately curved panels in softer tones making the display stand out but at the same time balancing it as well. Each frame for display is customized specifically for a purpose making sure to display all varieties of merchandise, from short and long garments to shoes and accessories.",
-    "img": "/home1/assets/img/projects/reactoutlet.jpg",
+    "img": "/home_preview/assets/img/Interior_Design/5656.ReactOutlet-Lahore/CAM01.jpg",
     "client": "Mr. Masroor Bhatti",
     "location": "LAHORE",
     "area": "3600 Sqft",
     "images": [
-      "/home1/assets/img/projects/reactoutlet/react1.jpg",
-      "/home1/assets/img/projects/reactoutlet/react2.jpg",
-      "/home1/assets/img/projects/reactoutlet/react3.jpg",
-      "/home1/assets/img/projects/reactoutlet/react4.jpg",
-      "/home1/assets/img/projects/reactoutlet/react5.jpg"
+      "/home_preview/assets/img/Interior_Design/5656.ReactOutlet-Lahore/CAM01.jpg",
+      "/home_preview/assets/img/Interior_Design/5656.ReactOutlet-Lahore/CAM02.jpg",
+      "/home_preview/assets/img/Interior_Design/5656.ReactOutlet-Lahore/CAM03.jpg",
+      "/home_preview/assets/img/Interior_Design/5656.ReactOutlet-Lahore/CAM04.jpg",
+      "/home_preview/assets/img/Interior_Design/5656.ReactOutlet-Lahore/CAM05.jpg"
     ]
   },
   {
-    "title": "ZAK Shinwari – Sialkot",
-    "sub1": "Restaurant",
-    "sub2": "Hospitality",
+    "title": "ZAKShinwari – Sialkot",
+    "sub1": "Interior Design",
+    "sub2": "Commercial",
     "desc": "The idea behind this luxury fine dine was \"Renaissance\". A fusion of culture with modernism. Culture may or may not directly effect our architecture. It depends upon how we approach it. The food of Afghanistan is now served in modern luxury interior so you can enjoy it whilst forgetting the dark times.",
-    "img": "/home1/assets/img/projects/zak.jpg",
+    "img": "/home_preview/assets/img/Interior_Design/5806.ZAKShinwari-Sialkot/FFCAM01.jpg",
     "client": "Mr. Zulfiqar Butt",
     "location": "Sialkot",
     "area": "6000 Sqft",
     "images": [
-      "/home1/assets/img/projects/zak/zak1.jpg",
-      "/home1/assets/img/projects/zak/zak2.jpg",
-      "/home1/assets/img/projects/zak/zak3.jpg",
-      "/home1/assets/img/projects/zak/zak4.jpg",
-      "/home1/assets/img/projects/zak/zak5.jpg",
-      "/home1/assets/img/projects/zak/zak6.jpg"
+      "/home_preview/assets/img/Interior_Design/5806.ZAKShinwari-Sialkot/FFCAM01.jpg",
+      "/home_preview/assets/img/Interior_Design/5806.ZAKShinwari-Sialkot/FFCAM02.jpg",
+      "/home_preview/assets/img/Interior_Design/5806.ZAKShinwari-Sialkot/FFCAM03.jpg",
+      "/home_preview/assets/img/Interior_Design/5806.ZAKShinwari-Sialkot/GFCam01.jpg",
+      "/home_preview/assets/img/Interior_Design/5806.ZAKShinwari-Sialkot/GFCam02.jpg",
+      "/home_preview/assets/img/Interior_Design/5806.ZAKShinwari-Sialkot/GFCam03.jpg",
+      "/home_preview/assets/img/Interior_Design/5806.ZAKShinwari-Sialkot/GFCam04.jpg"
     ]
   },
   {
-    "title": "Ignition Pro – Gulberg, Lahore",
-    "sub1": "Commercial",
-    "sub2": "Interior Design",
+    "title": "IgnitionPro – Gulberg, Lahore",
+    "sub1": "Interior Design",
+    "sub2": "Commercial",
     "desc": "Balancing the colours of the logo with the space to keep it simple and clean while not making it boring is the main idea of the design. Using red as a prominent colour to make the space more vibrant.",
-    "img": "/home1/assets/img/projects/ignitionpro.jpg",
+    "img": "/home_preview/assets/img/Interior_Design/5770.IgnitionPro-Gulberg,Lahore/01.jpg",
     "client": "Mr. Hamza Atiq",
     "location": "LAHORE",
     "area": "9000 Sqft",
     "images": [
-      "/home1/assets/img/projects/ignition/ignition1.jpg",
-      "/home1/assets/img/projects/ignition/ignition2.jpg",
-      "/home1/assets/img/projects/ignition/ignition3.jpg",
-      "/home1/assets/img/projects/ignition/ignition4.jpg",
-      "/home1/assets/img/projects/ignition/ignition5.jpg",
-      "/home1/assets/img/projects/ignition/ignition6.jpg",
-      "/home1/assets/img/projects/ignition/ignition7.jpg"
+      "/home_preview/assets/img/Interior_Design/5770.IgnitionPro-Gulberg,Lahore/01.jpg",
+      "/home_preview/assets/img/Interior_Design/5770.IgnitionPro-Gulberg,Lahore/03.jpg",
+      "/home_preview/assets/img/Interior_Design/5770.IgnitionPro-Gulberg,Lahore/05.jpg",
+      "/home_preview/assets/img/Interior_Design/5770.IgnitionPro-Gulberg,Lahore/06.jpg",
+      "/home_preview/assets/img/Interior_Design/5770.IgnitionPro-Gulberg,Lahore/Classroom02.jpg",
+      "/home_preview/assets/img/Interior_Design/5770.IgnitionPro-Gulberg,Lahore/DirectorOffice.jpg",
+      "/home_preview/assets/img/Interior_Design/5770.IgnitionPro-Gulberg,Lahore/MeetingRoom.jpg"
     ]
   },
   {
-    "title": "Asian Bistro – Islamabad",
+    "title": "AsianBistro – Islamabad",
     "sub1": "Restaurant",
     "sub2": "Hospitality",
     "desc": "The idea was to design a space along contemporary Asian inspired interior design. It has an ambiance that is raw, elemental, and creative, featuring a live digital mural wall and a unique bar design as well as a life sized cherry blossom tree running along the ceiling. In short, the space is innovative and one of its kind, sure to attract visitors for the value of its exquisite experience.",
-    "img": "/home1/assets/img/projects/asianbristo.jpg",
+    "img": "/home_preview/assets/img/Interior_Design/5761.AsianBistro-Islamabad/03.jpg",
     "client": "Mr. Mian Fahad",
     "location": "Islamabad",
     "area": "2250 Sqft",
     "images": [
-      "/home1/assets/img/projects/asianbristo/asianbristo1.jpg",
-      "/home1/assets/img/projects/asianbristo/asianbristo2.jpg",
-      "/home1/assets/img/projects/asianbristo/asianbristo3.jpg",
-      "/home1/assets/img/projects/asianbristo/asianbristo4.jpg",
-      "/home1/assets/img/projects/asianbristo/asianbristo5.jpg"
+      "/home_preview/assets/img/Interior_Design/5761.AsianBistro-Islamabad/03.jpg",
+      "/home_preview/assets/img/Interior_Design/5761.AsianBistro-Islamabad/06.2.jpg",
+      "/home_preview/assets/img/Interior_Design/5761.AsianBistro-Islamabad/5761.Render(1).jpg",
+      "/home_preview/assets/img/Interior_Design/5761.AsianBistro-Islamabad/5761.Render(2).jpg",
+      "/home_preview/assets/img/Interior_Design/5761.AsianBistro-Islamabad/5761.Render(3).jpg"
+    ]
+  },
+  {
+    "title": "ShahbazResidence – Lake City, Lahore",
+    "sub1": "Residential",
+    "sub2": "Architecture Design",
+    "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+    "img": "/home_preview/assets/img/Architecture_Deisgn/5607.ShahbazResidence-Lake City,Lahore/5607CAM01.jpg",
+    "client": "",
+    "location": "Lake City, Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Architecture_Deisgn/5607.ShahbazResidence-Lake City,Lahore/5607CAM01.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5607.ShahbazResidence-Lake City,Lahore/5607CAM02.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5607.ShahbazResidence-Lake City,Lahore/5607CAM03.jpg"
+    ]
+  },
+  {
+    "title": "HamzaArcade – BahriaTown, Lahore",
+    "sub1": "Commercial",
+    "sub2": "Architecture Design",
+    "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+    "img": "/home_preview/assets/img/Architecture_Deisgn/5618.HamzaArcade-BahriaTown,Lahore/Waseem_SeecaView1.jpg",
+    "client": "",
+    "location": "BahriaTown, Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Architecture_Deisgn/5618.HamzaArcade-BahriaTown,Lahore/Waseem_SeecaView1.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5618.HamzaArcade-BahriaTown,Lahore/Waseem_SeecaView2.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5618.HamzaArcade-BahriaTown,Lahore/Waseem_SeecaView3.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5618.HamzaArcade-BahriaTown,Lahore/Waseem_SeecaView4.1.png"
+    ]
+  },
+  {
+    "title": "BarkaMall – Oman",
+    "sub1": "Commercial",
+    "sub2": "Architecture Design",
+    "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+    "img": "/home_preview/assets/img/Architecture_Deisgn/5645.BarkaMall-Oman/5645.BarkaMall(1).png",
+    "client": "",
+    "location": "Oman",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Architecture_Deisgn/5645.BarkaMall-Oman/5645.BarkaMall(1).png",
+      "/home_preview/assets/img/Architecture_Deisgn/5645.BarkaMall-Oman/5645.BarkaMall(2).png",
+      "/home_preview/assets/img/Architecture_Deisgn/5645.BarkaMall-Oman/5645.BarkaMall(3).png",
+      "/home_preview/assets/img/Architecture_Deisgn/5645.BarkaMall-Oman/5645.BarkaMall(4).png",
+      "/home_preview/assets/img/Architecture_Deisgn/5645.BarkaMall-Oman/5645.BarkaMall(5).png"
+    ]
+  },
+  {
+    "title": "MominSolutions – AbdalianSociety, Lahore",
+    "sub1": "Architecture",
+    "sub2": "Architecture Design",
+    "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+    "img": "/home_preview/assets/img/Architecture_Deisgn/5662.MominSolutions-AbdalianSociety,Lahore/5662ITOFFICEVIEW01.jpg",
+    "client": "",
+    "location": "AbdalianSociety, Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Architecture_Deisgn/5662.MominSolutions-AbdalianSociety,Lahore/5662ITOFFICEVIEW01.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5662.MominSolutions-AbdalianSociety,Lahore/5662ITOFFICEVIEW02.jpg"
+    ]
+  },
+  {
+    "title": "EhsanHeight – EtihadTown, Lahore",
+    "sub1": "Residential",
+    "sub2": "Architecture Design",
+    "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+    "img": "/home_preview/assets/img/Architecture_Deisgn/5663.EhsanHeight-EtihadTown,Lahore/CAM01.jpg",
+    "client": "",
+    "location": "EtihadTown, Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Architecture_Deisgn/5663.EhsanHeight-EtihadTown,Lahore/CAM01.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5663.EhsanHeight-EtihadTown,Lahore/CAM02.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5663.EhsanHeight-EtihadTown,Lahore/CAM03.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5663.EhsanHeight-EtihadTown,Lahore/CAM04.jpg"
+    ]
+  },
+  {
+    "title": "MasuadTech – Daroghewala, Lahore",
+    "sub1": "Architecture",
+    "sub2": "Architecture Design",
+    "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+    "img": "/home_preview/assets/img/Architecture_Deisgn/5682.MasuadTech-Daroghewala,Lahore/01.jpg",
+    "client": "",
+    "location": "Daroghewala, Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Architecture_Deisgn/5682.MasuadTech-Daroghewala,Lahore/01.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5682.MasuadTech-Daroghewala,Lahore/02.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5682.MasuadTech-Daroghewala,Lahore/03.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5682.MasuadTech-Daroghewala,Lahore/04.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5682.MasuadTech-Daroghewala,Lahore/05.jpg"
+    ]
+  },
+  {
+    "title": "USApparel – Lahore",
+    "sub1": "Commercial",
+    "sub2": "Architecture Design",
+    "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+    "img": "/home_preview/assets/img/Architecture_Deisgn/5687.USApparel-Lahore/03(2).jpg",
+    "client": "",
+    "location": "Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Architecture_Deisgn/5687.USApparel-Lahore/03(2).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5687.USApparel-Lahore/5687.EditedRenders01.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5687.USApparel-Lahore/5687.EditedRenders02.jpg"
+    ]
+  },
+  {
+    "title": "AbdullahResidence – NespakSociety, Lahore",
+    "sub1": "Residential",
+    "sub2": "Interior Design",
+    "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+    "img": "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/01.jpg",
+    "client": "",
+    "location": "NespakSociety, Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/01.jpg",
+      "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/02.jpg",
+      "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/03.jpg",
+      "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/09.jpg",
+      "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/CHILD(1).jpg",
+      "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/CHILD(2).jpg",
+      "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/CHILD(3).jpg",
+      "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/CHILD(4).jpg",
+      "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/DiningCAM03(1).jpg",
+      "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/DiningCAM03(3).jpg",
+      "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/MasterBed01(1).jpg",
+      "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/MasterBed01(2).jpg",
+      "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/MasterBed01(3).jpg"
+    ]
+  },
+  {
+    "title": "FaisalResidence – Lahore",
+    "sub1": "Residential",
+    "sub2": "Architecture Design",
+    "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+    "img": "/home_preview/assets/img/Architecture_Deisgn/5746.FaisalResidence-Lahore/5746.CAM05(1).jpg",
+    "client": "",
+    "location": "Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Architecture_Deisgn/5746.FaisalResidence-Lahore/5746.CAM05(1).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5746.FaisalResidence-Lahore/5746.CAM05(2).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5746.FaisalResidence-Lahore/5746.CAM05(3).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5746.FaisalResidence-Lahore/5746.CAM05(4).jpg"
+    ]
+  },
+  {
+    "title": "ShabbirResidence – FaisalTown, Lahore",
+    "sub1": "Residential",
+    "sub2": "Architecture Design",
+    "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+    "img": "/home_preview/assets/img/Architecture_Deisgn/5753.ShabbirResidence-FaisalTown,Lahore/01.jpg",
+    "client": "",
+    "location": "FaisalTown, Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Architecture_Deisgn/5753.ShabbirResidence-FaisalTown,Lahore/01.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5753.ShabbirResidence-FaisalTown,Lahore/02.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5753.ShabbirResidence-FaisalTown,Lahore/03.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5753.ShabbirResidence-FaisalTown,Lahore/04.jpg"
+    ]
+  },
+  {
+    "title": "AbdulMoeedResidence – Lahore",
+    "sub1": "Residential",
+    "sub2": "Architecture Design",
+    "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+    "img": "/home_preview/assets/img/Architecture_Deisgn/5765.AbdulMoeedResidence-Lahore/CAMERA01.jpg",
+    "client": "",
+    "location": "Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Architecture_Deisgn/5765.AbdulMoeedResidence-Lahore/CAMERA01.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5765.AbdulMoeedResidence-Lahore/CAMERA02.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5765.AbdulMoeedResidence-Lahore/CAMERA03.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5765.AbdulMoeedResidence-Lahore/CAMERA04.jpg"
+    ]
+  },
+  {
+    "title": "QasimResidence – LakeCity, Lahore",
+    "sub1": "Residential",
+    "sub2": "Architecture Design",
+    "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+    "img": "/home_preview/assets/img/Architecture_Deisgn/5780.QasimResidence-LakeCity,Lahore/5780.Renders(1).jpg",
+    "client": "",
+    "location": "LakeCity, Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Architecture_Deisgn/5780.QasimResidence-LakeCity,Lahore/5780.Renders(1).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5780.QasimResidence-LakeCity,Lahore/5780.Renders(2).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5780.QasimResidence-LakeCity,Lahore/5780.Renders(3).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5780.QasimResidence-LakeCity,Lahore/5780.Renders(4).jpg"
+    ]
+  },
+  {
+    "title": "SamadHeight – EtihadTown, Lahore",
+    "sub1": "Residential",
+    "sub2": "Architecture Design",
+    "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+    "img": "/home_preview/assets/img/Architecture_Deisgn/5785.SamadHeight-EtihadTown,Lahore/5785.Renders(1).jpg",
+    "client": "",
+    "location": "EtihadTown, Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Architecture_Deisgn/5785.SamadHeight-EtihadTown,Lahore/5785.Renders(1).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5785.SamadHeight-EtihadTown,Lahore/5785.Renders(2).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5785.SamadHeight-EtihadTown,Lahore/5785.Renders(3).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5785.SamadHeight-EtihadTown,Lahore/5785.Renders(5).jpg"
+    ]
+  },
+  {
+    "title": "ZilEHumaResidence – Lahore",
+    "sub1": "Residential",
+    "sub2": "Architecture Design",
+    "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+    "img": "/home_preview/assets/img/Architecture_Deisgn/5801.ZilEHumaResidence-Lahore/5801.Renders(1).jpg",
+    "client": "",
+    "location": "Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Architecture_Deisgn/5801.ZilEHumaResidence-Lahore/5801.Renders(1).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5801.ZilEHumaResidence-Lahore/5801.Renders(2).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5801.ZilEHumaResidence-Lahore/5801.Renders(3).jpg"
+    ]
+  },
+  {
+    "title": "AhmadHeight – Somalia",
+    "sub1": "Residential",
+    "sub2": "Architecture Design",
+    "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+    "img": "/home_preview/assets/img/Architecture_Deisgn/5804.AhmadHeight-Somalia/5804.Renders(1).jpg",
+    "client": "",
+    "location": "Somalia",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Architecture_Deisgn/5804.AhmadHeight-Somalia/5804.Renders(1).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5804.AhmadHeight-Somalia/5804.Renders(2).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5804.AhmadHeight-Somalia/5804.Renders(3).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5804.AhmadHeight-Somalia/5804.Renders(4).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5804.AhmadHeight-Somalia/5804.Renders(5).jpg"
+    ]
+  },
+  {
+    "title": "AsadResidence – LakeCity, Lahore",
+    "sub1": "Residential",
+    "sub2": "Architecture Design",
+    "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+    "img": "/home_preview/assets/img/Architecture_Deisgn/5810.AsadResidence-LakeCity,Lahore/CAM01.jpg",
+    "client": "",
+    "location": "LakeCity, Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Architecture_Deisgn/5810.AsadResidence-LakeCity,Lahore/CAM01.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5810.AsadResidence-LakeCity,Lahore/CAM02.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5810.AsadResidence-LakeCity,Lahore/CAM03.jpg"
+    ]
+  },
+  {
+    "title": "SaleemAlbelaHouse – ParagonCity, Lahore",
+    "sub1": "Residential",
+    "sub2": "Architecture Design",
+    "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+    "img": "/home_preview/assets/img/Architecture_Deisgn/5829.SaleemAlbelaHouse-ParagonCity,Lahore/5829.CAM01(1).jpg",
+    "client": "",
+    "location": "ParagonCity, Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Architecture_Deisgn/5829.SaleemAlbelaHouse-ParagonCity,Lahore/5829.CAM01(1).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5829.SaleemAlbelaHouse-ParagonCity,Lahore/5829.CAM01(2).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5829.SaleemAlbelaHouse-ParagonCity,Lahore/5829.CAM01(3).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5829.SaleemAlbelaHouse-ParagonCity,Lahore/5829.CAM01(4).jpg"
+    ]
+  },
+  {
+    "title": "AbdulAzizAbdullah – Nairobi, Kenya",
+    "sub1": "Architecture",
+    "sub2": "Architecture Design",
+    "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+    "img": "/home_preview/assets/img/Architecture_Deisgn/5832.AbdulAzizAbdullah-Nairobi,Kenya/CAM01.jpg",
+    "client": "",
+    "location": "Nairobi, Kenya",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Architecture_Deisgn/5832.AbdulAzizAbdullah-Nairobi,Kenya/CAM01.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5832.AbdulAzizAbdullah-Nairobi,Kenya/CAM02.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5832.AbdulAzizAbdullah-Nairobi,Kenya/CAM03.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5832.AbdulAzizAbdullah-Nairobi,Kenya/CAM04.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5832.AbdulAzizAbdullah-Nairobi,Kenya/CAM05.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5832.AbdulAzizAbdullah-Nairobi,Kenya/CAM06.jpg"
+    ]
+  },
+  {
+    "title": "VocationalVilla – Turks&CaicosIsland",
+    "sub1": "Residential",
+    "sub2": "Interior Design",
+    "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+    "img": "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/01(1).jpg",
+    "client": "",
+    "location": "Turks&CaicosIsland",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/01(1).jpg",
+      "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/02(1).jpg",
+      "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/04.jpg",
+      "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/07.jpg",
+      "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/10.5.jpg",
+      "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/5.5.jpg",
+      "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/5861.07(1).jpg",
+      "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/5861.07(2).jpg",
+      "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/5861.07(3).jpg",
+      "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/5861.07(4).jpg",
+      "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/5861.07(5).jpg",
+      "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/5861.07(6).jpg",
+      "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/5861.07(7).jpg",
+      "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/View-7.jpg"
+    ]
+  },
+  {
+    "title": "BinUmerHeight – Lahore",
+    "sub1": "Residential",
+    "sub2": "Architecture Design",
+    "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+    "img": "/home_preview/assets/img/Architecture_Deisgn/5869.BinUmerHeight-Lahore/EveningView.jpg",
+    "client": "",
+    "location": "Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Architecture_Deisgn/5869.BinUmerHeight-Lahore/EveningView.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5869.BinUmerHeight-Lahore/View-1(1).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5869.BinUmerHeight-Lahore/View-2.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5869.BinUmerHeight-Lahore/View-3.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5869.BinUmerHeight-Lahore/View-5-1-1.jpg"
+    ]
+  },
+  {
+    "title": "BilalResidence – Lahore",
+    "sub1": "Residential",
+    "sub2": "Architecture Design",
+    "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+    "img": "/home_preview/assets/img/Architecture_Deisgn/5878.BilalResidence-Lahore/View-1(8).jpg",
+    "client": "",
+    "location": "Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Architecture_Deisgn/5878.BilalResidence-Lahore/View-1(8).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5878.BilalResidence-Lahore/View-1(9).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5878.BilalResidence-Lahore/View-2(4).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5878.BilalResidence-Lahore/View-3(2).jpg"
+    ]
+  },
+  {
+    "title": "FahadResidence – Lahore",
+    "sub1": "Residential",
+    "sub2": "Architecture Design",
+    "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+    "img": "/home_preview/assets/img/Architecture_Deisgn/5880.FahadResidence-Lahore/LightTest-1(1).jpg",
+    "client": "",
+    "location": "Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Architecture_Deisgn/5880.FahadResidence-Lahore/LightTest-1(1).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5880.FahadResidence-Lahore/LightTest-2(1).jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5880.FahadResidence-Lahore/LightTest-3.jpg"
+    ]
+  },
+  {
+    "title": "HamzaArcadeIII – Lahore",
+    "sub1": "Commercial",
+    "sub2": "Architecture Design",
+    "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+    "img": "/home_preview/assets/img/Architecture_Deisgn/5881.HamzaArcadeIII-Lahore/5881.DayView001.1.jpg",
+    "client": "",
+    "location": "Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Architecture_Deisgn/5881.HamzaArcadeIII-Lahore/5881.DayView001.1.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5881.HamzaArcadeIII-Lahore/5881.DayView002.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5881.HamzaArcadeIII-Lahore/5881.DayView004.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5881.HamzaArcadeIII-Lahore/5881.NightView001.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5881.HamzaArcadeIII-Lahore/5881.NightView002.jpg",
+      "/home_preview/assets/img/Architecture_Deisgn/5881.HamzaArcadeIII-Lahore/5881.NightView003.jpg"
+    ]
+  },
+  {
+    "title": "MomentumFitness – JoharTown, Lahore",
+    "sub1": "Fitness",
+    "sub2": "Commercial",
+    "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+    "img": "/home_preview/assets/img/Interior_Design/5561.MomentumFitness-JoharTown,Lahore/5561.(2).jpg",
+    "client": "",
+    "location": "JoharTown, Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Interior_Design/5561.MomentumFitness-JoharTown,Lahore/5561.(2).jpg",
+      "/home_preview/assets/img/Interior_Design/5561.MomentumFitness-JoharTown,Lahore/5561.(3).jpg",
+      "/home_preview/assets/img/Interior_Design/5561.MomentumFitness-JoharTown,Lahore/5561.(4).jpg",
+      "/home_preview/assets/img/Interior_Design/5561.MomentumFitness-JoharTown,Lahore/5561.(5).jpg",
+      "/home_preview/assets/img/Interior_Design/5561.MomentumFitness-JoharTown,Lahore/5561.(6).jpg",
+      "/home_preview/assets/img/Interior_Design/5561.MomentumFitness-JoharTown,Lahore/5561.(7).jpg",
+      "/home_preview/assets/img/Interior_Design/5561.MomentumFitness-JoharTown,Lahore/5561.(8).jpg"
+    ]
+  },
+  {
+    "title": "DivineDiva – LakeCity, Lahore",
+    "sub1": "Interior Design",
+    "sub2": "Commercial",
+    "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+    "img": "/home_preview/assets/img/Interior_Design/5635.DivineDiva-LakeCity,Lahore/5635.CAM01.jpg",
+    "client": "",
+    "location": "LakeCity, Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Interior_Design/5635.DivineDiva-LakeCity,Lahore/5635.CAM01.jpg",
+      "/home_preview/assets/img/Interior_Design/5635.DivineDiva-LakeCity,Lahore/5635.CAM03.jpg",
+      "/home_preview/assets/img/Interior_Design/5635.DivineDiva-LakeCity,Lahore/CAM02.jpg",
+      "/home_preview/assets/img/Interior_Design/5635.DivineDiva-LakeCity,Lahore/CAM04.jpg",
+      "/home_preview/assets/img/Interior_Design/5635.DivineDiva-LakeCity,Lahore/CAM05.jpg",
+      "/home_preview/assets/img/Interior_Design/5635.DivineDiva-LakeCity,Lahore/CAM06.jpg"
+    ]
+  },
+  {
+    "title": "AmbreenResidence – Lahore",
+    "sub1": "Residential",
+    "sub2": "Interior Design",
+    "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+    "img": "/home_preview/assets/img/Interior_Design/5672.AmbreenResidence-Lahore/5627.GFDINNINGROOM03.jpg",
+    "client": "",
+    "location": "Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Interior_Design/5672.AmbreenResidence-Lahore/5627.GFDINNINGROOM03.jpg",
+      "/home_preview/assets/img/Interior_Design/5672.AmbreenResidence-Lahore/5627.GFDRAWINGROOM01.jpg",
+      "/home_preview/assets/img/Interior_Design/5672.AmbreenResidence-Lahore/5627.GFDRAWINGROOM02.jpg",
+      "/home_preview/assets/img/Interior_Design/5672.AmbreenResidence-Lahore/GROUNDFLOORKITCHEN01.jpg",
+      "/home_preview/assets/img/Interior_Design/5672.AmbreenResidence-Lahore/GROUNDFLOORKITCHEN02.jpg"
+    ]
+  },
+  {
+    "title": "JarikasComplex – JarikasCannt",
+    "sub1": "Interior Design",
+    "sub2": "Commercial",
+    "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+    "img": "/home_preview/assets/img/Interior_Design/5675.JarikasComplex-JarikasCannt/CAM001.jpg",
+    "client": "",
+    "location": "JarikasCannt",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Interior_Design/5675.JarikasComplex-JarikasCannt/CAM001.jpg",
+      "/home_preview/assets/img/Interior_Design/5675.JarikasComplex-JarikasCannt/CAM002.jpg",
+      "/home_preview/assets/img/Interior_Design/5675.JarikasComplex-JarikasCannt/CAM003.jpg",
+      "/home_preview/assets/img/Interior_Design/5675.JarikasComplex-JarikasCannt/CAM004.jpg",
+      "/home_preview/assets/img/Interior_Design/5675.JarikasComplex-JarikasCannt/CAM005.jpg",
+      "/home_preview/assets/img/Interior_Design/5675.JarikasComplex-JarikasCannt/CAM007.jpg"
+    ]
+  },
+  {
+    "title": "FitNationGym – DHAPhase5, Lahore",
+    "sub1": "Fitness",
+    "sub2": "Commercial",
+    "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+    "img": "/home_preview/assets/img/Interior_Design/5705.FitNationGym-DHAPhase5,Lahore/CAM01.jpg",
+    "client": "",
+    "location": "DHAPhase5, Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Interior_Design/5705.FitNationGym-DHAPhase5,Lahore/CAM01.jpg",
+      "/home_preview/assets/img/Interior_Design/5705.FitNationGym-DHAPhase5,Lahore/CAM02.jpg",
+      "/home_preview/assets/img/Interior_Design/5705.FitNationGym-DHAPhase5,Lahore/CAM03.jpg",
+      "/home_preview/assets/img/Interior_Design/5705.FitNationGym-DHAPhase5,Lahore/CAM04.jpg",
+      "/home_preview/assets/img/Interior_Design/5705.FitNationGym-DHAPhase5,Lahore/CAM06.jpg",
+      "/home_preview/assets/img/Interior_Design/5705.FitNationGym-DHAPhase5,Lahore/CAM07.jpg",
+      "/home_preview/assets/img/Interior_Design/5705.FitNationGym-DHAPhase5,Lahore/CAM08.jpg"
+    ]
+  },
+  {
+    "title": "BashirKhayreResidence – Somalia",
+    "sub1": "Residential",
+    "sub2": "Interior Design",
+    "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+    "img": "/home_preview/assets/img/Interior_Design/5737.BashirKhayreResidence-Somalia/5737.CAM01(2).jpg",
+    "client": "",
+    "location": "Somalia",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Interior_Design/5737.BashirKhayreResidence-Somalia/5737.CAM01(2).jpg",
+      "/home_preview/assets/img/Interior_Design/5737.BashirKhayreResidence-Somalia/5737.CAM01(4).jpg",
+      "/home_preview/assets/img/Interior_Design/5737.BashirKhayreResidence-Somalia/5737.CAM01(5).jpg",
+      "/home_preview/assets/img/Interior_Design/5737.BashirKhayreResidence-Somalia/5737.CAM01(6).jpg",
+      "/home_preview/assets/img/Interior_Design/5737.BashirKhayreResidence-Somalia/5737.CAM01(8).jpg"
+    ]
+  },
+  {
+    "title": "ONYXTec – JoharTown, Lahore",
+    "sub1": "Interior Design",
+    "sub2": "Commercial",
+    "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+    "img": "/home_preview/assets/img/Interior_Design/5762.ONYXTec-JoharTown,Lahore/CAM01.1.jpg",
+    "client": "",
+    "location": "JoharTown, Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Interior_Design/5762.ONYXTec-JoharTown,Lahore/CAM01.1.jpg",
+      "/home_preview/assets/img/Interior_Design/5762.ONYXTec-JoharTown,Lahore/CAM01.jpg",
+      "/home_preview/assets/img/Interior_Design/5762.ONYXTec-JoharTown,Lahore/CAM02.2.jpg",
+      "/home_preview/assets/img/Interior_Design/5762.ONYXTec-JoharTown,Lahore/CAM02.jpg",
+      "/home_preview/assets/img/Interior_Design/5762.ONYXTec-JoharTown,Lahore/CAM03.jpg",
+      "/home_preview/assets/img/Interior_Design/5762.ONYXTec-JoharTown,Lahore/CAM04.jpg",
+      "/home_preview/assets/img/Interior_Design/5762.ONYXTec-JoharTown,Lahore/CAM07.jpg"
+    ]
+  },
+  {
+    "title": "Shumaila_sLondon – Gulberg, Lahore",
+    "sub1": "Interior Design",
+    "sub2": "Commercial",
+    "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+    "img": "/home_preview/assets/img/Interior_Design/5767.Shumaila_sLondon-Gulberg,Lahore/CAM01.jpg",
+    "client": "",
+    "location": "Gulberg, Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Interior_Design/5767.Shumaila_sLondon-Gulberg,Lahore/CAM01.jpg",
+      "/home_preview/assets/img/Interior_Design/5767.Shumaila_sLondon-Gulberg,Lahore/CAM02.jpg",
+      "/home_preview/assets/img/Interior_Design/5767.Shumaila_sLondon-Gulberg,Lahore/CAM03.jpg",
+      "/home_preview/assets/img/Interior_Design/5767.Shumaila_sLondon-Gulberg,Lahore/CAM04.jpg",
+      "/home_preview/assets/img/Interior_Design/5767.Shumaila_sLondon-Gulberg,Lahore/CAM05.jpg",
+      "/home_preview/assets/img/Interior_Design/5767.Shumaila_sLondon-Gulberg,Lahore/CAM07.jpg",
+      "/home_preview/assets/img/Interior_Design/5767.Shumaila_sLondon-Gulberg,Lahore/CAM08.jpg"
+    ]
+  },
+  {
+    "title": "WaqasResidence – Multan",
+    "sub1": "Residential",
+    "sub2": "Interior Design",
+    "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+    "img": "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/5777.Bed01&Bed02(1).jpg",
+    "client": "",
+    "location": "Multan",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/5777.Bed01&Bed02(1).jpg",
+      "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/5777.Bed01&Bed02(2).jpg",
+      "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/5777.Bed01&Bed02(3).jpg",
+      "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/5777.Bed01&Bed02(4).jpg",
+      "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/5777.Bed01&Bed02(5).jpg",
+      "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/5777.Bed01&Bed02(6).jpg",
+      "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/5777.Bed01&Bed02(7).jpg",
+      "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/5777.Bed04(1).jpg",
+      "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/5777.Bed04(2).jpg",
+      "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/5777.Bed04(3).jpg",
+      "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/DRAWINGDINNING/5777.D&D(1).jpg",
+      "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/DRAWINGDINNING/5777.D&D(2).jpg",
+      "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/DRAWINGDINNING/5777.D&D(3).jpg",
+      "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/FFKITCHEN/CAM01.jpg",
+      "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/FFKITCHEN/CAM02.jpg",
+      "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/FFKITCHEN/CAM03.jpg",
+      "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/FFKITCHEN/CAM04.jpg",
+      "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/FFKITCHEN/CAM05.jpg"
+    ]
+  },
+  {
+    "title": "Bakers31 – BahawalpurCannt",
+    "sub1": "Interior Design",
+    "sub2": "Commercial",
+    "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+    "img": "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/1/CAM01.jpg",
+    "client": "",
+    "location": "BahawalpurCannt",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/1/CAM01.jpg",
+      "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/1/CAM02.jpg",
+      "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/1/CAM03.jpg",
+      "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/1/CAM04.jpg",
+      "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/1/CAM05.jpg",
+      "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/1/CAM06.jpg",
+      "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/2/CAMERA01.jpg",
+      "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/2/CAMERA02.jpg",
+      "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/2/CAMERA03.jpg",
+      "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/2/CAMERA04.jpg",
+      "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/2/CAMERA05.jpg",
+      "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/2/CAMERA06.jpg",
+      "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/2/CAMERA07.jpg"
+    ]
+  },
+  {
+    "title": "Calrom – AskariTower(Gulberg) – Lahore",
+    "sub1": "Interior Design",
+    "sub2": "Commercial",
+    "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+    "img": "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/BoardRoom(1).jpg",
+    "client": "",
+    "location": "AskariTower(Gulberg)",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/BoardRoom(1).jpg",
+      "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/Cafe01(1).jpg",
+      "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/Cafe01(3).jpg",
+      "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/Cafe01(5).jpg",
+      "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/GamingArea(1).jpg",
+      "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/MANAGEMENTROOMCAM01.jpg",
+      "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/MEETINGROOM04.jpg",
+      "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/Meetingroom01.jpg",
+      "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/TRAININGROOMCAM01.jpg",
+      "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/WORKSPACECAM01.jpg",
+      "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/WORKSPACECAM02.jpg",
+      "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/WORKSPACECAM03.jpg",
+      "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/WORKSPACECAM05.jpg"
+    ]
+  },
+  {
+    "title": "Mr.Hassan – London, UK",
+    "sub1": "Interior Design",
+    "sub2": "Commercial",
+    "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+    "img": "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/B01.jpg",
+    "client": "",
+    "location": "London, UK",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/B01.jpg",
+      "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/B02.jpg",
+      "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/FFOption02(1).jpg",
+      "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/FFOption02(2).jpg",
+      "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/FFOption02(3).jpg",
+      "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/GFCAM01(1).jpg",
+      "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/GFCAM01.jpg",
+      "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/GFCAM02(1).jpg",
+      "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/GFCAM02.jpg",
+      "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/GFCAM03(1).jpg",
+      "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/GFCAM03.jpg",
+      "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/GFCAM04.jpg",
+      "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/GFCAM05.jpg"
+    ]
+  },
+  {
+    "title": "SpiceMystery – BahriaTown, Lahore",
+    "sub1": "Interior Design",
+    "sub2": "Commercial",
+    "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+    "img": "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-1(6).jpg",
+    "client": "",
+    "location": "BahriaTown, Lahore",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-1(6).jpg",
+      "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-10.jpg",
+      "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-11.jpg",
+      "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-12.jpg",
+      "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-2(2).jpg",
+      "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-3(1).jpg",
+      "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-4(1).jpg",
+      "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-5.jpg",
+      "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-6.jpg",
+      "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-8.jpg",
+      "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-9.jpg"
+    ]
+  },
+  {
+    "title": "SheikhCharghaHouse, CitiHousing, Jhelum",
+    "sub1": "Residential",
+    "sub2": "Interior Design",
+    "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+    "img": "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Autumn/Autumn(1).jpg",
+    "client": "",
+    "location": "CitiHousing",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Autumn/Autumn(1).jpg",
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Autumn/Autumn(2).jpg",
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Autumn/Autumn(3).jpg",
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Autumn/Autumn(4).jpg",
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Autumn/Autumn(5).jpg",
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Spring/Spring(1).jpg",
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Spring/Spring(2).jpg",
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Spring/Spring(3).jpg",
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Spring/Spring(4).jpg",
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Spring/Spring(5).jpg",
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Spring/Spring(6).jpg",
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Summer/Summer(1).jpg",
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Summer/Summer(2).jpg",
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Summer/Summer(3).jpg",
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Summer/Summer(4).jpg",
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Summer/Summer(5).jpg",
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Summer/Summer(6).jpg",
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Summer/Summer(7).jpg",
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Summer/Summer(8).jpg",
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Winter/Winter(1).jpg",
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Winter/Winter(2).jpg",
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Winter/Winter(3).jpg",
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Winter/Winter(4).jpg",
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Winter/Winter(5).jpg",
+      "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Winter/Winter(6).jpg"
+    ]
+  },
+  {
+    "title": "RafylHotel – London, UK",
+    "sub1": "Restaurant",
+    "sub2": "Hospitality",
+    "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+    "img": "/home_preview/assets/img/Interior_Design/5906.RafylHotel-London,UK/View-1(12).jpg",
+    "client": "",
+    "location": "London, UK",
+    "area": "",
+    "images": [
+      "/home_preview/assets/img/Interior_Design/5906.RafylHotel-London,UK/View-1(12).jpg",
+      "/home_preview/assets/img/Interior_Design/5906.RafylHotel-London,UK/View-10.jpg",
+      "/home_preview/assets/img/Interior_Design/5906.RafylHotel-London,UK/View-2(4).jpg",
+      "/home_preview/assets/img/Interior_Design/5906.RafylHotel-London,UK/View-4(1).jpg",
+      "/home_preview/assets/img/Interior_Design/5906.RafylHotel-London,UK/View-5.jpg",
+      "/home_preview/assets/img/Interior_Design/5906.RafylHotel-London,UK/View-6.jpg",
+      "/home_preview/assets/img/Interior_Design/5906.RafylHotel-London,UK/View-7.jpg",
+      "/home_preview/assets/img/Interior_Design/5906.RafylHotel-London,UK/View-9.jpg"
     ]
   }
 ]

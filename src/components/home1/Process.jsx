@@ -313,7 +313,7 @@ function Process() {
       />
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div className="title mb-100 text-center">
-          <h2 className="fsz-45"> Our Process Work </h2>
+          <h2 className="fsz-45"> Our Work Process  </h2>
         </div>
         <div className="content">
           <div className="row">
@@ -342,11 +342,7 @@ function Process() {
                     >
                       <div className="accordion-body">
                         <div className="text">
-                          After surveying and obtaining the necessary
-                          information, we will create a preliminary design
-                          including technical drawings, 3D images of the
-                          interior and provide a 3D VR experience to help
-                          customers get a visual view of their project.
+                        After conducting a detailed site survey and gathering all required information, we develop a comprehensive preliminary design that includes technical drawings, high-quality 3D interior visuals, and an immersive 3D VR experience, allowing clients to clearly visualize their project before execution.
                         </div>
                       </div>
                     </div>
@@ -370,11 +366,7 @@ function Process() {
                     >
                       <div className="accordion-body">
                         <div className="text">
-                          After surveying and obtaining the necessary
-                          information, we will create a preliminary design
-                          including technical drawings, 3D images of the
-                          interior and provide a 3D VR experience to help
-                          customers get a visual view of their project.
+                        We believe exceptional design must perform as beautifully as it looks. Our approach balances aesthetics, functionality, sustainability, and technical precision, ensuring every space is efficient, durable, and tailored to the user’s needs. From concept to execution, we focus on design solutions that enhance comfort, usability, and long-term value.
                         </div>
                       </div>
                     </div>
@@ -397,22 +389,18 @@ function Process() {
                     >
                       <div className="accordion-body">
                         <div className="text">
-                          After surveying and obtaining the necessary
-                          information, we will create a preliminary design
-                          including technical drawings, 3D images of the
-                          interior and provide a 3D VR experience to help
-                          customers get a visual view of their project.
+                        At the handover stage, we deliver a complete set of finalized project materials, including detailed layouts, technical drawings, high-quality 3D renders, and design models. This comprehensive package ensures clarity, accuracy, and smooth execution during construction and implementation.
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <a
-                  href="#"
+                  href="./innerpages/our-process"
                   className="butn border rounded-pill mt-80 process-btn-green"
                 >
                   <span>
-                    Our Projects
+                    See Details
                     <i className="small ms-1 ti-arrow-top-right"></i>
                   </span>
                 </a>

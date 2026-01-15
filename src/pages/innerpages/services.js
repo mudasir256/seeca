@@ -6,6 +6,7 @@ import Navbar from '../../components/home_preview/Navbar';
 import StartButton from '../../components/home5_residence/StartButton';
 import Header from '../../components/innerpage/contact/Header';
 import Services from '../../components/home1/Services';
+import ServiceDetails from '../../components/innerpage/services/ServiceDetails';
 import Process from '../../components/home1/Process';
 import Testimonials from '../../components/home1/Testimonials';
 import Statistics from '../../components/common/Statistics';
@@ -28,6 +29,7 @@ function ServicesPage() {
       />
       <main>
         <Services />
+        <ServiceDetails />
         <div style={{ paddingTop: '100px' }}>
           <Process />
           <Statistics />

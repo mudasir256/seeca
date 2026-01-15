@@ -5,6 +5,8 @@ import data from '../../../data/home1/projects/projects1.json';
 import mixitup from 'mixitup';
 function LatestCases() {
   const [activeFilter, setActiveFilter] = useState('All');
+  const [currentPage, setCurrentPage] = useState(1);
+  const projectsPerPage = 6;
   const mixitupContainerRef = useRef(null);
   const navigate = useNavigate();
 
@@ -14,15 +16,28 @@ function LatestCases() {
     const sub1 = item.sub1?.toLowerCase() || '';
     const sub2 = item.sub2?.toLowerCase().replace(/\s+/g, '') || '';
     
-    // Map sub1 and sub2 to filter categories
+    // Check if it's an Interior Design project by image path
+    const hasInteriorImage = item.images?.some(img => img.includes('Interior_Design')) || 
+                             item.img?.includes('Interior_Design');
+    const hasArchitectureImage = item.images?.some(img => img.includes('Architecture_Deisgn')) || 
+                                item.img?.includes('Architecture_Deisgn');
+    
+    // Architecture projects
+    if (hasArchitectureImage || sub2.includes('architecturedesign') || sub1.includes('architecture')) {
+      classes.push('Architecture');
+    }
+    
+    // Interior projects - check image path first, then category
+    if (hasInteriorImage || sub2.includes('interiordesign') || sub1.includes('interior')) {
+      classes.push('Interior');
+    }
+    
+    // Additional categories
     if (sub1.includes('office') || sub1.includes('commercial') || sub2.includes('commercial')) {
       classes.push('Commercial');
     }
     if (sub1.includes('restaurant') || sub2.includes('hospitality')) {
       classes.push('Hospitality');
-    }
-    if (sub2.includes('interiordesign') || sub1.includes('interior')) {
-      classes.push('Interior');
     }
     if (sub1.includes('retail')) {
       classes.push('Commercial');
@@ -36,9 +51,39 @@ function LatestCases() {
     return classes.join(' ');
   };
 
+  // Filter projects based on active filter
+  const getFilteredProjects = () => {
+    if (activeFilter === 'All') {
+      return data;
+    }
+    return data.filter(item => {
+      const classes = getFilterClasses(item);
+      return classes.includes(activeFilter);
+    });
+  };
+
+  // Get paginated projects
+  const filteredProjects = getFilteredProjects();
+  const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
+  const startIndex = (currentPage - 1) * projectsPerPage;
+  const endIndex = startIndex + projectsPerPage;
+  const paginatedProjects = filteredProjects.slice(startIndex, endIndex);
+
+  // Reset to page 1 when filter changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [activeFilter]);
+
   useEffect(() => {
     const initializeMixitup = () => {
       if (mixitupContainerRef.current) {
+        // Destroy existing instance if any
+        const existingInstance = mixitup(mixitupContainerRef.current);
+        if (existingInstance && existingInstance.destroy) {
+          existingInstance.destroy();
+        }
+        
+        // Initialize new instance
         mixitup(mixitupContainerRef.current, {
           load: {
             sort: 'order:asc',
@@ -58,12 +103,18 @@ function LatestCases() {
       }
     };
 
-    initializeMixitup();
-  }, []);
+    // Small delay to ensure DOM is updated
+    const timer = setTimeout(() => {
+      initializeMixitup();
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, [paginatedProjects, activeFilter]);
   
   const handleFilterClick = (filter, e) => {
     e.preventDefault();
     setActiveFilter(filter);
+    setCurrentPage(1);
 
     // Remove 'active' class from all filter buttons
     document.querySelectorAll('.filter-btn').forEach((btn) => {
@@ -75,6 +126,54 @@ function LatestCases() {
     if (clickedButton) {
       clickedButton.classList.add('active');
     }
+  };
+
+  const handlePageChange = (page, e) => {
+    e.preventDefault();
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const getPaginationNumbers = () => {
+    const pages = [];
+    const maxVisible = 5;
+    
+    if (totalPages <= maxVisible) {
+      // Show all pages if total is less than max visible
+      for (let i = 1; i <= totalPages; i++) {
+        pages.push(i);
+      }
+    } else {
+      // Show first page
+      pages.push(1);
+      
+      if (currentPage <= 3) {
+        // Near the start
+        for (let i = 2; i <= 4; i++) {
+          pages.push(i);
+        }
+        pages.push('...');
+        pages.push(totalPages);
+      } else if (currentPage >= totalPages - 2) {
+        // Near the end
+        pages.push('...');
+        for (let i = totalPages - 3; i <= totalPages; i++) {
+          pages.push(i);
+        }
+      } else {
+        // In the middle
+        pages.push('...');
+        for (let i = currentPage - 1; i <= currentPage + 1; i++) {
+          pages.push(i);
+        }
+        pages.push('...');
+        pages.push(totalPages);
+      }
+    }
+    
+    return pages;
   };
 
   return (
@@ -224,26 +323,6 @@ function LatestCases() {
                 >
                   Interior
                 </a>
-                <a
-                  href="#0"
-                  onClick={(e) => handleFilterClick('Landscape', e)}
-                  className={`filter-btn ${
-                    activeFilter === 'Landscape' ? 'active' : ''
-                  }`}
-                  data-filter=".Landscape"
-                >
-                  Landscape
-                </a>
-                <a
-                  href="#0"
-                  onClick={(e) => handleFilterClick('Furniture', e)}
-                  className={`filter-btn ${
-                    activeFilter === 'Furniture' ? 'active' : ''
-                  }`}
-                  data-filter=".Furniture"
-                >
-                  Furniture
-                </a>
                 {/* <a
                   href="#0"
                   onClick={() => handleFilterClick("Gordon's Villa")}
@@ -261,7 +340,7 @@ function LatestCases() {
               data-wow-delay="0.4s"
             >
               <div className="row mixitup" ref={mixitupContainerRef}>
-                {data.map((item, i) => (
+                {paginatedProjects.map((item, i) => (
                   <div key={i} className={`col-lg-4 mix-item ${getFilterClasses(item)}`}>
                     <div 
                       className="case-card"
@@ -290,45 +369,47 @@ function LatestCases() {
                   </div>
                 ))}
               </div>
-              <nav aria-label="Page navigation example">
-                <ul className="pagination">
-                  <li className="page-item">
-                    <a className="page-link" href="#">
-                      <i className="fal fa-chevron-left"></i>
-                    </a>
-                  </li>
-                  <li className="page-item">
-                    <a className="page-link active" href="#">
-                      1
-                    </a>
-                  </li>
-                  <li className="page-item">
-                    <a className="page-link" href="#">
-                      2
-                    </a>
-                  </li>
-                  <li className="page-item">
-                    <a className="page-link" href="#">
-                      3
-                    </a>
-                  </li>
-                  <li className="page-item">
-                    <a className="page-link" href="#">
-                      ...
-                    </a>
-                  </li>
-                  <li className="page-item">
-                    <a className="page-link" href="#">
-                      15
-                    </a>
-                  </li>
-                  <li className="page-item">
-                    <a className="page-link" href="#">
-                      <i className="fal fa-chevron-right"></i>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+              {totalPages > 1 && (
+                <nav aria-label="Page navigation example" className="mt-60">
+                  <ul className="pagination justify-content-center">
+                    <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
+                      <a 
+                        className="page-link" 
+                        href="#"
+                        onClick={(e) => handlePageChange(currentPage - 1, e)}
+                        style={{ pointerEvents: currentPage === 1 ? 'none' : 'auto', opacity: currentPage === 1 ? 0.5 : 1 }}
+                      >
+                        <i className="fal fa-chevron-left"></i>
+                      </a>
+                    </li>
+                    {getPaginationNumbers().map((page, index) => (
+                      <li key={index} className={`page-item ${page === '...' ? 'disabled' : ''} ${page === currentPage ? 'active' : ''}`}>
+                        {page === '...' ? (
+                          <span className="page-link" style={{ pointerEvents: 'none' }}>...</span>
+                        ) : (
+                          <a 
+                            className={`page-link ${page === currentPage ? 'active' : ''}`}
+                            href="#"
+                            onClick={(e) => handlePageChange(page, e)}
+                          >
+                            {page}
+                          </a>
+                        )}
+                      </li>
+                    ))}
+                    <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
+                      <a 
+                        className="page-link" 
+                        href="#"
+                        onClick={(e) => handlePageChange(currentPage + 1, e)}
+                        style={{ pointerEvents: currentPage === totalPages ? 'none' : 'auto', opacity: currentPage === totalPages ? 0.5 : 1 }}
+                      >
+                        <i className="fal fa-chevron-right"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              )}
             </div>
           </div>
         </div>

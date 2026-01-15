@@ -171,7 +171,7 @@ function Experience() {
               <h5 className="fsz-18 text-uppercase">
                 years of <br /> experience
               </h5>
-              <h2 className="num" style={{ color: '#73bf44' }}> 15 </h2>
+              <h2 className="num" style={{ color: '#73bf44' }}> 13 </h2>
             </div>
           </div>
           <div className="col-12 col-md-6 col-lg-3">
@@ -185,16 +185,16 @@ function Experience() {
           </div>
           <div className="col-lg-3">
             <div className="info wow fadeInUp" data-wow-delay="0.3s">
-              <h3 className="fsz-45 fw-600 mb-30"> Est. 2010 </h3>
+              <h3 className="fsz-45 fw-600 mb-30"> Est. 2013 </h3>
               <div className="text fsz-15 color-666">
-                SEECA (SEE Consultants & Architects) with expert interior designers and professional architects in Lahore providing high-quality designing services for the Commercial (includes malls, shops, stores, multiplexes, exhibitions), Institutional (includes schools, colleges, training centers) Residential (Independent houses, flats, farm houses), and corporate offices.
+              SEECA (SEE Consultants & Architects) is a multidisciplinary design firm in Lahore delivering premium architectural and interior design services. Our architects and interior designers handle commercial, institutional, residential, and corporate office projects, including malls, spaces, schools, colleges, homes, apartments, farmhouses, and workplaces.
               </div>
               <a
-                href="#"
+                href="./innerpages/about"
                 className="butn rounded-pill mt-50 hover-bg-green2 bg-white"
               >
                 <span>
-                  Our Studio <i className="small ms-1 ti-arrow-top-right"></i>
+                  Learn More <i className="small ms-1 ti-arrow-top-right"></i>
                 </span>
               </a>
             </div>

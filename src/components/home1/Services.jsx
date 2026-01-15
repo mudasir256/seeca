@@ -76,7 +76,7 @@ function Services({ removeTopPadding = false }) {
               marginBottom: '20px',
               lineHeight: '1.2',
               letterSpacing: '-1px'
-            }}>What Can We Offer</h2>
+            }}>What We Offer</h2>
             <p className="title-subtitle wow fadeInUp" data-wow-delay="0.3s" style={{
               fontSize: '17px',
               color: '#666',
@@ -84,7 +84,7 @@ function Services({ removeTopPadding = false }) {
               margin: '0 auto',
               lineHeight: '1.7'
             }}>
-              Discover our comprehensive range of professional services designed to bring your vision to life
+         Discover our comprehensive range of professional services that we designed to “Bring Your Vision to Life” 
             </p>
           </div>
           
@@ -508,7 +508,7 @@ function Services({ removeTopPadding = false }) {
               style={{ backgroundColor: '#73bf44' }}
             >
               <span>
-                Get A Free Quote Now
+                Contact Us
                 <i className="small ms-1 ti-arrow-top-right"></i>
               </span>
             </Link>

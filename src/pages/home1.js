@@ -42,8 +42,8 @@ const Home1 = memo(() => {
         <Process />
         <Projects />
         <Testimonials />
-        <Awards />
-        <Team />
+        {/* <Awards />
+        <Team /> */}
         <Blog />
       </main>
       <Footer />

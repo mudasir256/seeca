@@ -76,12 +76,12 @@ function Process() {
         }}
       >
         <h2 className="fsz-45 fw-500 mb-80 text-center">
-          Our Approach
+        Our Core 
           <span 
             className="sub-font fst-italic fw-400"
-            style={{ color: '#73bf44' }}
+            style={{ color: '#73bf44',  marginLeft:"1px"}}
           >
-            process
+          Values
           </span>
         </h2>
         <div className="content">
@@ -107,7 +107,8 @@ function Process() {
                     >
                       <div className="accordion-body">
                         <div className="text">
-                        Integrity is being true to ourselves by being true to our clients. This means maintaining always a professional and collaborative attitude and consistently delivering beyond expectations.
+                        Integrity is the foundation of everything we do.
+                        We build trust through honesty, professionalism, and collaboration—ensuring every commitment we make is fulfilled with excellence and delivered beyond expectations.
                         </div>
                       </div>
                     </div>
@@ -129,8 +130,8 @@ function Process() {
                       data-bs-parent="#accordionProcess"
                     >
                       <div className="accordion-body">
-                        <div className="text">
-                        Humanity describes that we work for people within the national and international context.  Each of our projects, no matter the scale, is designed by people and for people.
+                        <div className="text">Humanity is at the heart of our practice.
+                        Whether working nationally or internationally, we design spaces that serve people, enrich lives, and respect the communities they belong to—because every project begins and ends with people.
                         </div>
                       </div>
                     </div>
@@ -153,7 +154,7 @@ function Process() {
                     >
                       <div className="accordion-body">
                         <div className="text">
-                        Creativity is the soul of every idea which translates not only into design, but also drives the pursuit of solutions to simple or complex problems through innovative technologies.
+                        Creativity fuels everything we do.   It shapes our designs and inspires innovative, technology-driven solutions that transform challenges—simple or complex—into meaningful outcomes.
                         </div>
                       </div>
                     </div>
@@ -176,7 +177,8 @@ function Process() {
                     >
                       <div className="accordion-body">
                         <div className="text">
-                        The sustainability of every project is something we would not overlook. It is useful to grow the company and build a sustainable and environment friendly society.
+                        Sustainability is integral to our design philosophy.
+                        By embracing environmentally responsible solutions, we aim to create lasting value—for our clients, our company, and the communities we serve.
                         </div>
                       </div>
                     </div>
@@ -201,7 +203,7 @@ function Process() {
                     alt=""
                     className="img-cover"
                   />
-                  <span className="txt sub-font"> Design </span>
+                  <span className="txt sub-font"> Integrity </span>
                 </div>
                 <div className="img" data-lag="0.4">
                   <img
@@ -209,7 +211,7 @@ function Process() {
                     alt=""
                     className="img-cover"
                   />
-                  <span className="txt sub-font"      style={{ color: '#73bf44' }}> Handover </span>
+                  <span className="txt sub-font"      style={{ color: '#73bf44' }}> Humanity </span>
                 </div>
                 <div className="img" data-lag="0.3">
                   <img
@@ -217,15 +219,15 @@ function Process() {
                     alt=""
                     className="img-cover"
                   />
-                  <span className="txt sub-font"> Survey </span>
+                  <span className="txt sub-font"> Creativity </span>
                 </div>
-                <div className="img" data-lag="0.5">
+                <div className="img" data-lag="0.5" >
                   <img
                     src="/innerpages/assets/img/process/proc4.jpg"
                     alt=""
                     className="img-cover"
                   />
-                  <span className="txt sub-font" style={{ marginRight: '50px' }}> Implement </span>
+                  <span className="txt sub-font" style={{ marginLeft: '150px' }}> Sustainability </span>
                 </div>
               </div>
             </div>

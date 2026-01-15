@@ -453,7 +453,7 @@ function Footer() {
                     <div className="contact-text">
                       <a href="tel:+923331498340">+92 333 1498340</a>
                       <br />
-                      <a href="tel:+923002500556">+92 300 2500556</a>
+                      <a href="tel:+923002500556">+92 324 7250008</a>
                     </div>
                   </div>
                 </div>

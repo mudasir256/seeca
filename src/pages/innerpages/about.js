@@ -24,7 +24,7 @@ function AboutPage() {
         <Process />
         <Statistics />
         <Projects />
-        <Awards />
+        {/* <Awards /> */}
         <Testimonials />
       </main>
       <Footer />
