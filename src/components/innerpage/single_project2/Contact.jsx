@@ -80,20 +80,20 @@ function Contact() {
                   </div>
                 </div>
               </div>
-              <a
-                href="#"
+              <button
+                type="submit"
                 className="butn hover-bg-orange1 text-capitalize bg-white rounded-pill mt-40"
               >
                 <span>
                   Send Your Message
                   <i className="fal fa-arrow-up-right ms-2"></i>
                 </span>
-              </a>
+              </button>
               <p className="fsz-12 color-666 mt-20">
-                By summiting, i’m agree to the
-                <a href="#" className="color-000 text-decoration-underline">
+                By summiting, i'm agree to the
+                <button type="button" className="color-000 text-decoration-underline border-0 bg-transparent p-0">
                   Terms & Conditions
-                </a>
+                </button>
               </p>
             </form>
           </div>
@@ -103,13 +103,13 @@ function Contact() {
         <div className="marq-slider">
           <div className="swiper-wrapper">
             <div className="swiper-slide">
-              <a href="#"> Next Cases </a>
+              <button type="button" className="border-0 bg-transparent p-0"> Next Cases </button>
             </div>
             <div className="swiper-slide">
-              <a href="#"> Next Cases </a>
+              <button type="button" className="border-0 bg-transparent p-0"> Next Cases </button>
             </div>
             <div className="swiper-slide">
-              <a href="#"> Next Cases </a>
+              <button type="button" className="border-0 bg-transparent p-0"> Next Cases </button>
             </div>
           </div>
           <div className="float-cursor float_box">
