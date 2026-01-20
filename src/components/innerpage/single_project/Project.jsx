@@ -609,40 +609,72 @@ function Project() {
             className="sub-title fsz-45 mb-60 wow fadeInUp slow"
             data-wow-delay="0.2s"
           >
-            Challenge
+            Challenges
           </h3>
-          <div
-            className="text fsz-24 mb-20 fw-500 wow fadeInUp slow"
-            data-wow-delay="0.2s"
-          >
-            {finalProjectData.challenge || `Delivering exceptional design and construction quality while meeting client expectations, budget constraints, and timeline requirements. The project required balancing aesthetic excellence with functional efficiency, ensuring that every design decision enhances both the visual appeal and practical usability of the space.`}
-          </div>
-          <ul
-            className="dots-list fsz-18 color-666 wow fadeInUp slow"
-            data-wow-delay="0.2s"
-          >
-            {(finalProjectData.challengePoints || [
-              "Integrating client vision with practical design solutions and building codes",
-              "Optimizing space utilization while maintaining aesthetic appeal and functionality",
-              "Ensuring quality execution within budget and timeline constraints"
-            ]).map((point, index) => (
-              <li key={index} className="d-flex my-4">
-                <span className="icon me-3"> • </span> {point}
-              </li>
-            ))}
-          </ul>
+          {finalProjectData.challenges && finalProjectData.challenges.length > 0 ? (
+            <>
+              <ul
+                className="dots-list fsz-18 color-666 wow fadeInUp slow"
+                data-wow-delay="0.2s"
+              >
+                {finalProjectData.challenges.map((challenge, index) => (
+                  <li key={index} className="d-flex my-4">
+                    <span className="icon me-3"> • </span> {challenge}
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : (
+            <>
+              <div
+                className="text fsz-24 mb-20 fw-500 wow fadeInUp slow"
+                data-wow-delay="0.2s"
+              >
+                {finalProjectData.challenge || `Delivering exceptional design and construction quality while meeting client expectations, budget constraints, and timeline requirements. The project required balancing aesthetic excellence with functional efficiency, ensuring that every design decision enhances both the visual appeal and practical usability of the space.`}
+              </div>
+              <ul
+                className="dots-list fsz-18 color-666 wow fadeInUp slow"
+                data-wow-delay="0.2s"
+              >
+                {(finalProjectData.challengePoints || [
+                  "Integrating client vision with practical design solutions and building codes",
+                  "Optimizing space utilization while maintaining aesthetic appeal and functionality",
+                  "Ensuring quality execution within budget and timeline constraints"
+                ]).map((point, index) => (
+                  <li key={index} className="d-flex my-4">
+                    <span className="icon me-3"> • </span> {point}
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
           <h3
             className="sub-title fsz-45 mb-60 mt-150 wow fadeInUp slow"
             data-wow-delay="0.2s"
           >
-            Solution
+            Solutions
           </h3>
-          <div
-            className="text fsz-24 mb-20 fw-500 wow fadeInUp slow"
-            data-wow-delay="0.2s"
-          >
-            {finalProjectData.solution || `Our approach combined innovative design thinking with proven construction methodologies. Through collaborative planning, detailed design development, and meticulous project management, we delivered a solution that exceeds client expectations. We leveraged modern technologies, sustainable practices, and expert craftsmanship to create spaces that are both beautiful and functional, setting new standards for quality and design excellence.`}
-          </div>
+          {finalProjectData.solutions && finalProjectData.solutions.length > 0 ? (
+            <>
+              <ul
+                className="dots-list fsz-18 color-666 wow fadeInUp slow"
+                data-wow-delay="0.2s"
+              >
+                {finalProjectData.solutions.map((solution, index) => (
+                  <li key={index} className="d-flex my-4">
+                    <span className="icon me-3"> • </span> {solution}
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : (
+            <div
+              className="text fsz-24 mb-20 fw-500 wow fadeInUp slow"
+              data-wow-delay="0.2s"
+            >
+              {finalProjectData.solution || `Our approach combined innovative design thinking with proven construction methodologies. Through collaborative planning, detailed design development, and meticulous project management, we delivered a solution that exceeds client expectations. We leveraged modern technologies, sustainable practices, and expert craftsmanship to create spaces that are both beautiful and functional, setting new standards for quality and design excellence.`}
+            </div>
+          )}
         </div>
       </div>
       {finalProjectData.images && finalProjectData.images.length > 0 && (

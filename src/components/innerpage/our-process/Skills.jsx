@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 
 const skills = [
   { 
@@ -6,7 +6,7 @@ const skills = [
     name: 'LAYOUT PLANNING', 
     percentage: 99,
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="3" width="18" height="18" rx="2"/>
         <path d="M3 9h18M9 3v18"/>
       </svg>
@@ -18,7 +18,7 @@ const skills = [
     name: '2D DRAFTING', 
     percentage: 96,
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 2L2 7l10 5 10-5-10-5z"/>
         <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
       </svg>
@@ -30,9 +30,9 @@ const skills = [
     name: '3D MODELING', 
     percentage: 90,
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <box width="20" height="20" depth="20" x="2" y="2" z="2"/>
-        <path d="M6 6h12M6 12h12M6 18h12"/>
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="2"/>
+        <path d="M7 2v20M17 2v20M2 7h20M2 17h20"/>
       </svg>
     ),
     description: 'Advanced 3D visualization and digital modeling with cutting-edge technology'
@@ -42,75 +42,77 @@ const skills = [
     name: '3D RENDERING', 
     percentage: 85,
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="3" width="18" height="18" rx="2"/>
         <circle cx="8.5" cy="8.5" r="1.5"/>
         <path d="M21 15l-5-5L5 21"/>
       </svg>
     ),
     description: 'Photorealistic renders and visual presentations that bring designs to life'
-  },
-  { 
-    id: 5, 
-    name: '3D ANIMATION', 
-    percentage: 85,
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <polygon points="5 3 19 12 5 21 5 3"/>
-      </svg>
-    ),
-    description: 'Dynamic animations and virtual walkthroughs for immersive experiences'
   }
 ];
 
 function Skills() {
   const skillRefs = useRef([]);
-  const [visibleSkills, setVisibleSkills] = useState([]);
+  const [visibleSkills, setVisibleSkills] = useState(new Set());
+  const observerRef = useRef(null);
+
+  const handleIntersection = useCallback((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const index = skillRefs.current.findIndex(ref => ref === entry.target);
+        if (index !== -1) {
+          setVisibleSkills(prev => {
+            const newSet = new Set(prev);
+            newSet.add(index);
+            return newSet;
+          });
+        }
+      }
+    });
+  }, []);
 
   useEffect(() => {
     const observerOptions = {
-      threshold: 0.2,
-      rootMargin: '0px'
+      threshold: 0.15,
+      rootMargin: '50px'
     };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const index = skillRefs.current.findIndex(ref => ref === entry.target);
-          if (index !== -1 && !visibleSkills.includes(index)) {
-            setVisibleSkills(prev => [...prev, index]);
-          }
-        }
-      });
-    }, observerOptions);
+    observerRef.current = new IntersectionObserver(handleIntersection, observerOptions);
 
-    skillRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
+    const currentRefs = skillRefs.current;
+    currentRefs.forEach((ref) => {
+      if (ref) observerRef.current.observe(ref);
     });
 
     return () => {
-      skillRefs.current.forEach((ref) => {
-        if (ref) observer.unobserve(ref);
-      });
+      if (observerRef.current) {
+        currentRefs.forEach((ref) => {
+          if (ref) observerRef.current.unobserve(ref);
+        });
+      }
     };
-  }, [visibleSkills]);
+  }, [handleIntersection]);
 
-  const getLevel = (percentage) => {
+  const getLevel = useCallback((percentage) => {
     if (percentage >= 95) return { level: 'Expert', bars: 5, gradient: 'linear-gradient(135deg, #73bf44 0%, #8dd65a 100%)' };
     if (percentage >= 85) return { level: 'Advanced', bars: 4, gradient: 'linear-gradient(135deg, #8dd65a 0%, #a8e075 100%)' };
     if (percentage >= 75) return { level: 'Proficient', bars: 3, gradient: 'linear-gradient(135deg, #a8e075 0%, #c3ea90 100%)' };
     return { level: 'Competent', bars: 2, gradient: 'linear-gradient(135deg, #c3ea90 0%, #d9f0a5 100%)' };
-  };
+  }, []);
 
   return (
     <>
       <style dangerouslySetInnerHTML={{__html: `
+        /* ===== Section Styles ===== */
         .tc-skills-section {
           position: relative;
           padding: 120px 0;
           background: #fff;
           overflow: hidden;
         }
+
+        /* ===== Header Styles ===== */
         .skills-header {
           text-align: center;
           margin-bottom: 80px;
@@ -134,6 +136,8 @@ function Skills() {
           max-width: 600px;
           margin: 0 auto;
         }
+
+        /* ===== Content Layout ===== */
         .skills-content {
           position: relative;
           min-height: 800px;
@@ -146,18 +150,83 @@ function Skills() {
           width: 100%;
           min-height: 800px;
         }
+
+        /* ===== Skill Item Styles ===== */
         .skill-item {
           position: absolute;
           background: #fff;
           border-radius: 16px;
           padding: 28px;
-          transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-          opacity: 0;
-          border: 1px solid #e8e8e8;
-          overflow: visible;
           width: 300px;
+          border: 1px solid #e8e8e8;
           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+          cursor: default;
+          overflow: visible;
+          opacity: 0;
+          transform: translateY(20px) scale(0.95);
+          transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+          will-change: transform, opacity;
+          z-index: 10;
         }
+        .skill-item.visible {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+        .skill-item:hover {
+          box-shadow: 0 12px 40px rgba(115, 191, 68, 0.2);
+          border-color: rgba(115, 191, 68, 0.3);
+        }
+
+        /* Skill Item Positions */
+        .skill-item:nth-child(1) {
+          top: 5%;
+          left: 50%;
+          transform: translateX(-50%) translateY(20px) scale(0.95);
+        }
+        .skill-item:nth-child(1).visible {
+          transform: translateX(-50%) translateY(0) scale(1);
+        }
+        .skill-item:nth-child(1):hover {
+          transform: translateX(-50%) translateY(-8px) scale(1.02);
+        }
+
+        .skill-item:nth-child(2) {
+          top: 50%;
+          right: 5%;
+          transform: translateY(calc(-50% + 20px)) scale(0.95);
+        }
+        .skill-item:nth-child(2).visible {
+          transform: translateY(-50%) scale(1);
+        }
+        .skill-item:nth-child(2):hover {
+          transform: translateY(calc(-50% - 8px)) scale(1.02);
+        }
+
+        .skill-item:nth-child(3) {
+          bottom: 5%;
+          left: 50%;
+          transform: translateX(-50%) translateY(20px) scale(0.95);
+        }
+        .skill-item:nth-child(3).visible {
+          transform: translateX(-50%) translateY(0) scale(1);
+        }
+        .skill-item:nth-child(3):hover {
+          transform: translateX(-50%) translateY(-8px) scale(1.02);
+        }
+
+        .skill-item:nth-child(4) {
+          top: 50%;
+          left: 5%;
+          transform: translateY(calc(-50% + 20px)) scale(0.95);
+        }
+        .skill-item:nth-child(4).visible {
+          transform: translateY(-50%) scale(1);
+        }
+        .skill-item:nth-child(4):hover {
+          transform: translateY(calc(-50% - 8px)) scale(1.02);
+        }
+
+        /* Top Border Animation */
         .skill-item::after {
           content: '';
           position: absolute;
@@ -168,43 +237,13 @@ function Skills() {
           background: linear-gradient(90deg, #73bf44 0%, #8dd65a 100%);
           transform: scaleX(0);
           transform-origin: left;
-          transition: transform 0.5s ease;
-        }
-        .skill-item.visible {
-          opacity: 1;
+          transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .skill-item.visible::after {
           transform: scaleX(1);
         }
-        .skill-item:hover {
-          box-shadow: 0 12px 40px rgba(115, 191, 68, 0.15);
-          transform: translateY(-8px);
-          border-color: rgba(115, 191, 68, 0.2);
-        }
-        .skill-item:nth-child(1) {
-          top: 5%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        .skill-item:nth-child(2) {
-          top: 50%;
-          right: 5%;
-          transform: translateY(-50%);
-        }
-        .skill-item:nth-child(3) {
-          bottom: 5%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        .skill-item:nth-child(4) {
-          top: 50%;
-          left: 5%;
-          transform: translateY(-50%);
-        }
-        .skill-item:nth-child(5) {
-          top: 25%;
-          right: 20%;
-        }
+
+        /* ===== Skill Header ===== */
         .skill-header {
           display: flex;
           align-items: flex-start;
@@ -221,16 +260,30 @@ function Skills() {
           background: #f8f9fa;
           border-radius: 12px;
           color: #73bf44;
-          transition: all 0.3s ease;
+          position: relative;
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .skill-icon-wrapper::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          border-radius: 12px;
+          background: linear-gradient(135deg, rgba(115, 191, 68, 0.1) 0%, rgba(141, 214, 90, 0.1) 100%);
+          opacity: 0;
+          transition: opacity 0.4s ease;
+        }
+        .skill-item:hover .skill-icon-wrapper::before {
+          opacity: 1;
         }
         .skill-item:hover .skill-icon-wrapper {
-          background: linear-gradient(135deg, rgba(115, 191, 68, 0.1) 0%, rgba(141, 214, 90, 0.1) 100%);
-          transform: scale(1.1);
+          transform: scale(1.1) rotate(5deg);
         }
         .skill-icon-wrapper svg {
           width: 24px;
           height: 24px;
           stroke-width: 2;
+          position: relative;
+          z-index: 1;
         }
         .skill-info {
           flex: 1;
@@ -262,6 +315,8 @@ function Skills() {
           margin-top: 12px;
           font-weight: 300;
         }
+
+        /* ===== Skill Bars ===== */
         .skill-bars {
           display: flex;
           gap: 6px;
@@ -280,17 +335,23 @@ function Skills() {
           transform-origin: left;
         }
         .skill-item.visible .skill-bar {
-          animation: fillBar 0.6s ease forwards;
+          animation: fillBar 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         }
         .skill-bar.active {
           background: linear-gradient(90deg, #73bf44 0%, #8dd65a 100%);
         }
         @keyframes fillBar {
+          from {
+            opacity: 0;
+            transform: scaleX(0);
+          }
           to {
             opacity: 1;
             transform: scaleX(1);
           }
         }
+
+        /* ===== Center Image ===== */
         .skills-image {
           position: absolute;
           top: 50%;
@@ -301,9 +362,11 @@ function Skills() {
           border-radius: 50%;
           overflow: hidden;
           box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-          z-index: 5;
+          z-index: 1;
           border: 10px solid #fff;
           background: #f5f5f5;
+          transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+          animation: floatImage 6s ease-in-out infinite;
         }
         .skills-image::before {
           content: '';
@@ -313,16 +376,62 @@ function Skills() {
           right: -2px;
           bottom: -2px;
           border-radius: 50%;
-          background: linear-gradient(135deg, rgba(115, 191, 68, 0.1) 0%, transparent 100%);
+          background: linear-gradient(135deg, rgba(115, 191, 68, 0.15) 0%, rgba(115, 191, 68, 0.05) 50%, transparent 100%);
           z-index: -1;
           pointer-events: none;
+          animation: rotateGradient 20s linear infinite;
+        }
+        .skills-image:hover {
+          transform: translate(-50%, -50%) scale(1.05);
+          box-shadow: 0 25px 80px rgba(115, 191, 68, 0.2);
         }
         .skills-image img {
           width: 100%;
           height: 100%;
           object-fit: cover;
           display: block;
+          transition: transform 0.6s ease;
         }
+        .skills-image:hover img {
+          transform: scale(1.1);
+        }
+        @keyframes floatImage {
+          0%, 100% {
+            transform: translate(-50%, -50%) translateY(0);
+          }
+          50% {
+            transform: translate(-50%, -50%) translateY(-10px);
+          }
+        }
+        @keyframes rotateGradient {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+
+        /* ===== Accessibility ===== */
+        @media (prefers-reduced-motion: reduce) {
+          .skill-item,
+          .skill-item.visible,
+          .skill-item:hover {
+            transition: opacity 0.3s ease;
+            transform: none !important;
+          }
+          .skills-image {
+            animation: none;
+          }
+          .skills-image::before {
+            animation: none;
+          }
+          .skill-bar {
+            animation: none;
+          }
+        }
+
+        /* ===== Responsive Design ===== */
         @media (max-width: 991px) {
           .tc-skills-section {
             padding: 80px 0;
@@ -360,11 +469,8 @@ function Skills() {
           .skill-item:nth-child(4) {
             left: 2%;
           }
-          .skill-item:nth-child(5) {
-            top: 20%;
-            right: 15%;
-          }
         }
+
         @media (max-width: 767px) {
           .tc-skills-section {
             padding: 60px 0;
@@ -403,6 +509,12 @@ function Skills() {
             right: auto !important;
             bottom: auto !important;
           }
+          .skill-item.visible {
+            transform: none !important;
+          }
+          .skill-item:hover {
+            transform: translateY(-4px) !important;
+          }
           .skills-image {
             position: relative;
             width: 280px;
@@ -414,6 +526,7 @@ function Skills() {
             margin-bottom: 40px;
           }
         }
+
         @media (max-width: 575px) {
           .skills-title {
             font-size: 32px;
@@ -446,7 +559,7 @@ function Skills() {
         }
       `}} />
       <section className="tc-skills-section">
-        {/* Blurred circular gradient backgrounds */}
+        {/* Background Gradients */}
         <div 
           className="d-none d-md-block"
           style={{
@@ -487,31 +600,30 @@ function Skills() {
               We constantly improve and learn from the daily challenges of every project. Client satisfaction is our top priority.
             </p>
           </div>
+
           <div className="skills-content">
             <div className="skills-image">
               <img
-                src="/innerpages/assets/img/process/proc2.jpg"
+                src="/home1/assets/img/View-11-1.jpg"
                 alt="Our Skills"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  display: 'block'
-                }}
+                loading="lazy"
               />
             </div>
+
             <div className="skills-list">
               {skills.map((skill, index) => {
                 const levelInfo = getLevel(skill.percentage);
-                const isVisible = visibleSkills.includes(index);
+                const isVisible = visibleSkills.has(index);
                 
                 return (
                   <div
                     key={skill.id}
                     className={`skill-item ${isVisible ? 'visible' : ''}`}
-                    ref={(el) => (skillRefs.current[index] = el)}
+                    ref={(el) => {
+                      if (el) skillRefs.current[index] = el;
+                    }}
                     style={{
-                      transitionDelay: `${index * 0.15}s`
+                      transitionDelay: `${index * 0.1}s`
                     }}
                   >
                     <div className="skill-header">
@@ -531,7 +643,7 @@ function Skills() {
                           className={`skill-bar ${barIndex < levelInfo.bars ? 'active' : ''}`}
                           style={{
                             background: barIndex < levelInfo.bars ? levelInfo.gradient : '#e8e8e8',
-                            transitionDelay: `${(index * 0.15) + (barIndex * 0.1)}s`
+                            animationDelay: `${(index * 0.1) + (barIndex * 0.08)}s`
                           }}
                         />
                       ))}
@@ -548,4 +660,3 @@ function Skills() {
 }
 
 export default Skills;
-

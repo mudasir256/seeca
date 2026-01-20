@@ -45,6 +45,23 @@ function Experience() {
   return (
     <>
       <style dangerouslySetInnerHTML={{__html: `
+        .tc-experience-style1 .exp-num {
+          text-align: center;
+        }
+        .tc-experience-style1 .mobile-contact {
+          display: none;
+        }
+        @media (min-width: 1200px) {
+          .tc-experience-style1 .info-col {
+            margin-left: 40px;
+          }
+        }
+        @media (max-width: 1199px) {
+          .tc-experience-style1 .info-col {
+            margin-left: 0 !important;
+            margin-top: 30px;
+          }
+        }
         @media (max-width: 991px) {
           .tc-experience-style1 .img {
             transform: rotate(0deg) scale(1) !important;
@@ -67,6 +84,43 @@ function Experience() {
           }
           .tc-experience-style1 .rotate-txt {
             display: none !important;
+          }
+          .tc-experience-style1 .mobile-contact {
+            display: block !important;
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #e5e5e5;
+          }
+          .tc-experience-style1 .mobile-contact ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+          .tc-experience-style1 .mobile-contact li {
+            margin: 10px 0;
+          }
+          .tc-experience-style1 .mobile-contact a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-size: 16px;
+          }
+          .tc-experience-style1 .exp-num {
+            margin-bottom: 40px !important;
+          }
+          .tc-experience-style1 .info h3 {
+            font-size: 32px !important;
+            text-align: center;
+          }
+          .tc-experience-style1 .info .text {
+            font-size: 14px !important;
+            text-align: center;
+          }
+          .tc-experience-style1 .info .butn {
+            display: block;
+            text-align: center;
+            margin: 30px auto 0;
+            width: fit-content;
           }
         }
         @media (max-width: 767px) {
@@ -92,6 +146,19 @@ function Experience() {
           .tc-experience-style1 .rotate-txt {
             display: none !important;
           }
+          .tc-experience-style1 .info h3 {
+            font-size: 28px !important;
+          }
+          .tc-experience-style1 .info .text {
+            font-size: 13px !important;
+          }
+          .tc-experience-style1 .partners-title {
+            font-size: 32px !important;
+            margin-bottom: 30px !important;
+          }
+          .tc-experience-style1 .partners-container {
+            margin-top: 50px !important;
+          }
         }
         @media (max-width: 575px) {
           .tc-experience-style1 .img {
@@ -115,6 +182,40 @@ function Experience() {
           }
           .tc-experience-style1 .rotate-txt {
             display: none !important;
+          }
+          .tc-experience-style1 .exp-num h5 {
+            font-size: 14px !important;
+          }
+          .tc-experience-style1 .exp-num h2 {
+            font-size: 36px !important;
+          }
+          .tc-experience-style1 .info h3 {
+            font-size: 24px !important;
+            margin-bottom: 20px !important;
+          }
+          .tc-experience-style1 .info .text {
+            font-size: 12px !important;
+            line-height: 1.6;
+          }
+          .tc-experience-style1 .info .butn {
+            margin-top: 20px !important;
+            padding: 10px 20px;
+            font-size: 14px;
+          }
+          .tc-experience-style1 .partners-title {
+            font-size: 28px !important;
+            margin-bottom: 25px !important;
+          }
+          .tc-experience-style1 .partners-container {
+            margin-top: 40px !important;
+          }
+          .tc-experience-style1 .partner-logo {
+            margin: 0 24px !important;
+            width: 100px !important;
+            height: 60px !important;
+          }
+          .tc-experience-style1 .partner-logo img {
+            height: 60px !important;
           }
         }
       `}} />
@@ -174,7 +275,7 @@ function Experience() {
       
       <div className="container-fluid" style={{ position: 'relative', zIndex: 1 }}>
         <div className="row justify-content-center align-items-center">
-          <div className="col-lg-2">
+          <div className="col-12 col-md-6 col-lg-2">
             <div className="exp-num mb-100 wow zoomIn" data-wow-delay="0.3s">
               <h5 className="fsz-18 text-uppercase">
                 years of <br /> experience
@@ -193,7 +294,7 @@ function Experience() {
               />
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="col-12 col-md-12 col-lg-3 info-col">
             <div className="info wow fadeInUp" data-wow-delay="0.3s">
               <h3 className="fsz-45 fw-600 mb-30"> Est. 2013 </h3>
               <div className="text fsz-15 color-666">
@@ -207,16 +308,26 @@ function Experience() {
                   Learn More <i className="small ms-1 ti-arrow-top-right"></i>
                 </span>
               </a>
+              <div className="mobile-contact">
+                <ul>
+                  <li>
+                    <a href="mailto:info@seeca.pk"> info@seeca.pk</a>
+                  </li>
+                  <li>
+                    <a href="tel:+923331498340"> +92 333 1498340 </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div className="col-lg-2">
+          <div className="col-lg-2 d-none d-lg-block">
             <div className="rotate-txt justify-content-lg-end">
               <ul>
                 <li>
-                  <a href="#"> info@seeca.pk</a>
+                  <a href="mailto:info@seeca.pk"> info@seeca.pk</a>
                 </li>
                 <li>
-                  <a href="#"> +92 333 1498340 </a>
+                  <a href="tel:+923331498340"> +92 333 1498340 </a>
                 </li>
               </ul>
             </div>
@@ -237,10 +348,10 @@ function Experience() {
         }}
       />
 
-      <div className="container-fluid" style={{ position: 'relative', zIndex: 1, marginTop: '80px' }}>
+      <div className="container-fluid partners-container" style={{ position: 'relative', zIndex: 1, marginTop: '80px' }}>
         <div className="row justify-content-center">
           <div className="col-12">
-            <h2 className="text-center fsz-45 fw-600 mb-50" style={{ color: '#1a1a1a' }}>
+            <h2 className="text-center fsz-45 fw-600 mb-50 partners-title" style={{ color: '#1a1a1a' }}>
               Our Partners
             </h2>
             
@@ -258,7 +369,7 @@ function Experience() {
                 {duplicatedLogos.map((logo, index) => (
                   <div
                     key={`logo-${index}`}
-                    className="flex-shrink-0 d-flex align-items-center justify-content-center"
+                    className="flex-shrink-0 d-flex align-items-center justify-content-center partner-logo"
                     style={{ 
                       margin: '0 48px',
                       width: '140px',

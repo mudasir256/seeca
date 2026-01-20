@@ -6,7 +6,7 @@ import mixitup from 'mixitup';
 function LatestCases() {
   const [activeFilter, setActiveFilter] = useState('All');
   const [currentPage, setCurrentPage] = useState(1);
-  const projectsPerPage = 6;
+  const projectsPerPage = 9;
   const mixitupContainerRef = useRef(null);
   const navigate = useNavigate();
 

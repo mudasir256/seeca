@@ -92,177 +92,156 @@ const Services = memo(function Services({ removeTopPadding = false }) {
             .service-card-compact {
               height: 100%;
               margin-bottom: 20px;
+              min-height: 350px;
             }
             .service-card-compact-inner {
-              background: #ffffff;
-              border-radius: 14px;
-              padding: 16px;
+              position: relative;
+              border-radius: 16px;
+              padding: 24px;
               height: 100%;
+              min-height: 350px;
               display: flex;
               flex-direction: column;
-              position: relative;
               overflow: hidden;
-              transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-              box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-              border: 1px solid rgba(0, 0, 0, 0.06);
+              transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
               cursor: pointer;
             }
+            .service-card-compact-inner::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              width: 100%;
+              height: 100%;
+              background-size: 100% 100%;
+              background-position: center center;
+              background-repeat: no-repeat;
+              transition: transform 0.5s ease;
+              z-index: 0;
+            }
+            .service-card-compact-inner::after {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background: rgba(0, 0, 0, 0.4);
+              transition: all 0.4s ease;
+              z-index: 1;
+            }
+            .service-card-compact-inner:hover::before {
+              transform: scale(1.1);
+            }
+            .service-card-compact-inner:hover::after {
+              background: rgba(0, 0, 0, 0.5);
+            }
             .service-card-compact-inner:hover {
-              transform: translateY(-5px);
-              box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-              border-color: rgba(0, 0, 0, 0.1);
+              transform: translateY(-8px);
+              box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+            }
+            .service-content-wrapper {
+              position: relative;
+              z-index: 2;
+              display: flex;
+              flex-direction: column;
+              height: 100%;
             }
             .service-icon-compact {
-              width: 42px;
-              height: 42px;
-              border-radius: 10px;
+              width: 50px;
+              height: 50px;
+              border-radius: 12px;
               display: flex;
               align-items: center;
               justify-content: center;
-              font-size: 20px;
+              font-size: 24px;
               color: #FFFFFF;
               transition: all 0.3s ease;
-              margin-bottom: 12px;
+              margin-bottom: 16px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             }
             .service-card-compact:hover .service-icon-compact {
-              transform: translateY(-3px) scale(1.1);
+              transform: translateY(-5px) scale(1.15);
+              box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
             }
             .service-title-compact {
-              font-size: 18px;
+              font-size: 22px;
               font-weight: 700;
-              color: #1a1a1a;
-              margin-bottom: 10px;
-              line-height: 1.3;
-            }
-            .service-image-compact {
-              width: 100%;
-              height: 160px;
-              border-radius: 10px;
-              overflow: hidden;
+              color: #FFFFFF;
               margin-bottom: 12px;
-              background: #f5f5f5;
-            }
-            .service-image-compact img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              transition: transform 0.5s ease;
-            }
-            .service-card-compact:hover .service-image-compact img {
-              transform: scale(1.05);
+              line-height: 1.3;
+              text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
             }
             .service-description-compact {
-              font-size: 13px;
-              line-height: 1.6;
-              color: #666666;
-              margin-bottom: 12px;
+              font-size: 14px;
+              line-height: 1.7;
+              color: rgba(255, 255, 255, 0.95);
+              margin-bottom: 20px;
               flex-grow: 1;
+              text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
             }
             .service-read-more-compact {
               display: inline-flex;
               align-items: center;
-              gap: 5px;
-              font-size: 11px;
+              gap: 8px;
+              font-size: 12px;
               font-weight: 600;
-              color: #1a1a1a;
+              color: #FFFFFF;
               text-transform: uppercase;
-              letter-spacing: 0.5px;
+              letter-spacing: 1px;
               text-decoration: none;
               transition: all 0.3s ease;
               margin-top: auto;
+              padding: 10px 20px;
+              background: rgba(255, 255, 255, 0.2);
+              border-radius: 25px;
+              border: 1px solid rgba(255, 255, 255, 0.3);
+              width: fit-content;
             }
             .service-read-more-compact i {
-              font-size: 11px;
+              font-size: 12px;
               transition: transform 0.3s ease;
             }
+            .service-card-compact:hover .service-read-more-compact {
+              background: rgba(255, 255, 255, 0.3);
+              transform: translateX(5px);
+            }
             .service-card-compact:hover .service-read-more-compact i {
-              transform: translate(2px, -2px);
+              transform: translate(3px, -3px);
             }
-            /* Unique Card Styles */
-            .card-1 .service-card-compact-inner {
-              border-top: 3px solid #73bf44;
-            }
+            /* Unique Card Styles with Color Accents */
             .card-1 .service-icon-compact {
               background: linear-gradient(135deg, #73bf44 0%, #8dd65a 100%);
-              box-shadow: 0 3px 10px rgba(115, 191, 68, 0.25);
             }
-            .card-1:hover .service-card-compact-inner {
-              border-top-color: #73bf44;
-              box-shadow: 0 8px 24px rgba(115, 191, 68, 0.15);
-            }
-            .card-1:hover .service-title-compact {
-              color: #73bf44;
-            }
-            .card-1:hover .service-read-more-compact {
-              color: #73bf44;
-            }
-            .card-2 .service-card-compact-inner {
-              border-top: 3px solid #4a90e2;
+            .card-1:hover .service-card-compact-inner::after {
+              background: rgba(115, 191, 68, 0.3);
             }
             .card-2 .service-icon-compact {
               background: linear-gradient(135deg, #4a90e2 0%, #6ba3f0 100%);
-              box-shadow: 0 3px 10px rgba(74, 144, 226, 0.25);
             }
-            .card-2:hover .service-card-compact-inner {
-              border-top-color: #4a90e2;
-              box-shadow: 0 8px 24px rgba(74, 144, 226, 0.15);
-            }
-            .card-2:hover .service-title-compact {
-              color: #4a90e2;
-            }
-            .card-2:hover .service-read-more-compact {
-              color: #4a90e2;
-            }
-            .card-3 .service-card-compact-inner {
-              border-top: 3px solid #e67e22;
+            .card-2:hover .service-card-compact-inner::after {
+              background: rgba(74, 144, 226, 0.3);
             }
             .card-3 .service-icon-compact {
               background: linear-gradient(135deg, #e67e22 0%, #f39c12 100%);
-              box-shadow: 0 3px 10px rgba(230, 126, 34, 0.25);
             }
-            .card-3:hover .service-card-compact-inner {
-              border-top-color: #e67e22;
-              box-shadow: 0 8px 24px rgba(230, 126, 34, 0.15);
-            }
-            .card-3:hover .service-title-compact {
-              color: #e67e22;
-            }
-            .card-3:hover .service-read-more-compact {
-              color: #e67e22;
-            }
-            .card-4 .service-card-compact-inner {
-              border-top: 3px solid #27ae60;
+            .card-3:hover .service-card-compact-inner::after {
+              background: rgba(230, 126, 34, 0.3);
             }
             .card-4 .service-icon-compact {
               background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
-              box-shadow: 0 3px 10px rgba(39, 174, 96, 0.25);
             }
-            .card-4:hover .service-card-compact-inner {
-              border-top-color: #27ae60;
-              box-shadow: 0 8px 24px rgba(39, 174, 96, 0.15);
-            }
-            .card-4:hover .service-title-compact {
-              color: #27ae60;
-            }
-            .card-4:hover .service-read-more-compact {
-              color: #27ae60;
-            }
-            .card-5 .service-card-compact-inner {
-              border-top: 3px solid #9b59b6;
+            .card-4:hover .service-card-compact-inner::after {
+              background: rgba(39, 174, 96, 0.3);
             }
             .card-5 .service-icon-compact {
               background: linear-gradient(135deg, #9b59b6 0%, #bb8fce 100%);
-              box-shadow: 0 3px 10px rgba(155, 89, 182, 0.25);
             }
-            .card-5:hover .service-card-compact-inner {
-              border-top-color: #9b59b6;
-              box-shadow: 0 8px 24px rgba(155, 89, 182, 0.15);
-            }
-            .card-5:hover .service-title-compact {
-              color: #9b59b6;
-            }
-            .card-5:hover .service-read-more-compact {
-              color: #9b59b6;
+            .card-5:hover .service-card-compact-inner::after {
+              background: rgba(155, 89, 182, 0.3);
             }
             .service-row-bottom {
               margin-top: 30px;
@@ -282,86 +261,82 @@ const Services = memo(function Services({ removeTopPadding = false }) {
               box-shadow: 0 8px 25px rgba(115, 191, 68, 0.4);
             }
             @media screen and (max-width: 991px) {
-              .service-row-bottom {
-                margin-top: 20px;
+              .service-card-compact {
+                min-height: 320px;
               }
               .service-card-compact-inner {
-                padding: 14px;
+                padding: 20px;
+                min-height: 320px;
               }
               .service-icon-compact {
-                width: 40px;
-                height: 40px;
-                font-size: 18px;
-                margin-bottom: 10px;
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+                margin-bottom: 14px;
               }
               .service-title-compact {
-                font-size: 16px;
-                margin-bottom: 8px;
+                font-size: 20px;
+                margin-bottom: 10px;
               }
-              .service-image-compact {
-                height: 140px;
+              .service-description-compact {
+                font-size: 13px;
+                margin-bottom: 16px;
+              }
+            }
+            @media screen and (max-width: 767px) {
+              .service-card-compact {
+                min-height: 300px;
+              }
+              .service-card-compact-inner {
+                padding: 18px;
+                min-height: 300px;
+              }
+              .service-icon-compact {
+                width: 42px;
+                height: 42px;
+                font-size: 18px;
+                margin-bottom: 12px;
+              }
+              .service-title-compact {
+                font-size: 18px;
                 margin-bottom: 10px;
               }
               .service-description-compact {
                 font-size: 12px;
-                margin-bottom: 10px;
-              }
-            }
-            @media screen and (max-width: 767px) {
-              .service-card-compact-inner {
-                padding: 12px;
-              }
-              .service-icon-compact {
-                width: 38px;
-                height: 38px;
-                font-size: 17px;
-                margin-bottom: 10px;
-              }
-              .service-title-compact {
-                font-size: 15px;
-                margin-bottom: 8px;
-              }
-              .service-image-compact {
-                height: 130px;
-                margin-bottom: 10px;
-              }
-              .service-description-compact {
-                font-size: 11px;
-                margin-bottom: 10px;
+                margin-bottom: 14px;
               }
               .service-read-more-compact {
-                font-size: 10px;
+                font-size: 11px;
+                padding: 8px 16px;
               }
             }
             @media screen and (max-width: 575px) {
               .service-card-compact {
                 margin-bottom: 20px;
+                min-height: 280px;
               }
               .service-card-compact-inner {
-                padding: 12px;
-                border-radius: 12px;
+                padding: 16px;
+                border-radius: 14px;
+                min-height: 280px;
               }
               .service-icon-compact {
-                width: 36px;
-                height: 36px;
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+                margin-bottom: 10px;
+              }
+              .service-title-compact {
                 font-size: 16px;
                 margin-bottom: 8px;
               }
-              .service-title-compact {
-                font-size: 14px;
-                margin-bottom: 6px;
-              }
-              .service-image-compact {
-                height: 120px;
-                margin-bottom: 8px;
-                border-radius: 8px;
-              }
               .service-description-compact {
                 font-size: 11px;
-                margin-bottom: 8px;
+                margin-bottom: 12px;
               }
               .service-read-more-compact {
-                font-size: 9px;
+                font-size: 10px;
+                padding: 8px 14px;
               }
             }
           `}} />
@@ -375,25 +350,22 @@ const Services = memo(function Services({ removeTopPadding = false }) {
                   data-wow-delay="0.1s"
                   style={{ textDecoration: 'none', display: 'block' }}
                 >
-                  <div className="service-card-compact-inner">
-                    <div className="service-icon-compact">
-                      <i className="la la-drafting-compass"></i>
-                    </div>
-                    <h5 className="service-title-compact">Architecture</h5>
-                    <div className="service-image-compact">
-                      <img
-                        src="/home_preview/assets/img/Architecture-scaled.jpg"
-                        alt="Architecture"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </div>
-                    <p className="service-description-compact">
-                      We will help you to get the result you dreamed of.
-                    </p>
-                    <div className="service-read-more-compact">
-                      <span>READ MORE</span>
-                      <i className="ti-arrow-top-right"></i>
+                  <div 
+                    className="service-card-compact-inner"
+                    style={{ backgroundImage: 'url(/home_preview/assets/img/Architecture-scaled.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
+                  >
+                    <div className="service-content-wrapper">
+                      <div className="service-icon-compact">
+                        <i className="la la-drafting-compass"></i>
+                      </div>
+                      <h5 className="service-title-compact">Architecture</h5>
+                      <p className="service-description-compact">
+                        We will help you to get the result you dreamed of.
+                      </p>
+                      <div className="service-read-more-compact">
+                        <span>READ MORE</span>
+                        <i className="ti-arrow-top-right"></i>
+                      </div>
                     </div>
                   </div>
                 </Link>
@@ -406,25 +378,22 @@ const Services = memo(function Services({ removeTopPadding = false }) {
                   data-wow-delay="0.2s"
                   style={{ textDecoration: 'none', display: 'block' }}
                 >
-                  <div className="service-card-compact-inner">
-                    <div className="service-icon-compact">
-                      <i className="la la-couch"></i>
-                    </div>
-                    <h5 className="service-title-compact">Interior Design</h5>
-                    <div className="service-image-compact">
-                      <img
-                        src="/home_preview/assets/img/Slider-1-scaled.jpg"
-                        alt="Interior Design"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </div>
-                    <p className="service-description-compact">
-                      Individual, aesthetically stunning solutions for customers.
-                    </p>
-                    <div className="service-read-more-compact">
-                      <span>READ MORE</span>
-                      <i className="ti-arrow-top-right"></i>
+                  <div 
+                    className="service-card-compact-inner"
+                    style={{ backgroundImage: 'url(/home_preview/assets/img/Slider-1-scaled.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
+                  >
+                    <div className="service-content-wrapper">
+                      <div className="service-icon-compact">
+                        <i className="la la-couch"></i>
+                      </div>
+                      <h5 className="service-title-compact">Interior Design</h5>
+                      <p className="service-description-compact">
+                        Individual, aesthetically stunning solutions for customers.
+                      </p>
+                      <div className="service-read-more-compact">
+                        <span>READ MORE</span>
+                        <i className="ti-arrow-top-right"></i>
+                      </div>
                     </div>
                   </div>
                 </Link>
@@ -437,25 +406,22 @@ const Services = memo(function Services({ removeTopPadding = false }) {
                   data-wow-delay="0.3s"
                   style={{ textDecoration: 'none', display: 'block' }}
                 >
-                  <div className="service-card-compact-inner">
-                    <div className="service-icon-compact">
-                      <i className="la la-building"></i>
-                    </div>
-                    <h5 className="service-title-compact">Construction</h5>
-                    <div className="service-image-compact">
-                      <img
-                        src="/home_preview/assets/img/Construction-scaled.jpg"
-                        alt="Construction"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </div>
-                    <p className="service-description-compact">
-                      We create and produce our product design lines.
-                    </p>
-                    <div className="service-read-more-compact">
-                      <span>READ MORE</span>
-                      <i className="ti-arrow-top-right"></i>
+                  <div 
+                    className="service-card-compact-inner"
+                    style={{ backgroundImage: 'url(/home_preview/assets/img/Construction-scaled.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
+                  >
+                    <div className="service-content-wrapper">
+                      <div className="service-icon-compact">
+                        <i className="la la-building"></i>
+                      </div>
+                      <h5 className="service-title-compact">Construction</h5>
+                      <p className="service-description-compact">
+                        We create and produce our product design lines.
+                      </p>
+                      <div className="service-read-more-compact">
+                        <span>READ MORE</span>
+                        <i className="ti-arrow-top-right"></i>
+                      </div>
                     </div>
                   </div>
                 </Link>
@@ -469,25 +435,22 @@ const Services = memo(function Services({ removeTopPadding = false }) {
                   data-wow-delay="0.4s"
                   style={{ textDecoration: 'none', display: 'block' }}
                 >
-                  <div className="service-card-compact-inner">
-                    <div className="service-icon-compact">
-                      <i className="la la-recycle"></i>
-                    </div>
-                    <h5 className="service-title-compact">Building Sustainability</h5>
-                    <div className="service-image-compact">
-                      <img
-                        src="/home_preview/assets/img/Evening-View-scaled.jpg"
-                        alt="Building Sustainability"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </div>
-                    <p className="service-description-compact">
-                      We will help you to get the result you dreamed of.
-                    </p>
-                    <div className="service-read-more-compact">
-                      <span>READ MORE</span>
-                      <i className="ti-arrow-top-right"></i>
+                  <div 
+                    className="service-card-compact-inner"
+                    style={{ backgroundImage: 'url(/home_preview/assets/img/Evening-View-scaled.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
+                  >
+                    <div className="service-content-wrapper">
+                      <div className="service-icon-compact">
+                        <i className="la la-recycle"></i>
+                      </div>
+                      <h5 className="service-title-compact">Building Sustainability</h5>
+                      <p className="service-description-compact">
+                        We will help you to get the result you dreamed of.
+                      </p>
+                      <div className="service-read-more-compact">
+                        <span>READ MORE</span>
+                        <i className="ti-arrow-top-right"></i>
+                      </div>
                     </div>
                   </div>
                 </Link>
@@ -500,25 +463,22 @@ const Services = memo(function Services({ removeTopPadding = false }) {
                   data-wow-delay="0.5s"
                   style={{ textDecoration: 'none', display: 'block' }}
                 >
-                  <div className="service-card-compact-inner">
-                    <div className="service-icon-compact">
-                      <i className="la la-network-wired"></i>
-                    </div>
-                    <h5 className="service-title-compact">Smart Building Technologies</h5>
-                    <div className="service-image-compact">
-                      <img
-                        src="/home_preview/assets/img/Smart-Technologies-scaled.jpg"
-                        alt="Smart Building Technologies"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </div>
-                    <p className="service-description-compact">
-                      Individual, aesthetically stunning solutions for customers.
-                    </p>
-                    <div className="service-read-more-compact">
-                      <span>READ MORE</span>
-                      <i className="ti-arrow-top-right"></i>
+                  <div 
+                    className="service-card-compact-inner"
+                    style={{ backgroundImage: 'url(/home_preview/assets/img/Smart-Technologies-scaled.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
+                  >
+                    <div className="service-content-wrapper">
+                      <div className="service-icon-compact">
+                        <i className="la la-network-wired"></i>
+                      </div>
+                      <h5 className="service-title-compact">Smart Building Technologies</h5>
+                      <p className="service-description-compact">
+                        Individual, aesthetically stunning solutions for customers.
+                      </p>
+                      <div className="service-read-more-compact">
+                        <span>READ MORE</span>
+                        <i className="ti-arrow-top-right"></i>
+                      </div>
                     </div>
                   </div>
                 </Link>
@@ -542,7 +502,7 @@ const Services = memo(function Services({ removeTopPadding = false }) {
       </div>
     </section>
       <div className="ser-img">
-        <img src="/home1/assets/img/services/ser.jpg" alt="" loading="lazy" decoding="async" />
+        <img src="/home1/assets/img/services/ser(1).jpg" alt="" loading="lazy" decoding="async" />
       </div>
     </> 
   );

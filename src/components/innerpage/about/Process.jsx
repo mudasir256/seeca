@@ -1,6 +1,119 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 function Process() {
+  const swiperRef = useRef(null);
+  const sliderRef = useRef(null);
+
+  useEffect(() => {
+    let retryCount = 0;
+    const maxRetries = 50;
+    
+    const initSwiper = () => {
+      if (typeof window === 'undefined' || !window.Swiper) {
+        retryCount++;
+        if (retryCount < maxRetries) {
+          setTimeout(initSwiper, 100);
+        }
+        return;
+      }
+
+      if (!sliderRef.current || swiperRef.current) {
+        return;
+      }
+
+      const sliderElement = sliderRef.current;
+      const wrapper = sliderElement.querySelector('.swiper-wrapper');
+      
+      if (!wrapper || !wrapper.querySelector('.swiper-slide')) {
+        retryCount++;
+        if (retryCount < maxRetries) {
+          setTimeout(initSwiper, 100);
+        }
+        return;
+      }
+
+      const Swiper = window.Swiper;
+      
+      const paginationEl = sliderElement.querySelector('.swiper-pagination');
+      const nextEl = sliderElement.querySelector('.swiper-button-next');
+      const prevEl = sliderElement.querySelector('.swiper-button-prev');
+      
+        try {
+        swiperRef.current = new Swiper(sliderElement, {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          centeredSlides: true,
+          speed: 1200,
+          effect: 'fade',
+          fadeEffect: {
+            crossFade: true
+          },
+          pagination: paginationEl ? {
+            el: paginationEl,
+            clickable: true,
+            dynamicBullets: false,
+          } : false,
+          navigation: (nextEl && prevEl) ? {
+            nextEl: nextEl,
+            prevEl: prevEl,
+          } : false,
+          mousewheel: false,
+          keyboard: true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          },
+          loop: true,
+          grabCursor: true,
+        });
+      } catch (error) {
+        console.error('Error initializing Swiper:', error);
+      }
+    };
+
+    const timer = setTimeout(initSwiper, 200);
+
+    return () => {
+      clearTimeout(timer);
+      if (swiperRef.current) {
+        try {
+          swiperRef.current.destroy(true, true);
+        } catch (e) {
+          console.warn('Error destroying Swiper:', e);
+        }
+        swiperRef.current = null;
+      }
+    };
+  }, []);
+
+  const sliderData = [
+    {
+      id: 1,
+      image: "/innerpages/assets/img/portfolio/case5.jpg",
+      text: "Integrity",
+      color: ""
+    },
+    {
+      id: 2,
+      image: "/innerpages/assets/img/portfolio/case6.jpg",
+      text: "Humanity",
+      color: "#73bf44"
+    },
+    {
+      id: 3,
+      image: "/home1/assets/img/projects/reactoutlet/react2.jpg",
+      text: "Creativity",
+      color: ""
+    },
+    {
+      id: 4,
+      image: "/home1/assets/img/projects/ignition/ignition1.jpg",
+      text: "Sustainability",
+      color: ""
+    }
+  ];
+
   return (
     <>
       <style dangerouslySetInnerHTML={{__html: `
@@ -12,6 +125,238 @@ function Process() {
         }
         .tc-process-style2 .accordion-button:not(.collapsed) .num {
           color: #73bf44 !important;
+        }
+        
+        /* Beautiful Slider Styles */
+        .tc-process-style2 .process-slider {
+          position: relative;
+          overflow: hidden;
+          border-radius: 20px;
+          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+          height: 550px;
+          transition: box-shadow 0.3s ease;
+          margin: 0 auto;
+          display: block;
+        }
+        
+        .tc-process-style2 .process-slider:hover {
+          box-shadow: 0 25px 80px rgba(115, 191, 68, 0.2);
+        }
+        
+        .tc-process-style2 .process-slider .swiper-wrapper {
+          height: 100%;
+        }
+        
+        .tc-process-style2 .process-slider .swiper-slide {
+          height: 100%;
+          opacity: 0;
+          transition: opacity 0.6s ease-in-out, transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .tc-process-style2 .process-slider .swiper-slide-active {
+          opacity: 1;
+        }
+        
+        .tc-process-style2 .process-slider .swiper-slide .img {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          border-radius: 20px;
+        }
+        
+        .tc-process-style2 .process-slider .swiper-slide .img::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+          z-index: 1;
+          transition: opacity 0.4s ease;
+        }
+        
+        .tc-process-style2 .process-slider .swiper-slide-active .img::before {
+          opacity: 0.6;
+        }
+        
+        .tc-process-style2 .process-slider .swiper-slide .img img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+          transform: scale(1.1);
+        }
+        
+        .tc-process-style2 .process-slider .swiper-slide-active .img img {
+          transform: scale(1);
+        }
+        
+        .tc-process-style2 .process-slider .swiper-slide .img .txt {
+          position: absolute;
+          bottom: 30px;
+          left: 30px;
+          font-size: 36px;
+          font-weight: 600;
+          color: #fff;
+          z-index: 2;
+          text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+          transform: translateY(30px);
+          opacity: 0;
+          transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+          letter-spacing: 1px;
+          white-space: nowrap;
+        }
+        
+        .tc-process-style2 .process-slider .swiper-slide-active .img .txt {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        
+        .tc-process-style2 .process-slider .swiper-slide .img .txt[style*="color: #73bf44"] {
+          color: #73bf44 !important;
+          text-shadow: 0 2px 10px rgba(115, 191, 68, 0.4);
+        }
+        
+        /* Special positioning for Sustainability */
+        .tc-process-style2 .process-slider .swiper-slide:nth-child(4) .img .txt {
+          left: auto;
+          right: 30px;
+        }
+        
+        @media (max-width: 991px) {
+          .tc-process-style2 .process-slider .swiper-slide:nth-child(4) .img .txt {
+            right: 30px;
+          }
+        }
+        
+        @media (max-width: 576px) {
+          .tc-process-style2 .process-slider .swiper-slide:nth-child(4) .img .txt {
+            right: 20px;
+          }
+        }
+        
+        /* Navigation Buttons */
+        .tc-process-style2 .process-slider .swiper-button-next,
+        .tc-process-style2 .process-slider .swiper-button-prev {
+          width: 50px;
+          height: 50px;
+          background: rgba(255, 255, 255, 0.95);
+          border-radius: 50%;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+          transition: all 0.3s ease;
+          margin-top: -25px;
+        }
+        
+        .tc-process-style2 .process-slider .swiper-button-next::after,
+        .tc-process-style2 .process-slider .swiper-button-prev::after {
+          font-size: 18px;
+          font-weight: 700;
+          color: #73bf44;
+        }
+        
+        .tc-process-style2 .process-slider .swiper-button-next:hover,
+        .tc-process-style2 .process-slider .swiper-button-prev:hover {
+          background: #73bf44;
+          transform: scale(1.1);
+          box-shadow: 0 6px 25px rgba(115, 191, 68, 0.4);
+        }
+        
+        .tc-process-style2 .process-slider .swiper-button-next:hover::after,
+        .tc-process-style2 .process-slider .swiper-button-prev:hover::after {
+          color: #fff;
+        }
+        
+        .tc-process-style2 .process-slider .swiper-button-next {
+          right: 20px;
+        }
+        
+        .tc-process-style2 .process-slider .swiper-button-prev {
+          left: 20px;
+        }
+        
+        /* Pagination */
+        .tc-process-style2 .process-slider .swiper-pagination {
+          bottom: 20px !important;
+          left: 50% !important;
+          transform: translateX(-50%);
+          width: auto !important;
+          display: flex;
+          gap: 10px;
+          justify-content: center;
+          align-items: center;
+        }
+        
+        .tc-process-style2 .process-slider .swiper-pagination-bullet {
+          width: 12px;
+          height: 12px;
+          background: rgba(255, 255, 255, 0.5);
+          opacity: 1;
+          margin: 0 !important;
+          transition: all 0.3s ease;
+          border: 2px solid rgba(255, 255, 255, 0.8);
+        }
+        
+        .tc-process-style2 .process-slider .swiper-pagination-bullet-active {
+          width: 40px;
+          height: 12px;
+          background: #73bf44;
+          border-radius: 6px;
+          border-color: #73bf44;
+          box-shadow: 0 0 15px rgba(115, 191, 68, 0.6);
+        }
+        
+        /* Responsive */
+        @media (max-width: 991px) {
+          .tc-process-style2 .process-slider {
+            height: 450px;
+            margin-top: 40px;
+          }
+          
+          .tc-process-style2 .process-slider .swiper-slide .img .txt {
+            font-size: 28px;
+            bottom: 25px;
+            left: 25px;
+          }
+          
+          .tc-process-style2 .process-slider .swiper-button-next,
+          .tc-process-style2 .process-slider .swiper-button-prev {
+            width: 40px;
+            height: 40px;
+            margin-top: -20px;
+          }
+          
+          .tc-process-style2 .process-slider .swiper-button-next::after,
+          .tc-process-style2 .process-slider .swiper-button-prev::after {
+            font-size: 14px;
+          }
+          
+          .tc-process-style2 .process-slider .swiper-button-next {
+            right: 15px;
+          }
+          
+          .tc-process-style2 .process-slider .swiper-button-prev {
+            left: 15px;
+          }
+        }
+        
+        @media (max-width: 576px) {
+          .tc-process-style2 .process-slider {
+            height: 380px;
+            border-radius: 15px;
+            margin-top: 30px;
+          }
+          
+          .tc-process-style2 .process-slider .swiper-slide .img {
+            border-radius: 15px;
+          }
+          
+          .tc-process-style2 .process-slider .swiper-slide .img .txt {
+            font-size: 20px;
+            bottom: 15px;
+            left: 15px;
+          }
         }
       `}} />
     <section 
@@ -196,39 +541,31 @@ function Process() {
               </div>
             </div>
             <div className="col-lg-7">
-              <div className="imgs">
-                <div className="img" data-lag="0.2">
-                  <img
-                    src="/innerpages/assets/img/process/proc1.jpg"
-                    alt=""
-                    className="img-cover"
-                  />
-                  <span className="txt sub-font"> Integrity </span>
+              <div className="process-slider swiper" ref={sliderRef} style={{ margin: '0 auto' }}>
+                <div className="swiper-wrapper">
+                  {sliderData.map((item) => (
+                    <div key={item.id} className="swiper-slide">
+                      <div className="img">
+                        <img
+                          src={item.image}
+                          alt={item.text}
+                          className="img-cover"
+                        />
+                        <span 
+                          className="txt sub-font" 
+                          style={{ 
+                            color: item.color || ''
+                          }}
+                        >
+                          {item.text}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                <div className="img" data-lag="0.4">
-                  <img
-                    src="/innerpages/assets/img/process/proc2.jpg"
-                    alt=""
-                    className="img-cover"
-                  />
-                  <span className="txt sub-font"      style={{ color: '#73bf44' }}> Humanity </span>
-                </div>
-                <div className="img" data-lag="0.3">
-                  <img
-                    src="/innerpages/assets/img/process/proc3.jpg"
-                    alt=""
-                    className="img-cover"
-                  />
-                  <span className="txt sub-font"> Creativity </span>
-                </div>
-                <div className="img" data-lag="0.5" >
-                  <img
-                    src="/innerpages/assets/img/process/proc4.jpg"
-                    alt=""
-                    className="img-cover"
-                  />
-                  <span className="txt sub-font" style={{ marginLeft: '150px' }}> Sustainability </span>
-                </div>
+                <div className="swiper-pagination"></div>
+                <div className="swiper-button-next"></div>
+                <div className="swiper-button-prev"></div>
               </div>
             </div>
           </div>
