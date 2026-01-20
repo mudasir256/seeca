@@ -351,15 +351,15 @@ function LatestCases() {
                       </div>
                       <div className="info">
                         <div className="tags mb-30">
-                          <span> {item.sub1} </span>
+                          <a href="#" onClick={(e) => e.preventDefault()}> {item.sub1} </a>
                           {item.sub2 && (
-                            <span> {item.sub2} </span>
+                            <a href="#" onClick={(e) => e.preventDefault()}> {item.sub2} </a>
                           )}
                         </div>
                         <h3 className="title mb-20">
-                          <span className="hover-orange1">
+                          <a href="#" className="hover-orange1" onClick={(e) => e.preventDefault()}>
                             {item.title}
-                          </span>
+                          </a>
                         </h3>
                         <div className="text color-666">
                           {item.desc}
@@ -373,41 +373,39 @@ function LatestCases() {
                 <nav aria-label="Page navigation example" className="mt-60">
                   <ul className="pagination justify-content-center">
                     <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
-                      <button 
-                        type="button"
+                      <a 
                         className="page-link" 
+                        href="#"
                         onClick={(e) => handlePageChange(currentPage - 1, e)}
-                        disabled={currentPage === 1}
                         style={{ pointerEvents: currentPage === 1 ? 'none' : 'auto', opacity: currentPage === 1 ? 0.5 : 1 }}
                       >
                         <i className="fal fa-chevron-left"></i>
-                      </button>
+                      </a>
                     </li>
                     {getPaginationNumbers().map((page, index) => (
                       <li key={index} className={`page-item ${page === '...' ? 'disabled' : ''} ${page === currentPage ? 'active' : ''}`}>
                         {page === '...' ? (
                           <span className="page-link" style={{ pointerEvents: 'none' }}>...</span>
                         ) : (
-                          <button 
-                            type="button"
+                          <a 
                             className={`page-link ${page === currentPage ? 'active' : ''}`}
+                            href="#"
                             onClick={(e) => handlePageChange(page, e)}
                           >
                             {page}
-                          </button>
+                          </a>
                         )}
                       </li>
                     ))}
                     <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
-                      <button 
-                        type="button"
+                      <a 
                         className="page-link" 
+                        href="#"
                         onClick={(e) => handlePageChange(currentPage + 1, e)}
-                        disabled={currentPage === totalPages}
                         style={{ pointerEvents: currentPage === totalPages ? 'none' : 'auto', opacity: currentPage === totalPages ? 0.5 : 1 }}
                       >
                         <i className="fal fa-chevron-right"></i>
-                      </button>
+                      </a>
                     </li>
                   </ul>
                 </nav>
