@@ -90,10 +90,10 @@ function Contact() {
                 </span>
               </button>
               <p className="fsz-12 color-666 mt-20">
-                By summiting, i'm agree to the
-                <button type="button" className="color-000 text-decoration-underline border-0 bg-transparent p-0">
+                By summiting, i'm agree to the{' '}
+                <span className="color-000 text-decoration-underline">
                   Terms & Conditions
-                </button>
+                </span>
               </p>
             </form>
           </div>
@@ -103,13 +103,13 @@ function Contact() {
         <div className="marq-slider">
           <div className="swiper-wrapper">
             <div className="swiper-slide">
-              <button type="button" className="border-0 bg-transparent p-0"> Next Cases </button>
+              <span> Next Cases </span>
             </div>
             <div className="swiper-slide">
-              <button type="button" className="border-0 bg-transparent p-0"> Next Cases </button>
+              <span> Next Cases </span>
             </div>
             <div className="swiper-slide">
-              <button type="button" className="border-0 bg-transparent p-0"> Next Cases </button>
+              <span> Next Cases </span>
             </div>
           </div>
           <div className="float-cursor float_box">
