@@ -1,15 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const ticking = useRef(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY || window.pageYOffset;
-      setIsScrolled(scrollPosition > 50);
+      if (!ticking.current) {
+        window.requestAnimationFrame(() => {
+          const scrollPosition = window.scrollY || window.pageYOffset;
+          setIsScrolled(scrollPosition > 50);
+          ticking.current = false;
+        });
+        ticking.current = true;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 

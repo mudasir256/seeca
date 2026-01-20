@@ -10,8 +10,8 @@ const truncateToWords = (text, limit) => {
 };
 
 function Projects() {
-  // Ensure data1 is an array
-  const projectsData = Array.isArray(data1) ? data1 : [];
+  // Ensure data1 is an array and limit to 5 projects
+  const projectsData = Array.isArray(data1) ? data1.slice(0, 5) : [];
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -1119,7 +1119,7 @@ function Projects() {
                         ))}
                       </div>
                       <span className="project-slider-counter">
-                        {data1.length.toString().padStart(2, '0')}
+                        {projectsData.length.toString().padStart(2, '0')}
                       </span>
                   </div>
                 </div>
@@ -1274,7 +1274,7 @@ function Projects() {
                         ))}
                       </div>
                       <span className="project-slider-counter">
-                        {data1.length.toString().padStart(2, '0')}
+                        {projectsData.length.toString().padStart(2, '0')}
                       </span>
                   </div>
                 </div>

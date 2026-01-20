@@ -140,17 +140,21 @@ function InteriorDesignContent() {
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="interior-content-wrapper">
             <div className="interior-text">
+              <div className="interior-subtitle">[ WHAT WE OFFER ]</div>
               <h4 style={{ fontSize: '34px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px', lineHeight: '1.3', letterSpacing: '-0.5px' }}>
-                We make indoor spaces functional, safe, and beautiful by determining space requirements
+                Designing Spaces That Inspire Living
               </h4>
               <div className="interior-description">
-                <strong>Interior design</strong> is the art and science of enhancing the interior of a space to achieve a healthier and more aesthetically pleasing environment for the people using the space. It involves a comprehensive understanding of architecture, design principles, color theory, materials, furniture, lighting, and spatial arrangements. The ultimate goal is to create spaces that are functional, beautiful, and reflective of the personality or purpose of the occupant or user.
+                We create interior environments that are functional, safe, and visually compelling by thoughtfully defining space requirements and design intent.
               </div>
               <div className="interior-description">
-                In design, we incorporate elements from the natural environment into constructed spaces, including features such as water, vegetation, and natural illumination, as well as materials like wood and stone. Promoting the integration of natural systems and processes in design fosters a connection to nature, which subsequently enhances health and well-being. The potential advantages include reduced heart rate variability and pulse rates, lower blood pressure, and heightened activity within our nervous systems, among others.
+                Interior design is both an art and a science—enhancing indoor spaces to promote comfort, health, and aesthetic harmony. It requires a deep understanding of architecture, design principles, color theory, materials, furniture, lighting, and spatial planning. Our goal is to craft interiors that are not only beautiful and practical, but also expressive of the purpose, identity, and lifestyle of those who inhabit them.
               </div>
               <div className="interior-description">
-                Interior design plays a crucial role in making spaces not only functional but also emotionally engaging. The way a space looks and feels can influence a person's mood, productivity, and overall well-being, making interior design a key element of modern living and working environments.
+                Our design approach embraces nature-inspired elements, integrating water features, vegetation, natural light, and organic materials such as wood and stone. By reconnecting built environments with natural systems, we foster spaces that support physical and mental well-being—helping reduce stress, improve focus, and enhance overall comfort.
+              </div>
+              <div className="interior-description">
+                Interior design plays a vital role in shaping human experience. The look, feel, and flow of a space directly influence mood, productivity, and quality of life, making thoughtful interior design essential to modern living and working environments.
               </div>
             </div>
             <div className="interior-image">

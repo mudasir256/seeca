@@ -142,13 +142,19 @@ function BuildingSustainabilityContent() {
             <div className="building-sustainability-text">
               <div className="building-sustainability-subtitle">[ WHAT WE OFFER ]</div>
               <h4 style={{ fontSize: '34px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px', lineHeight: '1.3', letterSpacing: '-0.5px' }}>
-                Our focus is to revolutionize the building sustainability theme
+                Redefining Sustainable Building—Smarter, Stronger, More Efficient
               </h4>
               <div className="building-sustainability-description">
-                <strong>Building sustainability</strong> is the practice of designing, constructing, and operating buildings to minimize environmental impact, ensure energy efficiency, resource conservation, and long-term durability. Sustainable buildings reduce ecological footprint, contribute to occupant health and comfort, promote social responsibility, and incorporate energy-efficient design, eco-friendly materials, and systems that reduce waste and support a circular economy.
+                Our focus is to redefine building sustainability by combining environmentally responsible design with cost-efficient structural engineering solutions.
               </div>
               <div className="building-sustainability-description">
-                Sustainable building is essential for addressing environmental, economic, and social challenges. Sustainable practices reduce impact on the environment, improve occupant well-being, and provide long-term economic benefits. The future of the construction industry will focus on creating buildings that are functional, beautiful, sustainable, and resilient.
+                Building sustainability is not only about reducing environmental impact—it is about designing smarter. Through optimized structural systems, efficient material usage, and integrated engineering strategies, we help clients lower construction costs, reduce waste, and improve long-term building performance. Sustainability, when done correctly, becomes an economic advantage rather than an added expense.
+              </div>
+              <div className="building-sustainability-description">
+                We approach sustainable building as a holistic process that balances energy efficiency, resource conservation, durability, and occupant well-being. By integrating eco-friendly materials, energy-efficient systems, and intelligent structural design, we create buildings that are resilient, efficient, and financially viable over their entire lifecycle.
+              </div>
+              <div className="building-sustainability-description">
+                Our sustainability-driven engineering solutions address today's environmental, economic, and social challenges—delivering buildings that are functional, visually compelling, structurally optimized, and future-ready. The future of construction lies in structures that do more with less, perform better over time, and create lasting value for both people and the planet.
               </div>
             </div>
             <div className="building-sustainability-image">

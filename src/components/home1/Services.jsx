@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 
-function Services({ removeTopPadding = false }) {
+const Services = memo(function Services({ removeTopPadding = false }) {
   return (
     <>
     <section className="tc-services-style1-modern" style={{ position: 'relative', overflow: 'hidden', background: '#f8f9fa' }}>
@@ -84,7 +84,7 @@ function Services({ removeTopPadding = false }) {
               margin: '0 auto',
               lineHeight: '1.7'
             }}>
-         Discover our comprehensive range of professional services that we designed to “Bring Your Vision to Life” 
+             Discover our comprehensive range of professional services that we designed to “Bring Your Vision to Life” 
             </p>
           </div>
           
@@ -94,83 +94,85 @@ function Services({ removeTopPadding = false }) {
               margin-bottom: 20px;
             }
             .service-card-compact-inner {
-              background: rgba(26, 26, 26, 0.95);
-              border-radius: 20px;
-              padding: 28px;
+              background: #ffffff;
+              border-radius: 14px;
+              padding: 16px;
               height: 100%;
               display: flex;
               flex-direction: column;
               position: relative;
               overflow: hidden;
-              transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+              transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+              box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+              border: 1px solid rgba(0, 0, 0, 0.06);
               cursor: pointer;
             }
             .service-card-compact-inner:hover {
-              transform: translateY(-8px);
-              box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+              transform: translateY(-5px);
+              box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+              border-color: rgba(0, 0, 0, 0.1);
             }
             .service-icon-compact {
-              width: 60px;
-              height: 60px;
-              border-radius: 14px;
+              width: 42px;
+              height: 42px;
+              border-radius: 10px;
               display: flex;
               align-items: center;
               justify-content: center;
-              font-size: 28px;
+              font-size: 20px;
               color: #FFFFFF;
-              transition: all 0.4s ease;
-              margin-bottom: 20px;
+              transition: all 0.3s ease;
+              margin-bottom: 12px;
             }
             .service-card-compact:hover .service-icon-compact {
-              transform: translateY(-5px) scale(1.15);
+              transform: translateY(-3px) scale(1.1);
             }
             .service-title-compact {
-              font-size: 22px;
+              font-size: 18px;
               font-weight: 700;
-              color: #ffffff;
-              margin-bottom: 16px;
+              color: #1a1a1a;
+              margin-bottom: 10px;
               line-height: 1.3;
             }
             .service-image-compact {
               width: 100%;
               height: 160px;
-              border-radius: 14px;
+              border-radius: 10px;
               overflow: hidden;
-              margin-bottom: 18px;
-              background: #2a2a2a;
+              margin-bottom: 12px;
+              background: #f5f5f5;
             }
             .service-image-compact img {
               width: 100%;
               height: 100%;
               object-fit: cover;
-              transition: transform 0.6s ease;
+              transition: transform 0.5s ease;
             }
             .service-card-compact:hover .service-image-compact img {
-              transform: scale(1.08);
+              transform: scale(1.05);
             }
             .service-description-compact {
-              font-size: 14px;
-              line-height: 1.7;
-              color: #cccccc;
-              margin-bottom: 20px;
+              font-size: 13px;
+              line-height: 1.6;
+              color: #666666;
+              margin-bottom: 12px;
               flex-grow: 1;
             }
             .service-read-more-compact {
               display: inline-flex;
               align-items: center;
-              gap: 8px;
-              font-size: 13px;
+              gap: 5px;
+              font-size: 11px;
               font-weight: 600;
-              color: #ffffff;
+              color: #1a1a1a;
               text-transform: uppercase;
-              letter-spacing: 0.8px;
+              letter-spacing: 0.5px;
               text-decoration: none;
               transition: all 0.3s ease;
               margin-top: auto;
             }
             .service-read-more-compact i {
-              font-size: 14px;
+              font-size: 11px;
               transition: transform 0.3s ease;
             }
             .service-card-compact:hover .service-read-more-compact i {
@@ -179,15 +181,14 @@ function Services({ removeTopPadding = false }) {
             /* Unique Card Styles */
             .card-1 .service-card-compact-inner {
               border-top: 3px solid #73bf44;
-              border-left: 2px solid rgba(115, 191, 68, 0.1);
             }
             .card-1 .service-icon-compact {
               background: linear-gradient(135deg, #73bf44 0%, #8dd65a 100%);
-              box-shadow: 0 4px 12px rgba(115, 191, 68, 0.3);
+              box-shadow: 0 3px 10px rgba(115, 191, 68, 0.25);
             }
             .card-1:hover .service-card-compact-inner {
-              border-color: rgba(115, 191, 68, 0.4);
-              box-shadow: 0 6px 25px rgba(115, 191, 68, 0.2);
+              border-top-color: #73bf44;
+              box-shadow: 0 8px 24px rgba(115, 191, 68, 0.15);
             }
             .card-1:hover .service-title-compact {
               color: #73bf44;
@@ -197,15 +198,14 @@ function Services({ removeTopPadding = false }) {
             }
             .card-2 .service-card-compact-inner {
               border-top: 3px solid #4a90e2;
-              border-right: 2px solid rgba(74, 144, 226, 0.1);
             }
             .card-2 .service-icon-compact {
               background: linear-gradient(135deg, #4a90e2 0%, #6ba3f0 100%);
-              box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+              box-shadow: 0 3px 10px rgba(74, 144, 226, 0.25);
             }
             .card-2:hover .service-card-compact-inner {
-              border-color: rgba(74, 144, 226, 0.4);
-              box-shadow: 0 6px 25px rgba(74, 144, 226, 0.2);
+              border-top-color: #4a90e2;
+              box-shadow: 0 8px 24px rgba(74, 144, 226, 0.15);
             }
             .card-2:hover .service-title-compact {
               color: #4a90e2;
@@ -215,15 +215,14 @@ function Services({ removeTopPadding = false }) {
             }
             .card-3 .service-card-compact-inner {
               border-top: 3px solid #e67e22;
-              border-left: 2px solid rgba(230, 126, 34, 0.1);
             }
             .card-3 .service-icon-compact {
               background: linear-gradient(135deg, #e67e22 0%, #f39c12 100%);
-              box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+              box-shadow: 0 3px 10px rgba(230, 126, 34, 0.25);
             }
             .card-3:hover .service-card-compact-inner {
-              border-color: rgba(230, 126, 34, 0.4);
-              box-shadow: 0 6px 25px rgba(230, 126, 34, 0.2);
+              border-top-color: #e67e22;
+              box-shadow: 0 8px 24px rgba(230, 126, 34, 0.15);
             }
             .card-3:hover .service-title-compact {
               color: #e67e22;
@@ -233,15 +232,14 @@ function Services({ removeTopPadding = false }) {
             }
             .card-4 .service-card-compact-inner {
               border-top: 3px solid #27ae60;
-              border-right: 2px solid rgba(39, 174, 96, 0.1);
             }
             .card-4 .service-icon-compact {
               background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
-              box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+              box-shadow: 0 3px 10px rgba(39, 174, 96, 0.25);
             }
             .card-4:hover .service-card-compact-inner {
-              border-color: rgba(39, 174, 96, 0.4);
-              box-shadow: 0 6px 25px rgba(39, 174, 96, 0.2);
+              border-top-color: #27ae60;
+              box-shadow: 0 8px 24px rgba(39, 174, 96, 0.15);
             }
             .card-4:hover .service-title-compact {
               color: #27ae60;
@@ -251,15 +249,14 @@ function Services({ removeTopPadding = false }) {
             }
             .card-5 .service-card-compact-inner {
               border-top: 3px solid #9b59b6;
-              border-left: 2px solid rgba(155, 89, 182, 0.1);
             }
             .card-5 .service-icon-compact {
               background: linear-gradient(135deg, #9b59b6 0%, #bb8fce 100%);
-              box-shadow: 0 4px 12px rgba(155, 89, 182, 0.3);
+              box-shadow: 0 3px 10px rgba(155, 89, 182, 0.25);
             }
             .card-5:hover .service-card-compact-inner {
-              border-color: rgba(155, 89, 182, 0.4);
-              box-shadow: 0 6px 25px rgba(155, 89, 182, 0.2);
+              border-top-color: #9b59b6;
+              box-shadow: 0 8px 24px rgba(155, 89, 182, 0.15);
             }
             .card-5:hover .service-title-compact {
               color: #9b59b6;
@@ -289,44 +286,51 @@ function Services({ removeTopPadding = false }) {
                 margin-top: 20px;
               }
               .service-card-compact-inner {
-                padding: 24px;
+                padding: 14px;
               }
               .service-icon-compact {
-                width: 55px;
-                height: 55px;
-                font-size: 26px;
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+                margin-bottom: 10px;
               }
               .service-title-compact {
-                font-size: 20px;
+                font-size: 16px;
+                margin-bottom: 8px;
               }
               .service-image-compact {
-                height: 150px;
+                height: 140px;
+                margin-bottom: 10px;
+              }
+              .service-description-compact {
+                font-size: 12px;
+                margin-bottom: 10px;
               }
             }
             @media screen and (max-width: 767px) {
               .service-card-compact-inner {
-                padding: 20px;
+                padding: 12px;
               }
               .service-icon-compact {
-                width: 50px;
-                height: 50px;
-                font-size: 24px;
-                margin-bottom: 15px;
+                width: 38px;
+                height: 38px;
+                font-size: 17px;
+                margin-bottom: 10px;
               }
               .service-title-compact {
-                font-size: 18px;
-                margin-bottom: 12px;
+                font-size: 15px;
+                margin-bottom: 8px;
               }
               .service-image-compact {
-                height: 140px;
-                margin-bottom: 15px;
+                height: 130px;
+                margin-bottom: 10px;
               }
               .service-description-compact {
-                font-size: 13px;
-                margin-bottom: 15px;
+                font-size: 11px;
+                margin-bottom: 10px;
               }
               .service-read-more-compact {
-                font-size: 12px;
+                font-size: 10px;
               }
             }
             @media screen and (max-width: 575px) {
@@ -334,19 +338,30 @@ function Services({ removeTopPadding = false }) {
                 margin-bottom: 20px;
               }
               .service-card-compact-inner {
-                padding: 18px;
-                border-radius: 16px;
+                padding: 12px;
+                border-radius: 12px;
               }
               .service-icon-compact {
-                width: 45px;
-                height: 45px;
-                font-size: 22px;
+                width: 36px;
+                height: 36px;
+                font-size: 16px;
+                margin-bottom: 8px;
               }
               .service-title-compact {
-                font-size: 17px;
+                font-size: 14px;
+                margin-bottom: 6px;
               }
               .service-image-compact {
                 height: 120px;
+                margin-bottom: 8px;
+                border-radius: 8px;
+              }
+              .service-description-compact {
+                font-size: 11px;
+                margin-bottom: 8px;
+              }
+              .service-read-more-compact {
+                font-size: 9px;
               }
             }
           `}} />
@@ -369,6 +384,8 @@ function Services({ removeTopPadding = false }) {
                       <img
                         src="/home_preview/assets/img/Architecture-scaled.jpg"
                         alt="Architecture"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                     <p className="service-description-compact">
@@ -398,6 +415,8 @@ function Services({ removeTopPadding = false }) {
                       <img
                         src="/home_preview/assets/img/Slider-1-scaled.jpg"
                         alt="Interior Design"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                     <p className="service-description-compact">
@@ -427,6 +446,8 @@ function Services({ removeTopPadding = false }) {
                       <img
                         src="/home_preview/assets/img/Construction-scaled.jpg"
                         alt="Construction"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                     <p className="service-description-compact">
@@ -457,6 +478,8 @@ function Services({ removeTopPadding = false }) {
                       <img
                         src="/home_preview/assets/img/Evening-View-scaled.jpg"
                         alt="Building Sustainability"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                     <p className="service-description-compact">
@@ -486,6 +509,8 @@ function Services({ removeTopPadding = false }) {
                       <img
                         src="/home_preview/assets/img/Smart-Technologies-scaled.jpg"
                         alt="Smart Building Technologies"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                     <p className="service-description-compact">
@@ -517,10 +542,12 @@ function Services({ removeTopPadding = false }) {
       </div>
     </section>
       <div className="ser-img">
-        <img src="/home1/assets/img/services/ser.jpg" alt="" />
+        <img src="/home1/assets/img/services/ser.jpg" alt="" loading="lazy" decoding="async" />
       </div>
-    </>
+    </> 
   );
-}
+});
+
+Services.displayName = 'Services';
 
 export default Services;

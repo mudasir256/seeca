@@ -138,16 +138,19 @@ function ArchitectureContent() {
             <div className="architecture-text">
               <div className="architecture-subtitle">[ WHAT WE OFFER ]</div>
               <h4 style={{ fontSize: '34px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px', lineHeight: '1.3', letterSpacing: '-0.5px' }}>
-                Our Goal is to Create Incredible Custom Architecture Design
+                Our Goal: Creating Exceptional Custom Architecture
               </h4>
               <div className="architecture-description">
-                Architecture is the art and science of designing and constructing buildings, structures, and other physical environments. It encompasses a wide range of disciplines, from the design of individual buildings to the planning of entire cities. The building design is mostly concerned with the aesthetic look, functionality of the space, sustainable environment, and cultural aspects of the residents.
+                Architecture is both an art and a science—the thoughtful design and construction of buildings, structures, and the physical environments we inhabit. It spans multiple disciplines, from the creation of individual spaces to the planning of entire communities and cities.
               </div>
               <div className="architecture-description">
-                Architects are responsible for conceptualizing the design; understanding client needs, creating initial designs, and refining the vision. They create blueprints, 3D models, and other technical specifications of the design.
+                At its core, architectural design balances aesthetic excellence, functional efficiency, environmental sustainability, and cultural sensitivity. Every building is shaped not only by form and function, but also by the lifestyle, values, and aspirations of the people who use it.
               </div>
               <div className="architecture-description">
-                Architecture not only provides shelter but also shapes the built environment in ways that influence society and culture, offering a reflection of the values, technologies, and artistic movements of different periods in history.
+                Architects play a vital role in transforming ideas into reality. This process begins with understanding client needs and vision, followed by conceptual development, detailed design, and technical refinement. Through blueprints, 3D visualizations, and precise specifications, architects bring clarity and structure to complex ideas.
+              </div>
+              <div className="architecture-description">
+                Architecture goes beyond providing shelter. It shapes the built environment, influences human behavior, and reflects the social, cultural, and technological progress of its time. Thoughtfully designed spaces have the power to inspire, connect communities, and leave a lasting impact on society.
               </div>
             </div>
             <div className="architecture-image">

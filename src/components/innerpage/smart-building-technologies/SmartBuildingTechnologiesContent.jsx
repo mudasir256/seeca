@@ -142,16 +142,19 @@ function SmartBuildingTechnologiesContent() {
             <div className="smart-building-technologies-text">
               <div className="smart-building-technologies-subtitle">[ WHAT WE OFFER ]</div>
               <h4 style={{ fontSize: '34px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px', lineHeight: '1.3', letterSpacing: '-0.5px' }}>
-                We incorporate Smart and Innovative Solutions for your comfort
+                Smart & Innovative Solutions for Intelligent Living
               </h4>
               <div className="smart-building-technologies-description">
-                <strong>Smart building technologies</strong> are systems and devices integrated into a building's infrastructure to enhance efficiency, comfort, security, and performance. These technologies use sensors, automation, and data analytics to optimize operations, reduce energy consumption, improve well-being, and provide control. Smart buildings incorporate <strong>Internet of Things (IoT)</strong> devices, advanced monitoring systems, and automation tools for intelligent, data-driven decisions.
+                We integrate smart and innovative building solutions designed to enhance comfort, efficiency, and control—creating spaces that respond intelligently to the needs of the people within them.
               </div>
               <div className="smart-building-technologies-description">
-                The key smart building technologies are <strong>Building Management Systems (BMS) / Building Automation Systems (BAS)</strong>. These systems are the "brain" of a smart building, controlling and monitoring systems like lighting, HVAC, security, fire alarms, and energy management.
+                Smart building technologies combine automation, sensors, and data-driven systems to optimize building performance. Through intelligent monitoring and control, these systems reduce energy consumption, improve operational efficiency, and elevate occupant well-being. Our approach ensures technology serves people—not the other way around.
               </div>
               <div className="smart-building-technologies-description">
-                Smart building technologies are revolutionizing building design, operation, and management. They offer benefits such as energy savings, enhanced comfort, improved security, and greater sustainability. Smart buildings will be critical in shaping urban development and the built environment.
+                At the core of every smart building is a Building Management System (BMS) / Building Automation System (BAS)—the central intelligence that seamlessly controls lighting, HVAC, security, fire safety, and energy systems. By integrating these systems into a unified platform, we enable real-time monitoring, predictive maintenance, and efficient decision-making.
+              </div>
+              <div className="smart-building-technologies-description">
+                Smart technologies are transforming how buildings are designed, operated, and experienced. The result is enhanced comfort, improved safety, reduced operating costs, and greater sustainability. As cities evolve, smart buildings will play a vital role in shaping a connected, efficient, and future-ready built environment.
               </div>
             </div>
             <div className="smart-building-technologies-image">

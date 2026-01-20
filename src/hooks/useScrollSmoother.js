@@ -261,11 +261,11 @@ export const useScrollSmoother = (containerId = 'scrollsmoother-container', enab
             // Only create ScrollSmoother on desktop/web screens
             smoother = window.ScrollSmoother.create({
               content: `#${containerId}`,
-              smooth: 2,
+              smooth: 1.2, // Reduced from 2 for faster scrolling
               normalizeScroll: true,
               ignoreMobileResize: true,
               effects: true,
-              ease: 'power2.out',
+              ease: 'power1.out', // Faster easing
             });
             smootherRef.current = smoother;
             window.scrollSmootherInstance = smoother;

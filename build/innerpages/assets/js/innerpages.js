@@ -290,9 +290,9 @@ $(document).ready(function() {
 
     // projects-style2
     var swiper = new Swiper('.tc-projects-style2 .projects-slider', {
-        slidesPerView: 3,
+        slidesPerView: 4,
         spaceBetween: 30,
-        centeredSlides: true,
+        centeredSlides: false,
         speed: 1000,
         pagination: {
             el: '.tc-projects-style2 .swiper-pagination',
@@ -316,10 +316,10 @@ $(document).ready(function() {
                 slidesPerView: 2,
             },
             991: {
-                slidesPerView: 2,
+                slidesPerView: 3,
             },
             1200: {
-                slidesPerView: 3,
+                slidesPerView: 4,
             }
         }
     });

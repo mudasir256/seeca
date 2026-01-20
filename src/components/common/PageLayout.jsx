@@ -27,10 +27,25 @@ const SMOOTH_SCROLL_STYLES = `
     -webkit-transform: translateZ(0);
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    contain: layout style paint;
+  }
+  /* Optimize images for better scrolling performance */
+  img {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 300px;
   }
   * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+  /* Improve scroll performance */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  /* Force hardware acceleration for common animated elements */
+  .wow, [class*="animate"], [data-wow] {
+    transform: translateZ(0);
+    backface-visibility: hidden;
   }
   /* Mobile optimizations - Native smooth scrolling only */
   @media (max-width: 991px) {

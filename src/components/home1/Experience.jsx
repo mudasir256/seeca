@@ -11,27 +11,35 @@ function Experience() {
     
     let animationId;
     let position = 0;
-    const speed = 2; 
+    const speed = 1.5; // Slightly reduced for better performance
     const totalWidth = scrollContainer.scrollWidth / 2;
+    let lastTime = performance.now();
     
-    const scroll = () => {
-      position += speed;
+    const scroll = (currentTime) => {
+      const deltaTime = currentTime - lastTime;
+      lastTime = currentTime;
+      
+      // Use time-based animation for consistent speed
+      position += speed * (deltaTime / 16); // Normalize to 60fps
       
       if (position >= totalWidth) {
         position = 0;
       }
       
       if (scrollContainer) {
-        scrollContainer.style.transform = `translateX(-${position}px)`;
+        // Use transform3d for GPU acceleration
+        scrollContainer.style.transform = `translate3d(-${position}px, 0, 0)`;
       }
       
       animationId = requestAnimationFrame(scroll);
     };
     
-    scroll(); 
+    animationId = requestAnimationFrame(scroll);
     
     return () => {
-      cancelAnimationFrame(animationId);
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+      }
     };
   }, []);
   return (
@@ -177,9 +185,11 @@ function Experience() {
           <div className="col-12 col-md-6 col-lg-3">
             <div className="img wow">
               <img
-                src="/home1/assets/img/exp.png"
+                src="/home1/assets/img/CAM01.jpg"
                 alt=""
                 className="img-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -238,7 +248,12 @@ function Experience() {
               <div 
                 ref={scrollRef}
                 className="d-flex"
-                style={{ willChange: 'transform', width: 'fit-content' }}
+                style={{ 
+                  willChange: 'transform', 
+                  width: 'fit-content',
+                  transform: 'translateZ(0)', // Force GPU acceleration
+                  backfaceVisibility: 'hidden'
+                }}
               >
                 {duplicatedLogos.map((logo, index) => (
                   <div
@@ -253,6 +268,8 @@ function Experience() {
                     <img
                       src={logo.logo}
                       alt={logo.name}
+                      loading="lazy"
+                      decoding="async"
                       style={{ 
                         height: '80px',
                         width: 'auto',

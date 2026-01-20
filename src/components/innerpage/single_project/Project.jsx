@@ -615,29 +615,21 @@ function Project() {
             className="text fsz-24 mb-20 fw-500 wow fadeInUp slow"
             data-wow-delay="0.2s"
           >
-            Create an unconventional yet user-friendly website – innovative,
-            with a clean and simple design that communicates brand values and
-            showcases multi-media content. Site that spreads the message:
-            &quot;Islamic stories your child will love&quot;
+            {finalProjectData.challenge || `Delivering exceptional design and construction quality while meeting client expectations, budget constraints, and timeline requirements. The project required balancing aesthetic excellence with functional efficiency, ensuring that every design decision enhances both the visual appeal and practical usability of the space.`}
           </div>
           <ul
             className="dots-list fsz-18 color-666 wow fadeInUp slow"
             data-wow-delay="0.2s"
           >
-            <li className="d-flex my-4">
-              <span className="icon me-3"> • </span> Develop easy-to-find and
-              easy-to-navigate mobile friendly website
-            </li>
-            <li className="d-flex my-4">
-              <span className="icon me-3"> • </span> Showcase each type of
-              content: interactive books, animated stories and picture books,
-              audio stories. <br /> Create an experience people want to share
-              with others
-            </li>
-            <li className="d-flex my-4">
-              <span className="icon me-3"> • </span> Persuade to download app
-              and subscribe
-            </li>
+            {(finalProjectData.challengePoints || [
+              "Integrating client vision with practical design solutions and building codes",
+              "Optimizing space utilization while maintaining aesthetic appeal and functionality",
+              "Ensuring quality execution within budget and timeline constraints"
+            ]).map((point, index) => (
+              <li key={index} className="d-flex my-4">
+                <span className="icon me-3"> • </span> {point}
+              </li>
+            ))}
           </ul>
           <h3
             className="sub-title fsz-45 mb-60 mt-150 wow fadeInUp slow"
@@ -649,10 +641,7 @@ function Project() {
             className="text fsz-24 mb-20 fw-500 wow fadeInUp slow"
             data-wow-delay="0.2s"
           >
-            Our approach was to present the site as a visual editorial platform
-            with quarterly features based on events and occasions the brand was
-            focused on. Each quarterly focus would be marked by the hero and
-            custom tags that filter content.
+            {finalProjectData.solution || `Our approach combined innovative design thinking with proven construction methodologies. Through collaborative planning, detailed design development, and meticulous project management, we delivered a solution that exceeds client expectations. We leveraged modern technologies, sustainable practices, and expert craftsmanship to create spaces that are both beautiful and functional, setting new standards for quality and design excellence.`}
           </div>
         </div>
       </div>

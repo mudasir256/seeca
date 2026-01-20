@@ -208,7 +208,7 @@ function Advantages() {
           <div className="advantages-content">
             <div className="advantages-image-wrapper">
               <img
-                src="/innerpages/assets/img/process/proc1.jpg"
+                src="/innerpages/assets/img/process/EveningView.jpg"
                 alt="Interior Design"
                 className="advantages-image"
               />

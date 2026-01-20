@@ -142,16 +142,22 @@ function ConstructionContent() {
             <div className="construction-text">
               <div className="construction-subtitle">[ WHAT WE OFFER ]</div>
               <h4 style={{ fontSize: '34px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px', lineHeight: '1.3', letterSpacing: '-0.5px' }}>
-                We will Help You to Get the Result You Dreamed of
+                Turning Construction Challenges into Successful Results
               </h4>
               <div className="construction-description">
-                <strong>Construction</strong> is the process of building or assembling infrastructure, buildings, and other structures. It involves a series of steps, including planning, design, execution, and completion. Construction projects can range from small residential buildings to large-scale commercial and industrial facilities, as well as public infrastructure like roads, bridges, and airports. The construction industry involves various professionals, including architects, engineers, project managers, contractors, and skilled workers, all working together to bring a project from concept to reality.
+                We help clients achieve the results they envisioned—especially when construction projects fall short due to poor coordination, design gaps, execution errors, or repeated on-site mistakes.
               </div>
               <div className="construction-description">
-                The construction industry is flourishing, and modern technologies like Building Information Modeling (BIM), Drones, Virtual Reality (VR), Robotics, and Smart Construction are being used to improve work efficiency and reduce labor costs. These innovations help streamline processes, enhance accuracy, and create more sustainable building practices.
+                Construction is more than assembling materials; it is a carefully managed process that transforms ideas into lasting structures. From planning and design to execution and completion, successful construction demands precision, experience, and seamless collaboration between architects, engineers, project managers, contractors, and skilled labor. When any part of this chain fails, projects face delays, cost overruns, and compromised quality.
               </div>
               <div className="construction-description">
-                Construction is a multifaceted industry that plays a vital role in shaping the built environment, from homes to complex infrastructure. It requires careful planning, coordination, and expertise, involving a wide range of materials and technologies. By focusing on safety and sustainability, the construction industry helps achieve long-term success and create functional, durable, and aesthetically pleasing spaces.
+                Many clients struggle with miscommunication, design inconsistencies, unskilled workmanship, and avoidable errors on site. Our role is to step in with clarity and control—streamlining workflows, resolving design-to-construction gaps, and ensuring that every decision is executed accurately on the ground.
+              </div>
+              <div className="construction-description">
+                We leverage modern construction technologies such as Building Information Modeling (BIM), drones, virtual reality (VR), smart construction tools, and advanced project management systems to reduce errors, improve coordination, and increase efficiency. These tools allow us to identify problems before they occur, minimize rework, and maintain strict quality standards throughout the project lifecycle.
+              </div>
+              <div className="construction-description">
+                Construction plays a vital role in shaping the built environment—from homes and commercial spaces to complex infrastructure. By prioritizing safety, accuracy, sustainability, and accountability, we help deliver projects that are not only functional and durable, but also aligned with the original vision and expectations of our clients.
               </div>
             </div>
             <div className="construction-image">

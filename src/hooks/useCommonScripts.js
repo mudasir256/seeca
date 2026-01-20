@@ -91,20 +91,27 @@ export const useCommonScripts = () => {
       });
     });
 
-    // Scroll to top handlers
+    // Scroll to top handlers - throttled with requestAnimationFrame
+    let ticking = false;
     const handleScroll = () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const toTopElements = document.querySelectorAll('#to_top, .to_top');
-      toTopElements.forEach((el) => {
-        if (scrollTop > 700) {
-          el.classList.add('show');
-        } else {
-          el.classList.remove('show');
-        }
-      });
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          const toTopElements = document.querySelectorAll('#to_top, .to_top');
+          toTopElements.forEach((el) => {
+            if (scrollTop > 700) {
+              el.classList.add('show');
+            } else {
+              el.classList.remove('show');
+            }
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     // To top click handlers
     const toTopElements = document.querySelectorAll('#to_top, .to_top');
