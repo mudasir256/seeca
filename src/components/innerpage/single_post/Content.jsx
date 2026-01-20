@@ -51,34 +51,28 @@ function RelatedPosts({ currentBlog }) {
                 </div>
                       <div className="info pt-30">
                         <div className="tags color-666 text-uppercase fsz-12">
-                    <a 
-                      href="#" 
+                    <span 
                       className="color-green1"
-                      onClick={(e) => e.preventDefault()}
                       style={{ color: '#73bf44' }}
                     >
                       {item.subTitle}
-                          </a>
+                          </span>
                           <span className="circle icon-3 bg-666 rounded-circle mx-3"></span>
-                    <a 
-                      href="#"
-                      onClick={(e) => e.preventDefault()}
-                    > 
+                    <span> 
                       {item.history} 
-                    </a>
+                    </span>
                         </div>
                         <h3 className="title mt-15">
-                    <a 
-                      href="#" 
+                    <button 
+                      type="button"
                       className="hover-green1 fsz-24"
-                      onClick={(e) => {
-                        e.preventDefault();
+                      onClick={() => {
                         navigate('/innerpages/single_post', { state: { blog: item } });
                       }}
-                      style={{ color: 'inherit' }}
+                      style={{ color: 'inherit', background: 'none', border: 'none', padding: 0, cursor: 'pointer', textAlign: 'left', width: '100%' }}
                     >
                       {item.title}
-                          </a>
+                          </button>
                         </h3>
                       </div>
                     </div>
@@ -157,11 +151,11 @@ function Content({ blog }) {
                   className="breadcromb wow fadeInUp slow"
                   data-wow-delay="0.2s"
                 >
-                  <a href="#" onClick={(e) => e.preventDefault()}> Home </a>
+                  <span> Home </span>
                   <span className="icon">/</span>
-                  <a href="#" onClick={(e) => e.preventDefault()}> Blog </a>
+                  <span> Blog </span>
                   <span className="icon">/</span>
-                  <a href="#" onClick={(e) => e.preventDefault()}> {blogData.title} </a>
+                  <span> {blogData.title} </span>
                 </div>
                 <h6
                   className="fsz-24 fw-600 mb-60 wow fadeInUp slow"
@@ -193,13 +187,11 @@ function Content({ blog }) {
                   <div className="col-lg-6">
                     <div className="tags">
                       {blogData.subTitle && blogData.subTitle.split(',').map((tag, index) => (
-                        <a 
+                        <span 
                           key={index} 
-                        href="#"
-                          onClick={(e) => e.preventDefault()}
                         > 
                           {tag.trim()} 
-                        </a>
+                        </span>
                       ))}
                     </div>
                   </div>
@@ -207,18 +199,18 @@ function Content({ blog }) {
                     <div className="share mt-4 mt-lg-0 justify-content-lg-end">
                       <span className="txt me-3"> Share on </span>
                       <div className="links">
-                        <a href="#" onClick={(e) => e.preventDefault()}>
+                        <button type="button" onClick={(e) => e.preventDefault()}>
                           <i className="fab fa-x-twitter"></i>
-                        </a>
-                        <a href="#" onClick={(e) => e.preventDefault()}>
+                        </button>
+                        <button type="button" onClick={(e) => e.preventDefault()}>
                           <i className="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" onClick={(e) => e.preventDefault()}>
+                        </button>
+                        <button type="button" onClick={(e) => e.preventDefault()}>
                           <i className="fab fa-blogger"></i>
-                        </a>
-                        <a href="#" onClick={(e) => e.preventDefault()}>
+                        </button>
+                        <button type="button" onClick={(e) => e.preventDefault()}>
                           <i className="fab fa-discord"></i>
-                        </a>
+                        </button>
                       </div>
                     </div>
                   </div>
