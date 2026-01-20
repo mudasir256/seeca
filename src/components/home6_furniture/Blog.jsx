@@ -26,7 +26,7 @@ function Blog() {
             <div
               key={i}
               className={`col-lg-4 mt-50  ${
-                i != data.length - 1 && 'border-end'
+                i !== data.length - 1 && 'border-end'
               }`}
             >
               <div

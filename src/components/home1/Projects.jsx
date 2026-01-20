@@ -2,13 +2,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import data1 from '../../data/home1/projects/projects1';
 
-const truncateToWords = (text, limit) => {
-  if (!text) return "";
-  const words = text.split(" ");
-  if (words.length <= limit) return text;
-  return words.slice(0, limit).join(" ") + "...";
-};
-
 function Projects() {
   // Ensure data1 is an array and limit to 5 projects
   const projectsData = Array.isArray(data1) ? data1.slice(0, 5) : [];

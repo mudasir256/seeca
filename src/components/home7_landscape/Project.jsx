@@ -50,7 +50,7 @@ function Project() {
               id={item.tab}
               src={item.img}
               alt=""
-              className={`tab-img ${i == 0 && 'current'} `}
+              className={`tab-img ${i === 0 && 'current'} `}
             />
           ))}
         </div>

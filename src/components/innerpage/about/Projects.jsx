@@ -1,5 +1,5 @@
 import React from 'react';
-  import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Projects() {
     const navigate = useNavigate();
@@ -462,15 +462,16 @@ function Projects() {
             </h2>
           </div>
           <div className="col-lg-4 text-lg-end mt-4 mt-lg-0">
-            <a
-              href="#"
+            <button
+              type="button"
               className="butn borderd border rounded-pill hover-bg-green2"
+              style={{ background: 'none', border: '1px solid', padding: '0.75rem 1.5rem' }}
             >
               <span>
                 See All Projects
                 <i className="ms-2 fal fa-long-arrow-right ico-45"></i>
               </span>
-            </a>
+            </button>
           </div>
         </div>
         <div className="tabs-links mt-40">

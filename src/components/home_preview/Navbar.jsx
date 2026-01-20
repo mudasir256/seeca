@@ -182,6 +182,7 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item dropdown">
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a
                 className="nav-link dropdown-toggle"
                 href="#"
@@ -205,6 +206,7 @@ function Navbar() {
               </ul>
             </li>
             <li className="nav-item dropdown">
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a
                 className="nav-link dropdown-toggle"
                 href="#"

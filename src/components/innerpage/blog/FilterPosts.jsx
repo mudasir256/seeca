@@ -219,32 +219,27 @@ function FilterPosts() {
                   </div>
                   <div className="info pt-30">
                     <div className="tags color-666 text-uppercase fsz-12">
-                      <a 
-                        href="#" 
+                      <span 
                         className="color-orange1"
-                        onClick={(e) => e.preventDefault()}
                       >
                         {item.subTitle}
-                      </a>
+                      </span>
                       <span className="circle icon-3 bg-666 rounded-circle mx-3"></span>
-                      <a 
-                        href="#"
-                        onClick={(e) => e.preventDefault()}
-                      > 
+                      <span> 
                         {item.history} 
-                      </a>
+                      </span>
                     </div>
                     <h3 className="title mt-15">
-                      <a 
-                        href="#" 
+                      <button 
+                        type="button"
                         className="hover-orange1 fsz-24"
-                        onClick={(e) => {
-                          e.preventDefault();
+                        onClick={() => {
                           navigate('/innerpages/single_post', { state: { blog: item } });
                         }}
+                        style={{ color: 'inherit', background: 'none', border: 'none', padding: 0, cursor: 'pointer', textAlign: 'left', width: '100%' }}
                       >
                         {item.title}
-                      </a>
+                      </button>
                     </h3>
                   </div>
                 </div>
@@ -253,12 +248,13 @@ function FilterPosts() {
           </div>
         </div>
         <div className="text-center wow fadeInUp slow" data-wow-delay="0.2s">
-          <a
-            href="#"
+          <button
+            type="button"
             className="butn border rounded-pill color-orange1 border-orange1 hover-bg-orange1 mt-100 px-5"
+            style={{ background: 'transparent' }}
           >
             <span> Load More (6) </span>
-          </a>
+          </button>
         </div>
         </div>
       </section>

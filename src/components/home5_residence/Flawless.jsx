@@ -24,7 +24,7 @@ function Flawless() {
           <div className="flex-accordion">
             <ul className="acc-list">
               {data.map((item, i) => (
-                <li key={i} className={`acc-li  ${i == 0 && 'is-open'}`}>
+                <li key={i} className={`acc-li  ${i === 0 && 'is-open'}`}>
                   <img src={item.img} alt="" className="bg" />
                   <div className="panel-inner">
                     <div className="acc-title">
