@@ -4,7 +4,6 @@ import Header from '../../components/innerpage/about/Header';
 import Navbar from '../../components/home_preview/Navbar';
 import Process from '../../components/innerpage/about/Process';
 import Projects from '../../components/innerpage/about/Projects';
-import Awards from '../../components/innerpage/about/Awards';
 import Footer from '../../components/home1/Footer';
 import Menu from '../../components/innerpage/Menu';
 import Testimonials from '../../components/home1/Testimonials';

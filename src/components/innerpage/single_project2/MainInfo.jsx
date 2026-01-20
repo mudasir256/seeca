@@ -9,14 +9,14 @@ function MainInfo() {
             <h4 className="fsz-45 fw-bold js-splittext-lines">
               Architecture is a visual art and the building speak for themselves
             </h4>
-            <a
-              href="#"
+            <button
+              type="button"
               className="butn hover-bg-orange1 text-capitalize bg-white rounded-pill mt-90"
             >
               <span>
                 View on Behance <i className="fal fa-arrow-up-right ms-2"></i>
               </span>
-            </a>
+            </button>
           </div>
           <div className="col-lg-6 offset-lg-2 mt-5 mt-lg-0">
             <h6

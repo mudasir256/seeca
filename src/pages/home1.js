@@ -7,10 +7,8 @@ import Experience from '../components/home1/Experience';
 import Services from '../components/home1/Services';
 import Statistics from '../components/common/Statistics';
 import Process from '../components/home1/Process';
-import Awards from '../components/home1/Awards';
 import Projects from '../components/home1/Projects';
 import Testimonials from '../components/home1/Testimonials';
-import Team from '../components/home1/Team';
 import Blog from '../components/home1/Blog';
 import Footer from '../components/home1/Footer';
 

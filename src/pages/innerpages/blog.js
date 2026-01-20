@@ -4,8 +4,6 @@ import Footer from '../../components/home1/Footer';
 import Menu from '../../components/innerpage/Menu';
 import Navbar from '../../components/home_preview/Navbar';
 import Header from '../../components/innerpage/contact/Header';
-import Slider from '../../components/innerpage/blog/Slider';
-import LatestPosts from '../../components/innerpage/blog/LatestPosts';
 import FilterPosts from '../../components/innerpage/blog/FilterPosts';
 import StartButton from '../../components/home5_residence/StartButton';
 
