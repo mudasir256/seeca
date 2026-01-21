@@ -23,6 +23,7 @@ import OurProcessPage from './pages/innerpages/our-process';
 import SinglePost from './pages/innerpages/single_post';
 import SingleProject from './pages/innerpages/single_project';
 import SingleProject2 from './pages/innerpages/single_project2';
+import ScrollToTop from './components/common/ScrollToTop';
 
 function WhatsAppFloat() {
   return (
@@ -81,6 +82,7 @@ function WhatsAppFloat() {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <WhatsAppFloat />
       <Routes>
         <Route path="/" element={<Home1 />} />
