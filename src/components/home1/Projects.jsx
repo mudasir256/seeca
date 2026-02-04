@@ -1,10 +1,13 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import data1 from '../../data/home1/projects/projects1';
+import OptimizedImage from '../common/OptimizedImage';
 
 function Projects() {
-  // Ensure data1 is an array and limit to 5 projects
-  const projectsData = Array.isArray(data1) ? data1.slice(0, 5) : [];
+  const projectsData = useMemo(
+    () => (Array.isArray(data1) ? data1.slice(0, 5) : []),
+    []
+  );
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -25,12 +28,12 @@ function Projects() {
     setTimeout(() => setIsAnimating(false), 500);
   }, [isAnimating, projectsData.length]);
 
-  const goToSlide = (index) => {
+  const goToSlide = useCallback((index) => {
     if (isAnimating || index === currentIndex || index < 0 || index >= projectsData.length) return;
     setIsAnimating(true);
     setCurrentIndex(index);
     setTimeout(() => setIsAnimating(false), 500);
-  };
+  }, [isAnimating, currentIndex, projectsData.length]);
 
   useEffect(() => {
     if (projectsData.length === 0) return;
@@ -40,11 +43,11 @@ function Projects() {
     return () => clearInterval(interval);
   }, [projectsData.length]);
 
-  const handleTouchStart = (e) => {
+  const handleTouchStart = useCallback((e) => {
     setTouchStart(e.touches[0].clientX);
-  };
+  }, []);
 
-  const handleTouchEnd = (e) => {
+  const handleTouchEnd = useCallback((e) => {
     const touchEnd = e.changedTouches[0].clientX;
     const diff = touchStart - touchEnd;
     if (Math.abs(diff) > 50) {
@@ -54,9 +57,9 @@ function Projects() {
         prevSlide();
       }
     }
-  };
+  }, [touchStart, nextSlide, prevSlide]);
 
-  const getSlidePosition = (index) => {
+  const getSlidePosition = useCallback((index) => {
     if (projectsData.length === 0) return "hidden";
     const total = projectsData.length;
     let relativeIndex = (index - currentIndex + total) % total;
@@ -83,7 +86,7 @@ function Projects() {
     else {
       return "hidden";
     }
-  };
+  }, [currentIndex, projectsData.length]);
 
   // Reset index when tab changes
   useEffect(() => {
@@ -1010,7 +1013,7 @@ function Projects() {
                             <div className="project-card-wrapper" >
                               <div className={`project-card-modern ${isActive ? 'active' : 'inactive'}`}>
                                 <div className="project-card-img">
-                                  <img src={item.img} alt={item.title} />
+                                  <OptimizedImage src={item.img} alt={item.title} />
                                   <div className="project-card-badge">Project</div>
                                 </div>
                                 <div className="project-card-content">
@@ -1165,7 +1168,7 @@ function Projects() {
                             <div className="project-card-wrapper">
                               <div className={`project-card-modern ${isActive ? 'active' : 'inactive'}`}>
                                 <div className="project-card-img">
-                                  <img src={item.img} alt={item.title} />
+                                  <OptimizedImage src={item.img} alt={item.title} />
                                   <div className="project-card-badge">Project</div>
                                 </div>
                                 <div className="project-card-content">

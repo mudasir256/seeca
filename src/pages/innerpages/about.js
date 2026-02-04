@@ -17,6 +17,7 @@ function AboutPage() {
       ]}
       bodyClassName="inner-pages-style1 about-pg-style1"
       fixedElements={<><Menu /><Navbar /></>}
+      enableScrollSmoother={false}
     >
       <Header />
       <main>

@@ -1,8 +1,10 @@
 'use client';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useMemo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import data from '../../../data/home1/projects/projects1.json';
 import mixitup from 'mixitup';
+import OptimizedImage from '../../common/OptimizedImage';
+
 function LatestCases() {
   const [activeFilter, setActiveFilter] = useState('All');
   const [currentPage, setCurrentPage] = useState(1);
@@ -10,29 +12,23 @@ function LatestCases() {
   const mixitupContainerRef = useRef(null);
   const navigate = useNavigate();
 
-  // Category mapping: maps data categories to filter categories
-  const getFilterClasses = (item) => {
+  // Category mapping: maps data categories to filter categories (memoized)
+  const getFilterClasses = useCallback((item) => {
     const classes = [];
     const sub1 = item.sub1?.toLowerCase() || '';
     const sub2 = item.sub2?.toLowerCase().replace(/\s+/g, '') || '';
     
-    // Check if it's an Interior Design project by image path
     const hasInteriorImage = item.images?.some(img => img.includes('Interior_Design')) || 
                              item.img?.includes('Interior_Design');
     const hasArchitectureImage = item.images?.some(img => img.includes('Architecture_Deisgn')) || 
                                 item.img?.includes('Architecture_Deisgn');
     
-    // Architecture projects
     if (hasArchitectureImage || sub2.includes('architecturedesign') || sub1.includes('architecture')) {
       classes.push('Architecture');
     }
-    
-    // Interior projects - check image path first, then category
     if (hasInteriorImage || sub2.includes('interiordesign') || sub1.includes('interior')) {
       classes.push('Interior');
     }
-    
-    // Additional categories
     if (sub1.includes('office') || sub1.includes('commercial') || sub2.includes('commercial')) {
       classes.push('Commercial');
     }
@@ -42,17 +38,15 @@ function LatestCases() {
     if (sub1.includes('retail')) {
       classes.push('Commercial');
     }
-    
-    // Always add the original sub2 class for backward compatibility
     if (item.sub2) {
       classes.push(item.sub2.replace(/\s+/g, ''));
     }
     
     return classes.join(' ');
-  };
+  }, []);
 
-  // Filter projects based on active filter
-  const getFilteredProjects = () => {
+  // Filter projects based on active filter (memoized)
+  const filteredProjects = useMemo(() => {
     if (activeFilter === 'All') {
       return data;
     }
@@ -60,14 +54,18 @@ function LatestCases() {
       const classes = getFilterClasses(item);
       return classes.includes(activeFilter);
     });
-  };
+  }, [activeFilter, getFilterClasses]);
 
-  // Get paginated projects
-  const filteredProjects = getFilteredProjects();
-  const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
-  const startIndex = (currentPage - 1) * projectsPerPage;
-  const endIndex = startIndex + projectsPerPage;
-  const paginatedProjects = filteredProjects.slice(startIndex, endIndex);
+  const totalPages = useMemo(
+    () => Math.ceil(filteredProjects.length / projectsPerPage),
+    [filteredProjects.length, projectsPerPage]
+  );
+
+  const paginatedProjects = useMemo(() => {
+    const startIndex = (currentPage - 1) * projectsPerPage;
+    const endIndex = startIndex + projectsPerPage;
+    return filteredProjects.slice(startIndex, endIndex);
+  }, [filteredProjects, currentPage, projectsPerPage]);
 
   // Reset to page 1 when filter changes
   useEffect(() => {
@@ -111,59 +109,52 @@ function LatestCases() {
     return () => clearTimeout(timer);
   }, [paginatedProjects, activeFilter]);
   
-  const handleFilterClick = (filter, e) => {
+  const handleFilterClick = useCallback((filter, e) => {
     e.preventDefault();
     setActiveFilter(filter);
     setCurrentPage(1);
 
-    // Remove 'active' class from all filter buttons
     document.querySelectorAll('.filter-btn').forEach((btn) => {
       btn.classList.remove('active');
     });
 
-    // Add 'active' class to the clicked filter button
     const clickedButton = e.currentTarget;
     if (clickedButton) {
       clickedButton.classList.add('active');
     }
-  };
+  }, []);
 
-  const handlePageChange = (page, e) => {
+  const handlePageChange = useCallback((page, e) => {
     e.preventDefault();
     if (page >= 1 && page <= totalPages) {
       setCurrentPage(page);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-  };
+  }, [totalPages]);
 
-  const getPaginationNumbers = () => {
+  const getPaginationNumbers = useMemo(() => {
     const pages = [];
     const maxVisible = 5;
     
     if (totalPages <= maxVisible) {
-      // Show all pages if total is less than max visible
       for (let i = 1; i <= totalPages; i++) {
         pages.push(i);
       }
     } else {
-      // Show first page
       pages.push(1);
       
       if (currentPage <= 3) {
-        // Near the start
         for (let i = 2; i <= 4; i++) {
           pages.push(i);
         }
         pages.push('...');
         pages.push(totalPages);
       } else if (currentPage >= totalPages - 2) {
-        // Near the end
         pages.push('...');
         for (let i = totalPages - 3; i <= totalPages; i++) {
           pages.push(i);
         }
       } else {
-        // In the middle
         pages.push('...');
         for (let i = currentPage - 1; i <= currentPage + 1; i++) {
           pages.push(i);
@@ -174,7 +165,7 @@ function LatestCases() {
     }
     
     return pages;
-  };
+  }, [totalPages, currentPage]);
 
   return (
     <>
@@ -347,7 +338,7 @@ function LatestCases() {
                       onClick={() => navigate('/innerpages/single_project', { state: { project: item } })}
                     >
                       <div className="img">
-                        <img src={item.img} alt="" className="img-cover" />
+                        <OptimizedImage src={item.img} alt={item.title || ''} className="img-cover" />
                       </div>
                       <div className="info">
                         <div className="tags mb-30">
@@ -383,7 +374,7 @@ function LatestCases() {
                         <i className="fal fa-chevron-left"></i>
                       </button>
                     </li>
-                    {getPaginationNumbers().map((page, index) => (
+                    {getPaginationNumbers.map((page, index) => (
                       <li key={index} className={`page-item ${page === '...' ? 'disabled' : ''} ${page === currentPage ? 'active' : ''}`}>
                         {page === '...' ? (
                           <span className="page-link" style={{ pointerEvents: 'none' }}>...</span>

@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import { useLocation } from 'react-router-dom';
+import OptimizedImage from '../../common/OptimizedImage';
 
 function Project() {
   const location = useLocation();
   const projectFromState = location.state?.project;
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  // Default values if no project data is passed
-  const defaultProject = {
+  const defaultProject = useMemo(() => ({
     title: "Gordon's Villa",
     sub1: "Architecture",
     sub2: "Landscape",
@@ -17,34 +17,35 @@ function Project() {
     client: "",
     location: "Ecoriver Residence, Boston MA 02108, US",
     area: ""
-  };
+  }), []);
 
-  // Use project from state or defaultProject as fallback
-  // This ensures the full JSON object (including images array) is available
-  const finalProjectData = projectFromState || defaultProject;
+  const finalProjectData = useMemo(
+    () => projectFromState || defaultProject,
+    [projectFromState, defaultProject]
+  );
 
-  const openImageModal = (image, index) => {
+  const openImageModal = useCallback((image, index) => {
     setSelectedImage(image);
     setCurrentImageIndex(index);
-  };
+  }, []);
 
-  const closeImageModal = () => {
+  const closeImageModal = useCallback(() => {
     setSelectedImage(null);
-  };
+  }, []);
 
-  const nextImage = () => {
+  const nextImage = useCallback(() => {
     if (finalProjectData.images && currentImageIndex < finalProjectData.images.length - 1) {
       setCurrentImageIndex(currentImageIndex + 1);
       setSelectedImage(finalProjectData.images[currentImageIndex + 1]);
     }
-  };
+  }, [finalProjectData.images, currentImageIndex]);
 
-  const prevImage = () => {
+  const prevImage = useCallback(() => {
     if (finalProjectData.images && currentImageIndex > 0) {
       setCurrentImageIndex(currentImageIndex - 1);
       setSelectedImage(finalProjectData.images[currentImageIndex - 1]);
     }
-  };
+  }, [finalProjectData.images, currentImageIndex]);
 
   React.useEffect(() => {
     const handleKeyDown = (e) => {
@@ -563,7 +564,7 @@ function Project() {
               </div>
             </div>
           </div>
-          <img
+          <OptimizedImage
             src="/innerpages/assets/img/c_line.png"
             alt=""
             className="line wow"
@@ -585,7 +586,7 @@ function Project() {
                       }}
                       style={{ cursor: 'pointer' }}
                 >
-                  <img
+                  <OptimizedImage
                         src={image}
                         alt={finalProjectData.title}
                     className="img-cover"
@@ -691,7 +692,7 @@ function Project() {
                   }}
                   style={{ cursor: 'pointer' }}
                 >
-                  <img
+                  <OptimizedImage
                     src={image}
                     alt={finalProjectData.title}
                 className="img-cover"
@@ -727,7 +728,7 @@ function Project() {
               ‹
             </button>
           )}
-          <img src={selectedImage} alt={finalProjectData.title} />
+          <OptimizedImage src={selectedImage} alt={finalProjectData.title} loading="eager" />
           {finalProjectData.images && currentImageIndex < finalProjectData.images.length - 1 && (
             <button 
               className="image-modal-nav next" 

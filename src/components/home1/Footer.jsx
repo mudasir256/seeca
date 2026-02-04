@@ -414,9 +414,7 @@ function Footer() {
                     className="logo"
                     style={{ maxHeight: '50px' }}
                   />
-                  <div className="company-name">
-                    EE CONSULTANTS & ARCHITECTS (PRIVATE) LIMITED
-                  </div>
+               
                   <div className="service-desc">
                     We provide a full range of Architecture and Interior Design services.
                   </div>

@@ -1,5 +1,7 @@
 import React from 'react';
 import data from '../../../data/innerpages/portfolio/case';
+import OptimizedImage from '../../common/OptimizedImage';
+
 function Cases() {
   return (
     <section className="tc-featured-cases-style1">
@@ -76,7 +78,7 @@ function Cases() {
                   <div key={i} className="swiper-slide">
                     <div className="case-card">
                       <a href={item.img} className="img" data-fancybox="cases">
-                        <img src={item.img} alt="" className="img-cover" />
+                        <OptimizedImage src={item.img} alt={item.title || ''} className="img-cover" />
                       </a>
                       <div className="info">
                         <div className="tags mb-30">
@@ -106,7 +108,7 @@ function Cases() {
                   <div key={i} className="swiper-slide">
                     <div className="case-card">
                       <a href={item.img} className="img" data-fancybox="cases">
-                        <img src={item.img} alt="" className="img-cover" />
+                        <OptimizedImage src={item.img} alt={item.title || ''} className="img-cover" />
                       </a>
                       <div className="info">
                         <div className="tags mb-30">
