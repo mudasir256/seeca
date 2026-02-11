@@ -90,25 +90,25 @@ function Process() {
   const sliderData = [
     {
       id: 1,
-      image: "/innerpages/assets/img/portfolio/case5.jpg",
+      image: "/home_preview/assets/img/Architecture_Deisgn/5682.MasuadTech-Daroghewala,Lahore/02.jpg",
       text: "Integrity",
       color: ""
     },
     {
       id: 2,
-      image: "/innerpages/assets/img/portfolio/case6.jpg",
+      image: "/home_preview/assets/img/Interior_Design/5737.BashirKhayreResidence-Somalia/5737.CAM01(5).jpg",
       text: "Humanity",
       color: "#73bf44"
     },
     {
       id: 3,
-      image: "/home1/assets/img/projects/reactoutlet/react2.jpg",
+      image: "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Autumn/Autumn(5).jpg",
       text: "Creativity",
       color: ""
     },
     {
       id: 4,
-      image: "/home1/assets/img/projects/ignition/ignition1.jpg",
+      image: "/home_preview/assets/img/Architecture_Deisgn/5861.VocationalVilla-Turks%26CaicosIsland/View-11-1.jpg",
       text: "Sustainability",
       color: ""
     }
@@ -150,7 +150,7 @@ function Process() {
         .tc-process-style2 .process-slider .swiper-slide {
           height: 100%;
           opacity: 0;
-          transition: opacity 0.6s ease-in-out, transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: opacity 0.25s ease-out;
         }
         
         .tc-process-style2 .process-slider .swiper-slide-active {
@@ -185,11 +185,6 @@ function Process() {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-          transform: scale(1.1);
-        }
-        
-        .tc-process-style2 .process-slider .swiper-slide-active .img img {
           transform: scale(1);
         }
         
@@ -202,16 +197,10 @@ function Process() {
           color: #fff;
           z-index: 2;
           text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-          transform: translateY(30px);
-          opacity: 0;
-          transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
-          letter-spacing: 1px;
-          white-space: nowrap;
-        }
-        
-        .tc-process-style2 .process-slider .swiper-slide-active .img .txt {
           transform: translateY(0);
           opacity: 1;
+          letter-spacing: 1px;
+          white-space: nowrap;
         }
         
         .tc-process-style2 .process-slider .swiper-slide .img .txt[style*="color: #73bf44"] {
@@ -432,7 +421,7 @@ function Process() {
         <div className="content">
           <div className="row">
             <div className="col-lg-5">
-              <div className="accordion-side wow fadeInUp slow">
+              <div className="accordion-side">
                 <div className="accordion" id="accordionProcess">
                   <div className="accordion-item">
                     <div className="accordion-header" id="headingOne">
@@ -575,7 +564,6 @@ function Process() {
         src="/innerpages/assets/img/prc_bg.png"
         alt=""
         className="bg"
-        data-speed="1.2"
         style={{
           position: 'absolute',
           zIndex: 0

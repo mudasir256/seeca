@@ -22,7 +22,7 @@ function ConstructionPage() {
       <Header
         title="Construction"
         description="Delivering high-quality construction services with precision, safety, and excellence"
-        backgroundImage="/home_preview/assets/img/Slider-4-scaled.jpg"
+        backgroundImage="/home_preview/assets/img/Architecture_Deisgn/5880.FahadResidence-Lahore/LightTest-1(1).jpg"
       />
       <main>
         <ConstructionContent />

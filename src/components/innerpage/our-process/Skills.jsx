@@ -109,7 +109,10 @@ function Skills() {
           position: relative;
           padding: 120px 0;
           background: #fff;
-          overflow: hidden;
+          overflow-x: hidden;
+          overflow-y: visible;
+          touch-action: pan-y;
+          -webkit-overflow-scrolling: touch;
         }
 
         /* ===== Header Styles ===== */
@@ -144,11 +147,13 @@ function Skills() {
           display: flex;
           align-items: center;
           justify-content: center;
+          overflow: visible;
         }
         .skills-list {
           position: relative;
           width: 100%;
           min-height: 800px;
+          overflow: visible;
         }
 
         /* ===== Skill Item Styles ===== */
@@ -604,7 +609,7 @@ function Skills() {
           <div className="skills-content">
             <div className="skills-image">
               <img
-                src="/home1/assets/img/View-11-1.jpg"
+                src="/home1/assets/img/View-8.jpg"
                 alt="Our Skills"
                 loading="lazy"
               />

@@ -12,12 +12,17 @@ const SMOOTH_SCROLL_STYLES = `
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
   }
   body {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     overflow-x: hidden;
+    overflow-y: auto;
     position: relative;
+    min-height: 100%;
+    height: auto;
   }
   .smooth-scroll-content {
     scroll-behavior: smooth;
@@ -64,11 +69,14 @@ const SMOOTH_SCROLL_STYLES = `
       -webkit-tap-highlight-color: transparent;
       touch-action: pan-y;
     }
-    /* Ensure ScrollSmoother container doesn't interfere on mobile */
-    #scrollsmoother-container {
+    /* Ensure ScrollSmoother container doesn't interfere on mobile / when smoother is disabled */
+    #scrollsmoother-container,
+    .smooth-scroll-content {
       position: relative !important;
       transform: none !important;
       -webkit-transform: none !important;
+      overflow: visible !important;
+      min-height: 0;
     }
   }
   @media (prefers-reduced-motion: reduce) {

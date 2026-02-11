@@ -67,7 +67,7 @@ function Header() {
       <div className="slider-card">
         <div className="img">
           <img
-            src="/innerpages/assets/img/about/header1.jpg"
+            src="/innerpages/assets/img/about/5918.Exterior04.jpg"
             alt=""
             className="img-cover"
           />
@@ -76,7 +76,7 @@ function Header() {
           <div className="container">
             <div className="row">
               <div className="col-lg-5 offset-lg-6">
-                <div className="rotate-box" data-speed="1" data-lag="0.4">
+                <div className="rotate-box">
                   <a
                     href="#"
                     className="rotate-circle fsz-35 rotate-text d-inline-block text-uppercase"

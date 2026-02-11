@@ -22,7 +22,7 @@ function InteriorDesignPage() {
       <Header
         title="Interior Design"
         description="Transforming spaces into beautiful, functional environments that reflect your style and needs"
-        backgroundImage="/home_preview/assets/img/Slider-1-scaled.jpg"
+        backgroundImage="/home_preview/assets/img/CAM01.jpg"
       />
       <main>
         <InteriorDesignContent />

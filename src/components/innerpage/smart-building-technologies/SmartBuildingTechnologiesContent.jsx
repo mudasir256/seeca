@@ -144,6 +144,9 @@ function SmartBuildingTechnologiesContent() {
               <h4 style={{ fontSize: '34px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px', lineHeight: '1.3', letterSpacing: '-0.5px' }}>
                 Smart & Innovative Solutions for Intelligent Living
               </h4>
+              <div className="smart-building-technologies-description" style={{ fontWeight: '500', color: '#333' }}>
+                Integrating cutting-edge technology to create intelligent and efficient buildings.
+              </div>
               <div className="smart-building-technologies-description">
                 We integrate smart and innovative building solutions designed to enhance comfort, efficiency, and control—creating spaces that respond intelligently to the needs of the people within them.
               </div>
@@ -159,8 +162,8 @@ function SmartBuildingTechnologiesContent() {
             </div>
             <div className="smart-building-technologies-image">
               <img
-                src="/home_preview/assets/img/Smart-Technologies-scaled.jpg"
-                alt="Smart Building Interior"
+                src="/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/BoardRoom(1).jpg"
+                alt="Smart Building Technologies"
                 className="img-cover"
               />
             </div>

@@ -109,6 +109,15 @@ export const useScrollSmoother = (containerId = 'scrollsmoother-container', enab
           // Ignore errors
         }
       }
+      // Always restore body/html scroll so the next page can scroll (ScrollSmoother sets overflow: hidden)
+      try {
+        document.body.style.overflow = '';
+        document.body.style.height = '';
+        document.documentElement.style.overflow = '';
+        document.documentElement.style.height = '';
+      } catch (e) {
+        // Ignore
+      }
       if (smootherRef.current) {
         smootherRef.current = null;
       }

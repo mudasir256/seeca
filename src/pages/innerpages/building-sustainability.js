@@ -22,7 +22,7 @@ function BuildingSustainabilityPage() {
       <Header
         title="Building Sustainability"
         description="Designing eco-friendly and sustainable buildings for a better future"
-        backgroundImage="/home_preview/assets/img/slider-3-scaled.jpg"
+        backgroundImage="/home_preview/assets/img/Architecture_Deisgn/5832.AbdulAzizAbdullah-Nairobi,Kenya/CAM06.jpg"
       />
       <main>
         <BuildingSustainabilityContent />

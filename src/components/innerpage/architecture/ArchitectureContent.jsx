@@ -140,6 +140,9 @@ function ArchitectureContent() {
               <h4 style={{ fontSize: '34px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px', lineHeight: '1.3', letterSpacing: '-0.5px' }}>
                 Our Goal: Creating Exceptional Custom Architecture
               </h4>
+              <div className="architecture-description" style={{ fontWeight: '500', color: '#333' }}>
+                Creating innovative architectural solutions that blend functionality with aesthetic excellence.
+              </div>
               <div className="architecture-description">
                 Architecture is both an art and a science—the thoughtful design and construction of buildings, structures, and the physical environments we inhabit. It spans multiple disciplines, from the creation of individual spaces to the planning of entire communities and cities.
               </div>
@@ -155,7 +158,7 @@ function ArchitectureContent() {
             </div>
             <div className="architecture-image">
               <img
-                src="/home_preview/assets/img/Architecture-scaled.jpg"
+                src="/home_preview/assets/img/Architecture_Deisgn/5932.Mr.RafiullahKhan(1.2KanalArch.)-Bhakkar/View-66.jpg"
                 alt="Custom Architecture Design"
                 className="img-cover"
               />

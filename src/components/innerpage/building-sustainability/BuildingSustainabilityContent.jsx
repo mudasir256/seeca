@@ -144,6 +144,9 @@ function BuildingSustainabilityContent() {
               <h4 style={{ fontSize: '34px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px', lineHeight: '1.3', letterSpacing: '-0.5px' }}>
                 Redefining Sustainable Building—Smarter, Stronger, More Efficient
               </h4>
+              <div className="building-sustainability-description" style={{ fontWeight: '500', color: '#333' }}>
+                Designing eco-friendly and sustainable buildings for a better future.
+              </div>
               <div className="building-sustainability-description">
                 Our focus is to redefine building sustainability by combining environmentally responsible design with cost-efficient structural engineering solutions.
               </div>
@@ -159,7 +162,7 @@ function BuildingSustainabilityContent() {
             </div>
             <div className="building-sustainability-image">
               <img
-                src="/home_preview/assets/img/Evening-View-scaled.jpg"
+                src="/home_preview/assets/img/Architecture_Deisgn/5804.AhmadHeight-Somalia/5804.Renders(2).jpg"
                 alt="Sustainable Building"
                 className="img-cover"
               />

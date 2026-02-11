@@ -352,7 +352,7 @@ const Services = memo(function Services({ removeTopPadding = false }) {
                 >
                   <div 
                     className="service-card-compact-inner"
-                    style={{ backgroundImage: 'url(/home_preview/assets/img/Architecture-scaled.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
+                    style={{ backgroundImage: 'url(/home_preview/assets/img/A1.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
                   >
                     <div className="service-content-wrapper">
                       <div className="service-icon-compact">
@@ -380,7 +380,7 @@ const Services = memo(function Services({ removeTopPadding = false }) {
                 >
                   <div 
                     className="service-card-compact-inner"
-                    style={{ backgroundImage: 'url(/home_preview/assets/img/Slider-1-scaled.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
+                    style={{ backgroundImage: 'url(/home_preview/assets/img/CAM01.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
                   >
                     <div className="service-content-wrapper">
                       <div className="service-icon-compact">
@@ -408,7 +408,7 @@ const Services = memo(function Services({ removeTopPadding = false }) {
                 >
                   <div 
                     className="service-card-compact-inner"
-                    style={{ backgroundImage: 'url(/home_preview/assets/img/Construction-scaled.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
+                    style={{ backgroundImage: 'url(/home_preview/assets/img/Architecture-scaled.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
                   >
                     <div className="service-content-wrapper">
                       <div className="service-icon-compact">
@@ -437,7 +437,7 @@ const Services = memo(function Services({ removeTopPadding = false }) {
                 >
                   <div 
                     className="service-card-compact-inner"
-                    style={{ backgroundImage: 'url(/home_preview/assets/img/Evening-View-scaled.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
+                    style={{ backgroundImage: 'url(/home_preview/assets/img/5881.NightView003.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
                   >
                     <div className="service-content-wrapper">
                       <div className="service-icon-compact">
@@ -502,7 +502,7 @@ const Services = memo(function Services({ removeTopPadding = false }) {
       </div>
     </section>
       <div className="ser-img">
-        <img src="/home1/assets/img/services/ser(1).jpg" alt="" loading="lazy" decoding="async" />
+        <img src="/home1/assets/img/services/villa_white_sky_upscaled_8k2.jpg" alt="" loading="lazy" decoding="async" />
       </div>
     </> 
   );

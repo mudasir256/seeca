@@ -144,6 +144,9 @@ function InteriorDesignContent() {
               <h4 style={{ fontSize: '34px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px', lineHeight: '1.3', letterSpacing: '-0.5px' }}>
                 Designing Spaces That Inspire Living
               </h4>
+              <div className="interior-description" style={{ fontWeight: '500', color: '#333' }}>
+                Transforming spaces into beautiful, functional environments that reflect your style and needs.
+              </div>
               <div className="interior-description">
                 We create interior environments that are functional, safe, and visually compelling by thoughtfully defining space requirements and design intent.
               </div>
@@ -159,7 +162,7 @@ function InteriorDesignContent() {
             </div>
             <div className="interior-image">
               <img
-                src="/home_preview/assets/img/Interior-Design-scaled.jpg"
+                src="/home_preview/assets/img/CAM01.jpg"
                 alt="Interior Design Space"
                 className="img-cover"
               />

@@ -22,7 +22,7 @@ function SmartBuildingTechnologiesPage() {
       <Header
         title="Building Technologies"
         description="Integrating cutting-edge technology to create intelligent and efficient buildings"
-        backgroundImage="/home_preview/assets/img/Slider-scaled.jpg"
+        backgroundImage="/home_preview/assets/img/Interior_Design/5952.Mr.UsmanPasha(OPTConsultingPvtLtd-ID)-OPFSociety,Lahore/A2.jpg"
       />
       <main>
         <SmartBuildingTechnologiesContent />

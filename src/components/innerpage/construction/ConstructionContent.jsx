@@ -144,6 +144,9 @@ function ConstructionContent() {
               <h4 style={{ fontSize: '34px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px', lineHeight: '1.3', letterSpacing: '-0.5px' }}>
                 Turning Construction Challenges into Successful Results
               </h4>
+              <div className="construction-description" style={{ fontWeight: '500', color: '#333' }}>
+                Delivering high-quality construction services with precision, safety, and excellence.
+              </div>
               <div className="construction-description">
                 We help clients achieve the results they envisioned—especially when construction projects fall short due to poor coordination, design gaps, execution errors, or repeated on-site mistakes.
               </div>
@@ -162,7 +165,7 @@ function ConstructionContent() {
             </div>
             <div className="construction-image">
               <img
-                src="/home_preview/assets/img/Construction-scaled.jpg"
+                src="/home_preview/assets/img/Architecture_Deisgn/5880.FahadResidence-Lahore/LightTest-1(1).jpg"
                 alt="Construction Building"
                 className="img-cover"
               />

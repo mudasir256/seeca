@@ -22,7 +22,7 @@ function ArchitecturePage() {
       <Header
         title="Architecture"
         description="Creating innovative architectural solutions that blend functionality with aesthetic excellence"
-        backgroundImage="/home_preview/assets/img/Architecture-scaled.jpg"
+        backgroundImage="/home_preview/assets/img/Architecture_Deisgn/5932.Mr.RafiullahKhan(1.2KanalArch.)-Bhakkar/View-66.jpg"
       />
       <main>
         <ArchitectureContent />

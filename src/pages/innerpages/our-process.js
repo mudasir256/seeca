@@ -9,8 +9,27 @@ import WorkingProcess from '../../components/innerpage/our-process/WorkingProces
 import Advantages from '../../components/innerpage/our-process/Advantages';
 import Skills from '../../components/innerpage/our-process/Skills';
 
+// Ensure native scroll works when ScrollSmoother is disabled
+const OUR_PROCESS_SCROLL_STYLES = `
+  body.our-process-pg-style1 #scrollsmoother-container,
+  body.our-process-pg-style1 .smooth-scroll-content {
+    overflow: visible !important;
+    contain: none !important;
+    will-change: auto !important;
+    min-height: 0 !important;
+  }
+  body.our-process-pg-style1 {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    height: auto !important;
+    min-height: 100% !important;
+  }
+`;
+
 function OurProcessPage() {
   return (
+    <>
+      <style dangerouslySetInnerHTML={{ __html: OUR_PROCESS_SCROLL_STYLES }} />
     <PageLayout
       cssFiles={[
         '/common/assets/css/navbar-global.css',
@@ -18,6 +37,7 @@ function OurProcessPage() {
       ]}
       bodyClassName="inner-pages-style1 our-process-pg-style1"
       fixedElements={<><Menu /><Navbar /></>}
+      enableScrollSmoother={false}
     >
       <Header
         title="Our Process"
@@ -32,6 +52,7 @@ function OurProcessPage() {
       <Footer />
       <StartButton />
     </PageLayout>
+    </>
   );
 }
 

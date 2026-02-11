@@ -68,11 +68,11 @@ function Project() {
       document.addEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = '';
     }
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = '';
     };
   }, [selectedImage, currentImageIndex, finalProjectData.images]);
 
