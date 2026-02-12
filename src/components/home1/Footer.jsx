@@ -17,7 +17,7 @@ function Footer() {
           margin-bottom: 30px;
         }
         .tc-footer-style1 .logo-section .logo {
-          max-height: 60px;
+          max-height: 78px;
           margin-bottom: 20px;
         }
         .tc-footer-style1 .logo-section .company-name {
@@ -172,7 +172,7 @@ function Footer() {
             margin-bottom: 0;
           }
           .tc-footer-style1 .logo-section .logo {
-            max-height: 50px;
+            max-height: 65px;
             margin-bottom: 15px;
           }
           .tc-footer-style1 .logo-section .company-name {
@@ -237,7 +237,7 @@ function Footer() {
             margin-bottom: 35px;
           }
           .tc-footer-style1 .logo-section .logo {
-            max-height: 45px;
+            max-height: 58px;
             margin-bottom: 12px;
           }
           .tc-footer-style1 .logo-section .company-name {
@@ -328,7 +328,7 @@ function Footer() {
             margin-bottom: 30px;
           }
           .tc-footer-style1 .logo-section .logo {
-            max-height: 40px;
+            max-height: 52px;
             margin-bottom: 10px;
           }
           .tc-footer-style1 .logo-section .company-name {
@@ -412,7 +412,7 @@ function Footer() {
                     src="/home_preview/assets/img/logo.png"
                     alt="SEECA"
                     className="logo"
-                    style={{ maxHeight: '50px' }}
+                    style={{ maxHeight: '78px' }}
                   />
                
                   <div className="service-desc">

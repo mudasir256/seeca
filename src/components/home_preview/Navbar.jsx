@@ -26,6 +26,12 @@ function Navbar() {
     <>
       <style>
         {`
+          .tc-navbar-preview .content .navbar-brand .logo {
+            height: 64px !important;
+            max-height: 64px !important;
+            width: auto !important;
+            object-fit: contain !important;
+          }
           .tc-navbar-preview .content .navbar-nav .nav-link:hover,
           .tc-navbar-preview .content .navbar-nav .nav-link.active {
             color: #73bf44 !important;
@@ -52,11 +58,12 @@ function Navbar() {
               padding: 0 !important;
             }
             .tc-navbar-preview .content .navbar-brand {
-              max-width: 180px;
+              max-width: 220px;
               margin-inline-end: 0;
             }
             .tc-navbar-preview .content .navbar-brand .logo {
-              max-height: 40px !important;
+              height: 52px !important;
+              max-height: 52px !important;
             }
             .tc-navbar-preview .navbar-nav {
               margin: 20px 0;
@@ -110,10 +117,11 @@ function Navbar() {
               padding: 8px 15px !important;
             }
             .tc-navbar-preview .content .navbar-brand {
-              max-width: 150px;
+              max-width: 180px;
             }
             .tc-navbar-preview .content .navbar-brand .logo {
-              max-height: 35px !important;
+              height: 46px !important;
+              max-height: 46px !important;
             }
             .tc-navbar-preview .navbar-nav .nav-link {
               font-size: 14px;
@@ -135,10 +143,11 @@ function Navbar() {
               padding: 6px 12px !important;
             }
             .tc-navbar-preview .content .navbar-brand {
-              max-width: 120px;
+              max-width: 150px;
             }
             .tc-navbar-preview .content .navbar-brand .logo {
-              max-height: 30px !important;
+              height: 42px !important;
+              max-height: 42px !important;
             }
             .tc-navbar-preview .navbar-toggler {
               padding: 6px 10px;
@@ -160,7 +169,7 @@ function Navbar() {
           <OptimizedImage
             src="/home_preview/assets/img/logo.png"
             alt="SEECA Logo"
-            style={{ maxHeight: '50px' }}
+            style={{ height: '64px', maxHeight: '64px', width: 'auto', objectFit: 'contain' }}
             className="logo"
             loading="eager"
           />
