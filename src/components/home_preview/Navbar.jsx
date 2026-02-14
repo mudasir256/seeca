@@ -261,6 +261,30 @@ function Navbar() {
                 PORTFOLIO
               </Link>
             </li>
+            <li className="nav-item dropdown">
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                CAREER
+              </a>
+              <ul className="dropdown-menu">
+                <li>
+                  <Link className="dropdown-item" to="/innerpages/career/internship">
+                    Apply Internship
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/innerpages/career/job">
+                    Apply Job
+                  </Link>
+                </li>
+              </ul>
+            </li>
             <li className="nav-item">
               <Link className="nav-link" to="/innerpages/blog">
                 BLOGS

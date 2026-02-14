@@ -31,6 +31,7 @@ const Home1 = memo(() => {
     <PageLayout
       cssFiles={CSS_FILES}
       fixedElements={fixedElements}
+      enableScrollSmoother={false}
     >
       <Header />
       <main>
