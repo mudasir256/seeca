@@ -24,6 +24,8 @@ import SinglePost from './pages/innerpages/single_post';
 import SingleProject from './pages/innerpages/single_project';
 import SingleProject2 from './pages/innerpages/single_project2';
 import ScrollToTop from './components/common/ScrollToTop';
+import ChatBot from './components/common/ChatBot';
+import ImageProtection from './components/common/ImageProtection';
 
 function WhatsAppFloat() {
   return (
@@ -82,7 +84,9 @@ function WhatsAppFloat() {
 function App() {
   return (
     <Router>
+      <ImageProtection />
       <ScrollToTop />
+      <ChatBot />
       <WhatsAppFloat />
       <Routes>
         <Route path="/" element={<Home1 />} />

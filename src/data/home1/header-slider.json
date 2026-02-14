@@ -12,15 +12,15 @@
     "img": "/home1/assets/img/A5(1).jpg"
   },
   {
-    "title": "Sustainability",
-    "subTitle": "Sustainable Design",
-    "desc": "Sustainability focuses on meeting the needs of the present without compromising the ability of future generations to meet their needs.",
-    "img": "/home1/assets/img/PHOTO-2026-02-11-16-33-30.jpg"
-  },
-  {
     "title": "Construction",
     "subTitle": "Construction Management",
     "desc": "Professional construction management services ensuring quality, efficiency, and timely completion of projects from planning to execution.",
     "img": "/home1/assets/img/006.jpg"
+  },
+  {
+    "title": "Sustainability",
+    "subTitle": "Sustainable Design",
+    "desc": "Sustainability focuses on meeting the needs of the present without compromising the ability of future generations to meet their needs.",
+    "img": "/home1/assets/img/PHOTO-2026-02-11-16-33-30.jpg"
   }
 ]
