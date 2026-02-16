@@ -55,6 +55,39 @@ function Footer() {
         .tc-footer-style1 .foot-social a i {
           font-size: 16px;
         }
+        .tc-footer-style1 .footer-brand {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 10px 0;
+        }
+        .tc-footer-style1 .footer-brand .logo {
+          max-height: 320px;
+          width: auto;
+          object-fit: contain;
+          margin-bottom: 24px;
+          display: block;
+        }
+        .tc-footer-style1 .footer-brand .foot-social {
+          margin-top: 0;
+        }
+        @media (max-width: 991px) {
+          .tc-footer-style1 .footer-brand {
+            align-items: center;
+            text-align: center;
+          }
+          .tc-footer-style1 .footer-brand .logo {
+            max-height: 260px;
+          }
+          .tc-footer-style1 .footer-brand .foot-social {
+            justify-content: center;
+          }
+        }
+        @media (max-width: 767px) {
+          .tc-footer-style1 .footer-brand .logo {
+            max-height: 200px;
+          }
+        }
         .tc-footer-style1 .contact-section {
           margin-bottom: 40px;
         }
@@ -407,17 +440,12 @@ function Footer() {
           <div className="top-content section-padding">
             <div className="row gx-5">
               <div className="col-12 col-md-6 col-lg-4">
-                <div className="logo-section">
+                <div className="footer-brand">
                   <img
-                    src="/home_preview/assets/img/logo.png"
+                    src="/home_preview/assets/img/Logo-card-white.png"
                     alt="SEECA"
                     className="logo"
-                    style={{ maxHeight: '78px' }}
                   />
-               
-                  <div className="service-desc">
-                    We provide a full range of Architecture and Interior Design services.
-                  </div>
                   <div className="foot-social">
                     <a href="#" aria-label="Facebook">
                       <i className="fab fa-facebook-f"></i>

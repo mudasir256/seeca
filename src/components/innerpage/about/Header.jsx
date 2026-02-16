@@ -90,12 +90,12 @@ function Header() {
                       </defs>
                       <text>
                         <textPath xlinkHref="#textcircle" textLength="900">
-                          • Years of experience • since 2013
+                          • Years of experience • since 2018
                         </textPath>
                       </text>
                     </svg>
                   </a>
-                  <span className="num"> 13 </span>
+                  <span className="num"> 9 </span>
                 </div>
               </div>
             </div>
