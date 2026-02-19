@@ -447,19 +447,19 @@ function Footer() {
                     className="logo"
                   />
                   <div className="foot-social">
-                    <a href="#" aria-label="Facebook">
+                    <a href="https://www.facebook.com/seecapl.pk/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                       <i className="fab fa-facebook-f"></i>
                     </a>
-                    <a href="#" aria-label="LinkedIn">
-                      <i className="fab fa-linkedin-in"></i>
+                    <a href="https://x.com/seeca_pk" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                      <i className="fab fa-x-twitter"></i>
                     </a>
-                    <a href="#" aria-label="YouTube">
-                      <i className="fab fa-youtube"></i>
-                    </a>
-                    <a href="#" aria-label="Instagram">
+                    <a href="https://www.instagram.com/seeca_pk/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                       <i className="fab fa-instagram"></i>
                     </a>
-                    <a href="#" aria-label="Pinterest">
+                    <a href="https://www.threads.net/@seeca_pk" target="_blank" rel="noopener noreferrer" aria-label="Threads">
+                      <i className="fab fa-threads"></i>
+                    </a>
+                    <a href="https://www.pinterest.com/seeconsultantsarchitects/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
                       <i className="fab fa-pinterest-p"></i>
                     </a>
                   </div>

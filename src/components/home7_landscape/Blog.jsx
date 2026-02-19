@@ -24,7 +24,7 @@ function Blog() {
                 <div className="date">
                   <h3 className="numb"> 25 </h3>
                   <small>
-                    december <br /> 2023
+                    january <br /> 2026
                   </small>
                 </div>
                 <div className="cont">
@@ -47,7 +47,7 @@ function Blog() {
                 <div className="date">
                   <h3 className="numb"> 12 </h3>
                   <small>
-                    december <br /> 2023
+                    january <br /> 2026
                   </small>
                 </div>
                 <div className="cont">
@@ -66,7 +66,7 @@ function Blog() {
                 <div className="date">
                   <h3 className="numb"> 7 </h3>
                   <small>
-                    october <br /> 2023
+                    january <br /> 2026
                   </small>
                 </div>
                 <div className="cont">
@@ -85,7 +85,7 @@ function Blog() {
                 <div className="date">
                   <h3 className="numb"> 15 </h3>
                   <small>
-                    august <br /> 2023
+                    january <br /> 2026
                   </small>
                 </div>
                 <div className="cont">

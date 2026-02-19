@@ -89,7 +89,7 @@ function Content({ blog }) {
   const defaultBlog = {
     title: "Top 10 Wooden Architecture Building 2023",
     subTitle: "Architecture, Building",
-    history: "march 24, 2024",
+    history: "January 24, 2026",
     description: "Discover the latest trends in modern architecture.",
     content: "Success needs hard work. Don't listen to these 'get rich quick' schemes. You need to build your character and work hard on yourself and your business to achieve greatness. Worked hard and work smart. Do the right things and do them in the right way. Don't think much to procrastinate. Take bold actions. Work long hours and craft your legacy. Successful people do not see failures as failures. They see them as important learning lessons. Be with people who have utmost conviction and patience. The battle is never lost until you've abandon your vision."
   };

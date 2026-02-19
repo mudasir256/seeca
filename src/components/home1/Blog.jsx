@@ -221,7 +221,7 @@ function Blog({ limit = 3, showViewAll = true }) {
                           {item.history.split('<br />')[1]}
                         </>
                       ) : (
-                        'January 2024'
+                        'January 2026'
                       )}
                     </small>
                   </div>

@@ -30,10 +30,10 @@ const knowledgeBase = {
     "Smart Building Technologies at SEECA offer individual, aesthetically stunning solutions integrated with modern technology for efficient and intelligent buildings. Visit our Smart Building Technologies page to learn more.",
   ],
   contact: [
-    "Contact SEECA:\n\n📧 Email: hello@SEECA.co\n\n📍 Head Office: 903-C, Maulana Shaukat Ali Road, Faisal Town, Lahore\n📞 +92 333 1498340\n📞 +92 324 7250008\n\n📍 Somalia Office: Downtown Hargeisa, Road # 01, Office # 01 Hargeisa, Somaliland\n📞 +252 633 8109 71\n📞 +252 634 6333 31\n\nYou can also use our Contact page or WhatsApp to get in touch.",
+    "Contact SEECA:\n\n📧 Email: seeca.pk@gmail.com\n\n📍 Head Office: 903-C, Maulana Shaukat Ali Road, Faisal Town, Lahore\n📞 +92 333 1498340\n📞 +92 324 7250008\n\n📍 Somalia Office: Downtown Hargeisa, Road # 01, Office # 01 Hargeisa, Somaliland\n📞 +252 633 8109 71\n📞 +252 634 6333 31\n\nYou can also use our Contact page or WhatsApp to get in touch.",
   ],
   email: [
-    "Our email is hello@SEECA.co. Use it for general inquiries, project discussions, or to start a conversation. We'd love to hear from you!",
+    "Our email is seeca.pk@gmail.com. Use it for general inquiries, project discussions, or to start a conversation. We'd love to hear from you!",
   ],
   address: [
     "Head Office: 903-C, Maulana Shaukat Ali Road, Faisal Town, Lahore, Pakistan.\n\nSomalia Office: Downtown Hargeisa, Road # 01, Office # 01 Hargeisa, Somaliland.",
@@ -54,7 +54,7 @@ const knowledgeBase = {
     "Our vision is to bring your vision to life. We provide a full range of architecture and interior design services with a focus on quality, aesthetics, and sustainability.",
   ],
   default: [
-    "I'm not sure about that. I can help with:\n\n• What SEECA does (architecture, interior, construction, sustainability, smart building)\n• Contact info (email hello@SEECA.co, phone, addresses)\n• Our services and process\n• Projects and portfolio\n\nAsk me something like 'What services do you offer?' or 'How can I contact you?'",
+    "I'm not sure about that. I can help with:\n\n• What SEECA does (architecture, interior, construction, sustainability, smart building)\n• Contact info (email seeca.pk@gmail.com, phone, addresses)\n• Our services and process\n• Projects and portfolio\n\nAsk me something like 'What services do you offer?' or 'How can I contact you?'",
   ],
 };
 

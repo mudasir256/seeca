@@ -5,7 +5,7 @@ function Slider({ blog }) {
   const defaultBlog = {
     img: "/innerpages/assets/img/blog/b1.jpg",
     subTitle: "inspiration",
-    history: "march 24, 2024",
+    history: "January 24, 2026",
     title: "Top 10 Wooden Architecture Building 2023"
   };
 

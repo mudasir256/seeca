@@ -84,9 +84,9 @@ function LatestPosts() {
                     <div className="row">
                       <div className="col-lg-3">
                         <div className="date">
-                          <h2 className="num fsz-45 fw-400 mb-10"> 25 </h2>
+                          <h2 className="num fsz-45 fw-400 mb-10"> 7 </h2>
                           <p className="txt fsz-12 color-666 text-uppercase">
-                            december <br /> 2023
+                            january <br /> 2026
                           </p>
                         </div>
                       </div>
@@ -124,9 +124,9 @@ function LatestPosts() {
                     <div className="row">
                       <div className="col-lg-3">
                         <div className="date">
-                          <h2 className="num fsz-45 fw-400 mb-10"> 16 </h2>
+                          <h2 className="num fsz-45 fw-400 mb-10"> 23 </h2>
                           <p className="txt fsz-12 color-666 text-uppercase">
-                            december <br /> 2023
+                            january <br /> 2026
                           </p>
                         </div>
                       </div>

@@ -98,7 +98,7 @@ function Footer() {
             </div>
             <div className="col-lg-3">
               <p className="copy">
-                © 2023 SEECA Interior Studio. <br /> All Right Reserved
+                © 2025 SEECA Architecture Studio. <br /> All Right Reserved
               </p>
             </div>
             <div className="col-lg-5">

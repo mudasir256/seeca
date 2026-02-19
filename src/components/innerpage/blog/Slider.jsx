@@ -63,7 +63,7 @@ function Slider() {
                           <div className="date fsz-12 text-uppercase mb-30">
                             <a href="#"> inspiration </a>
                             <span className="circle icon-3 bg-white rounded-circle mx-3"></span>
-                            <a href="#"> march 24, 2024 </a>
+                            <a href="#"> January 24, 2026 </a>
                           </div>
                           <h2 className="fsz-45 fw-500">
                             <a href="#" className="hover-orange1">
@@ -92,7 +92,7 @@ function Slider() {
                           <div className="date fsz-12 text-uppercase mb-30">
                             <a href="#"> inspiration </a>
                             <span className="circle icon-3 bg-white rounded-circle mx-3"></span>
-                            <a href="#"> march 24, 2024 </a>
+                            <a href="#"> January 24, 2026 </a>
                           </div>
                           <h2 className="fsz-45 fw-500">
                             <a href="#" className="hover-orange1">

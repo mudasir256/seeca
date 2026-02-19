@@ -6,7 +6,7 @@ function Chat() {
       <div className="container">
         <div className="content">
           <a href="#" className="xl-text">
-            hello@SEECA.co
+            seeca.pk@gmail.com
           </a>
           <h5 className="mb-50 lh-5">
             دعنا نعش معك احلامك <br /> لتصبح حقيقة

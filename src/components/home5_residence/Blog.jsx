@@ -22,9 +22,9 @@ function Blog() {
               </a>
               <div className="info">
                 <div className="date">
-                  <h3 className="numb"> 25 </h3>
+                  <h3 className="numb"> 7 </h3>
                   <small>
-                    december <br /> 2023
+                    january <br /> 2026
                   </small>
                 </div>
                 <div className="cont">
@@ -48,9 +48,9 @@ function Blog() {
                 data-wow-delay="0.4s"
               >
                 <div className="date">
-                  <h3 className="numb"> 12 </h3>
+                  <h3 className="numb"> 23 </h3>
                   <small>
-                    december <br /> 2023
+                    january <br /> 2026
                   </small>
                 </div>
                 <div className="cont">
@@ -70,9 +70,9 @@ function Blog() {
                 data-wow-delay="0.6s"
               >
                 <div className="date">
-                  <h3 className="numb"> 7 </h3>
+                  <h3 className="numb"> 14 </h3>
                   <small>
-                    october <br /> 2023
+                    january <br /> 2026
                   </small>
                 </div>
                 <div className="cont">
@@ -92,9 +92,9 @@ function Blog() {
                 data-wow-delay="0.8s"
               >
                 <div className="date">
-                  <h3 className="numb"> 15 </h3>
+                  <h3 className="numb"> 19 </h3>
                   <small>
-                    august <br /> 2023
+                    january <br /> 2026
                   </small>
                 </div>
                 <div className="cont">
