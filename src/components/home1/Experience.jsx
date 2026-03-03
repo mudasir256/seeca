@@ -286,7 +286,7 @@ function Experience() {
           <div className="col-12 col-md-6 col-lg-3">
             <div className="img wow">
               <img
-                src="/home1/assets/img/CAM01.jpg"
+                src="/home1/assets/img/5804.Renders(6).jpg"
                 alt=""
                 className="img-cover"
                 loading="lazy"

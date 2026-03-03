@@ -178,9 +178,12 @@ function ContactInfo() {
             <div className="contact-item">
               <i className="la la-map-marker"></i>
               <div>
-                <span className="contact-label">OUR ADDRESS</span>
+                <span className="contact-label">OUR OFFICES</span>
                 <div className="contact-text">
+                  <div className="contact-label">Address in Pakistan</div>
+                  <div>Situated along the GT Road, primarily in Rawalpindi but spanning into the Islamabad Capital Territory.</div>
                   <div>903C, Maulana Shaukat Ali Road, Faisal Town, Lahore, Pakistan.</div>
+                  <div className="contact-label">Address in Somaliland</div>
                   <div>Downtown Hargeisa, Road # 01, Office # 01 Hargeisa, Somaliland</div>
                 </div>
               </div>
@@ -206,7 +209,7 @@ function ContactInfo() {
                 <span className="contact-label">OUR PHONE</span>
                 <div className="contact-text">
                   <a href="tel:+923331498340">+92 333 1498340</a>
-                  <a href="tel:+923002500556">+92 300 2500556</a>
+                  <a href="tel:+923002500556">+92 324 7250008</a>
                   <a href="tel:+252633810971">+252 633 8109 71</a>
                   <a href="tel:+252634633331">+252 634 6333 31</a>
                 </div>
