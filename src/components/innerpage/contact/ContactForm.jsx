@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 function ContactForm() {
+  const formRef = useRef();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
     message: ''
   });
+  const [status, setStatus] = useState('idle');
+  const [errorMsg, setErrorMsg] = useState('');
 
   const handleChange = (e) => {
     setFormData({
@@ -17,7 +21,25 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    setStatus('sending');
+    setErrorMsg('');
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_INTERNSHIP_TEMPLATE_ID,
+        formRef.current,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
+        setStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        if (formRef.current) formRef.current.reset();
+      })
+      .catch((err) => {
+        setStatus('error');
+        setErrorMsg(err?.text || 'Something went wrong. Please try again.');
+      });
   };
 
   return (
@@ -90,6 +112,21 @@ function ContactForm() {
           background: #e8e8e8;
           transform: translateY(-2px);
         }
+        .tc-contact-form-section .submit-btn:disabled {
+          opacity: 0.7;
+          cursor: not-allowed;
+          transform: none;
+        }
+        .tc-contact-form-section .form-msg {
+          margin-top: 16px;
+          font-size: 15px;
+        }
+        .tc-contact-form-section .form-msg.success {
+          color: #73bf44;
+        }
+        .tc-contact-form-section .form-msg.error {
+          color: #c00;
+        }
         @media (max-width: 1199px) {
           .tc-contact-form-section {
             padding: 80px 60px;
@@ -142,7 +179,7 @@ function ContactForm() {
       <section className="tc-contact-form-section">
         <div className="form-wrapper">
           <h2>Get in Touch</h2>
-          <form onSubmit={handleSubmit}>
+          <form ref={formRef} onSubmit={handleSubmit}>
             <div className="form-group">
               <input
                 type="text"
@@ -185,9 +222,15 @@ function ContactForm() {
                 onChange={handleChange}
               />
             </div>
-            <button type="submit" className="submit-btn">
-              Submit
+            <button type="submit" className="submit-btn" disabled={status === 'sending'}>
+              {status === 'sending' ? 'Sending...' : 'Submit'}
             </button>
+            {status === 'success' && (
+              <p className="form-msg success">Message sent successfully! We&apos;ll get back to you soon.</p>
+            )}
+            {status === 'error' && (
+              <p className="form-msg error">{errorMsg}</p>
+            )}
           </form>
         </div>
       </section>

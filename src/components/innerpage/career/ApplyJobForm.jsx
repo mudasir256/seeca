@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 function ApplyJobForm() {
+  const formRef = useRef();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -9,6 +11,8 @@ function ApplyJobForm() {
     experience: '',
     coverLetter: '',
   });
+  const [status, setStatus] = useState('idle');
+  const [errorMsg, setErrorMsg] = useState('');
 
   const handleChange = (e) => {
     setFormData({
@@ -19,7 +23,32 @@ function ApplyJobForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Job form submitted:', formData);
+    setStatus('sending');
+    setErrorMsg('');
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_JOB_TEMPLATE_ID,
+        formRef.current,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
+        setStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          position: '',
+          experience: '',
+          coverLetter: '',
+        });
+        if (formRef.current) formRef.current.reset();
+      })
+      .catch((err) => {
+        setStatus('error');
+        setErrorMsg(err?.text || 'Something went wrong. Please try again.');
+      });
   };
 
   const formStyles = `
@@ -128,6 +157,19 @@ function ApplyJobForm() {
       transform: translateY(-2px);
       box-shadow: 0 6px 20px rgba(115, 191, 68, 0.4);
     }
+    .tc-career-form-section .submit-btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .tc-career-form-section .form-msg {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .tc-career-form-section .form-msg.success { color: #73bf44; }
+    .tc-career-form-section .form-msg.error { color: #e74c3c; }
     @media (max-width: 767px) {
       .tc-career-form-section { padding: 50px 20px 70px; }
       .tc-career-form-section .form-card {
@@ -157,7 +199,7 @@ function ApplyJobForm() {
         <div className="form-card">
           <h2>Apply for Job</h2>
           <p className="form-subtitle">Join our team — fill in your details below.</p>
-          <form onSubmit={handleSubmit}>
+          <form ref={formRef} onSubmit={handleSubmit}>
             <div className="form-row">
               <div className="form-group">
                 <input
@@ -230,9 +272,18 @@ function ApplyJobForm() {
               </div>
             </div>
             <div className="submit-wrap">
-              <button type="submit" className="submit-btn">
-                Submit Application
+              <button type="submit" className="submit-btn" disabled={status === 'sending'}>
+                {status === 'sending' ? 'Sending...' : 'Submit Application'}
               </button>
+              {status === 'success' && (
+                <p className="form-msg success">Application submitted successfully!</p>
+              )}
+              {status === 'error' && (
+                <p className="form-msg error">{errorMsg}</p>
+              )}
+              {status === 'idle' && errorMsg && (
+                <p className="form-msg error">{errorMsg}</p>
+              )}
             </div>
           </form>
         </div>
