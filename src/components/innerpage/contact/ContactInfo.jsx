@@ -181,7 +181,7 @@ function ContactInfo() {
                 <span className="contact-label">OUR OFFICES</span>
                 <div className="contact-text">
                   <div className="contact-label">Address in Pakistan</div>
-                  <div>Situated along the GT Road, primarily in Rawalpindi but spanning into the Islamabad Capital Territory.</div>
+                  <div>Plaza 138, First Floor, Wallayat Complex, Phase 7, Bahria Town, Rawalpindi.</div>
                   <div>903C, Maulana Shaukat Ali Road, Faisal Town, Lahore, Pakistan.</div>
                   <div className="contact-label">Address in Somaliland</div>
                   <div>Downtown Hargeisa, Road # 01, Office # 01 Hargeisa, Somaliland</div>
