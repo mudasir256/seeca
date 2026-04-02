@@ -1,8 +1,20 @@
 import React from 'react';
 import data from '../../data/home1/blogs';
+import { useNavigate } from 'react-router-dom';
 
 function Blog({ limit = 3, showViewAll = true }) {
+  const navigate = useNavigate();
   const displayPosts = limit ? data.slice(0, limit) : data;
+  const openBlogDetails = (item) => {
+    navigate('/innerpages/single_post', {
+      state: {
+        blog: {
+          ...item,
+          img: item.img || item.coverImage,
+        },
+      },
+    });
+  };
 
   return (
     <>
@@ -131,6 +143,35 @@ function Blog({ limit = 3, showViewAll = true }) {
           letter-spacing: 0.5px;
           font-weight: 500;
         }
+        .tc-blog-style1 .blog-card .card-footer-row {
+          margin-top: 16px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+        }
+        .tc-blog-style1 .blog-card .card-footer-row .subTitle {
+          margin: 0;
+          line-height: 1.4;
+        }
+        .tc-blog-style1 .blog-card .blog-details-btn {
+          border: 1px solid #73bf44;
+          background: transparent;
+          color: #73bf44;
+          border-radius: 30px;
+          padding: 8px 16px;
+          min-height: 36px;
+          font-size: 13px;
+          font-weight: 600;
+          transition: all 0.3s ease;
+          white-space: nowrap;
+          flex-shrink: 0;
+          margin-right: 0;
+        }
+        .tc-blog-style1 .blog-card .blog-details-btn:hover {
+          background: #73bf44;
+          color: #fff;
+        }
         @media (max-width: 991px) {
           .tc-blog-style1 {
             padding: 80px 0 60px;
@@ -199,16 +240,20 @@ function Blog({ limit = 3, showViewAll = true }) {
           <div className="blog-header">
             <h2 className="fsz-45">Latest Blogs</h2>
             {showViewAll && limit && (
-              <a href="#" className="blog-view-all-btn">
+              <button type="button" className="blog-view-all-btn" onClick={() => navigate('/innerpages/blog')}>
                 <span>View All</span>
                 <i className="ti-arrow-top-right"></i>
-              </a>
+              </button>
             )}
           </div>
           <div className="blog-grid">
             {displayPosts.map((item, i) => (
               <div key={item.slug || i} className="blog-card">
-                <div className="img">
+                <div
+                  className="img"
+                  onClick={() => openBlogDetails(item)}
+                  style={{ cursor: 'pointer' }}
+                >
                   <img src={item.coverImage || item.img} alt={item.title} className="img-cover" />
                 </div>
                 <div className="info">
@@ -226,15 +271,29 @@ function Blog({ limit = 3, showViewAll = true }) {
                     </small>
                   </div>
                   <div className="cont">
-                    <a href="#" className="title d-block fsz-24 mb-15 fw-600">
+                    <button
+                      type="button"
+                      className="title d-block fsz-24 mb-15 fw-600"
+                      onClick={() => openBlogDetails(item)}
+                      style={{ background: 'none', border: 'none', padding: 0, textAlign: 'left', width: '100%', cursor: 'pointer' }}
+                    >
                       {item.title}
-                    </a>
+                    </button>
                     {item.description && (
                       <p className="description">{item.description}</p>
                     )}
-                    <small className="fsz-12 subTitle">
-                      {item.subTitle || 'Blog'}
-                    </small>
+                    <div className="card-footer-row">
+                      <small className="fsz-12 subTitle">
+                        {item.subTitle || 'Blog'}
+                      </small>
+                      <button
+                        type="button"
+                        className="blog-details-btn"
+                        onClick={() => openBlogDetails(item)}
+                      >
+                        Read Details
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>

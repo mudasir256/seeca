@@ -1,1 +1,95 @@
-[{"slug":"modern-architecture-trends-2024","title":"Modern Architecture Trends for 2024","description":"Discover the latest trends in modern architecture, from sustainable design to innovative materials and smart building technologies that are shaping the future of construction.","coverImage":"/home1/assets/img/blog/blog1.jpg","num":"25","history":"january <br /> 2026","subTitle":"Architecture, Guide"},{"slug":"sustainable-building-design","title":"Sustainable Building Design: A Complete Guide","description":"Learn how to incorporate sustainable practices into your building designs, including energy efficiency, eco-friendly materials, and green building certifications.","coverImage":"/home1/assets/img/blog/blog2.jpg","num":"16","history":"january <br /> 2026","subTitle":"Sustainability, Design"},{"slug":"interior-design-inspiration","title":"Top 10 Interior Design Inspiration Ideas","description":"Explore creative interior design ideas that transform spaces into beautiful, functional environments for modern living and working.","coverImage":"/home1/assets/img/blog/blog1.jpg","num":"12","history":"january <br /> 2026","subTitle":"Interior Design, Inspiration"},{"slug":"smart-home-technology","title":"Integrating Smart Home Technology in Modern Design","description":"Discover how to seamlessly integrate smart home technology into architectural and interior design projects for enhanced comfort and efficiency.","coverImage":"/home1/assets/img/blog/blog2.jpg","num":"8","history":"january <br /> 2026","subTitle":"Technology, Innovation"},{"slug":"commercial-space-planning","title":"Effective Commercial Space Planning Strategies","description":"Learn the key principles of commercial space planning to create efficient, productive, and aesthetically pleasing work environments.","coverImage":"/home1/assets/img/blog/blog1.jpg","num":"30","history":"january <br /> 2026","subTitle":"Commercial, Planning"},{"slug":"residential-architecture-tips","title":"Essential Tips for Residential Architecture Projects","description":"Expert advice on planning and executing successful residential architecture projects, from concept to completion with practical insights.","coverImage":"/home1/assets/img/blog/blog2.jpg","num":"22","history":"january <br /> 2026","subTitle":"Residential, Tips"},{"slug":"luxury-interior-design","title":"Luxury Interior Design: Creating Elegant Spaces","description":"Explore the principles of luxury interior design and learn how to create elegant, sophisticated spaces that reflect timeless beauty and style.","coverImage":"/home1/assets/img/blog/blog1.jpg","num":"15","history":"january <br /> 2026","subTitle":"Luxury, Interior Design"},{"slug":"green-building-materials","title":"Green Building Materials: Sustainable Choices","description":"A comprehensive guide to eco-friendly building materials that reduce environmental impact while maintaining quality and durability.","coverImage":"/home1/assets/img/blog/blog2.jpg","num":"5","history":"january <br /> 2026","subTitle":"Sustainability, Materials"},{"slug":"office-design-trends","title":"Modern Office Design Trends for 2024","description":"Discover the latest office design trends that promote productivity, collaboration, and employee well-being in contemporary workspaces.","coverImage":"/home1/assets/img/blog/blog1.jpg","num":"28","history":"january <br /> 2026","subTitle":"Office Design, Trends"},{"slug":"kitchen-renovation-guide","title":"Complete Guide to Kitchen Renovation","description":"Step-by-step guide to planning and executing a successful kitchen renovation, from layout design to material selection and finishing touches.","coverImage":"/home1/assets/img/blog/blog2.jpg","num":"18","history":"january <br /> 2026","subTitle":"Renovation, Guide"}]
+[
+  {
+    "slug": "quiet-luxury-aesthetic-2026",
+    "title": "The \"Quiet Luxury\" Aesthetic: Why Minimalism Is Making a Maximalist Comeback in 2026",
+    "description": "Explore how quiet luxury pairs minimal forms with rich textures, crafted details, and timeless materials for elevated interiors.",
+    "content": "Quiet luxury is one of the most defining interior architecture directions of 2026. Instead of obvious visual drama, it focuses on restraint, craftsmanship, and durable choices that age beautifully. The look is minimal on the surface, but deeply layered in execution through tone-on-tone palettes, nuanced textures, and thoughtful joinery.\n\nAt the planning stage, quiet luxury begins with spatial clarity. Designers prioritize proportion, symmetry, and circulation before decorative decisions. Walls, floors, and ceilings are treated as one coherent envelope, often using natural stone, brushed wood, limewash, or matte plaster finishes that hold light in a soft way.\n\nFurniture and accessories follow the same philosophy. Fewer pieces are selected, but each has stronger material integrity and sculptural presence. Oversized seating in tactile fabrics, custom millwork, concealed storage, and integrated lighting all help create a calm visual field while maintaining comfort and function.\n\nThe reason this approach feels new in 2026 is the return of selective maximalism inside minimal frameworks. Spaces stay clean, but details become richer: handwoven textiles, artisan ceramics, layered rugs, and subtle metallic accents. This contrast delivers emotional depth without visual clutter.\n\nFor clients, quiet luxury offers long-term value. It avoids trend fatigue, supports wellness through calmer environments, and works across residential, hospitality, and office interiors. The result is a timeless, elevated atmosphere that communicates quality quietly and confidently.",
+    "coverImage": "/innerpages/assets/img/blog/b10.jpg",
+    "num": "14",
+    "history": "february <br /> 2026",
+    "subTitle": "Interior, Inspiration"
+  },
+  {
+    "slug": "biophilic-design-beyond-plants",
+    "title": "Biophilic Design Beyond Plants: How to Integrate Natural Light and Organic Architecture",
+    "description": "See how natural light, organic forms, and climate-responsive planning create restorative spaces beyond decorative greenery.",
+    "content": "Biophilic design in 2026 is moving far beyond placing plants in corners. The strongest projects now treat nature as a core design system by shaping light, airflow, acoustics, materials, and movement patterns to support human well-being.\n\nDaylight is the first major layer. Orientation, window height, shading strategy, and reflective surfaces are coordinated to balance morning and afternoon light. Skylights, light wells, and clerestory windows are used not only for brightness but to create changing visual rhythms that keep interiors connected to time and weather.\n\nOrganic architecture contributes through form and sequence. Curved transitions, softened corners, and layered thresholds make spaces feel less mechanical and more intuitive to inhabit. In many projects, circulation paths are designed to alternate compression and openness, echoing natural movement in landscapes.\n\nMaterial selection is equally important. Timber, stone, clay, natural fiber composites, and breathable finishes improve tactile comfort and reduce sensory fatigue. When combined with passive ventilation and thermal zoning, these choices create environments that feel fresh, healthy, and grounded.\n\nApplied correctly, this approach improves mood, focus, and recovery from stress. It is especially effective for homes, workplaces, and healthcare-inspired spaces where long occupancy demands both performance and emotional comfort.",
+    "coverImage": "/innerpages/assets/img/blog/b5.jpg",
+    "num": "10",
+    "history": "february <br /> 2026",
+    "subTitle": "Architecture, Inspiration"
+  },
+  {
+    "slug": "net-zero-vs-passive-house",
+    "title": "Net-Zero vs. Passive House: Which Sustainable Architecture Model is Right for Your Project?",
+    "description": "Compare Net-Zero and Passive House to choose the right sustainability path based on performance targets, budget, and climate.",
+    "content": "Net-Zero and Passive House are often discussed together, but they solve sustainability from different starting points. Net-Zero focuses on annual energy balance: the building should produce as much energy as it consumes over a year, usually through on-site renewables and high-efficiency systems.\n\nPassive House starts with demand reduction. It prioritizes very high envelope performance, airtight construction, minimized thermal bridging, and controlled ventilation with heat recovery. The goal is to drastically reduce heating and cooling loads before considering generation.\n\nFor project teams, the decision depends on context. In sunny regions with strong rooftop generation potential, Net-Zero can be practical and cost-effective. In extreme climates, Passive House often provides superior comfort, resilience, and predictable operating performance due to reduced dependency on active systems.\n\nBudget strategy also matters. Passive House may involve higher detailing and construction quality upfront, while Net-Zero may allocate more toward mechanical systems and photovoltaic capacity. Lifecycle cost analysis is essential to compare long-term utility savings, maintenance, and durability.\n\nIn many real-world projects, the best outcome is hybrid. Teams combine Passive House-level envelope principles with Net-Zero energy generation to create buildings that are efficient, comfortable, and future-ready under evolving energy codes and carbon goals.",
+    "coverImage": "/innerpages/assets/img/blog/b9.jpg",
+    "num": "06",
+    "history": "february <br /> 2026",
+    "subTitle": "Architecture, Guide"
+  },
+  {
+    "slug": "smart-home-technology",
+    "title": "Integrating Smart Home Technology in Modern Design",
+    "description": "Discover how to seamlessly integrate smart home technology into architectural and interior design projects for enhanced comfort and efficiency.",
+    "coverImage": "/home1/assets/img/blog/blog2.jpg",
+    "num": "8",
+    "history": "january <br /> 2026",
+    "subTitle": "Technology, Innovation"
+  },
+  {
+    "slug": "commercial-space-planning",
+    "title": "Effective Commercial Space Planning Strategies",
+    "description": "Learn the key principles of commercial space planning to create efficient, productive, and aesthetically pleasing work environments.",
+    "coverImage": "/home1/assets/img/blog/blog1.jpg",
+    "num": "30",
+    "history": "january <br /> 2026",
+    "subTitle": "Commercial, Planning"
+  },
+  {
+    "slug": "residential-architecture-tips",
+    "title": "Essential Tips for Residential Architecture Projects",
+    "description": "Expert advice on planning and executing successful residential architecture projects, from concept to completion with practical insights.",
+    "coverImage": "/home1/assets/img/blog/blog2.jpg",
+    "num": "22",
+    "history": "january <br /> 2026",
+    "subTitle": "Residential, Tips"
+  },
+  {
+    "slug": "luxury-interior-design",
+    "title": "Luxury Interior Design: Creating Elegant Spaces",
+    "description": "Explore the principles of luxury interior design and learn how to create elegant, sophisticated spaces that reflect timeless beauty and style.",
+    "coverImage": "/home1/assets/img/blog/blog1.jpg",
+    "num": "15",
+    "history": "january <br /> 2026",
+    "subTitle": "Luxury, Interior Design"
+  },
+  {
+    "slug": "green-building-materials",
+    "title": "Green Building Materials: Sustainable Choices",
+    "description": "A comprehensive guide to eco-friendly building materials that reduce environmental impact while maintaining quality and durability.",
+    "coverImage": "/home1/assets/img/blog/blog2.jpg",
+    "num": "5",
+    "history": "january <br /> 2026",
+    "subTitle": "Sustainability, Materials"
+  },
+  {
+    "slug": "office-design-trends",
+    "title": "Modern Office Design Trends for 2024",
+    "description": "Discover the latest office design trends that promote productivity, collaboration, and employee well-being in contemporary workspaces.",
+    "coverImage": "/home1/assets/img/blog/blog1.jpg",
+    "num": "28",
+    "history": "january <br /> 2026",
+    "subTitle": "Office Design, Trends"
+  },
+  {
+    "slug": "kitchen-renovation-guide",
+    "title": "Complete Guide to Kitchen Renovation",
+    "description": "Step-by-step guide to planning and executing a successful kitchen renovation, from layout design to material selection and finishing touches.",
+    "coverImage": "/home1/assets/img/blog/blog2.jpg",
+    "num": "18",
+    "history": "january <br /> 2026",
+    "subTitle": "Renovation, Guide"
+  }
+]

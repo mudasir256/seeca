@@ -124,6 +124,11 @@ function Footer() {
           color: #73bf44;
         }
         .tc-footer-style1 .map-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
+        }
+        .tc-footer-style1 .map-container .map-frame {
           height: 280px;
           border-radius: 8px;
           overflow: hidden;
@@ -232,8 +237,12 @@ function Footer() {
             margin-right: 10px;
           }
           .tc-footer-style1 .map-container {
-            height: 220px;
+            grid-template-columns: 1fr;
+            gap: 10px;
             margin-top: 0;
+          }
+          .tc-footer-style1 .map-container .map-frame {
+            height: 220px;
           }
           .tc-footer-style1 .foot {
             padding: 25px 0;
@@ -314,8 +323,11 @@ function Footer() {
             word-break: break-word;
           }
           .tc-footer-style1 .map-container {
-            height: 250px;
+            grid-template-columns: 1fr;
             margin-top: 0;
+          }
+          .tc-footer-style1 .map-container .map-frame {
+            height: 250px;
           }
           .tc-footer-style1 .foot {
             padding: 20px 0;
@@ -398,6 +410,9 @@ function Footer() {
             margin-right: 6px;
           }
           .tc-footer-style1 .map-container {
+            grid-template-columns: 1fr;
+          }
+          .tc-footer-style1 .map-container .map-frame {
             height: 180px;
           }
           .tc-footer-style1 .foot {
@@ -471,7 +486,9 @@ function Footer() {
                   <div className="contact-item">
                     <i className="la la-map-marker"></i>
                     <div className="contact-text">
-                      903-C, Maulana Shaukat Ali Road, Faisal Town, Lahore
+                      Plaza 138, First Floor, Wallayat Complex, Phase 7, Bahria Town, Rawalpindi.
+                      <br />
+                      903C, Maulana Shaukat Ali Road, Faisal Town, Lahore, Pakistan.
                     </div>
                   </div>
                   <div className="contact-item">
@@ -484,7 +501,7 @@ function Footer() {
                   </div>
                 </div>
                 <div className="contact-section">
-                  <h5>Somalia Office</h5>
+                  <h5>Somaliland Office</h5>
                   <div className="contact-item">
                     <i className="la la-map-marker"></i>
                     <div className="contact-text">
@@ -503,13 +520,24 @@ function Footer() {
               </div>
               <div className="col-12 col-md-12 col-lg-4">
                 <div className="map-container">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.1234567890123!2d74.3589!3d31.5204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190483e57107d9%3A0x1234567890abcdef!2s903-C%2C%20Maulana%20Shaukat%20Ali%20Road%2C%20Faisal%20Town%2C%20Lahore!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="SEECA Office Location"
-                  ></iframe>
+                  <div className="map-frame">
+                    <iframe
+                      src="https://www.google.com/maps?q=903C,+Maulana+Shaukat+Ali+Road,+Faisal+Town,+Lahore,+Pakistan&output=embed"
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="SEECA Lahore Office Location"
+                    ></iframe>
+                  </div>
+                  <div className="map-frame">
+                    <iframe
+                      src="https://www.google.com/maps?q=Plaza+138,+First+Floor,+Wallayat+Complex,+Phase+7,+Bahria+Town,+Rawalpindi,+Pakistan&output=embed"
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="SEECA Rawalpindi Office Location"
+                    ></iframe>
+                  </div>
                 </div>
               </div>
             </div>

@@ -9,13 +9,35 @@ function Map() {
           background: #f8f8f8;
           width: 100%;
         }
-        .tc-contact-map-section .map-container {
+        .tc-contact-map-section .map-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 0;
           width: 100%;
-          height: 550px;
+        }
+        .tc-contact-map-section .map-frame {
           position: relative;
+          height: 550px;
           overflow: hidden;
         }
-        .tc-contact-map-section .map-container iframe {
+        .tc-contact-map-section .map-frame-label {
+          position: absolute;
+          top: 12px;
+          left: 12px;
+          z-index: 2;
+          font-size: 10px;
+          font-weight: 600;
+          letter-spacing: 0.02em;
+          text-transform: none;
+          line-height: 1.4;
+          color: #1a1a1a;
+          background: rgba(255, 255, 255, 0.95);
+          padding: 8px 12px;
+          border: 1px solid #e5e5e5;
+          max-width: calc(100% - 24px);
+          pointer-events: none;
+        }
+        .tc-contact-map-section .map-frame iframe {
           width: 100%;
           height: 100%;
           border: 0;
@@ -23,30 +45,46 @@ function Map() {
           display: block;
         }
         @media (max-width: 991px) {
-          .tc-contact-map-section .map-container {
+          .tc-contact-map-section .map-grid {
+            grid-template-columns: 1fr;
+          }
+          .tc-contact-map-section .map-frame {
             height: 450px;
           }
         }
         @media (max-width: 767px) {
-          .tc-contact-map-section .map-container {
+          .tc-contact-map-section .map-frame {
             height: 400px;
           }
         }
         @media (max-width: 575px) {
-          .tc-contact-map-section .map-container {
+          .tc-contact-map-section .map-frame {
             height: 350px;
           }
         }
       `}} />
       <section className="tc-contact-map-section">
-        <div className="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.1234567890123!2d74.3589!3d31.5204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190483e57107d9%3A0x1234567890abcdef!2s903-C%2C%20Maulana%20Shaukat%20Ali%20Road%2C%20Faisal%20Town%2C%20Lahore!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="SEECA Office Location"
-          ></iframe>
+        <div className="map-grid">
+          <div className="map-frame">
+            <span className="map-frame-label">Lahore</span>
+            <iframe
+              src="https://www.google.com/maps?q=903C,+Maulana+Shaukat+Ali+Road,+Faisal+Town,+Lahore,+Pakistan&output=embed"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="SEECA Lahore Office Location"
+            ></iframe>
+          </div>
+          <div className="map-frame">
+            <span className="map-frame-label">Plaza 138, First Floor, Wallayat Complex, Phase 7, Bahria Town, Rawalpindi.</span>
+            <iframe
+              src="https://www.google.com/maps?q=Plaza+138,+First+Floor,+Wallayat+Complex,+Phase+7,+Bahria+Town,+Rawalpindi,+Pakistan&output=embed"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="SEECA Rawalpindi Office Location"
+            ></iframe>
+          </div>
         </div>
       </section>
     </>
