@@ -215,6 +215,11 @@ function Navbar() {
                     Our Process
                   </Link>
                 </li>
+                <li>
+                  <Link className="dropdown-item" to="/innerpages/partners">
+                    Our Partners
+                  </Link>
+                </li>
               </ul>
             </li>
             <li className="nav-item dropdown">

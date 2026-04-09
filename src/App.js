@@ -20,6 +20,7 @@ import ConstructionPage from './pages/innerpages/construction';
 import BuildingSustainabilityPage from './pages/innerpages/building-sustainability';
 import SmartBuildingTechnologiesPage from './pages/innerpages/smart-building-technologies';
 import OurProcessPage from './pages/innerpages/our-process';
+import PartnersPage from './pages/innerpages/partners';
 import ApplyInternshipPage from './pages/innerpages/apply-internship';
 import ApplyJobPage from './pages/innerpages/apply-job';
 import SinglePost from './pages/innerpages/single_post';
@@ -113,6 +114,7 @@ function App() {
         <Route path="/innerpages/building-sustainability" element={<BuildingSustainabilityPage />} />
         <Route path="/innerpages/smart-building-technologies" element={<SmartBuildingTechnologiesPage />} />
         <Route path="/innerpages/our-process" element={<OurProcessPage />} />
+        <Route path="/innerpages/partners" element={<PartnersPage />} />
         <Route path="/innerpages/career/internship" element={<ApplyInternshipPage />} />
         <Route path="/innerpages/career/job" element={<ApplyJobPage />} />
         <Route path="/innerpages/single_post" element={<SinglePost />} />
