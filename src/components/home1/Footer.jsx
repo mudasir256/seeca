@@ -115,6 +115,19 @@ function Footer() {
         .tc-footer-style1 .contact-item .contact-text {
           flex: 1;
         }
+        .tc-footer-style1 .office-subtitle {
+          display: block;
+          color: #73bf44;
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          margin: 8px 0 4px;
+        }
+        .tc-footer-style1 .sub-office-address {
+          padding-left: 24px;
+          margin-bottom: 8px;
+        }
         .tc-footer-style1 .contact-item .contact-text a {
           color: rgba(255, 255, 255, 0.8);
           text-decoration: none;
@@ -486,9 +499,14 @@ function Footer() {
                   <div className="contact-item">
                     <i className="la la-map-marker"></i>
                     <div className="contact-text">
-                      Plaza 138, First Floor, Wallayat Complex, Phase 7, Bahria Town, Rawalpindi.
-                      <br />
-                      903C, Maulana Shaukat Ali Road, Faisal Town, Lahore, Pakistan.
+                      <span className="office-subtitle">Lahore Address</span>
+                      <div className="sub-office-address">
+                        903C, Maulana Shaukat Ali Road, Faisal Town, Lahore, Pakistan.
+                      </div>
+                      <span className="office-subtitle">ISB Office Address</span>
+                      <div className="sub-office-address">
+                        Plaza 138, First Floor, Wallayat Complex, Phase 7, Bahria Town, Rawalpindi.
+                      </div>
                     </div>
                   </div>
                   <div className="contact-item">
@@ -496,16 +514,19 @@ function Footer() {
                     <div className="contact-text">
                       <a href="tel:+923331498340">+92 333 1498340</a>
                       <br />
-                      <a href="tel:+923002500556">+92 324 7250008</a>
+                      <a href="tel:+923247250008">+92 324 7250008</a>
                     </div>
                   </div>
                 </div>
                 <div className="contact-section">
-                  <h5>Somaliland Office</h5>
+                  <h5>Somalia Office</h5>
                   <div className="contact-item">
                     <i className="la la-map-marker"></i>
                     <div className="contact-text">
-                      Downtown Hargeisa, Road # 01, Office # 01 Hargeisa, Somaliland
+                      <span className="office-subtitle">Address</span>
+                      <div className="sub-office-address">
+                        Downtown Hargeisa, Road # 01, Office # 01 Hargeisa, Somaliland
+                      </div>
                     </div>
                   </div>
                   <div className="contact-item">

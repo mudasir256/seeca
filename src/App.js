@@ -29,6 +29,7 @@ import SingleProject2 from './pages/innerpages/single_project2';
 import ScrollToTop from './components/common/ScrollToTop';
 import ChatBot from './components/common/ChatBot';
 import ImageProtection from './components/common/ImageProtection';
+import SeoManager from './components/common/SeoManager';
 
 function WhatsAppFloat() {
   return (
@@ -87,6 +88,7 @@ function WhatsAppFloat() {
 function App() {
   return (
     <Router>
+      <SeoManager />
       <ImageProtection />
       <ScrollToTop />
       <ChatBot />

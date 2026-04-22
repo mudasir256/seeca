@@ -94,6 +94,29 @@ function ContactInfo() {
           color: rgba(255, 255, 255, 0.9);
           line-height: 1.9;
         }
+        .tc-contact-info-section .office-block {
+          margin-bottom: 22px;
+        }
+        .tc-contact-info-section .office-title {
+          font-size: 15px;
+          font-weight: 700;
+          color: #fff;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin-bottom: 8px;
+        }
+        .tc-contact-info-section .office-subtitle {
+          font-size: 12px;
+          font-weight: 600;
+          color: #73bf44;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          margin: 8px 0 4px;
+          display: block;
+        }
+        .tc-contact-info-section .address-indent {
+          padding-left: 16px;
+        }
         .tc-contact-info-section .contact-item .contact-text > div {
           margin-bottom: 8px;
         }
@@ -180,13 +203,24 @@ function ContactInfo() {
               <div>
                 <span className="contact-label">OUR OFFICES</span>
                 <div className="contact-text">
-                  <div className="contact-label">Address in Pakistan</div>
-                  <div className="contact-label">Rawalpindi</div>
-                  <div>Plaza 138, First Floor, Wallayat Complex, Phase 7, Bahria Town, Rawalpindi.</div>
-                  <div className="contact-label">Lahore</div>
-                  <div>903C, Maulana Shaukat Ali Road, Faisal Town, Lahore, Pakistan.</div>
-                  <div className="contact-label">Address in Somaliland</div>
-                  <div>Downtown Hargeisa, Road # 01, Office # 01 Hargeisa, Somaliland</div>
+                  <div className="office-block">
+                    <div className="office-title">Head Office</div>
+                    <span className="office-subtitle">Lahore Address</span>
+                    <div className="address-indent">903C, Maulana Shaukat Ali Road, Faisal Town, Lahore, Pakistan.</div>
+                    <span className="office-subtitle">ISB Office Address</span>
+                    <div className="address-indent">Plaza 138, First Floor, Wallayat Complex, Phase 7, Bahria Town, Rawalpindi.</div>
+                    <span className="office-subtitle">Contact</span>
+                    <a href="tel:+923331498340">+92 333 1498340</a>
+                    <a href="tel:+923247250008">+92 324 7250008</a>
+                  </div>
+                  <div className="office-block">
+                    <div className="office-title">Somalia Office</div>
+                    <span className="office-subtitle">Address</span>
+                    <div className="address-indent">Downtown Hargeisa, Road # 01, Office # 01 Hargeisa, Somaliland</div>
+                    <span className="office-subtitle">Contact</span>
+                    <a href="tel:+252633810971">+252 633 8109 71</a>
+                    <a href="tel:+252634633331">+252 634 6333 31</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -199,21 +233,6 @@ function ContactInfo() {
                 <span className="contact-label">OUR MAILBOX</span>
                 <div className="contact-text">
                   <a href="mailto:info@seeca.pk">info@seeca.pk</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="contact-group">
-            <div className="contact-item">
-              <i className="la la-phone"></i>
-              <div>
-                <span className="contact-label">OUR PHONE</span>
-                <div className="contact-text">
-                  <a href="tel:+923331498340">+92 333 1498340</a>
-                  <a href="tel:+923002500556">+92 324 7250008</a>
-                  <a href="tel:+252633810971">+252 633 8109 71</a>
-                  <a href="tel:+252634633331">+252 634 6333 31</a>
                 </div>
               </div>
             </div>
