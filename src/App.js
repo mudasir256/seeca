@@ -107,6 +107,7 @@ function App() {
         <Route path="/home8_portfolio" element={<Home8 />} />
         <Route path="/innerpages/about" element={<AboutPage />} />
         <Route path="/innerpages/blog" element={<BlogPage />} />
+        <Route path="/innerpages/blog/:slug" element={<SinglePost />} />
         <Route path="/innerpages/contact" element={<ContactPage />} />
         <Route path="/innerpages/portfolio" element={<PortfolioPage />} />
         <Route path="/innerpages/services" element={<ServicesPage />} />

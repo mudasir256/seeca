@@ -207,8 +207,8 @@ function ContactInfo() {
                     <div className="office-title">Head Office</div>
                     <span className="office-subtitle">Lahore Address</span>
                     <div className="address-indent">903C, Maulana Shaukat Ali Road, Faisal Town, Lahore, Pakistan.</div>
-                    <span className="office-subtitle">ISB Office Address</span>
-                    <div className="address-indent">Plaza 138, First Floor, Wallayat Complex, Phase 7, Bahria Town, Rawalpindi.</div>
+                    <span className="office-subtitle">Islamabad Office Address</span>
+                    <div className="address-indent">Plaza 138, First Floor, Wallayat Complex, Phase 7, Bahria Town, Islamabad.</div>
                     <span className="office-subtitle">Contact</span>
                     <a href="tel:+923331498340">+92 333 1498340</a>
                     <a href="tel:+923247250008">+92 324 7250008</a>

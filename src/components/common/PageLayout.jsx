@@ -57,17 +57,21 @@ const SMOOTH_SCROLL_STYLES = `
     html, body {
       -webkit-overflow-scrolling: touch;
       overflow-scrolling: touch;
-      scroll-behavior: smooth;
+      scroll-behavior: auto;
+      overscroll-behavior-y: auto;
     }
     .smooth-scroll-content {
       -webkit-overflow-scrolling: touch;
       overflow-scrolling: touch;
-      /* Remove GPU acceleration on mobile - use native scrolling */
+      scroll-behavior: auto;
+      will-change: auto;
+      backface-visibility: visible;
+      -webkit-backface-visibility: visible;
+      contain: none;
     }
-    /* Improve touch scrolling performance */
+    /* Keep tap highlight optimization only */
     * {
       -webkit-tap-highlight-color: transparent;
-      touch-action: pan-y;
     }
     /* Ensure ScrollSmoother container doesn't interfere on mobile / when smoother is disabled */
     #scrollsmoother-container,
@@ -76,7 +80,7 @@ const SMOOTH_SCROLL_STYLES = `
       transform: none !important;
       -webkit-transform: none !important;
       overflow: visible !important;
-      min-height: 0;
+      min-height: auto;
     }
   }
   @media (prefers-reduced-motion: reduce) {
@@ -126,6 +130,40 @@ const PageLayout = memo(({
       };
     }
   }, [bodyClasses]);
+
+  // Guard against global scroll-lock leftovers from modal/libs on mobile Android.
+  useEffect(() => {
+    const unlockIfStuck = () => {
+      const hasFancybox = !!document.querySelector('.fancybox-container');
+      const hasLity = !!document.querySelector('.lity.lity-opened');
+      const hasLoader = !!document.querySelector('.loader-wrap:not([style*="display: none"])');
+
+      if (hasFancybox || hasLity || hasLoader) return;
+
+      document.documentElement.classList.remove('fancybox-enabled');
+      document.body.classList.remove('compensate-for-scrollbar');
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.left = '';
+      document.body.style.right = '';
+      document.body.style.width = '';
+      document.body.style.height = '';
+      document.body.style.overflow = '';
+      document.documentElement.style.height = '';
+      document.documentElement.style.overflow = '';
+      document.documentElement.style.overflowY = '';
+      document.body.style.overflowY = '';
+    };
+
+    unlockIfStuck();
+    const t1 = setTimeout(unlockIfStuck, 200);
+    const t2 = setTimeout(unlockIfStuck, 1200);
+
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+    };
+  }, [location.pathname]);
 
   // Handle container ref to prevent React from managing it during unmount
   useEffect(() => {

@@ -503,9 +503,9 @@ function Footer() {
                       <div className="sub-office-address">
                         903C, Maulana Shaukat Ali Road, Faisal Town, Lahore, Pakistan.
                       </div>
-                      <span className="office-subtitle">ISB Office Address</span>
+                      <span className="office-subtitle">Islamabad Office Address</span>
                       <div className="sub-office-address">
-                        Plaza 138, First Floor, Wallayat Complex, Phase 7, Bahria Town, Rawalpindi.
+                        Plaza 138, First Floor, Wallayat Complex, Phase 7, Bahria Town, Islamabad.
                       </div>
                     </div>
                   </div>

@@ -76,7 +76,7 @@ function Map() {
             ></iframe>
           </div>
           <div className="map-frame">
-            <span className="map-frame-label">Plaza 138, First Floor, Wallayat Complex, Phase 7, Bahria Town, Rawalpindi.</span>
+            <span className="map-frame-label">Plaza 138, First Floor, Wallayat Complex, Phase 7, Bahria Town, Islamabad.</span>
             <iframe
               src="https://www.google.com/maps?q=Plaza+138,+First+Floor,+Wallayat+Complex,+Phase+7,+Bahria+Town,+Rawalpindi,+Pakistan&output=embed"
               allowFullScreen=""

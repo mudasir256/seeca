@@ -40,7 +40,7 @@ function RelatedPosts({ currentBlog }) {
                     <div className="post-card">
                 <div
                         className="img th-280 radius-7 overflow-hidden d-block"
-                  onClick={() => navigate('/innerpages/single_post', { state: { blog: item } })}
+                  onClick={() => navigate(`/innerpages/blog/${item.slug}`, { state: { blog: item } })}
                   style={{ cursor: 'pointer' }}
                       >
                         <img
@@ -67,7 +67,7 @@ function RelatedPosts({ currentBlog }) {
                       type="button"
                       className="hover-green1 fsz-24"
                       onClick={() => {
-                        navigate('/innerpages/single_post', { state: { blog: item } });
+                        navigate(`/innerpages/blog/${item.slug}`, { state: { blog: item } });
                       }}
                       style={{ color: 'inherit', background: 'none', border: 'none', padding: 0, cursor: 'pointer', textAlign: 'left', width: '100%' }}
                     >
@@ -186,7 +186,7 @@ function Content({ blog }) {
                 <div className="row align-items-center">
                   <div className="col-lg-6">
                     <div className="tags">
-                      {blogData.subTitle && blogData.subTitle.split(',').map((tag, index) => (
+                        {blogData.subTitle && blogData.subTitle.split(/[,\s]+/).filter(Boolean).map((tag, index) => (
                         <span 
                           key={index} 
                         > 

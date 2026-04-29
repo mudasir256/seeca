@@ -254,6 +254,11 @@ export const useScrollSmoother = (containerId = 'scrollsmoother-container', enab
           
           // Completely disable ScrollSmoother on mobile - use native scrolling instead
           if (isMobileDevice) {
+            // Ensure any previous smoother styles don't lock native scrolling.
+            document.body.style.overflow = '';
+            document.body.style.height = '';
+            document.documentElement.style.overflow = '';
+            document.documentElement.style.height = '';
             // On mobile, just use native smooth scrolling via CSS
             // Don't create ScrollSmoother instance at all
             smootherRef.current = null;

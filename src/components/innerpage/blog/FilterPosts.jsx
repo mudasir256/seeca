@@ -203,7 +203,7 @@ function FilterPosts() {
                 <div
                   className="post-card mt-70 wow fadeInUp slow"
                   data-wow-delay="0.2s"
-                  onClick={() => navigate('/innerpages/single_post', { state: { blog: item } })}
+                  onClick={() => navigate(`/innerpages/blog/${item.slug}`, { state: { blog: item } })}
                   style={{ cursor: 'pointer' }}
                 >
                   <div
@@ -211,11 +211,11 @@ function FilterPosts() {
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
-                      navigate('/innerpages/single_post', { state: { blog: item } });
+                      navigate(`/innerpages/blog/${item.slug}`, { state: { blog: item } });
                     }}
                     style={{ cursor: 'pointer' }}
                   >
-                    <img src={item.img} alt="" className="img-cover" />
+                    <img src={item.img} alt={item.title} className="img-cover" />
                   </div>
                   <div className="info pt-30">
                     <div className="tags color-666 text-uppercase fsz-12">
@@ -234,7 +234,7 @@ function FilterPosts() {
                         type="button"
                         className="hover-orange1 fsz-24"
                         onClick={() => {
-                          navigate('/innerpages/single_post', { state: { blog: item } });
+                          navigate(`/innerpages/blog/${item.slug}`, { state: { blog: item } });
                         }}
                         style={{ color: 'inherit', background: 'none', border: 'none', padding: 0, cursor: 'pointer', textAlign: 'left', width: '100%' }}
                       >

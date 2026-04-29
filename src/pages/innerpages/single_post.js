@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import PageLayout from '../../components/common/PageLayout';
 import Footer from '../../components/home1/Footer';
 import Menu from '../../components/innerpage/Menu';
@@ -9,10 +9,14 @@ import Header from '../../components/innerpage/contact/Header';
 import Content from '../../components/innerpage/single_post/Content';
 import Testimonials from '../../components/home1/Testimonials';
 import ContactSection from '../../components/innerpage/architecture/ContactSection';
+import blogData from '../../data/innerpages/blog/filter.json';
 
 function SinglePost() {
   const location = useLocation();
-  const blog = location.state?.blog;
+  const { slug } = useParams();
+  const blogFromState = location.state?.blog;
+  const blogFromSlug = slug ? blogData.find((item) => item.slug === slug) : null;
+  const blog = blogFromState || blogFromSlug;
 
   // Default header values
   const headerTitle = blog?.title || 'Blog Post';

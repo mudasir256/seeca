@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet';
 import { useLocation } from 'react-router-dom';
+import blogPosts from '../../data/innerpages/blog/filter.json';
 
 const SITE_NAME = 'SEECA';
 const DEFAULT_TITLE = 'SEECA | Architecture, Interior Design & Construction';
@@ -223,6 +224,32 @@ function buildCanonicalUrl(pathname) {
   return `${origin}${normalizedPath}`;
 }
 
+function buildCanonicalWithSlug(pathname, slug) {
+  if (!slug) return buildCanonicalUrl(pathname);
+  return buildCanonicalUrl(`/innerpages/blog/${slug}`);
+}
+
+function buildBlogKeywords(blog) {
+  const tagText = (blog?.subTitle || '')
+    .replace(/[,/]+/g, ' ')
+    .toLowerCase();
+  const content = `${blog?.title || ''} ${blog?.description || ''} ${tagText}`.toLowerCase();
+  const keywordCandidates = [
+    'architecture blog',
+    'interior design blog',
+    'construction blog',
+    'sustainable architecture',
+    'smart building design',
+    'modern architecture trends',
+    'home interior ideas',
+    'construction insights',
+    ...tagText.split(/\s+/).filter(Boolean),
+  ];
+
+  const unique = Array.from(new Set(keywordCandidates)).filter((keyword) => content.includes(keyword.split(' ')[0]) || keyword.includes('blog'));
+  return unique.slice(0, 12).join(', ');
+}
+
 function toLabel(segment) {
   return segment
     .replace(/[-_]/g, ' ')
@@ -259,17 +286,24 @@ function buildBreadcrumbSchema(pathname, siteUrl) {
 }
 
 export default function SeoManager() {
-  const { pathname } = useLocation();
-  const pageSeo = routeSeo[pathname] || {};
-  const title = pageSeo.title || DEFAULT_TITLE;
-  const description = pageSeo.description || DEFAULT_DESCRIPTION;
-  const keywords = pageSeo.keywords || DEFAULT_KEYWORDS;
+  const { pathname, state } = useLocation();
+  const isBlogPostRoute = pathname.startsWith('/innerpages/blog/');
+  const blogSlug = isBlogPostRoute ? pathname.split('/').pop() : null;
+  const blogFromRoute = blogSlug ? blogPosts.find((post) => post.slug === blogSlug) : null;
+  const blogFromState = state?.blog;
+  const blog = blogFromRoute || blogFromState || null;
+
+  const pageSeo = routeSeo[pathname] || (isBlogPostRoute ? routeSeo['/innerpages/single_post'] : {});
+  const title = blog ? `${blog.title} | SEECA Blog` : (pageSeo.title || DEFAULT_TITLE);
+  const description = blog?.description || pageSeo.description || DEFAULT_DESCRIPTION;
+  const keywords = blog ? buildBlogKeywords(blog) : (pageSeo.keywords || DEFAULT_KEYWORDS);
   const robots = pageSeo.robots || 'index, follow, max-image-preview:large';
-  const canonical = buildCanonicalUrl(pathname);
-  const pageType = pageSeo.schemaType || 'WebPage';
+  const canonical = buildCanonicalWithSlug(pathname, blog?.slug);
+  const pageType = blog ? 'Article' : (pageSeo.schemaType || 'WebPage');
   const siteUrl =
     BASE_URL || (typeof window !== 'undefined' ? window.location.origin : '');
-  const ogImage = `${siteUrl}${DEFAULT_OG_IMAGE}`;
+  const blogImage = blog?.img || DEFAULT_OG_IMAGE;
+  const ogImage = `${siteUrl}${blogImage}`;
 
   const organizationSchema = {
     '@context': 'https://schema.org',
@@ -297,6 +331,31 @@ export default function SeoManager() {
     },
   };
   const breadcrumbSchema = buildBreadcrumbSchema(pathname, siteUrl);
+  const blogPostingSchema = blog
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: blog.title,
+        description: blog.description,
+        datePublished: blog.history,
+        dateModified: blog.history,
+        image: ogImage,
+        mainEntityOfPage: canonical,
+        publisher: {
+          '@type': 'Organization',
+          name: SITE_NAME,
+          logo: {
+            '@type': 'ImageObject',
+            url: `${siteUrl}${DEFAULT_OG_IMAGE}`,
+          },
+        },
+        author: {
+          '@type': 'Organization',
+          name: SITE_NAME,
+        },
+        keywords,
+      }
+    : null;
 
   return (
     <Helmet>
@@ -314,6 +373,7 @@ export default function SeoManager() {
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonical} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:image:alt" content={title} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
@@ -328,6 +388,9 @@ export default function SeoManager() {
       <script type="application/ld+json">
         {JSON.stringify(breadcrumbSchema)}
       </script>
+      {blogPostingSchema && (
+        <script type="application/ld+json">{JSON.stringify(blogPostingSchema)}</script>
+      )}
     </Helmet>
   );
 }

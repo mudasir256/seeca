@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PageLayout from '../../components/common/PageLayout';
 import Footer from '../../components/home1/Footer';
 import Menu from '../../components/innerpage/Menu';
@@ -16,7 +16,12 @@ const OUR_PROCESS_SCROLL_STYLES = `
     overflow: visible !important;
     contain: none !important;
     will-change: auto !important;
-    min-height: 0 !important;
+    min-height: auto !important;
+    height: auto !important;
+  }
+  html body.our-process-pg-style1 {
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior-y: auto !important;
   }
   body.our-process-pg-style1 {
     overflow-x: hidden !important;
@@ -27,6 +32,30 @@ const OUR_PROCESS_SCROLL_STYLES = `
 `;
 
 function OurProcessPage() {
+  useEffect(() => {
+    const unlockScroll = () => {
+      document.documentElement.classList.remove('fancybox-enabled');
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      document.body.style.height = '';
+      document.body.style.overflow = '';
+      document.body.style.overflowY = '';
+      document.documentElement.style.overflow = '';
+      document.documentElement.style.overflowY = '';
+      document.documentElement.style.height = '';
+    };
+
+    unlockScroll();
+    const t1 = setTimeout(unlockScroll, 150);
+    const t2 = setTimeout(unlockScroll, 800);
+
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+    };
+  }, []);
+
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: OUR_PROCESS_SCROLL_STYLES }} />

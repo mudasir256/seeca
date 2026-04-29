@@ -2207,9 +2207,9 @@ input:focus {
   html, body {
     -webkit-overflow-scrolling: touch;
     overflow-scrolling: touch;
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
     /* Ensure native scrolling works smoothly */
-    overscroll-behavior: none;
+    overscroll-behavior-y: auto;
   }
   
   #scrollsmoother-container,
@@ -2226,7 +2226,6 @@ input:focus {
   /* Improve touch scrolling performance */
   * {
     -webkit-tap-highlight-color: transparent;
-    touch-action: pan-y;
   }
   
   /* Ensure body scrolls natively on mobile */

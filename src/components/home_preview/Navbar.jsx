@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import OptimizedImage from '../common/OptimizedImage';
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const ticking = useRef(false);
+  const location = useLocation();
 
   const handleScroll = useCallback(() => {
     if (!ticking.current) {
@@ -21,6 +23,34 @@ function Navbar() {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
+
+  useEffect(() => {
+    const resetGlobalScrollLocks = () => {
+      // Keep global navbar behavior scroll-safe on Android across all routes.
+      document.documentElement.classList.remove('fancybox-enabled');
+      document.body.classList.remove('compensate-for-scrollbar');
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.left = '';
+      document.body.style.right = '';
+      document.body.style.width = '';
+      document.body.style.height = '';
+      document.body.style.overflow = '';
+      document.body.style.overflowY = '';
+      document.documentElement.style.height = '';
+      document.documentElement.style.overflow = '';
+      document.documentElement.style.overflowY = '';
+    };
+
+    resetGlobalScrollLocks();
+    const t1 = setTimeout(resetGlobalScrollLocks, 150);
+    const t2 = setTimeout(resetGlobalScrollLocks, 800);
+
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+    };
+  }, [location.pathname]);
 
   return (
     <>
@@ -51,8 +81,17 @@ function Navbar() {
               padding: 15px 20px !important;
               background: #000 !important;
             }
+            .tc-navbar-preview,
+            .tc-navbar-preview * {
+              touch-action: pan-y;
+            }
             .tc-navbar-preview.scrolled {
               padding: 10px 20px !important;
+            }
+            .tc-navbar-preview .navbar-collapse {
+              max-height: calc(100vh - 90px);
+              overflow-y: auto;
+              -webkit-overflow-scrolling: touch;
             }
             .tc-navbar-preview .content {
               padding: 0 !important;

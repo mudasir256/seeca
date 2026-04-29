@@ -6,7 +6,8 @@ function Blog({ limit = 3, showViewAll = true }) {
   const navigate = useNavigate();
   const displayPosts = limit ? data.slice(0, limit) : data;
   const openBlogDetails = (item) => {
-    navigate('/innerpages/single_post', {
+    const slug = item.slug || 'blog-post';
+    navigate(`/innerpages/blog/${slug}`, {
       state: {
         blog: {
           ...item,
