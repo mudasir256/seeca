@@ -6,7 +6,7 @@ const SITE_NAME = 'SEECA';
 const DEFAULT_TITLE = 'SEECA | Architecture, Interior Design & Construction';
 const DEFAULT_DESCRIPTION =
   'SEECA delivers architecture, interior design, and construction services for residential and commercial projects.';
-const DEFAULT_OG_IMAGE = '/favicon.ico';
+const DEFAULT_OG_IMAGE = '/logo512.png';
 const DEFAULT_KEYWORDS =
   'architecture services, interior design, construction company, building design, sustainable architecture, smart buildings';
 const BASE_URL =
@@ -373,6 +373,8 @@ export default function SeoManager() {
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonical} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="512" />
+      <meta property="og:image:height" content="512" />
       <meta property="og:image:alt" content={title} />
 
       <meta name="twitter:card" content="summary_large_image" />

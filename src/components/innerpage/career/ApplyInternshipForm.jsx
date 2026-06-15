@@ -1,5 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
+import {
+  initEmailJS,
+  EMAILJS_SERVICE_ID,
+  EMAILJS_INTERNSHIP_TEMPLATE_ID,
+} from '../../../config/emailjs';
 
 function ApplyInternshipForm() {
   const formRef = useRef();
@@ -16,6 +21,10 @@ function ApplyInternshipForm() {
   const [status, setStatus] = useState('idle');
   const [errorMsg, setErrorMsg] = useState('');
 
+  useEffect(() => {
+    initEmailJS();
+  }, []);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -25,15 +34,21 @@ function ApplyInternshipForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setStatus('sending');
     setErrorMsg('');
+
+    if (!EMAILJS_SERVICE_ID || !EMAILJS_INTERNSHIP_TEMPLATE_ID) {
+      setStatus('error');
+      setErrorMsg('Email service is not configured. Please try again later.');
+      return;
+    }
+
+    setStatus('sending');
 
     emailjs
       .sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_INTERNSHIP_TEMPLATE_ID,
-        formRef.current,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        EMAILJS_SERVICE_ID,
+        EMAILJS_INTERNSHIP_TEMPLATE_ID,
+        formRef.current
       )
       .then(() => {
         setStatus('success');

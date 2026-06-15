@@ -6,13 +6,13 @@ export const logos = [
       'Fitness and wellness brand we have supported with interior planning, spatial flow, and durable finishes suited to high-traffic training spaces.',
   },
   {
-    name: 'Partner',
+    name: 'ALICIA BUSINESS CONSULTING',
     logo: '/home_preview/assets/img/OurPartners/5562(1).png',
     writeup:
       'Commercial collaborator on mixed-use and retail environments, aligned with our documentation and site coordination standards.',
   },
   {
-    name: 'Partner',
+    name: 'PRISMATIC',
     logo: '/home_preview/assets/img/OurPartners/5562(2).png',
     writeup:
       'Repeat project partner for hospitality-led briefs, from early concept alignment through contractor-ready packages.',
@@ -78,7 +78,7 @@ export const logos = [
       'Lifestyle retail with bespoke display planning, focal lighting, and customer journey clarity throughout the store.',
   },
   {
-    name: 'Partner',
+    name: 'TIKSOM',
     logo: '/home_preview/assets/img/OurPartners/5689.Logo.png',
     writeup:
       'Local collaborator trusted across multiple commissions from schematic design to site troubleshooting.',
@@ -90,19 +90,19 @@ export const logos = [
       'Workplace and corporate environments planned for accessibility, adjacencies, and growth-ready floor plates.',
   },
   {
-    name: 'Partner',
+    name: 'FITNATION',
     logo: '/home_preview/assets/img/OurPartners/5705.Logo-1.png',
     writeup:
       'Joint delivery on residential and small commercial portfolios with shared quality gates and timelines.',
   },
   {
-    name: 'Partner',
+    name: 'SUGAR VILLA',
     logo: '/home_preview/assets/img/OurPartners/5717.Logo.png',
     writeup:
       'Aligned partner on sustainable material choices, waste reduction on site, and lifecycle-minded detailing.',
   },
   {
-    name: 'Partner',
+    name: 'CYNO SURE Designs',
     logo: '/home_preview/assets/img/OurPartners/5719.Logo.png',
     writeup:
       'Contributor to fast-track programmes where clear drawing sets and decision logs keep contractors unblocked.',
@@ -114,19 +114,19 @@ export const logos = [
       'Academic and campus-adjacent projects balancing learning environments, gathering spaces, and safe circulation.',
   },
   {
-    name: 'Partner',
+    name: 'DAR-E-ARQAM',
     logo: '/home_preview/assets/img/OurPartners/5721.Logo.png',
     writeup:
       'Specialist partner on interior fit-outs where finishes, ceilings, and joinery must meet brand and budget.',
   },
   {
-    name: 'Partner',
+    name: 'JEENY',
     logo: '/home_preview/assets/img/OurPartners/5730.Logo.png',
     writeup:
       'Regional collaborator extending our reach on surveys, site visits, and local authority engagement.',
   },
   {
-    name: 'Partner',
+    name: 'ONYX TEC',
     logo: '/home_preview/assets/img/OurPartners/5762.Logo.png',
     writeup:
       'Supporting partner on façade studies, shop drawings review, and mock-up sign-offs before full rollout.',
@@ -138,61 +138,61 @@ export const logos = [
       'Beauty and wellness retail featuring tailored display niches, soft lighting layers, and resilient wet areas.',
   },
   {
-    name: 'Partner',
+    name: 'Ignition Pro',
     logo: '/home_preview/assets/img/OurPartners/5770.Logo.png',
     writeup:
       'Value-aligned partner on phased renovations with minimal disruption to occupied spaces.',
   },
   {
-    name: 'ZAK',
+    name: 'ZAK SHINWARI',
     logo: '/home_preview/assets/img/OurPartners/5806.zak-logo.png',
     writeup:
       'Brand-forward built work where identity, signage, and architecture read as one coherent customer experience.',
   },
   {
-    name: 'Partner',
+    name: 'VIVID INTERIORS',
     logo: '/home_preview/assets/img/OurPartners/5826.Logo.png',
     writeup:
       'Delivery partner on turnkey interiors including loose furniture, artwork placement, and launch readiness.',
   },
   {
-    name: 'Partner',
+    name: 'CALROM PAKISTAN',
     logo: '/home_preview/assets/img/OurPartners/5850.Logo.png',
     writeup:
       'Consulting partner for code-aware egress, fire strategy interfaces, and assembly occupancy planning.',
   },
   {
-    name: 'Partner',
+    name: 'BRAINX',
     logo: '/home_preview/assets/img/OurPartners/5853.Logo.png',
     writeup:
       'Repeat ally on multi-unit housing, parking logic, and amenity cores shared across towers or blocks.',
   },
   {
-    name: 'Partner',
+    name: 'Faisal Group',
     logo: '/home_preview/assets/img/OurPartners/5867.Logo.png',
     writeup:
       'Collaborator on landscape interfaces, outdoor rooms, and transition zones between building and site.',
   },
   {
-    name: 'Partner',
+    name: 'SPICE MYSTERY',
     logo: '/home_preview/assets/img/OurPartners/5890.GLogo.png',
     writeup:
       'Supplier and execution partner ensuring specified products arrive tested, labelled, and install-ready.',
   },
   {
-    name: 'Partner',
+    name: 'GOLDSHEFF NUTRACEUTICALS (Pvt.) Ltd.',
     logo: '/home_preview/assets/img/OurPartners/5891.Logo.png',
     writeup:
       'Finance-adjacent or back-office fit-out partner prioritising acoustic privacy and efficient workstations.',
   },
   {
-    name: 'Partner',
+    name: 'Sheikh new CHARGHA HOUSE',
     logo: '/home_preview/assets/img/OurPartners/5897.Logo_B.png',
     writeup:
       'Experimental briefs where rapid prototyping, sample boards, and visual storytelling win stakeholder buy-in.',
   },
   {
-    name: 'Partner',
+    name: 'Rafayel on the Left Bank',
     logo: '/home_preview/assets/img/OurPartners/5906.logo.png',
     writeup:
       'Logistics and operations-aware partner helping us size loading, service yards, and vertical circulation early.',
@@ -204,13 +204,13 @@ export const logos = [
       'Hospitality and brand build-outs combining kitchen planning, guest seating zones, and memorable entry sequences.',
   },
   {
-    name: 'Cravings',
+    name: 'CRAVINGS BAKESHOP',
     logo: '/home_preview/assets/img/OurPartners/5950.CravingsLogoEPS.png',
     writeup:
       'Food and beverage concept where kitchen-to-floor layout, queue geometry, and ambiance support peak service.',
   },
   {
-    name: 'Partner',
+    name: 'optronix.ai',
     logo: '/home_preview/assets/img/OurPartners/5952.Logo.png',
     writeup:
       'Healthcare-adjacent or clinical support space partner focusing on hygiene, durability, and staff ergonomics.',
