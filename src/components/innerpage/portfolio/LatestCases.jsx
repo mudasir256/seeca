@@ -1,48 +1,18 @@
 'use client';
-import React, { useEffect, useRef, useState, useMemo, useCallback } from 'react';
+import React, { useEffect, useState, useMemo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import data from '../../../data/home1/projects/projects1.json';
-import mixitup from 'mixitup';
 import OptimizedImage from '../../common/OptimizedImage';
+import usePortfolio from '../../../hooks/usePortfolio';
 
 function LatestCases() {
+  const { categories, projects: data, loading } = usePortfolio();
   const [activeFilter, setActiveFilter] = useState('All');
   const [currentPage, setCurrentPage] = useState(1);
   const projectsPerPage = 9;
-  const mixitupContainerRef = useRef(null);
   const navigate = useNavigate();
 
-  // Category mapping: maps data categories to filter categories (memoized)
   const getFilterClasses = useCallback((item) => {
-    const classes = [];
-    const sub1 = item.sub1?.toLowerCase() || '';
-    const sub2 = item.sub2?.toLowerCase().replace(/\s+/g, '') || '';
-    
-    const hasInteriorImage = item.images?.some(img => img.includes('Interior_Design')) || 
-                             item.img?.includes('Interior_Design');
-    const hasArchitectureImage = item.images?.some(img => img.includes('Architecture_Deisgn')) || 
-                                item.img?.includes('Architecture_Deisgn');
-    
-    if (hasArchitectureImage || sub2.includes('architecturedesign') || sub1.includes('architecture')) {
-      classes.push('Architecture');
-    }
-    if (hasInteriorImage || sub2.includes('interiordesign') || sub1.includes('interior')) {
-      classes.push('Interior');
-    }
-    if (sub1.includes('office') || sub1.includes('commercial') || sub2.includes('commercial')) {
-      classes.push('Commercial');
-    }
-    if (sub1.includes('restaurant') || sub2.includes('hospitality')) {
-      classes.push('Hospitality');
-    }
-    if (sub1.includes('retail')) {
-      classes.push('Commercial');
-    }
-    if (item.sub2) {
-      classes.push(item.sub2.replace(/\s+/g, ''));
-    }
-    
-    return classes.join(' ');
+    return item.categoryId ? `PortfolioCategory-${item.categoryId}` : '';
   }, []);
 
   // Filter projects based on active filter (memoized)
@@ -50,11 +20,8 @@ function LatestCases() {
     if (activeFilter === 'All') {
       return data;
     }
-    return data.filter(item => {
-      const classes = getFilterClasses(item);
-      return classes.includes(activeFilter);
-    });
-  }, [activeFilter, getFilterClasses]);
+    return data.filter((item) => item.categoryId === activeFilter);
+  }, [activeFilter, data]);
 
   const totalPages = useMemo(
     () => Math.ceil(filteredProjects.length / projectsPerPage),
@@ -72,56 +39,10 @@ function LatestCases() {
     setCurrentPage(1);
   }, [activeFilter]);
 
-  useEffect(() => {
-    const initializeMixitup = () => {
-      if (mixitupContainerRef.current) {
-        // Destroy existing instance if any
-        const existingInstance = mixitup(mixitupContainerRef.current);
-        if (existingInstance && existingInstance.destroy) {
-          existingInstance.destroy();
-        }
-        
-        // Initialize new instance
-        mixitup(mixitupContainerRef.current, {
-          load: {
-            sort: 'order:asc',
-          },
-          animation: {
-            duration: 700,
-          },
-          classNames: {
-            block: 'filter',
-            elementFilter: 'filter-btn',
-            elementSort: 'sort-btn',
-          },
-          selectors: {
-            target: '.mix-item',
-          },
-        });
-      }
-    };
-
-    // Small delay to ensure DOM is updated
-    const timer = setTimeout(() => {
-      initializeMixitup();
-    }, 100);
-
-    return () => clearTimeout(timer);
-  }, [paginatedProjects, activeFilter]);
-  
   const handleFilterClick = useCallback((filter, e) => {
     e.preventDefault();
     setActiveFilter(filter);
     setCurrentPage(1);
-
-    document.querySelectorAll('.filter-btn').forEach((btn) => {
-      btn.classList.remove('active');
-    });
-
-    const clickedButton = e.currentTarget;
-    if (clickedButton) {
-      clickedButton.classList.add('active');
-    }
   }, []);
 
   const handlePageChange = useCallback((page, e) => {
@@ -294,48 +215,31 @@ function LatestCases() {
                 >
                   All
                 </a>
-                <a
-                  href="#0"
-                  onClick={(e) => handleFilterClick('Architecture', e)}
-                  className={`filter-btn ${
-                    activeFilter === 'Architecture' ? 'active' : ''
-                  }`}
-                  data-filter=".Architecture"
-                >
-                  Architecture
-                </a>
-                <a
-                  href="#0"
-                  onClick={(e) => handleFilterClick('Interior', e)}
-                  className={`filter-btn ${
-                    activeFilter === 'Interior' ? 'active' : ''
-                  }`}
-                  data-filter=".Interior"
-                >
-                  Interior
-                </a>
-                {/* <a
-                  href="#0"
-                  onClick={() => handleFilterClick("Gordon's Villa")}
-                  className={`filter-btn ${
-                    activeFilter === "Gordon's Villa" ? 'active' : ''
-                  }`}
-                  data-filter=".GordonsVilla"
-                >
-                  Gordon's Villa
-                </a> */}
+                {categories.map((category) => (
+                  <a
+                    key={category.id}
+                    href="#0"
+                    onClick={(e) => handleFilterClick(category.id, e)}
+                    className={`filter-btn ${
+                      activeFilter === category.id ? 'active' : ''
+                    }`}
+                    data-filter={`.PortfolioCategory-${category.id}`}
+                  >
+                    {category.name}
+                  </a>
+                ))}
               </div>
             </div>
             <div
               className="cases-content wow fadeInUp slow"
               data-wow-delay="0.4s"
             >
-              <div className="row mixitup" ref={mixitupContainerRef}>
+              <div className="row mixitup">
                 {paginatedProjects.map((item, i) => (
-                  <div key={i} className={`col-lg-4 mix-item ${getFilterClasses(item)}`}>
+                  <div key={item.id || i} className={`col-lg-4 mix-item ${getFilterClasses(item)}`}>
                     <div 
                       className="case-card"
-                      onClick={() => navigate('/innerpages/single_project', { state: { project: item } })}
+                      onClick={() => navigate(`/innerpages/single_project?project=${encodeURIComponent(item.id)}`, { state: { project: item } })}
                     >
                       <div className="img">
                         <OptimizedImage src={item.img} alt={item.title || ''} className="img-cover" />
@@ -359,6 +263,15 @@ function LatestCases() {
                     </div>
                   </div>
                 ))}
+                {!loading && paginatedProjects.length === 0 && (
+                  <div className="col-12">
+                    <p className="text-center color-666 fsz-18 py-5 mb-0">
+                      {activeFilter === 'All'
+                        ? 'No portfolio projects are available yet.'
+                        : 'No portfolio projects are available in this category.'}
+                    </p>
+                  </div>
+                )}
               </div>
               {totalPages > 1 && (
                 <nav aria-label="Page navigation example" className="mt-60">

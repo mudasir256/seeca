@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-import { logos } from './partner';
+import usePartners from '../../hooks/usePartners';
 
 function Experience() {
+  const { partners: logos, loading } = usePartners();
   const duplicatedLogos = [...logos, ...logos];
   const scrollRef = useRef(null);
   
@@ -41,7 +42,7 @@ function Experience() {
         cancelAnimationFrame(animationId);
       }
     };
-  }, []);
+  }, [logos.length]);
   return (
     <>
       <style dangerouslySetInnerHTML={{__html: `
@@ -356,7 +357,12 @@ function Experience() {
             </h2>
             
             <div className="relative overflow-hidden w-100" style={{ position: 'relative' }}>
-              <div 
+              {!loading && logos.length === 0 && (
+                <p className="text-center color-666 fsz-18 py-4 mb-0">
+                  No partners are available yet.
+                </p>
+              )}
+              <div
                 ref={scrollRef}
                 className="d-flex"
                 style={{ 

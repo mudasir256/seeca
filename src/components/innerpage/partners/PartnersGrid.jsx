@@ -1,7 +1,8 @@
 import React from 'react';
-import { logos } from '../../home1/partner';
+import usePartners from '../../../hooks/usePartners';
 
 function PartnersGrid() {
+  const { partners: logos, loading } = usePartners();
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
@@ -93,7 +94,7 @@ function PartnersGrid() {
           </header>
           <div className="row g-4">
             {logos.map((item, index) => (
-              <div key={`${item.logo}-${index}`} className="col-12 col-sm-6 col-lg-4">
+              <div key={item.id || `${item.logo}-${index}`} className="col-12 col-sm-6 col-lg-4">
                 <article className="partner-card">
                   <div className="partner-logo-wrap">
                     <img src={item.logo} alt={item.name} loading="lazy" decoding="async" />
@@ -103,6 +104,13 @@ function PartnersGrid() {
                 </article>
               </div>
             ))}
+            {!loading && logos.length === 0 && (
+              <div className="col-12">
+                <p className="text-center partner-writeup py-5 mb-0">
+                  No partners are available yet.
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </section>

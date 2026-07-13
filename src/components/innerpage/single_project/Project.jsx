@@ -1,28 +1,11 @@
-import React, { useState, useMemo, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import { createPortal } from 'react-dom';
-import { useLocation } from 'react-router-dom';
 import OptimizedImage from '../../common/OptimizedImage';
 
-function Project() {
-  const location = useLocation();
-  const projectFromState = location.state?.project;
+function Project({ project }) {
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const defaultProject = useMemo(() => ({
-    title: "Gordon's Villa",
-    sub1: "Architecture",
-    sub2: "Landscape",
-    desc: "This area will is short description of project, you can select to show or hide it",
-    img: "/innerpages/assets/img/s_project/m1.jpg",
-    client: "",
-    location: "Ecoriver Residence, Boston MA 02108, US",
-    area: ""
-  }), []);
-
-  const finalProjectData = useMemo(
-    () => projectFromState || defaultProject,
-    [projectFromState, defaultProject]
-  );
+  const finalProjectData = project || { images: [] };
 
   const openImageModal = useCallback((image, index) => {
     setSelectedImage(image);
@@ -75,6 +58,8 @@ function Project() {
       document.body.style.overflow = '';
     };
   }, [selectedImage, currentImageIndex, finalProjectData.images]);
+
+  if (!project) return null;
 
   return (
     <>
@@ -544,7 +529,7 @@ function Project() {
                         </div>
                       </div>
                     )}
-                    {finalProjectData.sub1 && finalProjectData.sub2 && (
+                    {(finalProjectData.sub1 || finalProjectData.sub2) && (
                     <div className="col-lg-3 col-md-6 col-sm-6 col-12 mb-4 mb-md-3 mb-sm-3">
                       <div
                         className="item mt-100 mt-md-60 mt-sm-40 mt-3 wow fadeInUp slow"
@@ -554,7 +539,7 @@ function Project() {
                             category
                         </small>
                         <div className="links fsz-18 fw-500">
-                            {finalProjectData.sub1}, {finalProjectData.sub2}
+                            {[finalProjectData.sub1, finalProjectData.sub2].filter(Boolean).join(', ')}
                           </div>
                         </div>
                       </div>
@@ -678,38 +663,18 @@ function Project() {
           )}
         </div>
       </div>
-      {finalProjectData.images && finalProjectData.images.length > 0 && (
+      {finalProjectData.endingImage && (
       <div className="main-slider-img wow fadeInUp slow" data-wow-delay="0.2s">
         <div className="swiper-wrapper">
-            {finalProjectData.images.map((image, index) => (
-              <div key={index} className="swiper-slide">
-                <div 
-                  className="img" 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    openImageModal(image, index);
-                  }}
-                  style={{ cursor: 'pointer' }}
-                >
-                  <OptimizedImage
-                    src={image}
-                    alt={finalProjectData.title}
+          <div className="swiper-slide">
+            <div className="img">
+              <OptimizedImage
+                src={finalProjectData.endingImage}
+                alt={finalProjectData.title}
                 className="img-cover"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      openImageModal(image, index);
-                    }}
               />
             </div>
           </div>
-            ))}
-        </div>
-        <div className="arrows">
-          <div className="swiper-button-prev"></div>
-          <div className="swiper-pagination"></div>
-          <div className="swiper-button-next"></div>
         </div>
       </div>
       )}

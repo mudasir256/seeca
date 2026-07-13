@@ -9,13 +9,14 @@ import Header from '../../components/innerpage/contact/Header';
 import Content from '../../components/innerpage/single_post/Content';
 import Testimonials from '../../components/home1/Testimonials';
 import ContactSection from '../../components/innerpage/architecture/ContactSection';
-import blogData from '../../data/innerpages/blog/filter.json';
+import useBlogs from '../../hooks/useBlogs';
 
 function SinglePost() {
   const location = useLocation();
   const { slug } = useParams();
+  const { blogs } = useBlogs();
   const blogFromState = location.state?.blog;
-  const blogFromSlug = slug ? blogData.find((item) => item.slug === slug) : null;
+  const blogFromSlug = slug ? blogs.find((item) => item.slug === slug) : null;
   const blog = blogFromState || blogFromSlug;
 
   // Default header values
@@ -38,7 +39,7 @@ function SinglePost() {
         backgroundImage={headerBackgroundImage}
       />
       <main>
-        <Content blog={blog} />
+        <Content blog={blog} blogs={blogs} />
         <Testimonials />
         <ContactSection />
       </main>
