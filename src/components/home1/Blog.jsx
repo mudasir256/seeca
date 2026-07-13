@@ -1,8 +1,9 @@
 import React from 'react';
-import data from '../../data/home1/blogs';
 import { useNavigate } from 'react-router-dom';
+import useBlogs from '../../hooks/useBlogs';
 
 function Blog({ limit = 3, showViewAll = true }) {
+  const { blogs: data, loading } = useBlogs();
   const navigate = useNavigate();
   const displayPosts = limit ? data.slice(0, limit) : data;
   const openBlogDetails = (item) => {
@@ -261,14 +262,8 @@ function Blog({ limit = 3, showViewAll = true }) {
                   <div className="date">
                     <div className="num fsz-45 mb-2">{item.num || '01'}</div>
                     <small className="fsz-12 text-uppercase color-666">
-                      {item.history ? (
-                        <>
-                          {item.history.split('<br />')[0]} <br />
-                          {item.history.split('<br />')[1]}
-                        </>
-                      ) : (
-                        'January 2026'
-                      )}
+                      {item.month} <br />
+                      {item.year}
                     </small>
                   </div>
                   <div className="cont">
@@ -299,6 +294,11 @@ function Blog({ limit = 3, showViewAll = true }) {
                 </div>
               </div>
             ))}
+            {!loading && displayPosts.length === 0 && (
+              <p className="text-center color-666 fsz-18 py-5 mb-0" style={{ gridColumn: '1 / -1' }}>
+                No blog posts are available yet.
+              </p>
+            )}
           </div>
         </div>
       </section>

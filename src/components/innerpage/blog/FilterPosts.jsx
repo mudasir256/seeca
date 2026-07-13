@@ -1,48 +1,26 @@
 'use client';
-import mixitup from 'mixitup';
-import data from '../../../data/innerpages/blog/filter';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import useBlogs from '../../../hooks/useBlogs';
 function FilterPosts() {
+  const { categories, blogs: data, loading } = useBlogs();
   const [activeFilter, setActiveFilter] = useState('All');
-  const mixitupContainerRef = useRef(null);
+  const [visibleCount, setVisibleCount] = useState(6);
   const navigate = useNavigate();
+  const filteredPosts = useMemo(() => {
+    if (activeFilter === 'All') return data;
+    return data.filter((item) => item.categoryId === activeFilter);
+  }, [activeFilter, data]);
+  const visiblePosts = filteredPosts.slice(0, visibleCount);
+  const remainingPosts = Math.max(filteredPosts.length - visibleCount, 0);
 
-  useEffect(() => {
-    const initializeMixitup = () => {
-      mixitup(mixitupContainerRef.current, {
-        load: {
-          sort: 'order:asc',
-        },
-        animation: {
-          duration: 700,
-        },
-        classNames: {
-          block: 'filter',
-          elementFilter: 'filter-btn',
-          elementSort: 'sort-btn',
-        },
-        selectors: {
-          target: '.mix-item',
-        },
-      });
-    };
-
-    initializeMixitup();
-  }, []);
   const handleFilterClick = (filter) => {
     setActiveFilter(filter);
+    setVisibleCount(6);
+  };
 
-    // Remove 'active' class from all filter buttons
-    document.querySelectorAll('.filter-btn').forEach((btn) => {
-      btn.classList.remove('active');
-    });
-
-    // Add 'active' class to the clicked filter button, if it exists
-    const clickedButton = document.querySelector(`[data-filter="${filter}"]`);
-    if (clickedButton) {
-      clickedButton.classList.add('active');
-    }
+  const handleLoadMore = () => {
+    setVisibleCount((current) => Math.min(current + 6, filteredPosts.length));
   };
 
   return (
@@ -128,57 +106,19 @@ function FilterPosts() {
                   >
                     All
                   </a>
-                  <a
-                    onClick={() => handleFilterClick('news')}
-                    href="#0"
-                    className={`filter-btn ${
-                      activeFilter === 'news' ? 'active' : ''
-                    }`}
-                    data-filter=".news"
-                  >
-                    news
-                  </a>
-                  <a
-                    onClick={() => handleFilterClick('.Architecture')}
-                    href="#0"
-                    className={`filter-btn ${
-                      activeFilter === 'Architecture' ? 'active' : ''
-                    }`}
-                    data-filter=".Architecture"
-                  >
-                    Architecture
-                  </a>
-
-                  <a
-                    href="#0"
-                    onClick={() => handleFilterClick('Interior')}
-                    className={`filter-btn ${
-                      activeFilter === 'Interior' ? 'active' : ''
-                    }`}
-                    data-filter=".Interior"
-                  >
-                    Interior
-                  </a>
-                  <a
-                    href="#0"
-                    onClick={() => handleFilterClick('guide')}
-                    className={`filter-btn ${
-                      activeFilter === 'guide' ? 'active' : ''
-                    }`}
-                    data-filter=".guide"
-                  >
-                    guide
-                  </a>
-                  <a
-                    href="#0"
-                    onClick={() => handleFilterClick('inspiration')}
-                    className={`filter-btn ${
-                      activeFilter === 'inspiration' ? 'active' : ''
-                    }`}
-                    data-filter=".inspiration"
-                  >
-                    inspiration
-                  </a>
+                  {categories.map((category) => (
+                    <a
+                      key={category.id}
+                      href="#0"
+                      onClick={() => handleFilterClick(category.id)}
+                      className={`filter-btn ${
+                        activeFilter === category.id ? 'active' : ''
+                      }`}
+                      data-filter={`.BlogCategory-${category.id}`}
+                    >
+                      {category.name}
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
@@ -197,9 +137,9 @@ function FilterPosts() {
           </div>
         </div>
         <div className="posts-content">
-          <div className="row mixitup" ref={mixitupContainerRef}>
-            {data.map((item, i) => (
-              <div key={i} className={`col-lg-4 mix-item ${item.subTitle}`}>
+          <div className="row mixitup">
+            {visiblePosts.map((item, i) => (
+              <div key={item.id || i} className={`col-lg-4 mix-item BlogCategory-${item.categoryId}`}>
                 <div
                   className="post-card mt-70 wow fadeInUp slow"
                   data-wow-delay="0.2s"
@@ -245,17 +185,29 @@ function FilterPosts() {
                 </div>
               </div>
             ))}
+            {!loading && visiblePosts.length === 0 && (
+              <div className="col-12">
+                <p className="text-center color-666 fsz-18 py-5 mb-0">
+                  {activeFilter === 'All'
+                    ? 'No blog posts are available yet.'
+                    : 'No blog posts are available in this category.'}
+                </p>
+              </div>
+            )}
           </div>
         </div>
-        <div className="text-center wow fadeInUp slow" data-wow-delay="0.2s">
-          <button
-            type="button"
-            className="butn border rounded-pill color-orange1 border-orange1 hover-bg-orange1 mt-100 px-5"
-            style={{ background: 'transparent' }}
-          >
-            <span> Load More (6) </span>
-          </button>
-        </div>
+        {remainingPosts > 0 && (
+          <div className="text-center wow fadeInUp slow" data-wow-delay="0.2s">
+            <button
+              type="button"
+              className="butn border rounded-pill color-orange1 border-orange1 hover-bg-orange1 mt-100 px-5"
+              style={{ background: 'transparent' }}
+              onClick={handleLoadMore}
+            >
+              <span> Load More ({Math.min(6, remainingPosts)}) </span>
+            </button>
+          </div>
+        )}
         </div>
       </section>
     </>

@@ -1,18 +1,25 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import data1 from '../../data/home1/projects/projects1';
 import OptimizedImage from '../common/OptimizedImage';
+import usePortfolio from '../../hooks/usePortfolio';
 
 function Projects() {
+  const { projects, loading } = usePortfolio();
   const projectsData = useMemo(
-    () => (Array.isArray(data1) ? data1.slice(0, 5) : []),
-    []
+    () => projects.slice(0, 5),
+    [projects]
   );
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [touchStart, setTouchStart] = useState(0);
   const [activeTab, setActiveTab] = useState('pills-proj1');
+
+  const openProject = useCallback((item) => {
+    navigate(`/innerpages/single_project?project=${encodeURIComponent(item.id)}`, {
+      state: { project: item },
+    });
+  }, [navigate]);
 
   const nextSlide = useCallback(() => {
     if (isAnimating || projectsData.length === 0) return;
@@ -42,6 +49,12 @@ function Projects() {
     }, 4000);
     return () => clearInterval(interval);
   }, [projectsData.length]);
+
+  useEffect(() => {
+    if (currentIndex >= projectsData.length) {
+      setCurrentIndex(0);
+    }
+  }, [currentIndex, projectsData.length]);
 
   const handleTouchStart = useCallback((e) => {
     setTouchStart(e.touches[0].clientX);
@@ -964,6 +977,11 @@ function Projects() {
           </div>
         </div>
         <div className="projects">
+          {!loading && projectsData.length === 0 && (
+            <p className="text-center color-666 fsz-18 py-5 mb-0">
+              No portfolio projects are available yet.
+            </p>
+          )}
           <div className="tab-content" id="pills-tabContent">
             <div
                 className={`tab-pane fade ${activeTab === 'pills-proj1' ? 'show active' : ''}`}
@@ -998,7 +1016,7 @@ function Projects() {
                               }
                               if (position === "active") {
                                 // Navigate to detail page when clicking active card
-                                navigate('/innerpages/single_project', { state: { project: item } });
+                                openProject(item);
                               } else if (position.startsWith("next")) {
                                 const nextCount = parseInt(position.split("-")[1]) || 1;
                                 const targetIndex = (currentIndex + nextCount) % projectsData.length;
@@ -1028,7 +1046,7 @@ function Projects() {
                                         e.preventDefault();
                                         e.stopPropagation();
                                         if (isActive) {
-                                          navigate('/innerpages/single_project', { state: { project: item } });
+                                          openProject(item);
                                         }
                                       }}
                                     >
@@ -1046,7 +1064,7 @@ function Projects() {
                                         onClick={(e) => {
                                           e.preventDefault();
                                           e.stopPropagation();
-                                          navigate('/innerpages/single_project', { state: { project: item } });
+                                          openProject(item);
                                         }}
                                       >
                                         <span>See Detail</span>
@@ -1153,7 +1171,7 @@ function Projects() {
                               }
                               if (position === "active") {
                                 // Navigate to detail page when clicking active card
-                                navigate('/innerpages/single_project', { state: { project: item } });
+                                openProject(item);
                               } else if (position.startsWith("next")) {
                                 const nextCount = parseInt(position.split("-")[1]) || 1;
                                 const targetIndex = (currentIndex + nextCount) % projectsData.length;
@@ -1183,7 +1201,7 @@ function Projects() {
                                         e.preventDefault();
                                         e.stopPropagation();
                                         if (isActive) {
-                                          navigate('/innerpages/single_project', { state: { project: item } });
+                                          openProject(item);
                                         }
                                       }}
                                     >
@@ -1201,7 +1219,7 @@ function Projects() {
                                         onClick={(e) => {
                                           e.preventDefault();
                                           e.stopPropagation();
-                                          navigate('/innerpages/single_project', { state: { project: item } });
+                                          openProject(item);
                                         }}
                                       >
                                         <span>See Detail</span>

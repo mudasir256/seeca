@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
-import { logos } from "./partner";
+import usePartners from "../../hooks/usePartners";
 
 export default function OurPartners() {
+  const { partners: logos, loading } = usePartners();
   const duplicatedLogos = [...logos, ...logos];
   const scrollRef = useRef(null);
   
@@ -33,7 +34,7 @@ export default function OurPartners() {
     return () => {
       cancelAnimationFrame(animationId);
     };
-  }, []);
+  }, [logos.length]);
   
   return (
     <section>
@@ -43,6 +44,9 @@ export default function OurPartners() {
         </h2>
         
         <div className="relative overflow-hidden w-full">
+          {!loading && logos.length === 0 && (
+            <p className="text-center text-gray-500 py-4">No partners are available yet.</p>
+          )}
           <div 
             ref={scrollRef}
             className="flex w-fit"

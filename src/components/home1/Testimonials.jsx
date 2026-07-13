@@ -1,18 +1,27 @@
 import React, { useState, useEffect, useRef } from 'react';
-import testimonialsData from '../../data/home1/testimonials.json';
+import useReviews from '../../hooks/useReviews';
 
 function Testimonials() {
 
+  const testimonialsData = useReviews();
   const [currentIndex, setCurrentIndex] = useState(0);
   const marqSwiperRef = useRef(null);
   const marqSliderRef = useRef(null);
 
   useEffect(() => {
+    if (testimonialsData.length === 0) return undefined;
+
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonialsData.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [testimonialsData.length]);
+
+  useEffect(() => {
+    if (currentIndex >= testimonialsData.length) {
+      setCurrentIndex(0);
+    }
+  }, [currentIndex, testimonialsData.length]);
 
   // Initialize marquee slider
   useEffect(() => {
@@ -83,10 +92,12 @@ function Testimonials() {
   };
 
   const nextSlide = () => {
+    if (testimonialsData.length === 0) return;
     setCurrentIndex((prev) => (prev + 1) % testimonialsData.length);
   };
 
   const prevSlide = () => {
+    if (testimonialsData.length === 0) return;
     setCurrentIndex((prev) => (prev - 1 + testimonialsData.length) % testimonialsData.length);
   };
 
@@ -514,7 +525,7 @@ function Testimonials() {
             <div className="testimonials-card-wrapper">
               {testimonialsData.map((testimonial, index) => (
                 <div
-                  key={index}
+                  key={testimonial.id || index}
                   className={`testimonial-slide ${index === currentIndex ? 'active' : 'inactive'}`}
                 >
                   <div className="testimonial-avatar">

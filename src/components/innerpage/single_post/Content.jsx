@@ -1,14 +1,73 @@
-import React from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import blogData from '../../../data/innerpages/blog/filter';
 
-function RelatedPosts({ currentBlog }) {
+function RelatedPosts({ currentBlog, blogs }) {
   const navigate = useNavigate();
-  
-  // Get related posts (exclude current blog, get first 3)
-  const relatedPosts = blogData
-    .filter(item => item.slug !== currentBlog?.slug)
-    .slice(0, 3);
+  const sliderRef = useRef(null);
+  const swiperRef = useRef(null);
+
+  const relatedPosts = useMemo(() => {
+    return [...blogs]
+      .filter((item) => item.slug !== currentBlog?.slug)
+      .sort((a, b) => {
+        const aMatches = a.categoryId === currentBlog?.categoryId ? 1 : 0;
+        const bMatches = b.categoryId === currentBlog?.categoryId ? 1 : 0;
+        return bMatches - aMatches;
+      })
+      .slice(0, 3);
+  }, [blogs, currentBlog?.categoryId, currentBlog?.slug]);
+
+  useEffect(() => {
+    if (relatedPosts.length === 0) return undefined;
+
+    let retryCount = 0;
+    let retryTimer;
+
+    const initializeSlider = () => {
+      if (typeof window === 'undefined' || !window.Swiper || !sliderRef.current) {
+        retryCount += 1;
+        if (retryCount < 50) {
+          retryTimer = setTimeout(initializeSlider, 100);
+        }
+        return;
+      }
+
+      swiperRef.current = new window.Swiper(sliderRef.current, {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        speed: 1000,
+        pagination: false,
+        navigation: {
+          nextEl: '.related-posts .swiper-button-next',
+          prevEl: '.related-posts .swiper-button-prev',
+        },
+        mousewheel: false,
+        keyboard: true,
+        autoplay: {
+          delay: 5000,
+        },
+        loop: relatedPosts.length > 1,
+        breakpoints: {
+          0: { slidesPerView: 1 },
+          480: { slidesPerView: 2 },
+          787: { slidesPerView: 2 },
+          991: { slidesPerView: 2 },
+          1200: { slidesPerView: 2 },
+        },
+      });
+    };
+
+    const startTimer = setTimeout(initializeSlider, 200);
+
+    return () => {
+      clearTimeout(startTimer);
+      clearTimeout(retryTimer);
+      if (swiperRef.current) {
+        swiperRef.current.destroy(true, true);
+        swiperRef.current = null;
+      }
+    };
+  }, [currentBlog?.slug, relatedPosts.length]);
 
   if (relatedPosts.length === 0) return null;
 
@@ -33,10 +92,11 @@ function RelatedPosts({ currentBlog }) {
               <div
                 className="related-slider wow fadeInUp slow"
                 data-wow-delay="0.2s"
+                ref={sliderRef}
               >
                 <div className="swiper-wrapper">
           {relatedPosts.map((item, index) => (
-            <div key={index} className="swiper-slide">
+            <div key={item.id || index} className="swiper-slide">
                     <div className="post-card">
                 <div
                         className="img th-280 radius-7 overflow-hidden d-block"
@@ -84,20 +144,13 @@ function RelatedPosts({ currentBlog }) {
   );
 }
 
-function Content({ blog }) {
-  // Default values if no blog data is passed
-  const defaultBlog = {
-    title: "Top 10 Wooden Architecture Building 2023",
-    subTitle: "Architecture, Building",
-    history: "January 24, 2026",
-    description: "Discover the latest trends in modern architecture.",
-    content: "Success needs hard work. Don't listen to these 'get rich quick' schemes. You need to build your character and work hard on yourself and your business to achieve greatness. Worked hard and work smart. Do the right things and do them in the right way. Don't think much to procrastinate. Take bold actions. Work long hours and craft your legacy. Successful people do not see failures as failures. They see them as important learning lessons. Be with people who have utmost conviction and patience. The battle is never lost until you've abandon your vision."
-  };
+function Content({ blog, blogs = [] }) {
+  if (!blog) return null;
 
-  const blogData = blog || defaultBlog;
+  const blogData = blog;
   
   // Split content into paragraphs if it contains newlines
-  const contentParagraphs = blogData.content ? blogData.content.split('\n\n') : [blogData.description || defaultBlog.content];
+  const contentParagraphs = blogData.content ? blogData.content.split('\n\n') : [blogData.description];
 
   return (
     <>
@@ -216,7 +269,7 @@ function Content({ blog }) {
                   </div>
                 </div>
               </div>
-              <RelatedPosts currentBlog={blogData} />
+              <RelatedPosts currentBlog={blogData} blogs={blogs} />
           </div>
         </div>
       </div>

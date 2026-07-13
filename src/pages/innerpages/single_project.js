@@ -9,10 +9,13 @@ import Header from '../../components/innerpage/contact/Header';
 import Project from '../../components/innerpage/single_project/Project';
 import Testimonials from '../../components/home1/Testimonials';
 import ContactSection from '../../components/innerpage/architecture/ContactSection';
+import usePortfolio from '../../hooks/usePortfolio';
 
 function SingleProject() {
   const location = useLocation();
-  const project = location.state?.project;
+  const { projects } = usePortfolio();
+  const projectId = new URLSearchParams(location.search).get('project');
+  const project = location.state?.project || projects.find((item) => item.id === projectId);
 
   // Default header values
   const headerTitle = project?.title || 'Project Details';
@@ -34,7 +37,7 @@ function SingleProject() {
         backgroundImage={headerBackgroundImage}
       />
       <main>
-        <Project />
+        <Project project={project} />
         <Testimonials />
         <ContactSection />
       </main>
