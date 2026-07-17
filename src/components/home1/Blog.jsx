@@ -8,7 +8,7 @@ function Blog({ limit = 3, showViewAll = true }) {
   const displayPosts = limit ? data.slice(0, limit) : data;
   const openBlogDetails = (item) => {
     const slug = item.slug || 'blog-post';
-    navigate(`/innerpages/blog/${slug}`, {
+    navigate(`/blog/${slug}`, {
       state: {
         blog: {
           ...item,
@@ -242,7 +242,7 @@ function Blog({ limit = 3, showViewAll = true }) {
           <div className="blog-header">
             <h2 className="fsz-45">Latest Blogs</h2>
             {showViewAll && limit && (
-              <button type="button" className="blog-view-all-btn" onClick={() => navigate('/innerpages/blog')}>
+              <button type="button" className="blog-view-all-btn" onClick={() => navigate('/blog')}>
                 <span>View All</span>
                 <i className="ti-arrow-top-right"></i>
               </button>

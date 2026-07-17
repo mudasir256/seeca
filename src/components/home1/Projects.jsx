@@ -16,7 +16,7 @@ function Projects() {
   const [activeTab, setActiveTab] = useState('pills-proj1');
 
   const openProject = useCallback((item) => {
-    navigate(`/innerpages/single_project?project=${encodeURIComponent(item.id)}`, {
+    navigate(`/single_project?project=${encodeURIComponent(item.id)}`, {
       state: { project: item },
     });
   }, [navigate]);
@@ -965,7 +965,7 @@ function Projects() {
                 className="butn border rounded-pill projects-see-all-btn"
                 onClick={(e) => {
                   e.preventDefault();
-                  navigate('/innerpages/portfolio');
+                  navigate('/portfolio');
                 }}
               >
                 <span>

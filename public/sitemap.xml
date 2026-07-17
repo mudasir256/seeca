@@ -56,142 +56,142 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/about</loc>
+    <loc>https://your-domain.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/blog</loc>
+    <loc>https://your-domain.com/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/blog/quiet-luxury-aesthetic-2026</loc>
+    <loc>https://your-domain.com/blog/quiet-luxury-aesthetic-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/blog/biophilic-design-beyond-plants</loc>
+    <loc>https://your-domain.com/blog/biophilic-design-beyond-plants</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/blog/net-zero-vs-passive-house</loc>
+    <loc>https://your-domain.com/blog/net-zero-vs-passive-house</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/blog/sustainable-materials-transforming-architecture-2026</loc>
+    <loc>https://your-domain.com/blog/sustainable-materials-transforming-architecture-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/blog/psychology-of-space-interior-architecture-mood</loc>
+    <loc>https://your-domain.com/blog/psychology-of-space-interior-architecture-mood</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/blog/daily-inspiration-coffee-bar-restaurant-spain</loc>
+    <loc>https://your-domain.com/blog/daily-inspiration-coffee-bar-restaurant-spain</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/blog/technical-drawings-guide</loc>
+    <loc>https://your-domain.com/blog/technical-drawings-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/blog/roxtaw-building-completed</loc>
+    <loc>https://your-domain.com/blog/roxtaw-building-completed</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/blog/choose-furniture-match-personality</loc>
+    <loc>https://your-domain.com/blog/choose-furniture-match-personality</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/blog/construction-law-2024</loc>
+    <loc>https://your-domain.com/blog/construction-law-2024</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/blog/minimalist-landscape-frontyard</loc>
+    <loc>https://your-domain.com/blog/minimalist-landscape-frontyard</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/blog/coffee-bar-industrial-design</loc>
+    <loc>https://your-domain.com/blog/coffee-bar-industrial-design</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/blog/bathroom-classic-design</loc>
+    <loc>https://your-domain.com/blog/bathroom-classic-design</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/blog/seeca-residence-construction-update</loc>
+    <loc>https://your-domain.com/blog/seeca-residence-construction-update</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/contact</loc>
+    <loc>https://your-domain.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/portfolio</loc>
+    <loc>https://your-domain.com/portfolio</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/services</loc>
+    <loc>https://your-domain.com/services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/architecture</loc>
+    <loc>https://your-domain.com/architecture</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/interior-design</loc>
+    <loc>https://your-domain.com/interior-design</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/construction</loc>
+    <loc>https://your-domain.com/construction</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/building-sustainability</loc>
+    <loc>https://your-domain.com/building-sustainability</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/smart-building-technologies</loc>
+    <loc>https://your-domain.com/smart-building-technologies</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/our-process</loc>
+    <loc>https://your-domain.com/our-process</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/partners</loc>
+    <loc>https://your-domain.com/partners</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/single_project</loc>
+    <loc>https://your-domain.com/single_project</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/innerpages/single_project2</loc>
+    <loc>https://your-domain.com/single_project2</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

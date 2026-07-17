@@ -374,7 +374,7 @@ function Projects() {
 
     const handleProjectClick = (e, project) => {
       e.preventDefault();
-      navigate('/innerpages/single_project', { state: { project } });
+      navigate('/single_project', { state: { project } });
     };
 
   return (

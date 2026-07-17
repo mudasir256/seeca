@@ -91,91 +91,91 @@ const routeSeo = {
     keywords: 'architecture portfolio, interior portfolio, project showcase',
     schemaType: 'CollectionPage',
   },
-  '/innerpages/about': {
+  '/about': {
     title: 'About SEECA',
     description:
       'Learn about SEECA team expertise, design philosophy, and project values across architecture and construction.',
     keywords: 'about seeca, architecture team, construction experts',
     schemaType: 'AboutPage',
   },
-  '/innerpages/blog': {
+  '/blog': {
     title: 'Design & Construction Blog | SEECA',
     description:
       'Read SEECA insights on architecture trends, interior ideas, construction updates, and project best practices.',
     keywords: 'architecture blog, interior design blog, construction insights',
     schemaType: 'Blog',
   },
-  '/innerpages/contact': {
+  '/contact': {
     title: 'Contact SEECA',
     description:
       'Contact SEECA for architecture, interior design, construction, and project consultation inquiries.',
     keywords: 'contact seeca, architecture consultation, construction inquiry',
     schemaType: 'ContactPage',
   },
-  '/innerpages/portfolio': {
+  '/portfolio': {
     title: 'Project Portfolio | SEECA',
     description:
       'See completed and ongoing SEECA projects to evaluate our design quality and construction capabilities.',
     keywords: 'construction portfolio, architecture projects, completed projects',
     schemaType: 'CollectionPage',
   },
-  '/innerpages/services': {
+  '/services': {
     title: 'Services | SEECA',
     description:
       'Explore SEECA architecture, interior design, construction, and planning services for modern projects.',
     keywords: 'architecture services, interior design services, construction services',
     schemaType: 'Service',
   },
-  '/innerpages/architecture': {
+  '/architecture': {
     title: 'Architecture Services | SEECA',
     description:
       'SEECA architecture services deliver concept development, planning, and execution-focused design support.',
     keywords: 'architectural design, building planning, architectural consultancy',
     schemaType: 'Service',
   },
-  '/innerpages/interior-design': {
+  '/interior-design': {
     title: 'Interior Design Services | SEECA',
     description:
       'SEECA interior design services create balanced spaces through material, layout, and lighting strategy.',
     keywords: 'interior design services, home interiors, commercial interiors',
     schemaType: 'Service',
   },
-  '/innerpages/construction': {
+  '/construction': {
     title: 'Construction Management | SEECA',
     description:
       'Plan and build with SEECA construction management that emphasizes quality, timeline, and budget control.',
     keywords: 'construction management, project supervision, building contractor',
     schemaType: 'Service',
   },
-  '/innerpages/building-sustainability': {
+  '/building-sustainability': {
     title: 'Building Sustainability | SEECA',
     description:
       'SEECA sustainability services improve building performance through efficient design and smart material choices.',
     keywords: 'sustainable architecture, green building, energy efficient design',
     schemaType: 'Service',
   },
-  '/innerpages/smart-building-technologies': {
+  '/smart-building-technologies': {
     title: 'Smart Building Technologies | SEECA',
     description:
       'Integrate modern smart building systems with SEECA for comfort, performance, and operational efficiency.',
     keywords: 'smart building systems, building automation, intelligent buildings',
     schemaType: 'Service',
   },
-  '/innerpages/our-process': {
+  '/our-process': {
     title: 'Our Process | SEECA',
     description:
       'Understand SEECA project workflow from consultation and concept to delivery and post-completion support.',
     keywords: 'design process, construction workflow, project lifecycle',
     schemaType: 'WebPage',
   },
-  '/innerpages/partners': {
+  '/partners': {
     title: 'Partners | SEECA',
     description:
       'Meet SEECA project partners and collaborators who help deliver reliable architecture and construction outcomes.',
     keywords: 'construction partners, design collaborators, project partners',
     schemaType: 'WebPage',
   },
-  '/innerpages/career/internship': {
+  '/career/internship': {
     title: 'Apply Internship | SEECA Careers',
     description:
       'Apply for internship opportunities at SEECA and build real-world experience in design and construction.',
@@ -183,7 +183,7 @@ const routeSeo = {
     schemaType: 'WebPage',
     robots: 'noindex, follow',
   },
-  '/innerpages/career/job': {
+  '/career/job': {
     title: 'Apply Job | SEECA Careers',
     description:
       'Join SEECA by applying for available job roles in architecture, design, engineering, and project operations.',
@@ -191,21 +191,21 @@ const routeSeo = {
     schemaType: 'WebPage',
     robots: 'noindex, follow',
   },
-  '/innerpages/single_post': {
+  '/single_post': {
     title: 'Blog Post | SEECA',
     description:
       'Read detailed SEECA blog content about architecture, interiors, construction, and design practices.',
     keywords: 'design articles, construction articles, architecture insights',
     schemaType: 'Article',
   },
-  '/innerpages/single_project': {
+  '/single_project': {
     title: 'Project Details | SEECA',
     description:
       'Review SEECA project details including design goals, process, and final construction outcomes.',
     keywords: 'project details, architecture case study, construction project',
     schemaType: 'WebPage',
   },
-  '/innerpages/single_project2': {
+  '/single_project2': {
     title: 'Project Showcase | SEECA',
     description:
       'Explore SEECA project showcase pages to understand our approach from concept to completion.',
@@ -226,7 +226,7 @@ function buildCanonicalUrl(pathname) {
 
 function buildCanonicalWithSlug(pathname, slug) {
   if (!slug) return buildCanonicalUrl(pathname);
-  return buildCanonicalUrl(`/innerpages/blog/${slug}`);
+  return buildCanonicalUrl(`/blog/${slug}`);
 }
 
 function buildBlogKeywords(blog) {
@@ -287,13 +287,13 @@ function buildBreadcrumbSchema(pathname, siteUrl) {
 
 export default function SeoManager() {
   const { pathname, state } = useLocation();
-  const isBlogPostRoute = pathname.startsWith('/innerpages/blog/');
+  const isBlogPostRoute = pathname.startsWith('/blog/');
   const blogSlug = isBlogPostRoute ? pathname.split('/').pop() : null;
   const blogFromRoute = blogSlug ? blogPosts.find((post) => post.slug === blogSlug) : null;
   const blogFromState = state?.blog;
   const blog = blogFromRoute || blogFromState || null;
 
-  const pageSeo = routeSeo[pathname] || (isBlogPostRoute ? routeSeo['/innerpages/single_post'] : {});
+  const pageSeo = routeSeo[pathname] || (isBlogPostRoute ? routeSeo['/single_post'] : {});
   const title = blog ? `${blog.title} | SEECA Blog` : (pageSeo.title || DEFAULT_TITLE);
   const description = blog?.description || pageSeo.description || DEFAULT_DESCRIPTION;
   const keywords = blog ? buildBlogKeywords(blog) : (pageSeo.keywords || DEFAULT_KEYWORDS);

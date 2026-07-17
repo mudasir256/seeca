@@ -302,7 +302,7 @@ function Experience() {
               SEECA (SEE Consultants & Architects) is a multidisciplinary design firm in Lahore delivering premium architectural and interior design services. Our architects and interior designers handle commercial, institutional, residential, and corporate office projects, including malls, spaces, schools, colleges, homes, apartments, farmhouses, and workplaces.
               </div>
               <a
-                href="./innerpages/about"
+                href="/about"
                 className="butn rounded-pill mt-50 hover-bg-green2 bg-white"
               >
                 <span>

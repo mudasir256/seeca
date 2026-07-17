@@ -227,7 +227,7 @@ function Header() {
                           {item.desc}
                         </div>
                         <Link
-                          to="/innerpages/services"
+                          to="/services"
                           className="butn border rounded-pill mt-60 hover-bg-white"
                         >
                           <span>

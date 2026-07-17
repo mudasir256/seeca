@@ -143,7 +143,7 @@ function FilterPosts() {
                 <div
                   className="post-card mt-70 wow fadeInUp slow"
                   data-wow-delay="0.2s"
-                  onClick={() => navigate(`/innerpages/blog/${item.slug}`, { state: { blog: item } })}
+                  onClick={() => navigate(`/blog/${item.slug}`, { state: { blog: item } })}
                   style={{ cursor: 'pointer' }}
                 >
                   <div
@@ -151,7 +151,7 @@ function FilterPosts() {
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
-                      navigate(`/innerpages/blog/${item.slug}`, { state: { blog: item } });
+                      navigate(`/blog/${item.slug}`, { state: { blog: item } });
                     }}
                     style={{ cursor: 'pointer' }}
                   >
@@ -174,7 +174,7 @@ function FilterPosts() {
                         type="button"
                         className="hover-orange1 fsz-24"
                         onClick={() => {
-                          navigate(`/innerpages/blog/${item.slug}`, { state: { blog: item } });
+                          navigate(`/blog/${item.slug}`, { state: { blog: item } });
                         }}
                         style={{ color: 'inherit', background: 'none', border: 'none', padding: 0, cursor: 'pointer', textAlign: 'left', width: '100%' }}
                       >

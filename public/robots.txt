@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /innerpages/career/internship
-Disallow: /innerpages/career/job
+Disallow: /career/internship
+Disallow: /career/job
 
 Sitemap: https://your-domain.com/sitemap.xml

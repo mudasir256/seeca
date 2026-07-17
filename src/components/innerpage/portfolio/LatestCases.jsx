@@ -239,7 +239,7 @@ function LatestCases() {
                   <div key={item.id || i} className={`col-lg-4 mix-item ${getFilterClasses(item)}`}>
                     <div 
                       className="case-card"
-                      onClick={() => navigate(`/innerpages/single_project?project=${encodeURIComponent(item.id)}`, { state: { project: item } })}
+                      onClick={() => navigate(`/single_project?project=${encodeURIComponent(item.id)}`, { state: { project: item } })}
                     >
                       <div className="img">
                         <OptimizedImage src={item.img} alt={item.title || ''} className="img-cover" />

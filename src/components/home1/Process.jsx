@@ -396,7 +396,7 @@ function Process() {
                   </div>
                 </div>
                 <a
-                  href="./innerpages/our-process"
+                  href="/our-process"
                   className="butn border rounded-pill mt-80 process-btn-green"
                 >
                   <span>

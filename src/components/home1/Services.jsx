@@ -345,7 +345,7 @@ const Services = memo(function Services({ removeTopPadding = false }) {
               {/* Top Row - 3 Cards */}
               <div className="col-lg-4 col-md-6 col-sm-12">
                 <Link
-                  to="/innerpages/architecture"
+                  to="/architecture"
                   className="service-card-compact card-1 wow fadeInUp"
                   data-wow-delay="0.1s"
                   style={{ textDecoration: 'none', display: 'block' }}
@@ -373,7 +373,7 @@ const Services = memo(function Services({ removeTopPadding = false }) {
 
               <div className="col-lg-4 col-md-6 col-sm-12">
                 <Link
-                  to="/innerpages/interior-design"
+                  to="/interior-design"
                   className="service-card-compact card-2 wow fadeInUp"
                   data-wow-delay="0.2s"
                   style={{ textDecoration: 'none', display: 'block' }}
@@ -401,7 +401,7 @@ const Services = memo(function Services({ removeTopPadding = false }) {
 
               <div className="col-lg-4 col-md-6 col-sm-12">
                 <Link
-                  to="/innerpages/construction"
+                  to="/construction"
                   className="service-card-compact card-3 wow fadeInUp"
                   data-wow-delay="0.3s"
                   style={{ textDecoration: 'none', display: 'block' }}
@@ -430,7 +430,7 @@ const Services = memo(function Services({ removeTopPadding = false }) {
               {/* Bottom Row - 2 Cards (Centered) */}
               <div className="col-lg-4 col-md-6 col-sm-12 offset-lg-2 service-row-bottom">
                 <Link
-                  to="/innerpages/building-sustainability"
+                  to="/building-sustainability"
                   className="service-card-compact card-4 wow fadeInUp"
                   data-wow-delay="0.4s"
                   style={{ textDecoration: 'none', display: 'block' }}
@@ -458,7 +458,7 @@ const Services = memo(function Services({ removeTopPadding = false }) {
 
               <div className="col-lg-4 col-md-6 col-sm-12 service-row-bottom">
                 <Link
-                  to="/innerpages/smart-building-technologies"
+                  to="/smart-building-technologies"
                   className="service-card-compact card-5 wow fadeInUp"
                   data-wow-delay="0.5s"
                   style={{ textDecoration: 'none', display: 'block' }}
@@ -488,7 +488,7 @@ const Services = memo(function Services({ removeTopPadding = false }) {
 
           <div className="text-center services-cta-wrapper">
             <Link
-              to="/innerpages/contact"
+              to="/contact"
               className="butn rounded-pill text-white services-cta-btn"
               style={{ backgroundColor: '#73bf44' }}
             >

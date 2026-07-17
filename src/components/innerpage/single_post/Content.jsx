@@ -100,7 +100,7 @@ function RelatedPosts({ currentBlog, blogs }) {
                     <div className="post-card">
                 <div
                         className="img th-280 radius-7 overflow-hidden d-block"
-                  onClick={() => navigate(`/innerpages/blog/${item.slug}`, { state: { blog: item } })}
+                  onClick={() => navigate(`/blog/${item.slug}`, { state: { blog: item } })}
                   style={{ cursor: 'pointer' }}
                       >
                         <img
@@ -127,7 +127,7 @@ function RelatedPosts({ currentBlog, blogs }) {
                       type="button"
                       className="hover-green1 fsz-24"
                       onClick={() => {
-                        navigate(`/innerpages/blog/${item.slug}`, { state: { blog: item } });
+                        navigate(`/blog/${item.slug}`, { state: { blog: item } });
                       }}
                       style={{ color: 'inherit', background: 'none', border: 'none', padding: 0, cursor: 'pointer', textAlign: 'left', width: '100%' }}
                     >

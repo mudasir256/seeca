@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Home from './pages';
 import Home1 from './pages/home1';
 import Home1RTL from './pages/home1-rtl';
@@ -30,6 +30,12 @@ import ScrollToTop from './components/common/ScrollToTop';
 import ChatBot from './components/common/ChatBot';
 import ImageProtection from './components/common/ImageProtection';
 import SeoManager from './components/common/SeoManager';
+
+function InnerpagesRedirect() {
+  const location = useLocation();
+  const newPath = location.pathname.replace(/^\/innerpages/, '') || '/';
+  return <Navigate to={`${newPath}${location.search}${location.hash}`} replace />;
+}
 
 function WhatsAppFloat() {
   return (
@@ -105,27 +111,29 @@ function App() {
         <Route path="/home6_furniture" element={<Home6 />} />
         <Route path="/home7_landscape" element={<Home7 />} />
         <Route path="/home8_portfolio" element={<Home8 />} />
-        <Route path="/innerpages/about" element={<AboutPage />} />
-        <Route path="/innerpages/blog" element={<BlogPage />} />
-        <Route path="/innerpages/blog/:slug" element={<SinglePost />} />
-        <Route path="/innerpages/contact" element={<ContactPage />} />
-        <Route path="/innerpages/portfolio" element={<PortfolioPage />} />
-        <Route path="/innerpages/services" element={<ServicesPage />} />
-        <Route path="/innerpages/architecture" element={<ArchitecturePage />} />
-        <Route path="/innerpages/interior-design" element={<InteriorDesignPage />} />
-        <Route path="/innerpages/construction" element={<ConstructionPage />} />
-        <Route path="/innerpages/building-sustainability" element={<BuildingSustainabilityPage />} />
-        <Route path="/innerpages/smart-building-technologies" element={<SmartBuildingTechnologiesPage />} />
-        <Route path="/innerpages/our-process" element={<OurProcessPage />} />
-        <Route path="/innerpages/partners" element={<PartnersPage />} />
-        <Route path="/innerpages/career/internship" element={<ApplyInternshipPage />} />
-        <Route path="/innerpages/career/job" element={<ApplyJobPage />} />
-        <Route path="/innerpages/single_post" element={<SinglePost />} />
-        <Route path="/innerpages/single_project" element={<SingleProject />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:slug" element={<SinglePost />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/portfolio" element={<PortfolioPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/architecture" element={<ArchitecturePage />} />
+        <Route path="/interior-design" element={<InteriorDesignPage />} />
+        <Route path="/construction" element={<ConstructionPage />} />
+        <Route path="/building-sustainability" element={<BuildingSustainabilityPage />} />
+        <Route path="/smart-building-technologies" element={<SmartBuildingTechnologiesPage />} />
+        <Route path="/our-process" element={<OurProcessPage />} />
+        <Route path="/partners" element={<PartnersPage />} />
+        <Route path="/career/internship" element={<ApplyInternshipPage />} />
+        <Route path="/career/job" element={<ApplyJobPage />} />
+        <Route path="/single_post" element={<SinglePost />} />
+        <Route path="/single_project" element={<SingleProject />} />
         <Route
-          path="/innerpages/single_project2"
+          path="/single_project2"
           element={<SingleProject2 />}
         />
+        {/* Redirect old /innerpages/* URLs */}
+        <Route path="/innerpages/*" element={<InnerpagesRedirect />} />
       </Routes>
     </Router>
   );

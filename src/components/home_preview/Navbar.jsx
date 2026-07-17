@@ -245,17 +245,17 @@ function Navbar() {
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <Link className="dropdown-item" to="/innerpages/about">
+                  <Link className="dropdown-item" to="/about">
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/innerpages/our-process">
+                  <Link className="dropdown-item" to="/our-process">
                     Our Process
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/innerpages/partners">
+                  <Link className="dropdown-item" to="/partners">
                     Our Partners
                   </Link>
                 </li>
@@ -274,34 +274,34 @@ function Navbar() {
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <Link className="dropdown-item" to="/innerpages/architecture">
+                  <Link className="dropdown-item" to="/architecture">
                     Architecture
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/innerpages/interior-design">
+                  <Link className="dropdown-item" to="/interior-design">
                     Interior Design
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/innerpages/construction">
+                  <Link className="dropdown-item" to="/construction">
                     Construction
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/innerpages/building-sustainability">
+                  <Link className="dropdown-item" to="/building-sustainability">
                     Building Sustainability
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/innerpages/smart-building-technologies">
+                  <Link className="dropdown-item" to="/smart-building-technologies">
                     Smart Building Technologies
                   </Link>
                 </li>
               </ul>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/innerpages/portfolio">
+              <Link className="nav-link" to="/portfolio">
                 PORTFOLIO
               </Link>
             </li>
@@ -318,26 +318,26 @@ function Navbar() {
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <Link className="dropdown-item" to="/innerpages/career/internship">
+                  <Link className="dropdown-item" to="/career/internship">
                     Apply Internship
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/innerpages/career/job">
+                  <Link className="dropdown-item" to="/career/job">
                     Apply Job
                   </Link>
                 </li>
               </ul>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/innerpages/blog">
+              <Link className="nav-link" to="/blog">
                 BLOGS
               </Link>
             </li>
           </ul>
           <div className="nav-side">
             <a
-              href="/innerpages/contact"
+              href="/contact"
               className="butn hover-bg-black text-capitalize  rounded-pill text-white"
               style={{ backgroundColor: '#73bf44' }}
             >
