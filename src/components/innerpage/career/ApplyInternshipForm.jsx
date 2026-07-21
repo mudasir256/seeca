@@ -72,7 +72,7 @@ function ApplyInternshipForm() {
       resumeUrlRef.current.value = resumeUrl;
       formRef.current.elements.coverLetter.value = [
         formData.coverLetter,
-        `Resume (available for 7 days): ${resumeUrl}`,
+        `Click here to get Resume: ${resumeUrl}`,
       ]
         .filter(Boolean)
         .join('\n\n');
