@@ -5,9 +5,15 @@ import {
   EMAILJS_SERVICE_ID,
   EMAILJS_JOB_TEMPLATE_ID,
 } from '../../../config/emailjs';
+import { uploadResume } from '../../../lib/resumeUpload';
+
+const MAX_RESUME_SIZE = 5 * 1024 * 1024;
+const RESUME_EXTENSIONS = /\.(pdf|doc|docx)$/i;
 
 function ApplyJobForm() {
   const formRef = useRef();
+  const resumeInputRef = useRef();
+  const resumeUrlRef = useRef();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -30,9 +36,26 @@ function ApplyJobForm() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setErrorMsg('');
+
+    const resume = resumeInputRef.current?.files?.[0];
+    if (!resume) {
+      setStatus('error');
+      setErrorMsg('Please upload your resume.');
+      return;
+    }
+    if (!RESUME_EXTENSIONS.test(resume.name)) {
+      setStatus('error');
+      setErrorMsg('Resume must be a PDF, DOC, or DOCX file.');
+      return;
+    }
+    if (resume.size > MAX_RESUME_SIZE) {
+      setStatus('error');
+      setErrorMsg('Resume must be 5 MB or smaller.');
+      return;
+    }
 
     if (!EMAILJS_SERVICE_ID || !EMAILJS_JOB_TEMPLATE_ID) {
       setStatus('error');
@@ -42,28 +65,36 @@ function ApplyJobForm() {
 
     setStatus('sending');
 
-    emailjs
-      .sendForm(
+    try {
+      const resumeUrl = await uploadResume(resume, 'jobs');
+      resumeUrlRef.current.value = resumeUrl;
+      formRef.current.elements.coverLetter.value = [
+        formData.coverLetter,
+        `Resume (available for 7 days): ${resumeUrl}`,
+      ]
+        .filter(Boolean)
+        .join('\n\n');
+
+      await emailjs.sendForm(
         EMAILJS_SERVICE_ID,
         EMAILJS_JOB_TEMPLATE_ID,
         formRef.current
-      )
-      .then(() => {
-        setStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          position: '',
-          experience: '',
-          coverLetter: '',
-        });
-        if (formRef.current) formRef.current.reset();
-      })
-      .catch((err) => {
-        setStatus('error');
-        setErrorMsg(err?.text || 'Something went wrong. Please try again.');
+      );
+
+      setStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        position: '',
+        experience: '',
+        coverLetter: '',
       });
+      if (formRef.current) formRef.current.reset();
+    } catch (err) {
+      setStatus('error');
+      setErrorMsg(err?.text || err?.message || 'Something went wrong. Please try again.');
+    }
   };
 
   const formStyles = `
@@ -148,6 +179,34 @@ function ApplyJobForm() {
       resize: vertical;
       font-family: inherit;
     }
+    .tc-career-form-section .file-label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .tc-career-form-section input[type="file"].form-control {
+      padding: 12px;
+      cursor: pointer;
+    }
+    .tc-career-form-section input[type="file"].form-control::file-selector-button {
+      padding: 9px 16px;
+      margin-right: 14px;
+      border: 0;
+      border-radius: 7px;
+      background: #73bf44;
+      color: #fff;
+      font-family: inherit;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .tc-career-form-section .file-help {
+      display: block;
+      margin-top: 7px;
+      color: #777;
+      font-size: 12px;
+    }
     .tc-career-form-section .submit-wrap {
       text-align: center;
       margin-top: 32px;
@@ -214,7 +273,7 @@ function ApplyJobForm() {
         <div className="form-card">
           <h2>Apply for Job</h2>
           <p className="form-subtitle">Join our team — fill in your details below.</p>
-          <form ref={formRef} onSubmit={handleSubmit}>
+          <form ref={formRef} onSubmit={handleSubmit} encType="multipart/form-data">
             <div className="form-row">
               <div className="form-group">
                 <input
@@ -286,6 +345,23 @@ function ApplyJobForm() {
                 />
               </div>
             </div>
+            <div className="form-row-full">
+              <div className="form-group">
+                <label className="file-label" htmlFor="job-resume">
+                  Upload resume *
+                </label>
+                <input
+                  id="job-resume"
+                  type="file"
+                  ref={resumeInputRef}
+                  className="form-control"
+                  accept=".pdf,.doc,.docx"
+                  required
+                />
+                <small className="file-help">PDF, DOC, or DOCX — maximum 5 MB</small>
+              </div>
+            </div>
+            <input ref={resumeUrlRef} type="hidden" name="resume_url" />
             <div className="submit-wrap">
               <button type="submit" className="submit-btn" disabled={status === 'sending'}>
                 {status === 'sending' ? 'Sending...' : 'Submit Application'}
