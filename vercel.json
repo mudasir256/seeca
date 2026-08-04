@@ -1,0 +1,9 @@
+{
+  "build": {
+    "env": {
+      "PUPPETEER_SKIP_DOWNLOAD": "1",
+      "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD": "1",
+      "SKIP_REACT_SNAP": "1"
+    }
+  }
+}
