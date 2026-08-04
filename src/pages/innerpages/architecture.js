@@ -20,7 +20,7 @@ function ArchitecturePage() {
       fixedElements={<><Menu /><Navbar /></>}
     >
       <Header
-        title="Architecture"
+        title="Architecture Services in Lahore"
         description="Creating innovative architectural solutions that blend functionality with aesthetic excellence"
         backgroundImage="/home_preview/assets/img/Architecture_Deisgn/5932.Mr.RafiullahKhan(1.2KanalArch.)-Bhakkar/View-66.jpg"
       />

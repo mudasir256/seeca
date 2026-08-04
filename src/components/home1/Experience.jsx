@@ -297,7 +297,7 @@ function Experience() {
           </div>
           <div className="col-12 col-md-12 col-lg-3 info-col">
             <div className="info wow fadeInUp" data-wow-delay="0.3s">
-              <h3 className="fsz-45 fw-600 mb-30"> Est. 2018 </h3>
+              <h3 className="fsz-45 fw-600 mb-30"> Est. 2017 </h3>
               <div className="text fsz-15 color-666">
               SEECA (SEE Consultants & Architects) is a multidisciplinary design firm in Lahore delivering premium architectural and interior design services. Our architects and interior designers handle commercial, institutional, residential, and corporate office projects, including malls, spaces, schools, colleges, homes, apartments, farmhouses, and workplaces.
               </div>

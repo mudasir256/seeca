@@ -21,7 +21,7 @@ function ServicesPage() {
       fixedElements={<><Menu /><Navbar /></>}
     >
       <Header
-        title="Our Services"
+        title="Architecture, Interior Design & Construction Services in Lahore"
         description="We provide comprehensive architecture and design services to bring your vision to life"
         backgroundImage="/home_preview/assets/img/cad-inner-banner-3.jpg"
       />

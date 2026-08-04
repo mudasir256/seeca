@@ -1,6 +1,23 @@
 User-agent: *
 Allow: /
+
+# Demo / theme routes — do not index
+Disallow: /home-preview
+Disallow: /home1
+Disallow: /home1-rtl
+Disallow: /home2
+Disallow: /home3_construction
+Disallow: /home4_personal_architect
+Disallow: /home5_residence
+Disallow: /home6_furniture
+Disallow: /home7_landscape
+Disallow: /home8_portfolio
+Disallow: /single_project
+Disallow: /single_project2
+Disallow: /single_post
+
+# Application forms
 Disallow: /career/internship
 Disallow: /career/job
 
-Sitemap: https://your-domain.com/sitemap.xml
+Sitemap: https://www.seeca.pk/sitemap.xml

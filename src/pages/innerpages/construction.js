@@ -20,7 +20,7 @@ function ConstructionPage() {
       fixedElements={<><Menu /><Navbar /></>}
     >
       <Header
-        title="Construction"
+        title="Construction Services in Lahore"
         description="Delivering high-quality construction services with precision, safety, and excellence"
         backgroundImage="/home_preview/assets/img/Architecture_Deisgn/5880.FahadResidence-Lahore/LightTest-1(1).jpg"
       />

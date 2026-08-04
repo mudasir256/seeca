@@ -20,6 +20,7 @@ function ApplyJobForm() {
     phone: '',
     position: '',
     experience: '',
+    portfolio: '',
     coverLetter: '',
   });
   const [status, setStatus] = useState('idle');
@@ -70,6 +71,7 @@ function ApplyJobForm() {
       resumeUrlRef.current.value = resumeUrl;
       formRef.current.elements.coverLetter.value = [
         formData.coverLetter,
+        formData.portfolio ? `Portfolio link: ${formData.portfolio}` : '',
         `Click here to get Resume:: ${resumeUrl}`,
       ]
         .filter(Boolean)
@@ -88,6 +90,7 @@ function ApplyJobForm() {
         phone: '',
         position: '',
         experience: '',
+        portfolio: '',
         coverLetter: '',
       });
       if (formRef.current) formRef.current.reset();
@@ -330,6 +333,18 @@ function ApplyJobForm() {
                   className="form-control"
                   placeholder="Years of experience (e.g. 2 years, 5+ years)"
                   value={formData.experience}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+            <div className="form-row-full">
+              <div className="form-group">
+                <input
+                  type="text"
+                  name="portfolio"
+                  className="form-control"
+                  placeholder="Paste your portfolio link"
+                  value={formData.portfolio}
                   onChange={handleChange}
                 />
               </div>

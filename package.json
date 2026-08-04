@@ -20,8 +20,34 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "node scripts/postbuild-snap.js",
+    "optimize-images": "node scripts/optimize-images.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "reactSnap": {
+    "include": [
+      "/",
+      "/about",
+      "/blog",
+      "/contact",
+      "/portfolio",
+      "/services",
+      "/architecture",
+      "/interior-design",
+      "/construction",
+      "/building-sustainability",
+      "/smart-building-technologies",
+      "/our-process",
+      "/partners"
+    ],
+    "skipThirdPartyRequests": true,
+    "crawl": false,
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -43,5 +69,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "fast-glob": "^3.3.3",
+    "react-snap": "^1.23.0",
+    "sharp": "^0.35.3"
   }
 }

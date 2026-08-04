@@ -20,7 +20,7 @@ function InteriorDesignPage() {
       fixedElements={<><Menu /><Navbar /></>}
     >
       <Header
-        title="Interior Design"
+        title="Interior Design Services in Lahore"
         description="Transforming spaces into beautiful, functional environments that reflect your style and needs"
         backgroundImage="/home_preview/assets/img/CAM01.jpg"
       />
