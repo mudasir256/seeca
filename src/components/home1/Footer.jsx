@@ -507,6 +507,10 @@ function Footer() {
                       <div className="sub-office-address">
                         Plaza 138, First Floor, Wallayat Complex, Phase 7, Bahria Town, Islamabad.
                       </div>
+                      <span className="office-subtitle">Jhelum Office Address</span>
+                      <div className="sub-office-address">
+                        C block, Bashir Tower, Citi housing, Jhelum, Pakistan.
+                      </div>
                     </div>
                   </div>
                   <div className="contact-item">
