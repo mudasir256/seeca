@@ -137,7 +137,7 @@ function FilterPosts() {
           </div>
         </div>
         <div className="posts-content">
-          <div className="row mixitup">
+          <div className="row">
             {visiblePosts.map((item, i) => (
               <div key={item.id || i} className={`col-lg-4 mix-item BlogCategory-${item.categoryId}`}>
                 <div
