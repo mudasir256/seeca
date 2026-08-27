@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { snapshot, useSnapshotFor } from '../lib/cmsFallback';
 import { getPublicImageUrl, supabase } from '../lib/supabase';
 
 function asRelation(value) {
@@ -13,14 +14,15 @@ function asList(value) {
 }
 
 export default function usePortfolio() {
-  const [categories, setCategories] = useState([]);
-  const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [categories, setCategories] = useState(snapshot.portfolioCategories);
+  const [projects, setProjects] = useState(snapshot.projects);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     let active = true;
 
     async function loadPortfolio() {
+      try {
       const [categoriesResult, projectsResult] = await Promise.all([
         supabase
           .from('portfolio_categories')
@@ -39,14 +41,23 @@ export default function usePortfolio() {
 
       if (!active) return;
 
+      if (useSnapshotFor(categoriesResult) || useSnapshotFor(projectsResult)) {
+        setCategories(snapshot.portfolioCategories);
+        setProjects(snapshot.projects);
+        setLoading(false);
+        return;
+      }
+
       if (categoriesResult.error) {
         console.error('Could not load portfolio categories:', categoriesResult.error.message);
+        setCategories(snapshot.portfolioCategories);
       } else {
         setCategories(categoriesResult.data || []);
       }
 
       if (projectsResult.error) {
         console.error('Could not load portfolio projects:', projectsResult.error.message);
+        setProjects(snapshot.projects);
         setLoading(false);
         return;
       }
@@ -82,6 +93,13 @@ export default function usePortfolio() {
         }),
       );
       setLoading(false);
+      } catch (error) {
+        if (!active) return;
+        console.error('Could not load portfolio projects:', error);
+        setCategories(snapshot.portfolioCategories);
+        setProjects(snapshot.projects);
+        setLoading(false);
+      }
     }
 
     loadPortfolio();

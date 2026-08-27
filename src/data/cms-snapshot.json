@@ -1,0 +1,2326 @@
+{
+  "portfolioCategories": [
+    {
+      "id": "392942fd-0206-4106-b139-a98b94804e07",
+      "name": "Architecture",
+      "created_at": "2026-07-14 21:44:28.66785+00"
+    },
+    {
+      "id": "a44856e5-a050-4404-a66f-ae78992bb6a1",
+      "name": "Commercial",
+      "created_at": "2026-07-14 21:41:04.963615+00"
+    },
+    {
+      "id": "20510a8a-21db-4086-a33c-d1041e3a2bc3",
+      "name": "Fitness",
+      "created_at": "2026-07-14 22:01:56.849764+00"
+    },
+    {
+      "id": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
+      "name": "Interior Design",
+      "created_at": "2026-07-14 21:39:22.082016+00"
+    },
+    {
+      "id": "107aa9fb-f253-4043-a339-0f5d0f2b4b10",
+      "name": "Office",
+      "created_at": "2026-07-14 21:38:25.702354+00"
+    },
+    {
+      "id": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "name": "Residential",
+      "created_at": "2026-07-14 21:40:40.547234+00"
+    },
+    {
+      "id": "b2b00105-badf-4f18-aa4e-b1d9994bd89f",
+      "name": "Restaurant",
+      "created_at": "2026-07-14 21:40:11.625768+00"
+    }
+  ],
+  "projects": [
+    {
+      "id": "53b25296-3f70-480f-9201-114e7899fe4d",
+      "title": "Cravings (4th Branch ID) – Gulshan, Multan",
+      "sub1": "Interior Design",
+      "sub2": "Commercial",
+      "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+      "img": "/home_preview/assets/img/Interior_Design/5996.Cravings(4thBranchID)-Gulshan,Multan/5996.(1).jpg",
+      "client": "Client",
+      "location": "Gulshan, Multan",
+      "area": "N/A",
+      "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5996.Cravings(4thBranchID)-Gulshan,Multan/5996.(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5996.Cravings(4thBranchID)-Gulshan,Multan/5996.(2).jpg",
+        "/home_preview/assets/img/Interior_Design/5996.Cravings(4thBranchID)-Gulshan,Multan/5996.(3).jpg",
+        "/home_preview/assets/img/Interior_Design/5996.Cravings(4thBranchID)-Gulshan,Multan/CAM01.jpg",
+        "/home_preview/assets/img/Interior_Design/5996.Cravings(4thBranchID)-Gulshan,Multan/CAM02.jpg",
+        "/home_preview/assets/img/Interior_Design/5996.Cravings(4thBranchID)-Gulshan,Multan/CAM02.2.jpg"
+      ],
+      "challenges": [
+        "Designing a functional and aesthetically pleasing interior design space",
+        "Balancing modern design trends with practical functionality",
+        "Creating an environment that reflects the brand identity"
+      ],
+      "solutions": [
+        "Conducted thorough space analysis to optimize layout and flow",
+        "Selected materials and finishes that combine durability with visual appeal",
+        "Integrated brand elements seamlessly into the overall design concept"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "c2068eaf-e1ed-4978-9644-d3adb9bb115e",
+      "title": "Mr. Faraz Ali (1 Kanal ID) – Bahria Town, Lahore",
+      "sub1": "Residential",
+      "sub2": "Interior Design",
+      "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+      "img": "/home_preview/assets/img/Interior_Design/5987.Mr.FarazAli(1KanalID)-BahriaTown,Lahore/Atrium/5987.AtriumV1.jpg",
+      "client": "Client",
+      "location": "Bahria Town, Lahore",
+      "area": "1 Kanal",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5987.Mr.FarazAli(1KanalID)-BahriaTown,Lahore/Atrium/5987.AtriumV1.jpg",
+        "/home_preview/assets/img/Interior_Design/5987.Mr.FarazAli(1KanalID)-BahriaTown,Lahore/Atrium/CAM01.jpg",
+        "/home_preview/assets/img/Interior_Design/5987.Mr.FarazAli(1KanalID)-BahriaTown,Lahore/BED01/CAM01.jpg",
+        "/home_preview/assets/img/Interior_Design/5987.Mr.FarazAli(1KanalID)-BahriaTown,Lahore/BED01/CAM02.jpg",
+        "/home_preview/assets/img/Interior_Design/5987.Mr.FarazAli(1KanalID)-BahriaTown,Lahore/BED01/CAM03.jpg",
+        "/home_preview/assets/img/Interior_Design/5987.Mr.FarazAli(1KanalID)-BahriaTown,Lahore/BED01/CAM04.jpg",
+        "/home_preview/assets/img/Interior_Design/5987.Mr.FarazAli(1KanalID)-BahriaTown,Lahore/DRAWING&DINING/CAM03.jpg",
+        "/home_preview/assets/img/Interior_Design/5987.Mr.FarazAli(1KanalID)-BahriaTown,Lahore/DRAWING&DINING/CAM04.jpg",
+        "/home_preview/assets/img/Interior_Design/5987.Mr.FarazAli(1KanalID)-BahriaTown,Lahore/AhmedBed/A1(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5987.Mr.FarazAli(1KanalID)-BahriaTown,Lahore/AhmedBed/A2(2).jpg",
+        "/home_preview/assets/img/Interior_Design/5987.Mr.FarazAli(1KanalID)-BahriaTown,Lahore/AhmedBed/A3(2).jpg",
+        "/home_preview/assets/img/Interior_Design/5987.Mr.FarazAli(1KanalID)-BahriaTown,Lahore/AhmedBed/A4(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5987.Mr.FarazAli(1KanalID)-BahriaTown,Lahore/AhmedBed/A5(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5987.Mr.FarazAli(1KanalID)-BahriaTown,Lahore/AhmedBed/A6.jpg",
+        "/home_preview/assets/img/Interior_Design/5987.Mr.FarazAli(1KanalID)-BahriaTown,Lahore/AhmedBed/AhmedBath(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5987.Mr.FarazAli(1KanalID)-BahriaTown,Lahore/AhmedBed/AhmedBath(2).jpg",
+        "/home_preview/assets/img/Interior_Design/5987.Mr.FarazAli(1KanalID)-BahriaTown,Lahore/AhmedBed/AhmedBath(3).jpg",
+        "/home_preview/assets/img/Interior_Design/5987.Mr.FarazAli(1KanalID)-BahriaTown,Lahore/AhmedBed/AhmedBath(4).jpg"
+      ],
+      "challenges": [
+        "Transforming residential spaces to reflect client personality and lifestyle",
+        "Maximizing functionality while maintaining aesthetic appeal",
+        "Selecting appropriate materials and finishes for residential use"
+      ],
+      "solutions": [
+        "Conducted in-depth consultations to understand client preferences and daily routines",
+        "Designed custom solutions for storage, lighting, and spatial flow",
+        "Selected durable, family-friendly materials that maintain their appearance over time"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "b727a097-6d65-4904-84a9-7d0a519f775b",
+      "title": "Mr. Naeem Khan (Apartments ID) – Jutial, Gilgit",
+      "sub1": "Residential",
+      "sub2": "Interior Design",
+      "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+      "img": "/home_preview/assets/img/Interior_Design/5985.Mr.NaeemKhan(ApartmentsID)-Jutial,Gilgit/BED2,4,6,8(1).jpg",
+      "client": "Client",
+      "location": "Jutial, Gilgit",
+      "area": "N/A",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5985.Mr.NaeemKhan(ApartmentsID)-Jutial,Gilgit/BED2,4,6,8(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5985.Mr.NaeemKhan(ApartmentsID)-Jutial,Gilgit/BED2,4,6,8(3).jpg",
+        "/home_preview/assets/img/Interior_Design/5985.Mr.NaeemKhan(ApartmentsID)-Jutial,Gilgit/BED2,4,6,8(4).jpg",
+        "/home_preview/assets/img/Interior_Design/5985.Mr.NaeemKhan(ApartmentsID)-Jutial,Gilgit/BED9,10,11(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5985.Mr.NaeemKhan(ApartmentsID)-Jutial,Gilgit/BED9,10,11(2).jpg",
+        "/home_preview/assets/img/Interior_Design/5985.Mr.NaeemKhan(ApartmentsID)-Jutial,Gilgit/BED9,10,11(3).jpg",
+        "/home_preview/assets/img/Interior_Design/5985.Mr.NaeemKhan(ApartmentsID)-Jutial,Gilgit/BED9,10,11(4).jpg"
+      ],
+      "challenges": [
+        "Transforming residential spaces to reflect client personality and lifestyle",
+        "Maximizing functionality while maintaining aesthetic appeal",
+        "Selecting appropriate materials and finishes for residential use"
+      ],
+      "solutions": [
+        "Conducted in-depth consultations to understand client preferences and daily routines",
+        "Designed custom solutions for storage, lighting, and spatial flow",
+        "Selected durable, family-friendly materials that maintain their appearance over time"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "67cdd65d-e594-45d5-a5ea-5e736c5dea8c",
+      "title": "Ch Nouman Latif (Marquee Design) – GA Family, Sialkot",
+      "sub1": "Interior Design",
+      "sub2": "Commercial",
+      "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+      "img": "/home_preview/assets/img/Interior_Design/5967.ChNoumanLatif(MarqueeDesign)-GAFamily,Sialkot/CAM01.jpg",
+      "client": "Client",
+      "location": "GA Family, Sialkot",
+      "area": "N/A",
+      "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5967.ChNoumanLatif(MarqueeDesign)-GAFamily,Sialkot/CAM01.jpg",
+        "/home_preview/assets/img/Interior_Design/5967.ChNoumanLatif(MarqueeDesign)-GAFamily,Sialkot/CAM02.jpg",
+        "/home_preview/assets/img/Interior_Design/5967.ChNoumanLatif(MarqueeDesign)-GAFamily,Sialkot/CAM03.jpg",
+        "/home_preview/assets/img/Interior_Design/5967.ChNoumanLatif(MarqueeDesign)-GAFamily,Sialkot/CAM04.jpg"
+      ],
+      "challenges": [
+        "Designing a functional and aesthetically pleasing interior design space",
+        "Balancing modern design trends with practical functionality",
+        "Creating an environment that reflects the brand identity"
+      ],
+      "solutions": [
+        "Conducted thorough space analysis to optimize layout and flow",
+        "Selected materials and finishes that combine durability with visual appeal",
+        "Integrated brand elements seamlessly into the overall design concept"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "56ccc66b-5202-4d62-ac28-0658d14c6876",
+      "title": "Mr. Usman Pasha (OPT Consulting Pvt Ltd ID) – OPF Society, Lahore",
+      "sub1": "Office",
+      "sub2": "Interior Design",
+      "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+      "img": "/home_preview/assets/img/Interior_Design/5952.Mr.UsmanPasha(OPTConsultingPvtLtd-ID)-OPFSociety,Lahore/A1.jpg",
+      "client": "Client",
+      "location": "OPF Society, Lahore",
+      "area": "N/A",
+      "categoryId": "107aa9fb-f253-4043-a339-0f5d0f2b4b10",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5952.Mr.UsmanPasha(OPTConsultingPvtLtd-ID)-OPFSociety,Lahore/A1.jpg",
+        "/home_preview/assets/img/Interior_Design/5952.Mr.UsmanPasha(OPTConsultingPvtLtd-ID)-OPFSociety,Lahore/A2.jpg",
+        "/home_preview/assets/img/Interior_Design/5952.Mr.UsmanPasha(OPTConsultingPvtLtd-ID)-OPFSociety,Lahore/A3.jpg",
+        "/home_preview/assets/img/Interior_Design/5952.Mr.UsmanPasha(OPTConsultingPvtLtd-ID)-OPFSociety,Lahore/A4.jpg",
+        "/home_preview/assets/img/Interior_Design/5952.Mr.UsmanPasha(OPTConsultingPvtLtd-ID)-OPFSociety,Lahore/A5.jpg",
+        "/home_preview/assets/img/Interior_Design/5952.Mr.UsmanPasha(OPTConsultingPvtLtd-ID)-OPFSociety,Lahore/A6.jpg",
+        "/home_preview/assets/img/Interior_Design/5952.Mr.UsmanPasha(OPTConsultingPvtLtd-ID)-OPFSociety,Lahore/A7.jpg",
+        "/home_preview/assets/img/Interior_Design/5952.Mr.UsmanPasha(OPTConsultingPvtLtd-ID)-OPFSociety,Lahore/A9.jpg",
+        "/home_preview/assets/img/Interior_Design/5952.Mr.UsmanPasha(OPTConsultingPvtLtd-ID)-OPFSociety,Lahore/A10.jpg",
+        "/home_preview/assets/img/Interior_Design/5952.Mr.UsmanPasha(OPTConsultingPvtLtd-ID)-OPFSociety,Lahore/A11.jpg",
+        "/home_preview/assets/img/Interior_Design/5952.Mr.UsmanPasha(OPTConsultingPvtLtd-ID)-OPFSociety,Lahore/TestRenders(2).jpg"
+      ],
+      "challenges": [
+        "Designing a functional and aesthetically pleasing office space",
+        "Balancing modern design trends with practical functionality",
+        "Creating an environment that reflects the brand identity"
+      ],
+      "solutions": [
+        "Conducted thorough space analysis to optimize layout and flow",
+        "Selected materials and finishes that combine durability with visual appeal",
+        "Integrated brand elements seamlessly into the overall design concept"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "e90e47c8-8a3a-475b-a7bf-0f0e470dbefd",
+      "title": "Mr. Saad Hamayun (Cravings Bakeshop ID) – Multan",
+      "sub1": "Interior Design",
+      "sub2": "Commercial",
+      "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+      "img": "/home_preview/assets/img/Interior_Design/5950.Mr.SaadHamayun(Cravingsbakeshop-ID)-Multan/A1.jpg",
+      "client": "Client",
+      "location": "Multan",
+      "area": "N/A",
+      "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5950.Mr.SaadHamayun(Cravingsbakeshop-ID)-Multan/A1.jpg",
+        "/home_preview/assets/img/Interior_Design/5950.Mr.SaadHamayun(Cravingsbakeshop-ID)-Multan/A2.jpg",
+        "/home_preview/assets/img/Interior_Design/5950.Mr.SaadHamayun(Cravingsbakeshop-ID)-Multan/A3.jpg",
+        "/home_preview/assets/img/Interior_Design/5950.Mr.SaadHamayun(Cravingsbakeshop-ID)-Multan/A4.jpg",
+        "/home_preview/assets/img/Interior_Design/5950.Mr.SaadHamayun(Cravingsbakeshop-ID)-Multan/A5.jpg",
+        "/home_preview/assets/img/Interior_Design/5950.Mr.SaadHamayun(Cravingsbakeshop-ID)-Multan/A6.jpg",
+        "/home_preview/assets/img/Interior_Design/5950.Mr.SaadHamayun(Cravingsbakeshop-ID)-Multan/A7.jpg",
+        "/home_preview/assets/img/Interior_Design/5950.Mr.SaadHamayun(Cravingsbakeshop-ID)-Multan/A8.jpg",
+        "/home_preview/assets/img/Interior_Design/5950.Mr.SaadHamayun(Cravingsbakeshop-ID)-Multan/A9.jpg"
+      ],
+      "challenges": [
+        "Designing a functional and aesthetically pleasing interior design space",
+        "Balancing modern design trends with practical functionality",
+        "Creating an environment that reflects the brand identity"
+      ],
+      "solutions": [
+        "Conducted thorough space analysis to optimize layout and flow",
+        "Selected materials and finishes that combine durability with visual appeal",
+        "Integrated brand elements seamlessly into the overall design concept"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "f76f0cff-e5be-4581-b69e-085d544a80c4",
+      "title": "Mr. Naeem Khan (Rest ID) – Jutial, Gilgit",
+      "sub1": "Restaurant",
+      "sub2": "Interior Design",
+      "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+      "img": "/home_preview/assets/img/Interior_Design/5940.Mr.NaeemKhan(RestID)-Jutial,Gilgit/A1.1.jpg",
+      "client": "Client",
+      "location": "Jutial, Gilgit",
+      "area": "N/A",
+      "categoryId": "b2b00105-badf-4f18-aa4e-b1d9994bd89f",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5940.Mr.NaeemKhan(RestID)-Jutial,Gilgit/A1.1.jpg",
+        "/home_preview/assets/img/Interior_Design/5940.Mr.NaeemKhan(RestID)-Jutial,Gilgit/A11.jpg",
+        "/home_preview/assets/img/Interior_Design/5940.Mr.NaeemKhan(RestID)-Jutial,Gilgit/A12.jpg",
+        "/home_preview/assets/img/Interior_Design/5940.Mr.NaeemKhan(RestID)-Jutial,Gilgit/A3.3.jpg",
+        "/home_preview/assets/img/Interior_Design/5940.Mr.NaeemKhan(RestID)-Jutial,Gilgit/A4.4.jpg",
+        "/home_preview/assets/img/Interior_Design/5940.Mr.NaeemKhan(RestID)-Jutial,Gilgit/A5.5.jpg",
+        "/home_preview/assets/img/Interior_Design/5940.Mr.NaeemKhan(RestID)-Jutial,Gilgit/A6.6.jpg",
+        "/home_preview/assets/img/Interior_Design/5940.Mr.NaeemKhan(RestID)-Jutial,Gilgit/A7.7.jpg",
+        "/home_preview/assets/img/Interior_Design/5940.Mr.NaeemKhan(RestID)-Jutial,Gilgit/A8.8.jpg",
+        "/home_preview/assets/img/Interior_Design/5940.Mr.NaeemKhan(RestID)-Jutial,Gilgit/A9.9.jpg"
+      ],
+      "challenges": [
+        "Designing a restaurant space that meets hospitality standards",
+        "Creating an inviting dining experience",
+        "Balancing aesthetics with functionality"
+      ],
+      "solutions": [
+        "Developed a design concept that reflects contemporary hospitality trends",
+        "Implemented materials and finishes to create a premium dining atmosphere",
+        "Designed flexible spaces for various dining occasions"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "773f8068-7c05-4955-b4e7-0e0e39a9766b",
+      "title": "Mr. Hamza Jalal (1.4 Kanal Arch. G+1) – Jalal Villas, Canal Road Lahore",
+      "sub1": "Residential",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5978.Mr.HamzaJalal(1.4KanalArch.G+1)JalalVillas,CanalRoadLahore/CAM01.jpg",
+      "client": "Client",
+      "location": "Canal Road, Lahore",
+      "area": "1.4 Kanal",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5978.Mr.HamzaJalal(1.4KanalArch.G+1)JalalVillas,CanalRoadLahore/CAM01.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5978.Mr.HamzaJalal(1.4KanalArch.G+1)JalalVillas,CanalRoadLahore/CAM02.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5978.Mr.HamzaJalal(1.4KanalArch.G+1)JalalVillas,CanalRoadLahore/CAM03.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5978.Mr.HamzaJalal(1.4KanalArch.G+1)JalalVillas,CanalRoadLahore/CAM04.jpg"
+      ],
+      "challenges": [
+        "Designing a modern residential structure that meets client lifestyle needs",
+        "Optimizing space utilization while maintaining aesthetic appeal",
+        "Integrating sustainable design principles"
+      ],
+      "solutions": [
+        "Conducted detailed client consultations to understand specific requirements and preferences",
+        "Developed innovative floor plans that maximize natural light and ventilation",
+        "Selected materials and construction methods that balance cost, durability, and aesthetics"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "a4154a84-8cef-4ca0-8eda-1365ded38057",
+      "title": "Ch Nouman Latif (Rest Design) – GA Family, Sialkot",
+      "sub1": "Restaurant",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5962.ChNoumanLatif(RestDesign)-GAFamily,Sialkot/001.jpg",
+      "client": "Client",
+      "location": "GA Family, Sialkot",
+      "area": "N/A",
+      "categoryId": "b2b00105-badf-4f18-aa4e-b1d9994bd89f",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5962.ChNoumanLatif(RestDesign)-GAFamily,Sialkot/001.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5962.ChNoumanLatif(RestDesign)-GAFamily,Sialkot/002.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5962.ChNoumanLatif(RestDesign)-GAFamily,Sialkot/003.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5962.ChNoumanLatif(RestDesign)-GAFamily,Sialkot/004.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5962.ChNoumanLatif(RestDesign)-GAFamily,Sialkot/005.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5962.ChNoumanLatif(RestDesign)-GAFamily,Sialkot/006.jpg"
+      ],
+      "challenges": [
+        "Designing a restaurant space that meets hospitality standards",
+        "Creating an inviting dining experience",
+        "Balancing aesthetics with functionality"
+      ],
+      "solutions": [
+        "Developed a design concept that reflects contemporary hospitality trends",
+        "Implemented materials and finishes to create a premium dining atmosphere",
+        "Designed flexible spaces for various dining occasions"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "6a5ec1ff-93ff-41b4-9260-2c77fd504490",
+      "title": "Mr. Ch. Nouman (Lights & Furniture Showroom E&ID) – Sialkot",
+      "sub1": "Commercial",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5949.Mr.Ch.Nouman(Lights&FurnitureShowroomE&ID)-Sialkot/CAM01.jpg",
+      "client": "Client",
+      "location": "Sialkot",
+      "area": "N/A",
+      "categoryId": "a44856e5-a050-4404-a66f-ae78992bb6a1",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5949.Mr.Ch.Nouman(Lights&FurnitureShowroomE&ID)-Sialkot/CAM01.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5949.Mr.Ch.Nouman(Lights&FurnitureShowroomE&ID)-Sialkot/CAM02.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5949.Mr.Ch.Nouman(Lights&FurnitureShowroomE&ID)-Sialkot/CAM03.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5949.Mr.Ch.Nouman(Lights&FurnitureShowroomE&ID)-Sialkot/CAM04.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5949.Mr.Ch.Nouman(Lights&FurnitureShowroomE&ID)-Sialkot/CAM05.jpg"
+      ],
+      "challenges": [
+        "Designing commercial architecture that supports business operations",
+        "Creating an impressive facade that attracts customers",
+        "Optimizing space for commercial use while maintaining design integrity"
+      ],
+      "solutions": [
+        "Developed functional layouts that support various commercial activities",
+        "Designed striking architectural elements that enhance brand visibility",
+        "Integrated modern building systems for efficiency and sustainability"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "391e9c72-3198-4e64-aa16-249ef2d44f8c",
+      "title": "Mr. Ismail (5.5 Kanal Arch.) – Bhakkar",
+      "sub1": "Residential",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5944.Mr.Ismail(5.5KanalArch.)-Bhakkar/A1.jpg",
+      "client": "Client",
+      "location": "Bhakkar",
+      "area": "5.5 Kanal",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5944.Mr.Ismail(5.5KanalArch.)-Bhakkar/A1.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5944.Mr.Ismail(5.5KanalArch.)-Bhakkar/A2.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5944.Mr.Ismail(5.5KanalArch.)-Bhakkar/A3.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5944.Mr.Ismail(5.5KanalArch.)-Bhakkar/A5.jpg"
+      ],
+      "challenges": [
+        "Designing a modern residential structure that meets client lifestyle needs",
+        "Optimizing space utilization while maintaining aesthetic appeal",
+        "Integrating sustainable design principles"
+      ],
+      "solutions": [
+        "Conducted detailed client consultations to understand specific requirements and preferences",
+        "Developed innovative floor plans that maximize natural light and ventilation",
+        "Selected materials and construction methods that balance cost, durability, and aesthetics"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "cea576c9-0e5d-4091-9824-70f82849a17e",
+      "title": "Mr. Kashif Rasheed (B+G+2 Exterior & ID) – Johar Town, Lahore",
+      "sub1": "Residential",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5939.Mr.KashifRasheed(B+G+2Exterior&ID)-JoharTown,Lahore/5939.View-1.jpg",
+      "client": "Client",
+      "location": "Johar Town, Lahore",
+      "area": "N/A",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5939.Mr.KashifRasheed(B+G+2Exterior&ID)-JoharTown,Lahore/5939.View-1.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5939.Mr.KashifRasheed(B+G+2Exterior&ID)-JoharTown,Lahore/5939.View-2.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5939.Mr.KashifRasheed(B+G+2Exterior&ID)-JoharTown,Lahore/5939.View-3.jpg"
+      ],
+      "challenges": [
+        "Designing a modern residential structure that meets client lifestyle needs",
+        "Optimizing space utilization while maintaining aesthetic appeal",
+        "Integrating sustainable design principles"
+      ],
+      "solutions": [
+        "Conducted detailed client consultations to understand specific requirements and preferences",
+        "Developed innovative floor plans that maximize natural light and ventilation",
+        "Selected materials and construction methods that balance cost, durability, and aesthetics"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "7ace79d9-5d19-4074-8a73-a0457ace2a24",
+      "title": "Mr. Aftab Ali Siddiqui (Goldsheff Arch.) – Sundar Industrial State, Lahore",
+      "sub1": "Commercial",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5934.Mr.AftabAliSiddiqui(Goldsheff(Arch.)SundarIndustrialState,Lahore/CAM01.jpg",
+      "client": "Client",
+      "location": "Sundar Industrial State, Lahore",
+      "area": "N/A",
+      "categoryId": "a44856e5-a050-4404-a66f-ae78992bb6a1",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5934.Mr.AftabAliSiddiqui(Goldsheff(Arch.)SundarIndustrialState,Lahore/CAM01.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5934.Mr.AftabAliSiddiqui(Goldsheff(Arch.)SundarIndustrialState,Lahore/CAM02.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5934.Mr.AftabAliSiddiqui(Goldsheff(Arch.)SundarIndustrialState,Lahore/CAM03.jpg"
+      ],
+      "challenges": [
+        "Designing commercial architecture that supports business operations",
+        "Creating an impressive facade that attracts customers",
+        "Optimizing space for commercial use while maintaining design integrity"
+      ],
+      "solutions": [
+        "Developed functional layouts that support various commercial activities",
+        "Designed striking architectural elements that enhance brand visibility",
+        "Integrated modern building systems for efficiency and sustainability"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "6ffe6f65-417c-4e6e-8a4e-0606b8bd7deb",
+      "title": "Mr. Rafiullah Khan (1.2 Kanal Arch.) – Bhakkar",
+      "sub1": "Residential",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5932.Mr.RafiullahKhan(1.2KanalArch.)-Bhakkar/View-44.jpg",
+      "client": "Client",
+      "location": "Bhakkar",
+      "area": "1.2 Kanal",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5932.Mr.RafiullahKhan(1.2KanalArch.)-Bhakkar/View-44.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5932.Mr.RafiullahKhan(1.2KanalArch.)-Bhakkar/View-55.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5932.Mr.RafiullahKhan(1.2KanalArch.)-Bhakkar/View-66.jpg"
+      ],
+      "challenges": [
+        "Designing a modern residential structure that meets client lifestyle needs",
+        "Optimizing space utilization while maintaining aesthetic appeal",
+        "Integrating sustainable design principles"
+      ],
+      "solutions": [
+        "Conducted detailed client consultations to understand specific requirements and preferences",
+        "Developed innovative floor plans that maximize natural light and ventilation",
+        "Selected materials and construction methods that balance cost, durability, and aesthetics"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "71732620-4d84-43ed-ba55-eb683859d5db",
+      "title": "Mr. Suhail Bin Rashid (B+G+4 Plaza Design) – Peoples Colony, Faisalabad",
+      "sub1": "Commercial",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5920.Mr.SuhailBinRashid(B+G+4PlazaDesign)-PeoplesColony,Faisalabad/5920.veiw1.1.jpg",
+      "client": "Client",
+      "location": "Peoples Colony, Faisalabad",
+      "area": "N/A",
+      "categoryId": "a44856e5-a050-4404-a66f-ae78992bb6a1",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5920.Mr.SuhailBinRashid(B+G+4PlazaDesign)-PeoplesColony,Faisalabad/5920.veiw1.1.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5920.Mr.SuhailBinRashid(B+G+4PlazaDesign)-PeoplesColony,Faisalabad/5920.veiw2.2.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5920.Mr.SuhailBinRashid(B+G+4PlazaDesign)-PeoplesColony,Faisalabad/5920.veiw3.3.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5920.Mr.SuhailBinRashid(B+G+4PlazaDesign)-PeoplesColony,Faisalabad/5920.veiw4.jpg"
+      ],
+      "challenges": [
+        "Designing commercial architecture that supports business operations",
+        "Creating an impressive facade that attracts customers",
+        "Optimizing space for commercial use while maintaining design integrity"
+      ],
+      "solutions": [
+        "Developed functional layouts that support various commercial activities",
+        "Designed striking architectural elements that enhance brand visibility",
+        "Integrated modern building systems for efficiency and sustainability"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "12c75613-b8a6-4a49-ade0-5b71b45903e5",
+      "title": "Mr. Erwin – Apartment Building",
+      "sub1": "Residential",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5918.Mr.Erwin(ApartmentBuilding)/5918.Exterior01.jpg",
+      "client": "Client",
+      "location": "Location",
+      "area": "N/A",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5918.Mr.Erwin(ApartmentBuilding)/5918.Exterior01.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5918.Mr.Erwin(ApartmentBuilding)/5918.Exterior02.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5918.Mr.Erwin(ApartmentBuilding)/5918.Exterior03.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5918.Mr.Erwin(ApartmentBuilding)/5918.Exterior04.jpg"
+      ],
+      "challenges": [
+        "Designing a modern residential structure that meets client lifestyle needs",
+        "Optimizing space utilization while maintaining aesthetic appeal",
+        "Ensuring compliance with local building codes and regulations"
+      ],
+      "solutions": [
+        "Conducted detailed client consultations to understand specific requirements and preferences",
+        "Developed innovative floor plans that maximize natural light and ventilation",
+        "Selected materials and construction methods that balance cost, durability, and aesthetics"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "02769dae-5d50-45c9-b515-f71bc5b4a6cf",
+      "title": "Rafyl Hotel – London, UK",
+      "sub1": "Restaurant",
+      "sub2": "Hospitality",
+      "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+      "img": "/home_preview/assets/img/Interior_Design/5906.RafylHotel-London,UK/View-1(12).jpg",
+      "client": "Client",
+      "location": "London, UK",
+      "area": "N/A",
+      "categoryId": "b2b00105-badf-4f18-aa4e-b1d9994bd89f",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5906.RafylHotel-London,UK/View-1(12).jpg",
+        "/home_preview/assets/img/Interior_Design/5906.RafylHotel-London,UK/View-10.jpg",
+        "/home_preview/assets/img/Interior_Design/5906.RafylHotel-London,UK/View-2(4).jpg",
+        "/home_preview/assets/img/Interior_Design/5906.RafylHotel-London,UK/View-4(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5906.RafylHotel-London,UK/View-5.jpg",
+        "/home_preview/assets/img/Interior_Design/5906.RafylHotel-London,UK/View-6.jpg",
+        "/home_preview/assets/img/Interior_Design/5906.RafylHotel-London,UK/View-7.jpg",
+        "/home_preview/assets/img/Interior_Design/5906.RafylHotel-London,UK/View-9.jpg"
+      ],
+      "challenges": [
+        "Designing a luxury hotel restaurant that meets international hospitality standards",
+        "Creating an elegant dining experience in a competitive London market",
+        "Balancing opulence with comfort and functionality"
+      ],
+      "solutions": [
+        "Developed a sophisticated design concept that reflects contemporary luxury hospitality trends",
+        "Implemented high-quality materials and finishes to create a premium dining atmosphere",
+        "Designed flexible spaces that can accommodate various dining occasions and group sizes"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "62d35696-c4ab-4759-a767-29a403e546b5",
+      "title": "Sheikh Chargha House, Citi Housing, Jhelum",
+      "sub1": "Residential",
+      "sub2": "Interior Design",
+      "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+      "img": "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Autumn/Autumn(1).jpg",
+      "client": "Client",
+      "location": "CitiHousing",
+      "area": "N/A",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Autumn/Autumn(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Autumn/Autumn(2).jpg",
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Autumn/Autumn(3).jpg",
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Autumn/Autumn(4).jpg",
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Autumn/Autumn(5).jpg",
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Spring/Spring(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Spring/Spring(2).jpg",
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Spring/Spring(3).jpg",
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Spring/Spring(4).jpg",
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Spring/Spring(5).jpg",
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Spring/Spring(6).jpg",
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Summer/Summer(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Summer/Summer(2).jpg",
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Summer/Summer(3).jpg",
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Summer/Summer(4).jpg",
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Summer/Summer(5).jpg",
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Summer/Summer(6).jpg",
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Summer/Summer(7).jpg",
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Summer/Summer(8).jpg",
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Winter/Winter(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Winter/Winter(2).jpg",
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Winter/Winter(3).jpg",
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Winter/Winter(4).jpg",
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Winter/Winter(5).jpg",
+        "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Winter/Winter(6).jpg"
+      ],
+      "challenges": [
+        "Creating seasonal design variations (Autumn, Spring, Summer, Winter) for the same space",
+        "Designing a flexible interior that can adapt to different seasonal aesthetics",
+        "Maintaining design coherence across multiple seasonal themes"
+      ],
+      "solutions": [
+        "Developed a base design structure that accommodates seasonal color and material changes",
+        "Created modular design elements that can be easily updated for different seasons",
+        "Designed a cohesive color palette system that works across all seasonal variations"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "cc35ed17-4b66-4aaa-bd32-ea6546860e0a",
+      "title": "Spice Mystery – Bahria Town, Lahore",
+      "sub1": "Interior Design",
+      "sub2": "Commercial",
+      "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+      "img": "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-1(6).jpg",
+      "client": "Client",
+      "location": "BahriaTown, Lahore",
+      "area": "N/A",
+      "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-1(6).jpg",
+        "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-10.jpg",
+        "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-11.jpg",
+        "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-12.jpg",
+        "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-2(2).jpg",
+        "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-3(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-4(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-5.jpg",
+        "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-6.jpg",
+        "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-8.jpg",
+        "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-9.jpg"
+      ],
+      "challenges": [
+        "Creating an inviting restaurant atmosphere that reflects the spice theme",
+        "Designing spaces that enhance the dining experience for diverse cuisine",
+        "Balancing vibrant design elements with comfortable dining environment"
+      ],
+      "solutions": [
+        "Developed a warm and inviting color scheme that complements the spice theme",
+        "Designed flexible seating arrangements for various group sizes",
+        "Created distinct dining zones with appropriate lighting and ambiance"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "e94a998d-5d07-4e46-ba6c-9ac4d71c473d",
+      "title": "Mr.Hassan – London, UK",
+      "sub1": "Interior Design",
+      "sub2": "Commercial",
+      "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+      "img": "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/B01.jpg",
+      "client": "Client",
+      "location": "London, UK",
+      "area": "N/A",
+      "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/B01.jpg",
+        "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/B02.jpg",
+        "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/FFOption02(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/FFOption02(2).jpg",
+        "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/FFOption02(3).jpg",
+        "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/GFCAM01(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/GFCAM01.jpg",
+        "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/GFCAM02(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/GFCAM02.jpg",
+        "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/GFCAM03(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/GFCAM03.jpg",
+        "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/GFCAM04.jpg",
+        "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/GFCAM05.jpg"
+      ],
+      "challenges": [
+        "Designing a functional and aesthetically pleasing interior design space",
+        "Balancing modern design trends with practical functionality",
+        "Creating an environment that reflects the brand identity"
+      ],
+      "solutions": [
+        "Conducted thorough space analysis to optimize layout and flow",
+        "Selected materials and finishes that combine durability with visual appeal",
+        "Integrated brand elements seamlessly into the overall design concept"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "4366f94a-94aa-40b5-adab-18c3492f8b24",
+      "title": "Bakers31 – Bahawalpur Cannt",
+      "sub1": "Interior Design",
+      "sub2": "Commercial",
+      "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+      "img": "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/1/CAM01.jpg",
+      "client": "Client",
+      "location": "BahawalpurCannt",
+      "area": "N/A",
+      "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/1/CAM01.jpg",
+        "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/1/CAM02.jpg",
+        "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/1/CAM03.jpg",
+        "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/1/CAM04.jpg",
+        "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/1/CAM05.jpg",
+        "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/1/CAM06.jpg",
+        "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/2/CAMERA01.jpg",
+        "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/2/CAMERA02.jpg",
+        "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/2/CAMERA03.jpg",
+        "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/2/CAMERA04.jpg",
+        "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/2/CAMERA05.jpg",
+        "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/2/CAMERA06.jpg",
+        "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/2/CAMERA07.jpg"
+      ],
+      "challenges": [
+        "Designing a functional and aesthetically pleasing interior design space",
+        "Balancing modern design trends with practical functionality",
+        "Creating an environment that reflects the brand identity"
+      ],
+      "solutions": [
+        "Conducted thorough space analysis to optimize layout and flow",
+        "Selected materials and finishes that combine durability with visual appeal",
+        "Integrated brand elements seamlessly into the overall design concept"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "0ce5560b-b997-4b54-b107-f70b5b39931a",
+      "title": "Waqas Residence – Multan",
+      "sub1": "Residential",
+      "sub2": "Interior Design",
+      "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+      "img": "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/5777.Bed01&Bed02(1).jpg",
+      "client": "Client",
+      "location": "Multan",
+      "area": "N/A",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/5777.Bed01&Bed02(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/5777.Bed01&Bed02(2).jpg",
+        "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/5777.Bed01&Bed02(3).jpg",
+        "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/5777.Bed01&Bed02(4).jpg",
+        "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/5777.Bed01&Bed02(5).jpg",
+        "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/5777.Bed01&Bed02(6).jpg",
+        "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/5777.Bed01&Bed02(7).jpg",
+        "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/5777.Bed04(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/5777.Bed04(2).jpg",
+        "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/5777.Bed04(3).jpg",
+        "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/DRAWINGDINNING/5777.D&D(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/DRAWINGDINNING/5777.D&D(2).jpg",
+        "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/DRAWINGDINNING/5777.D&D(3).jpg",
+        "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/FFKITCHEN/CAM01.jpg",
+        "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/FFKITCHEN/CAM02.jpg",
+        "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/FFKITCHEN/CAM03.jpg",
+        "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/FFKITCHEN/CAM04.jpg",
+        "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/FFKITCHEN/CAM05.jpg"
+      ],
+      "challenges": [
+        "Transforming residential spaces to reflect client personality and lifestyle",
+        "Maximizing functionality while maintaining aesthetic appeal",
+        "Selecting appropriate materials and finishes for residential use"
+      ],
+      "solutions": [
+        "Conducted in-depth consultations to understand client preferences and daily routines",
+        "Designed custom solutions for storage, lighting, and spatial flow",
+        "Selected durable, family-friendly materials that maintain their appearance over time"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "70f426cf-e7ad-4394-9612-83a16154e597",
+      "title": "Shumaila's London – Gulberg, Lahore",
+      "sub1": "Interior Design",
+      "sub2": "Commercial",
+      "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+      "img": "/home_preview/assets/img/Interior_Design/5767.Shumaila_sLondon-Gulberg,Lahore/CAM01.jpg",
+      "client": "Client",
+      "location": "Gulberg, Lahore",
+      "area": "N/A",
+      "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5767.Shumaila_sLondon-Gulberg,Lahore/CAM01.jpg",
+        "/home_preview/assets/img/Interior_Design/5767.Shumaila_sLondon-Gulberg,Lahore/CAM02.jpg",
+        "/home_preview/assets/img/Interior_Design/5767.Shumaila_sLondon-Gulberg,Lahore/CAM03.jpg",
+        "/home_preview/assets/img/Interior_Design/5767.Shumaila_sLondon-Gulberg,Lahore/CAM04.jpg",
+        "/home_preview/assets/img/Interior_Design/5767.Shumaila_sLondon-Gulberg,Lahore/CAM05.jpg",
+        "/home_preview/assets/img/Interior_Design/5767.Shumaila_sLondon-Gulberg,Lahore/CAM07.jpg",
+        "/home_preview/assets/img/Interior_Design/5767.Shumaila_sLondon-Gulberg,Lahore/CAM08.jpg"
+      ],
+      "challenges": [
+        "Designing a functional and aesthetically pleasing interior design space",
+        "Balancing modern design trends with practical functionality",
+        "Creating an environment that reflects the brand identity"
+      ],
+      "solutions": [
+        "Conducted thorough space analysis to optimize layout and flow",
+        "Selected materials and finishes that combine durability with visual appeal",
+        "Integrated brand elements seamlessly into the overall design concept"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "a74fb044-dace-4940-9212-5ed96adbab48",
+      "title": "ONYX Tec – Johar Town, Lahore",
+      "sub1": "Interior Design",
+      "sub2": "Commercial",
+      "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+      "img": "/home_preview/assets/img/Interior_Design/5762.ONYXTec-JoharTown,Lahore/CAM01.1.jpg",
+      "client": "Client",
+      "location": "JoharTown, Lahore",
+      "area": "N/A",
+      "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5762.ONYXTec-JoharTown,Lahore/CAM01.1.jpg",
+        "/home_preview/assets/img/Interior_Design/5762.ONYXTec-JoharTown,Lahore/CAM01.jpg",
+        "/home_preview/assets/img/Interior_Design/5762.ONYXTec-JoharTown,Lahore/CAM02.2.jpg",
+        "/home_preview/assets/img/Interior_Design/5762.ONYXTec-JoharTown,Lahore/CAM02.jpg",
+        "/home_preview/assets/img/Interior_Design/5762.ONYXTec-JoharTown,Lahore/CAM03.jpg",
+        "/home_preview/assets/img/Interior_Design/5762.ONYXTec-JoharTown,Lahore/CAM04.jpg",
+        "/home_preview/assets/img/Interior_Design/5762.ONYXTec-JoharTown,Lahore/CAM07.jpg"
+      ],
+      "challenges": [
+        "Designing a functional and aesthetically pleasing interior design space",
+        "Balancing modern design trends with practical functionality",
+        "Creating an environment that reflects the brand identity"
+      ],
+      "solutions": [
+        "Conducted thorough space analysis to optimize layout and flow",
+        "Selected materials and finishes that combine durability with visual appeal",
+        "Integrated brand elements seamlessly into the overall design concept"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "0f507430-8dd7-4e1a-817f-34a010bb96ed",
+      "title": "Bashir Khayre Residence – Somalia",
+      "sub1": "Residential",
+      "sub2": "Interior Design",
+      "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+      "img": "/home_preview/assets/img/Interior_Design/5737.BashirKhayreResidence-Somalia/5737.CAM01(2).jpg",
+      "client": "Client",
+      "location": "Somalia",
+      "area": "N/A",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5737.BashirKhayreResidence-Somalia/5737.CAM01(2).jpg",
+        "/home_preview/assets/img/Interior_Design/5737.BashirKhayreResidence-Somalia/5737.CAM01(4).jpg",
+        "/home_preview/assets/img/Interior_Design/5737.BashirKhayreResidence-Somalia/5737.CAM01(5).jpg",
+        "/home_preview/assets/img/Interior_Design/5737.BashirKhayreResidence-Somalia/5737.CAM01(6).jpg",
+        "/home_preview/assets/img/Interior_Design/5737.BashirKhayreResidence-Somalia/5737.CAM01(8).jpg"
+      ],
+      "challenges": [
+        "Transforming residential spaces to reflect client personality and lifestyle",
+        "Maximizing functionality while maintaining aesthetic appeal",
+        "Selecting appropriate materials and finishes for residential use"
+      ],
+      "solutions": [
+        "Conducted in-depth consultations to understand client preferences and daily routines",
+        "Designed custom solutions for storage, lighting, and spatial flow",
+        "Selected durable, family-friendly materials that maintain their appearance over time"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "465ac280-acb2-4a63-8733-af4a7e8f3abd",
+      "title": "Fit Nation Gym – DHA Phase5, Lahore",
+      "sub1": "Fitness",
+      "sub2": "Commercial",
+      "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+      "img": "/home_preview/assets/img/Interior_Design/5705.FitNationGym-DHAPhase5,Lahore/CAM01.jpg",
+      "client": "Client",
+      "location": "DHAPhase5, Lahore",
+      "area": "N/A",
+      "categoryId": "20510a8a-21db-4086-a33c-d1041e3a2bc3",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5705.FitNationGym-DHAPhase5,Lahore/CAM01.jpg",
+        "/home_preview/assets/img/Interior_Design/5705.FitNationGym-DHAPhase5,Lahore/CAM02.jpg",
+        "/home_preview/assets/img/Interior_Design/5705.FitNationGym-DHAPhase5,Lahore/CAM03.jpg",
+        "/home_preview/assets/img/Interior_Design/5705.FitNationGym-DHAPhase5,Lahore/CAM04.jpg",
+        "/home_preview/assets/img/Interior_Design/5705.FitNationGym-DHAPhase5,Lahore/CAM06.jpg",
+        "/home_preview/assets/img/Interior_Design/5705.FitNationGym-DHAPhase5,Lahore/CAM07.jpg",
+        "/home_preview/assets/img/Interior_Design/5705.FitNationGym-DHAPhase5,Lahore/CAM08.jpg"
+      ],
+      "challenges": [
+        "Designing a functional and aesthetically pleasing fitness space",
+        "Balancing modern design trends with practical functionality",
+        "Creating an environment that reflects the brand identity"
+      ],
+      "solutions": [
+        "Conducted thorough space analysis to optimize layout and flow",
+        "Selected materials and finishes that combine durability with visual appeal",
+        "Integrated brand elements seamlessly into the overall design concept"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "801ec94c-1252-44f8-8a83-ef35f4237399",
+      "title": "Jarikas Complex – Jarikas Cannt",
+      "sub1": "Interior Design",
+      "sub2": "Commercial",
+      "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+      "img": "/home_preview/assets/img/Interior_Design/5675.JarikasComplex-JarikasCannt/CAM001.jpg",
+      "client": "Client",
+      "location": "JarikasCannt",
+      "area": "N/A",
+      "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5675.JarikasComplex-JarikasCannt/CAM001.jpg",
+        "/home_preview/assets/img/Interior_Design/5675.JarikasComplex-JarikasCannt/CAM002.jpg",
+        "/home_preview/assets/img/Interior_Design/5675.JarikasComplex-JarikasCannt/CAM003.jpg",
+        "/home_preview/assets/img/Interior_Design/5675.JarikasComplex-JarikasCannt/CAM004.jpg",
+        "/home_preview/assets/img/Interior_Design/5675.JarikasComplex-JarikasCannt/CAM005.jpg",
+        "/home_preview/assets/img/Interior_Design/5675.JarikasComplex-JarikasCannt/CAM007.jpg"
+      ],
+      "challenges": [
+        "Designing a functional and aesthetically pleasing interior design space",
+        "Balancing modern design trends with practical functionality",
+        "Creating an environment that reflects the brand identity"
+      ],
+      "solutions": [
+        "Conducted thorough space analysis to optimize layout and flow",
+        "Selected materials and finishes that combine durability with visual appeal",
+        "Integrated brand elements seamlessly into the overall design concept"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "7ee436e3-bd7a-49d2-bc62-566519b48b3a",
+      "title": "Divine Diva – Lake City, Lahore",
+      "sub1": "Interior Design",
+      "sub2": "Commercial",
+      "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+      "img": "/home_preview/assets/img/Interior_Design/5635.DivineDiva-LakeCity,Lahore/5635.CAM01.jpg",
+      "client": "Client",
+      "location": "LakeCity, Lahore",
+      "area": "N/A",
+      "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5635.DivineDiva-LakeCity,Lahore/5635.CAM01.jpg",
+        "/home_preview/assets/img/Interior_Design/5635.DivineDiva-LakeCity,Lahore/5635.CAM03.jpg",
+        "/home_preview/assets/img/Interior_Design/5635.DivineDiva-LakeCity,Lahore/CAM02.jpg",
+        "/home_preview/assets/img/Interior_Design/5635.DivineDiva-LakeCity,Lahore/CAM04.jpg",
+        "/home_preview/assets/img/Interior_Design/5635.DivineDiva-LakeCity,Lahore/CAM05.jpg",
+        "/home_preview/assets/img/Interior_Design/5635.DivineDiva-LakeCity,Lahore/CAM06.jpg"
+      ],
+      "challenges": [
+        "Designing a functional and aesthetically pleasing interior design space",
+        "Balancing modern design trends with practical functionality",
+        "Creating an environment that reflects the brand identity"
+      ],
+      "solutions": [
+        "Conducted thorough space analysis to optimize layout and flow",
+        "Selected materials and finishes that combine durability with visual appeal",
+        "Integrated brand elements seamlessly into the overall design concept"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "76f063a8-6080-408b-aba3-818740ab4538",
+      "title": "Hamza Arcade III – Lahore",
+      "sub1": "Commercial",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5881.HamzaArcadeIII-Lahore/5881.DayView001.1.jpg",
+      "client": "Client",
+      "location": "Lahore",
+      "area": "N/A",
+      "categoryId": "a44856e5-a050-4404-a66f-ae78992bb6a1",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5881.HamzaArcadeIII-Lahore/5881.DayView001.1.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5881.HamzaArcadeIII-Lahore/5881.DayView002.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5881.HamzaArcadeIII-Lahore/5881.DayView004.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5881.HamzaArcadeIII-Lahore/5881.NightView001.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5881.HamzaArcadeIII-Lahore/5881.NightView002.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5881.HamzaArcadeIII-Lahore/5881.NightView003.jpg"
+      ],
+      "challenges": [
+        "Designing commercial architecture that supports business operations",
+        "Creating an impressive facade that attracts customers",
+        "Optimizing space for commercial use while maintaining design integrity"
+      ],
+      "solutions": [
+        "Developed functional layouts that support various commercial activities",
+        "Designed striking architectural elements that enhance brand visibility",
+        "Integrated modern building systems for efficiency and sustainability"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "0aab60a2-90bc-4a09-9241-7cc8587b7fd4",
+      "title": "Fahad Residence – Lahore",
+      "sub1": "Residential",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5880.FahadResidence-Lahore/LightTest-1(1).jpg",
+      "client": "Client",
+      "location": "Lahore",
+      "area": "N/A",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5880.FahadResidence-Lahore/LightTest-1(1).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5880.FahadResidence-Lahore/LightTest-2(1).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5880.FahadResidence-Lahore/LightTest-3.jpg"
+      ],
+      "challenges": [
+        "Designing a modern residential structure that meets client lifestyle needs",
+        "Optimizing space utilization while maintaining aesthetic appeal",
+        "Ensuring compliance with local building codes and regulations",
+        "Integrating sustainable design principles"
+      ],
+      "solutions": [
+        "Conducted detailed client consultations to understand specific requirements and preferences",
+        "Developed innovative floor plans that maximize natural light and ventilation",
+        "Selected materials and construction methods that balance cost, durability, and aesthetics",
+        "Incorporated energy-efficient systems and sustainable building practices"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "c579331f-310a-483e-8cb7-729e6c7177b0",
+      "title": "Bilal Residence – Lahore",
+      "sub1": "Residential",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5878.BilalResidence-Lahore/View-1(8).jpg",
+      "client": "Client",
+      "location": "Lahore",
+      "area": "N/A",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5878.BilalResidence-Lahore/View-1(8).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5878.BilalResidence-Lahore/View-1(9).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5878.BilalResidence-Lahore/View-2(4).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5878.BilalResidence-Lahore/View-3(2).jpg"
+      ],
+      "challenges": [
+        "Designing a modern residential structure that meets client lifestyle needs",
+        "Optimizing space utilization while maintaining aesthetic appeal",
+        "Ensuring compliance with local building codes and regulations",
+        "Integrating sustainable design principles"
+      ],
+      "solutions": [
+        "Conducted detailed client consultations to understand specific requirements and preferences",
+        "Developed innovative floor plans that maximize natural light and ventilation",
+        "Selected materials and construction methods that balance cost, durability, and aesthetics",
+        "Incorporated energy-efficient systems and sustainable building practices"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "6fea57f3-0837-4d8d-abf6-c7d9656a1784",
+      "title": "Bin Umer Height – Lahore",
+      "sub1": "Residential",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5869.BinUmerHeight-Lahore/EveningView.jpg",
+      "client": "Client",
+      "location": "Lahore",
+      "area": "N/A",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5869.BinUmerHeight-Lahore/EveningView.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5869.BinUmerHeight-Lahore/View-1(1).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5869.BinUmerHeight-Lahore/View-2.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5869.BinUmerHeight-Lahore/View-3.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5869.BinUmerHeight-Lahore/View-5-1-1.jpg"
+      ],
+      "challenges": [
+        "Designing a modern residential structure that meets client lifestyle needs",
+        "Optimizing space utilization while maintaining aesthetic appeal",
+        "Ensuring compliance with local building codes and regulations",
+        "Integrating sustainable design principles"
+      ],
+      "solutions": [
+        "Conducted detailed client consultations to understand specific requirements and preferences",
+        "Developed innovative floor plans that maximize natural light and ventilation",
+        "Selected materials and construction methods that balance cost, durability, and aesthetics",
+        "Incorporated energy-efficient systems and sustainable building practices"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "e4ebb15c-3577-4e3e-bf4d-c09b667aca97",
+      "title": "Vocational Villa – Turks&Caicos Island",
+      "sub1": "Residential",
+      "sub2": "Interior Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/01(1).jpg",
+      "client": "Client",
+      "location": "Turks&CaicosIsland",
+      "area": "N/A",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/01(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/02(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/04.jpg",
+        "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/07.jpg",
+        "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/10.5.jpg",
+        "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/5.5.jpg",
+        "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/5861.07(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/5861.07(2).jpg",
+        "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/5861.07(3).jpg",
+        "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/5861.07(4).jpg",
+        "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/5861.07(5).jpg",
+        "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/5861.07(6).jpg",
+        "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/5861.07(7).jpg",
+        "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/View-7.jpg"
+      ],
+      "challenges": [
+        "Transforming residential spaces to reflect client personality and lifestyle",
+        "Maximizing functionality while maintaining aesthetic appeal",
+        "Selecting appropriate materials and finishes for residential use"
+      ],
+      "solutions": [
+        "Conducted in-depth consultations to understand client preferences and daily routines",
+        "Designed custom solutions for storage, lighting, and spatial flow",
+        "Selected durable, family-friendly materials that maintain their appearance over time"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "68bb4e7c-9472-472d-a08d-8e79003b8b3e",
+      "title": "Abdul Aziz Abdullah – Nairobi, Kenya",
+      "sub1": "Architecture",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5832.AbdulAzizAbdullah-Nairobi,Kenya/CAM01.jpg",
+      "client": "Client",
+      "location": "Nairobi, Kenya",
+      "area": "N/A",
+      "categoryId": "392942fd-0206-4106-b139-a98b94804e07",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5832.AbdulAzizAbdullah-Nairobi,Kenya/CAM01.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5832.AbdulAzizAbdullah-Nairobi,Kenya/CAM02.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5832.AbdulAzizAbdullah-Nairobi,Kenya/CAM03.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5832.AbdulAzizAbdullah-Nairobi,Kenya/CAM04.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5832.AbdulAzizAbdullah-Nairobi,Kenya/CAM05.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5832.AbdulAzizAbdullah-Nairobi,Kenya/CAM06.jpg"
+      ],
+      "challenges": [
+        "Creating innovative architectural solutions that meet functional requirements",
+        "Balancing aesthetic design with structural integrity",
+        "Ensuring the design integrates well with surrounding environment",
+        "Managing project complexity and coordination"
+      ],
+      "solutions": [
+        "Developed creative design concepts that address both form and function",
+        "Collaborated with structural engineers to ensure safe and efficient construction",
+        "Conducted site analysis to optimize building placement and orientation",
+        "Implemented comprehensive project management systems for smooth execution"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "3c23c5ca-4446-43f1-a73f-5f86504ba45e",
+      "title": "Saleem Albela House – Paragon City, Lahore",
+      "sub1": "Residential",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5829.SaleemAlbelaHouse-ParagonCity,Lahore/5829.CAM01(1).jpg",
+      "client": "Client",
+      "location": "ParagonCity, Lahore",
+      "area": "N/A",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5829.SaleemAlbelaHouse-ParagonCity,Lahore/5829.CAM01(1).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5829.SaleemAlbelaHouse-ParagonCity,Lahore/5829.CAM01(2).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5829.SaleemAlbelaHouse-ParagonCity,Lahore/5829.CAM01(3).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5829.SaleemAlbelaHouse-ParagonCity,Lahore/5829.CAM01(4).jpg"
+      ],
+      "challenges": [
+        "Designing a modern residential structure that meets client lifestyle needs",
+        "Optimizing space utilization while maintaining aesthetic appeal",
+        "Ensuring compliance with local building codes and regulations",
+        "Integrating sustainable design principles"
+      ],
+      "solutions": [
+        "Conducted detailed client consultations to understand specific requirements and preferences",
+        "Developed innovative floor plans that maximize natural light and ventilation",
+        "Selected materials and construction methods that balance cost, durability, and aesthetics",
+        "Incorporated energy-efficient systems and sustainable building practices"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "937c9687-2630-486c-9f5d-546c5e5f9f90",
+      "title": "Asad Residence – Lake City, Lahore",
+      "sub1": "Residential",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5810.AsadResidence-LakeCity,Lahore/CAM01.jpg",
+      "client": "Client",
+      "location": "LakeCity, Lahore",
+      "area": "N/A",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5810.AsadResidence-LakeCity,Lahore/CAM01.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5810.AsadResidence-LakeCity,Lahore/CAM02.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5810.AsadResidence-LakeCity,Lahore/CAM03.jpg"
+      ],
+      "challenges": [
+        "Designing a modern residential structure that meets client lifestyle needs",
+        "Optimizing space utilization while maintaining aesthetic appeal",
+        "Ensuring compliance with local building codes and regulations",
+        "Integrating sustainable design principles"
+      ],
+      "solutions": [
+        "Conducted detailed client consultations to understand specific requirements and preferences",
+        "Developed innovative floor plans that maximize natural light and ventilation",
+        "Selected materials and construction methods that balance cost, durability, and aesthetics",
+        "Incorporated energy-efficient systems and sustainable building practices"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "3c1967df-e50f-4ba5-ae95-71c0877577db",
+      "title": "Ahmad Height – Somalia",
+      "sub1": "Residential",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5804.AhmadHeight-Somalia/5804.Renders(1).jpg",
+      "client": "Client",
+      "location": "Somalia",
+      "area": "N/A",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5804.AhmadHeight-Somalia/5804.Renders(1).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5804.AhmadHeight-Somalia/5804.Renders(2).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5804.AhmadHeight-Somalia/5804.Renders(3).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5804.AhmadHeight-Somalia/5804.Renders(4).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5804.AhmadHeight-Somalia/5804.Renders(5).jpg"
+      ],
+      "challenges": [
+        "Designing a modern residential structure that meets client lifestyle needs",
+        "Optimizing space utilization while maintaining aesthetic appeal",
+        "Ensuring compliance with local building codes and regulations",
+        "Integrating sustainable design principles"
+      ],
+      "solutions": [
+        "Conducted detailed client consultations to understand specific requirements and preferences",
+        "Developed innovative floor plans that maximize natural light and ventilation",
+        "Selected materials and construction methods that balance cost, durability, and aesthetics",
+        "Incorporated energy-efficient systems and sustainable building practices"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "6a519456-74c5-489e-bac6-2e15bc2ab9de",
+      "title": "Zil E Huma Residence – Lahore",
+      "sub1": "Residential",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5801.ZilEHumaResidence-Lahore/5801.Renders(1).jpg",
+      "client": "Client",
+      "location": "Lahore",
+      "area": "N/A",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5801.ZilEHumaResidence-Lahore/5801.Renders(1).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5801.ZilEHumaResidence-Lahore/5801.Renders(2).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5801.ZilEHumaResidence-Lahore/5801.Renders(3).jpg"
+      ],
+      "challenges": [
+        "Designing a modern residential structure that meets client lifestyle needs",
+        "Optimizing space utilization while maintaining aesthetic appeal",
+        "Ensuring compliance with local building codes and regulations",
+        "Integrating sustainable design principles"
+      ],
+      "solutions": [
+        "Conducted detailed client consultations to understand specific requirements and preferences",
+        "Developed innovative floor plans that maximize natural light and ventilation",
+        "Selected materials and construction methods that balance cost, durability, and aesthetics",
+        "Incorporated energy-efficient systems and sustainable building practices"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "12331992-5117-47e7-b1a6-c9b5bcd029d3",
+      "title": "Samad Height – Etihad Town, Lahore",
+      "sub1": "Residential",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5785.SamadHeight-EtihadTown,Lahore/5785.Renders(2).jpg",
+      "client": "Client",
+      "location": "EtihadTown, Lahore",
+      "area": "N/A",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5785.SamadHeight-EtihadTown,Lahore/5785.Renders(1).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5785.SamadHeight-EtihadTown,Lahore/5785.Renders(2).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5785.SamadHeight-EtihadTown,Lahore/5785.Renders(3).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5785.SamadHeight-EtihadTown,Lahore/5785.Renders(5).jpg"
+      ],
+      "challenges": [
+        "Designing a modern residential structure that meets client lifestyle needs",
+        "Optimizing space utilization while maintaining aesthetic appeal",
+        "Ensuring compliance with local building codes and regulations",
+        "Integrating sustainable design principles"
+      ],
+      "solutions": [
+        "Conducted detailed client consultations to understand specific requirements and preferences",
+        "Developed innovative floor plans that maximize natural light and ventilation",
+        "Selected materials and construction methods that balance cost, durability, and aesthetics",
+        "Incorporated energy-efficient systems and sustainable building practices"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "6a75b55a-d326-43c3-90ab-42723a07c425",
+      "title": "Qasim Residence – Lake City, Lahore",
+      "sub1": "Residential",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5780.QasimResidence-LakeCity,Lahore/5780.Renders(1).jpg",
+      "client": "Client",
+      "location": "LakeCity, Lahore",
+      "area": "N/A",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5780.QasimResidence-LakeCity,Lahore/5780.Renders(1).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5780.QasimResidence-LakeCity,Lahore/5780.Renders(2).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5780.QasimResidence-LakeCity,Lahore/5780.Renders(3).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5780.QasimResidence-LakeCity,Lahore/5780.Renders(4).jpg"
+      ],
+      "challenges": [
+        "Designing a modern residential structure that meets client lifestyle needs",
+        "Optimizing space utilization while maintaining aesthetic appeal",
+        "Ensuring compliance with local building codes and regulations",
+        "Integrating sustainable design principles"
+      ],
+      "solutions": [
+        "Conducted detailed client consultations to understand specific requirements and preferences",
+        "Developed innovative floor plans that maximize natural light and ventilation",
+        "Selected materials and construction methods that balance cost, durability, and aesthetics",
+        "Incorporated energy-efficient systems and sustainable building practices"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "19ec004d-caaa-4346-9c1b-e4eb81e95072",
+      "title": "Abdul Moeed Residence – Lahore",
+      "sub1": "Residential",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5765.AbdulMoeedResidence-Lahore/CAMERA01.jpg",
+      "client": "Client",
+      "location": "Lahore",
+      "area": "N/A",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5765.AbdulMoeedResidence-Lahore/CAMERA01.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5765.AbdulMoeedResidence-Lahore/CAMERA02.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5765.AbdulMoeedResidence-Lahore/CAMERA03.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5765.AbdulMoeedResidence-Lahore/CAMERA04.jpg"
+      ],
+      "challenges": [
+        "Designing a modern residential structure that meets client lifestyle needs",
+        "Optimizing space utilization while maintaining aesthetic appeal",
+        "Ensuring compliance with local building codes and regulations",
+        "Integrating sustainable design principles"
+      ],
+      "solutions": [
+        "Conducted detailed client consultations to understand specific requirements and preferences",
+        "Developed innovative floor plans that maximize natural light and ventilation",
+        "Selected materials and construction methods that balance cost, durability, and aesthetics",
+        "Incorporated energy-efficient systems and sustainable building practices"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "1e35b932-705b-45cd-be27-02b5ff851b44",
+      "title": "Shabbir Residence – Faisal Town, Lahore",
+      "sub1": "Residential",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5753.ShabbirResidence-FaisalTown,Lahore/01.jpg",
+      "client": "Client",
+      "location": "FaisalTown, Lahore",
+      "area": "N/A",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5753.ShabbirResidence-FaisalTown,Lahore/01.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5753.ShabbirResidence-FaisalTown,Lahore/02.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5753.ShabbirResidence-FaisalTown,Lahore/03.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5753.ShabbirResidence-FaisalTown,Lahore/04.jpg"
+      ],
+      "challenges": [
+        "Designing a modern residential structure that meets client lifestyle needs",
+        "Optimizing space utilization while maintaining aesthetic appeal",
+        "Ensuring compliance with local building codes and regulations",
+        "Integrating sustainable design principles"
+      ],
+      "solutions": [
+        "Conducted detailed client consultations to understand specific requirements and preferences",
+        "Developed innovative floor plans that maximize natural light and ventilation",
+        "Selected materials and construction methods that balance cost, durability, and aesthetics",
+        "Incorporated energy-efficient systems and sustainable building practices"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "0876a085-35df-4bec-8dc5-01c7ebd6d60a",
+      "title": "Faisal Residence – Lahore",
+      "sub1": "Residential",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5746.FaisalResidence-Lahore/5746.CAM05(1).jpg",
+      "client": "Client",
+      "location": "Lahore",
+      "area": "N/A",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5746.FaisalResidence-Lahore/5746.CAM05(1).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5746.FaisalResidence-Lahore/5746.CAM05(2).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5746.FaisalResidence-Lahore/5746.CAM05(3).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5746.FaisalResidence-Lahore/5746.CAM05(4).jpg"
+      ],
+      "challenges": [
+        "Designing a modern residential structure that meets client lifestyle needs",
+        "Optimizing space utilization while maintaining aesthetic appeal",
+        "Ensuring compliance with local building codes and regulations",
+        "Integrating sustainable design principles"
+      ],
+      "solutions": [
+        "Conducted detailed client consultations to understand specific requirements and preferences",
+        "Developed innovative floor plans that maximize natural light and ventilation",
+        "Selected materials and construction methods that balance cost, durability, and aesthetics",
+        "Incorporated energy-efficient systems and sustainable building practices"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "5b446cc6-9d50-4ed5-b1d4-fad47e86425e",
+      "title": "Abdullah Residence – Nespak Society, Lahore",
+      "sub1": "Residential",
+      "sub2": "Interior Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/01.jpg",
+      "client": "Client",
+      "location": "NespakSociety, Lahore",
+      "area": "N/A",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/01.jpg",
+        "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/02.jpg",
+        "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/03.jpg",
+        "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/09.jpg",
+        "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/CHILD(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/CHILD(2).jpg",
+        "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/CHILD(3).jpg",
+        "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/CHILD(4).jpg",
+        "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/DiningCAM03(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/DiningCAM03(3).jpg",
+        "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/MasterBed01(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/MasterBed01(2).jpg",
+        "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/MasterBed01(3).jpg"
+      ],
+      "challenges": [
+        "Designing multiple spaces including master bedroom, children rooms, and dining areas",
+        "Creating cohesive design language across different functional areas",
+        "Balancing adult sophistication with child-friendly elements"
+      ],
+      "solutions": [
+        "Developed a comprehensive design scheme that flows seamlessly between spaces",
+        "Created age-appropriate children rooms with playful yet elegant design elements",
+        "Designed master bedroom and dining areas with sophisticated finishes and furnishings"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "610ea9cc-67e9-4570-9e9a-8756748423bd",
+      "title": "US Apparel – Lahore",
+      "sub1": "Commercial",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5687.USApparel-Lahore/03(2).jpg",
+      "client": "Client",
+      "location": "Lahore",
+      "area": "N/A",
+      "categoryId": "a44856e5-a050-4404-a66f-ae78992bb6a1",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5687.USApparel-Lahore/03(2).jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5687.USApparel-Lahore/5687.EditedRenders01.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5687.USApparel-Lahore/5687.EditedRenders02.jpg"
+      ],
+      "challenges": [
+        "Designing commercial architecture that supports business operations",
+        "Creating an impressive facade that attracts customers",
+        "Optimizing space for commercial use while maintaining design integrity"
+      ],
+      "solutions": [
+        "Developed functional layouts that support various commercial activities",
+        "Designed striking architectural elements that enhance brand visibility",
+        "Integrated modern building systems for efficiency and sustainability"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "a8ff9d30-bb50-4904-a7fa-a6e8eead15bd",
+      "title": "Masuad Tech – Daroghewala, Lahore",
+      "sub1": "Architecture",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5682.MasuadTech-Daroghewala,Lahore/01.jpg",
+      "client": "Client",
+      "location": "Daroghewala, Lahore",
+      "area": "N/A",
+      "categoryId": "392942fd-0206-4106-b139-a98b94804e07",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5682.MasuadTech-Daroghewala,Lahore/01.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5682.MasuadTech-Daroghewala,Lahore/02.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5682.MasuadTech-Daroghewala,Lahore/03.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5682.MasuadTech-Daroghewala,Lahore/04.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5682.MasuadTech-Daroghewala,Lahore/05.jpg"
+      ],
+      "challenges": [
+        "Creating innovative architectural solutions that meet functional requirements",
+        "Balancing aesthetic design with structural integrity",
+        "Ensuring the design integrates well with surrounding environment",
+        "Managing project complexity and coordination"
+      ],
+      "solutions": [
+        "Developed creative design concepts that address both form and function",
+        "Collaborated with structural engineers to ensure safe and efficient construction",
+        "Conducted site analysis to optimize building placement and orientation",
+        "Implemented comprehensive project management systems for smooth execution"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "4bbae2f8-7d68-4fff-8fcf-0bbb92a5a798",
+      "title": "Ehsan Height – Etihad Town, Lahore",
+      "sub1": "Residential",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5663.EhsanHeight-EtihadTown,Lahore/CAM02.jpg",
+      "client": "Client",
+      "location": "EtihadTown, Lahore",
+      "area": "N/A",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5663.EhsanHeight-EtihadTown,Lahore/CAM01.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5663.EhsanHeight-EtihadTown,Lahore/CAM02.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5663.EhsanHeight-EtihadTown,Lahore/CAM03.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5663.EhsanHeight-EtihadTown,Lahore/CAM04.jpg"
+      ],
+      "challenges": [
+        "Designing a modern residential structure that meets client lifestyle needs",
+        "Optimizing space utilization while maintaining aesthetic appeal",
+        "Ensuring compliance with local building codes and regulations",
+        "Integrating sustainable design principles"
+      ],
+      "solutions": [
+        "Conducted detailed client consultations to understand specific requirements and preferences",
+        "Developed innovative floor plans that maximize natural light and ventilation",
+        "Selected materials and construction methods that balance cost, durability, and aesthetics",
+        "Incorporated energy-efficient systems and sustainable building practices"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "8c5ddf2e-2e18-403a-bbfc-bdfe4afe03a5",
+      "title": "Calrom – Askari Tower(Gulberg) – Lahore",
+      "sub1": "Interior Design",
+      "sub2": "Commercial",
+      "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+      "img": "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/BoardRoom(1).jpg",
+      "client": "Client",
+      "location": "AskariTower(Gulberg)",
+      "area": "N/A",
+      "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/BoardRoom(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/Cafe01(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/Cafe01(3).jpg",
+        "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/Cafe01(5).jpg",
+        "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/GamingArea(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/MANAGEMENTROOMCAM01.jpg",
+        "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/MEETINGROOM04.jpg",
+        "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/Meetingroom01.jpg",
+        "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/TRAININGROOMCAM01.jpg",
+        "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/WORKSPACECAM01.jpg",
+        "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/WORKSPACECAM02.jpg",
+        "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/WORKSPACECAM03.jpg",
+        "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/WORKSPACECAM05.jpg"
+      ],
+      "challenges": [
+        "Creating a cohesive design for a large 18,000 sqft multi-international office space",
+        "Balancing cool and calming colors while maintaining a professional atmosphere",
+        "Ensuring the design promotes creativity and innovation across different cultural work styles"
+      ],
+      "solutions": [
+        "Implemented a color palette of cool blues and soft greens throughout the space to create a calming yet energizing environment",
+        "Designed flexible workspace zones that accommodate different working styles and cultural preferences",
+        "Integrated natural lighting and biophilic design elements to enhance productivity and well-being"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "b6c514f1-8bb7-4a1f-975f-9f1ca8012a77",
+      "title": "Ambreen Residence – Lahore",
+      "sub1": "Residential",
+      "sub2": "Interior Design",
+      "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+      "img": "/home_preview/assets/img/Interior_Design/5672.AmbreenResidence-Lahore/5627.GFDINNINGROOM03.jpg",
+      "client": "Client",
+      "location": "Lahore",
+      "area": "N/A",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5672.AmbreenResidence-Lahore/5627.GFDINNINGROOM03.jpg",
+        "/home_preview/assets/img/Interior_Design/5672.AmbreenResidence-Lahore/5627.GFDRAWINGROOM01.jpg",
+        "/home_preview/assets/img/Interior_Design/5672.AmbreenResidence-Lahore/5627.GFDRAWINGROOM02.jpg",
+        "/home_preview/assets/img/Interior_Design/5672.AmbreenResidence-Lahore/GROUNDFLOORKITCHEN01.jpg",
+        "/home_preview/assets/img/Interior_Design/5672.AmbreenResidence-Lahore/GROUNDFLOORKITCHEN02.jpg"
+      ],
+      "challenges": [
+        "Transforming residential spaces to reflect client personality and lifestyle",
+        "Maximizing functionality while maintaining aesthetic appeal",
+        "Selecting appropriate materials and finishes for residential use"
+      ],
+      "solutions": [
+        "Conducted in-depth consultations to understand client preferences and daily routines",
+        "Designed custom solutions for storage, lighting, and spatial flow",
+        "Selected durable, family-friendly materials that maintain their appearance over time"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "6f46c886-fae5-411b-acc1-a4d875e77d38",
+      "title": "Momentum Fitness – Johar Town, Lahore",
+      "sub1": "Fitness",
+      "sub2": "Commercial",
+      "desc": "Exquisite interior design project featuring elegant spaces and thoughtful design solutions.",
+      "img": "/home_preview/assets/img/Interior_Design/5561.MomentumFitness-JoharTown,Lahore/5561.(2).jpg",
+      "client": "Client",
+      "location": "JoharTown, Lahore",
+      "area": "N/A",
+      "categoryId": "20510a8a-21db-4086-a33c-d1041e3a2bc3",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5561.MomentumFitness-JoharTown,Lahore/5561.(2).jpg",
+        "/home_preview/assets/img/Interior_Design/5561.MomentumFitness-JoharTown,Lahore/5561.(3).jpg",
+        "/home_preview/assets/img/Interior_Design/5561.MomentumFitness-JoharTown,Lahore/5561.(4).jpg",
+        "/home_preview/assets/img/Interior_Design/5561.MomentumFitness-JoharTown,Lahore/5561.(5).jpg",
+        "/home_preview/assets/img/Interior_Design/5561.MomentumFitness-JoharTown,Lahore/5561.(6).jpg",
+        "/home_preview/assets/img/Interior_Design/5561.MomentumFitness-JoharTown,Lahore/5561.(7).jpg",
+        "/home_preview/assets/img/Interior_Design/5561.MomentumFitness-JoharTown,Lahore/5561.(8).jpg"
+      ],
+      "challenges": [
+        "Designing a functional and aesthetically pleasing fitness space",
+        "Balancing modern design trends with practical functionality",
+        "Creating an environment that reflects the brand identity"
+      ],
+      "solutions": [
+        "Conducted thorough space analysis to optimize layout and flow",
+        "Selected materials and finishes that combine durability with visual appeal",
+        "Integrated brand elements seamlessly into the overall design concept"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "6ae275ae-104d-412e-b092-c571071d3f64",
+      "title": "Barka Mall – Oman",
+      "sub1": "Commercial",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5645.BarkaMall-Oman/5645.BarkaMall(1).png",
+      "client": "Client",
+      "location": "Oman",
+      "area": "N/A",
+      "categoryId": "a44856e5-a050-4404-a66f-ae78992bb6a1",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5645.BarkaMall-Oman/5645.BarkaMall(1).png",
+        "/home_preview/assets/img/Architecture_Deisgn/5645.BarkaMall-Oman/5645.BarkaMall(2).png",
+        "/home_preview/assets/img/Architecture_Deisgn/5645.BarkaMall-Oman/5645.BarkaMall(3).png",
+        "/home_preview/assets/img/Architecture_Deisgn/5645.BarkaMall-Oman/5645.BarkaMall(4).png",
+        "/home_preview/assets/img/Architecture_Deisgn/5645.BarkaMall-Oman/5645.BarkaMall(5).png"
+      ],
+      "challenges": [
+        "Designing a large-scale commercial development in an international location",
+        "Creating an iconic architectural statement that attracts visitors",
+        "Ensuring the design meets local building codes and cultural preferences"
+      ],
+      "solutions": [
+        "Developed a comprehensive master plan that integrates multiple functions and retail spaces",
+        "Created distinctive architectural features that serve as landmarks",
+        "Collaborated with local consultants to ensure compliance and cultural sensitivity"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "9f8a222a-fd73-43ae-b4af-ab71c0c9a510",
+      "title": "Momin Solutions – Abdalian Society, Lahore",
+      "sub1": "Architecture",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5662.MominSolutions-AbdalianSociety,Lahore/5662ITOFFICEVIEW02.jpg",
+      "client": "Client",
+      "location": "AbdalianSociety, Lahore",
+      "area": "N/A",
+      "categoryId": "392942fd-0206-4106-b139-a98b94804e07",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5662.MominSolutions-AbdalianSociety,Lahore/5662ITOFFICEVIEW01.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5662.MominSolutions-AbdalianSociety,Lahore/5662ITOFFICEVIEW02.jpg"
+      ],
+      "challenges": [
+        "Creating innovative architectural solutions that meet functional requirements",
+        "Balancing aesthetic design with structural integrity",
+        "Ensuring the design integrates well with surrounding environment",
+        "Managing project complexity and coordination"
+      ],
+      "solutions": [
+        "Developed creative design concepts that address both form and function",
+        "Collaborated with structural engineers to ensure safe and efficient construction",
+        "Conducted site analysis to optimize building placement and orientation",
+        "Implemented comprehensive project management systems for smooth execution"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "5044c97b-a4c8-425c-b598-52deaaa6b391",
+      "title": "Hamza Arcade – Bahria Town, Lahore",
+      "sub1": "Commercial",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5618.HamzaArcade-BahriaTown,Lahore/Waseem_SeecaView1.jpg",
+      "client": "Client",
+      "location": "BahriaTown, Lahore",
+      "area": "N/A",
+      "categoryId": "a44856e5-a050-4404-a66f-ae78992bb6a1",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5618.HamzaArcade-BahriaTown,Lahore/Waseem_SeecaView1.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5618.HamzaArcade-BahriaTown,Lahore/Waseem_SeecaView2.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5618.HamzaArcade-BahriaTown,Lahore/Waseem_SeecaView3.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5618.HamzaArcade-BahriaTown,Lahore/Waseem_SeecaView4.1.png"
+      ],
+      "challenges": [
+        "Designing commercial architecture that supports business operations",
+        "Creating an impressive facade that attracts customers",
+        "Optimizing space for commercial use while maintaining design integrity"
+      ],
+      "solutions": [
+        "Developed functional layouts that support various commercial activities",
+        "Designed striking architectural elements that enhance brand visibility",
+        "Integrated modern building systems for efficiency and sustainability"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "5d27431f-e21a-4b8e-aabe-e656ede4079f",
+      "title": "Shahbaz Residence – Lake City, Lahore",
+      "sub1": "Residential",
+      "sub2": "Architecture Design",
+      "desc": "Professional architecture design project showcasing innovative design solutions and modern aesthetics.",
+      "img": "/home_preview/assets/img/Architecture_Deisgn/5607.ShahbazResidence-Lake City,Lahore/5607CAM01.jpg",
+      "client": "Client",
+      "location": "Lake City, Lahore",
+      "area": "N/A",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Architecture_Deisgn/5607.ShahbazResidence-Lake City,Lahore/5607CAM01.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5607.ShahbazResidence-Lake City,Lahore/5607CAM02.jpg",
+        "/home_preview/assets/img/Architecture_Deisgn/5607.ShahbazResidence-Lake City,Lahore/5607CAM03.jpg"
+      ],
+      "challenges": [
+        "Designing a modern residential structure that meets client lifestyle needs",
+        "Optimizing space utilization while maintaining aesthetic appeal",
+        "Ensuring compliance with local building codes and regulations",
+        "Integrating sustainable design principles"
+      ],
+      "solutions": [
+        "Conducted detailed client consultations to understand specific requirements and preferences",
+        "Developed innovative floor plans that maximize natural light and ventilation",
+        "Selected materials and construction methods that balance cost, durability, and aesthetics",
+        "Incorporated energy-efficient systems and sustainable building practices"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "2655589f-b550-4d44-b036-097a70899285",
+      "title": "Asian Bistro – Islamabad",
+      "sub1": "Restaurant",
+      "sub2": "Hospitality",
+      "desc": "The idea was to design a space along contemporary Asian inspired interior design. It has an ambiance that is raw, elemental, and creative, featuring a live digital mural wall and a unique bar design as well as a life sized cherry blossom tree running along the ceiling. In short, the space is innovative and one of its kind, sure to attract visitors for the value of its exquisite experience.",
+      "img": "/home_preview/assets/img/Interior_Design/5761.AsianBistro-Islamabad/06.2.jpg",
+      "client": "Mr. Mian Fahad",
+      "location": "Islamabad",
+      "area": "2250 Sqft",
+      "categoryId": "b2b00105-badf-4f18-aa4e-b1d9994bd89f",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5761.AsianBistro-Islamabad/03.jpg",
+        "/home_preview/assets/img/Interior_Design/5761.AsianBistro-Islamabad/06.2.jpg",
+        "/home_preview/assets/img/Interior_Design/5761.AsianBistro-Islamabad/5761.Render(1).jpg",
+        "/home_preview/assets/img/Interior_Design/5761.AsianBistro-Islamabad/5761.Render(2).jpg",
+        "/home_preview/assets/img/Interior_Design/5761.AsianBistro-Islamabad/5761.Render(3).jpg"
+      ],
+      "challenges": [
+        "Implementing innovative features like live digital mural wall and life-sized cherry blossom tree",
+        "Creating a raw, elemental, and creative ambiance in a 2,250 sqft space",
+        "Designing a unique bar and ceiling installation that becomes a focal point"
+      ],
+      "solutions": [
+        "Collaborated with technology specialists to integrate the digital mural wall seamlessly",
+        "Designed a custom cherry blossom tree installation that runs along the ceiling creating visual drama",
+        "Created distinct zones within the compact space to maximize functionality and experience"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "6ea07f34-e856-485f-8ed2-bd7de62b0122",
+      "title": "Ignition Pro – Gulberg, Lahore",
+      "sub1": "Interior Design",
+      "sub2": "Commercial",
+      "desc": "Balancing the colours of the logo with the space to keep it simple and clean while not making it boring is the main idea of the design. Using red as a prominent colour to make the space more vibrant.",
+      "img": "/home_preview/assets/img/Interior_Design/5770.IgnitionPro-Gulberg,Lahore/06.jpg",
+      "client": "Mr. Hamza Atiq",
+      "location": "LAHORE",
+      "area": "9000 Sqft",
+      "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5770.IgnitionPro-Gulberg,Lahore/01.jpg",
+        "/home_preview/assets/img/Interior_Design/5770.IgnitionPro-Gulberg,Lahore/03.jpg",
+        "/home_preview/assets/img/Interior_Design/5770.IgnitionPro-Gulberg,Lahore/05.jpg",
+        "/home_preview/assets/img/Interior_Design/5770.IgnitionPro-Gulberg,Lahore/06.jpg",
+        "/home_preview/assets/img/Interior_Design/5770.IgnitionPro-Gulberg,Lahore/Classroom02.jpg",
+        "/home_preview/assets/img/Interior_Design/5770.IgnitionPro-Gulberg,Lahore/DirectorOffice.jpg",
+        "/home_preview/assets/img/Interior_Design/5770.IgnitionPro-Gulberg,Lahore/MeetingRoom.jpg"
+      ],
+      "challenges": [
+        "Integrating brand logo colors (red) into the space without overwhelming the design",
+        "Maintaining simplicity and cleanliness while avoiding a boring aesthetic",
+        "Creating vibrant energy in a 9,000 sqft educational space"
+      ],
+      "solutions": [
+        "Used red as an accent color strategically placed in key areas to create visual interest without dominance",
+        "Designed clean, minimalist spaces with pops of color to maintain energy and engagement",
+        "Created distinct zones for classrooms, meeting rooms, and director office with cohesive design language"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "5a363b0c-dc86-4814-a9b1-c9338d85fdfd",
+      "title": "ZAK Shinwari – Sialkot",
+      "sub1": "Interior Design",
+      "sub2": "Commercial",
+      "desc": "The idea behind this luxury fine dine was \"Renaissance\". A fusion of culture with modernism. Culture may or may not directly effect our architecture. It depends upon how we approach it. The food of Afghanistan is now served in modern luxury interior so you can enjoy it whilst forgetting the dark times.",
+      "img": "/home_preview/assets/img/Interior_Design/5806.ZAKShinwari-Sialkot/GFCam01.jpg",
+      "client": "Mr. Zulfiqar Butt",
+      "location": "Sialkot",
+      "area": "6000 Sqft",
+      "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5806.ZAKShinwari-Sialkot/FFCAM01.jpg",
+        "/home_preview/assets/img/Interior_Design/5806.ZAKShinwari-Sialkot/FFCAM02.jpg",
+        "/home_preview/assets/img/Interior_Design/5806.ZAKShinwari-Sialkot/FFCAM03.jpg",
+        "/home_preview/assets/img/Interior_Design/5806.ZAKShinwari-Sialkot/GFCam01.jpg",
+        "/home_preview/assets/img/Interior_Design/5806.ZAKShinwari-Sialkot/GFCam02.jpg",
+        "/home_preview/assets/img/Interior_Design/5806.ZAKShinwari-Sialkot/GFCam03.jpg",
+        "/home_preview/assets/img/Interior_Design/5806.ZAKShinwari-Sialkot/GFCam04.jpg"
+      ],
+      "challenges": [
+        "Fusing Afghan cultural elements with modern luxury interior design",
+        "Creating a Renaissance-inspired atmosphere that honors tradition while embracing contemporary aesthetics",
+        "Designing a space that helps diners enjoy the experience while moving past difficult historical associations"
+      ],
+      "solutions": [
+        "Integrated traditional Afghan architectural motifs with modern materials and finishes",
+        "Created a sophisticated color palette that reflects cultural heritage while maintaining luxury appeal",
+        "Designed an immersive dining experience that celebrates the cuisine and culture"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "0744f68b-4d66-487d-bd02-5bbd11bead43",
+      "title": "React Outlet – Lahore",
+      "sub1": "Office",
+      "sub2": "Commercial",
+      "desc": "The idea was to create a contemporary design that is one of its kind. Sharp straight lines in dark tones are used for design which is set against the background of delicately curved panels in softer tones making the display stand out but at the same time balancing it as well. Each frame for display is customized specifically for a purpose making sure to display all varieties of merchandise, from short and long garments to shoes and accessories.",
+      "img": "/home_preview/assets/img/Interior_Design/5656.ReactOutlet-Lahore/CAM04.jpg",
+      "client": "Mr. Masroor Bhatti",
+      "location": "LAHORE",
+      "area": "3600 Sqft",
+      "categoryId": "107aa9fb-f253-4043-a339-0f5d0f2b4b10",
+      "images": [
+        "/home_preview/assets/img/Interior_Design/5656.ReactOutlet-Lahore/CAM01.jpg",
+        "/home_preview/assets/img/Interior_Design/5656.ReactOutlet-Lahore/CAM02.jpg",
+        "/home_preview/assets/img/Interior_Design/5656.ReactOutlet-Lahore/CAM03.jpg",
+        "/home_preview/assets/img/Interior_Design/5656.ReactOutlet-Lahore/CAM04.jpg",
+        "/home_preview/assets/img/Interior_Design/5656.ReactOutlet-Lahore/CAM05.jpg"
+      ],
+      "challenges": [
+        "Creating a unique contemporary retail design that stands out in the market",
+        "Balancing sharp straight lines with delicate curved panels without visual conflict",
+        "Designing custom display frames for diverse merchandise including garments, shoes, and accessories"
+      ],
+      "solutions": [
+        "Developed a contrasting design system using dark tones for structural elements and softer tones for background panels",
+        "Created purpose-built display frames tailored to different product categories ensuring optimal presentation",
+        "Implemented strategic lighting to highlight merchandise while maintaining the design aesthetic"
+      ],
+      "endingImage": ""
+    },
+    {
+      "id": "31a887d2-cc94-480f-9ce8-0f42f0b67c89",
+      "title": "Calrom – Askari Tower, Lahore",
+      "sub1": "Office",
+      "sub2": "Commercial",
+      "desc": "Introducing the design of the working area of a multi-international office with the concept of cool and calming colors. Where creativity thrives and innovation sparks. Welcome to the epitome of cool office vibes.",
+      "img": "/home1/assets/img/projects/calrom.jpg",
+      "client": "Ms Mehwish Fatima",
+      "location": "Lahore",
+      "area": "18000 Sqft",
+      "categoryId": "107aa9fb-f253-4043-a339-0f5d0f2b4b10",
+      "images": [
+        "/home1/assets/img/projects/calrom/calrom1.jpg",
+        "/home1/assets/img/projects/calrom/calrom2.jpg",
+        "/home1/assets/img/projects/calrom/calrom3.jpg",
+        "/home1/assets/img/projects/calrom/calrom4.jpg",
+        "/home1/assets/img/projects/calrom/calrom5.jpg",
+        "/home1/assets/img/projects/calrom/calrom6.jpg",
+        "/home1/assets/img/projects/calrom/calrom7.jpg",
+        "/home1/assets/img/projects/calrom/calrom8.jpg",
+        "/home1/assets/img/projects/calrom/calrom9.jpg"
+      ],
+      "challenges": [
+        "Creating a cohesive design for a large 18,000 sqft multi-international office space",
+        "Balancing cool and calming colors while maintaining a professional atmosphere",
+        "Ensuring the design promotes creativity and innovation across different cultural work styles"
+      ],
+      "solutions": [
+        "Implemented a color palette of cool blues and soft greens throughout the space to create a calming yet energizing environment",
+        "Designed flexible workspace zones that accommodate different working styles and cultural preferences",
+        "Integrated natural lighting and biophilic design elements to enhance productivity and well-being"
+      ],
+      "endingImage": ""
+    }
+  ],
+  "blogCategories": [
+    {
+      "id": "52feb2e8-95eb-4cc9-9039-6f47cec1cad3",
+      "name": "Architecture",
+      "created_at": "2026-07-15 20:05:36.017398+00"
+    },
+    {
+      "id": "eef45f4b-a24b-4c50-9616-2f383706fcde",
+      "name": "Construction",
+      "created_at": "2026-07-15 20:05:45.980615+00"
+    },
+    {
+      "id": "aab7c233-59f5-43ed-b731-a953554090d6",
+      "name": "Interior Design",
+      "created_at": "2026-07-15 20:05:40.786817+00"
+    }
+  ],
+  "blogs": [
+    {
+      "id": "d56e0ad4-c6e0-4dbb-a7f1-57729c238696",
+      "title": "Smart Building Technologies That Quietly Improve Daily Life",
+      "slug": "smart-building-technologies-that-quietly-improve-daily-life",
+      "description": "SEECA integrates intelligent systems for comfort, security, and efficiency — technology that supports the building without overwhelming the people inside it.",
+      "content": "Smart buildings succeed when technology disappears into better daily experiences. At SEECA, we integrate systems that improve comfort, safety, and efficiency while keeping interfaces simple and spaces visually calm.\n\nOur approach starts with the building’s real operational needs: lighting scenes, climate zones, access control, monitoring, and energy visibility. Instead of stacking disconnected gadgets, we plan an architecture for data and control — so systems can communicate, scale, and remain maintainable over time.\n\nIn commercial and mixed-use projects, this often means intelligent access, wayfinding, occupancy-aware lighting, and dashboards that help facility teams act quickly. In residential work, the priority is quieter: scenes that respond to time of day, security that feels seamless, and climate control that stays out of the way.\n\nTechnology should never compete with materials and light. When smart systems are designed as part of the architecture from the beginning, they raise performance without turning the building into a showroom of screens. The best smart building feels intuitive, efficient, and human.",
+      "article": "Smart buildings succeed when technology disappears into better daily experiences. At SEECA, we integrate systems that improve comfort, safety, and efficiency while keeping interfaces simple and spaces visually calm.\n\nOur approach starts with the building’s real operational needs: lighting scenes, climate zones, access control, monitoring, and energy visibility. Instead of stacking disconnected gadgets, we plan an architecture for data and control — so systems can communicate, scale, and remain maintainable over time.\n\nIn commercial and mixed-use projects, this often means intelligent access, wayfinding, occupancy-aware lighting, and dashboards that help facility teams act quickly. In residential work, the priority is quieter: scenes that respond to time of day, security that feels seamless, and climate control that stays out of the way.\n\nTechnology should never compete with materials and light. When smart systems are designed as part of the architecture from the beginning, they raise performance without turning the building into a showroom of screens. The best smart building feels intuitive, efficient, and human.",
+      "img": "/innerpages/assets/img/blog/b5.jpg",
+      "coverImage": "/innerpages/assets/img/blog/b5.jpg",
+      "subTitle": "Architecture",
+      "categoryId": "52feb2e8-95eb-4cc9-9039-6f47cec1cad3",
+      "history": "July 15, 2026",
+      "num": "15",
+      "month": "July",
+      "year": "2026"
+    },
+    {
+      "id": "6a98f058-c7c7-4bf2-b40c-174a46a77511",
+      "title": "Building Sustainability as a Design Responsibility",
+      "slug": "building-sustainability-as-a-design-responsibility",
+      "description": "SEECA integrates energy performance, healthy materials, and climate-responsive strategies so sustainability is built into the project — not added as a label.",
+      "content": "Sustainability is not a separate service layer at SEECA. It is a design responsibility that shapes orientation, envelope performance, material selection, and the way a building uses energy and water over its lifetime.\n\nWe begin with passive strategies whenever possible: daylighting, shading, natural ventilation potential, and thermal mass. These decisions reduce mechanical demand before equipment is ever specified. From there, we look at efficient systems, renewable opportunities, and durable assemblies that lower both operating cost and environmental impact.\n\nMaterial choices matter as much as systems. We prefer finishes and assemblies that are healthy, locally appropriate where feasible, and resilient under real climate conditions. Green infrastructure — living walls, thoughtful landscaping, and water-conscious design — can also improve comfort while supporting biodiversity around the building.\n\nA sustainable building should feel better to occupy, not only score better on paper. When performance and experience move together, sustainability becomes a lasting part of the architecture rather than a temporary claim.",
+      "article": "Sustainability is not a separate service layer at SEECA. It is a design responsibility that shapes orientation, envelope performance, material selection, and the way a building uses energy and water over its lifetime.\n\nWe begin with passive strategies whenever possible: daylighting, shading, natural ventilation potential, and thermal mass. These decisions reduce mechanical demand before equipment is ever specified. From there, we look at efficient systems, renewable opportunities, and durable assemblies that lower both operating cost and environmental impact.\n\nMaterial choices matter as much as systems. We prefer finishes and assemblies that are healthy, locally appropriate where feasible, and resilient under real climate conditions. Green infrastructure — living walls, thoughtful landscaping, and water-conscious design — can also improve comfort while supporting biodiversity around the building.\n\nA sustainable building should feel better to occupy, not only score better on paper. When performance and experience move together, sustainability becomes a lasting part of the architecture rather than a temporary claim.",
+      "img": "/innerpages/assets/img/blog/b5.jpg",
+      "coverImage": "/innerpages/assets/img/blog/b5.jpg",
+      "subTitle": "Architecture",
+      "categoryId": "52feb2e8-95eb-4cc9-9039-6f47cec1cad3",
+      "history": "July 15, 2026",
+      "num": "15",
+      "month": "July",
+      "year": "2026"
+    },
+    {
+      "id": "835e2d70-d741-4cc0-8c34-254539e5fcb4",
+      "title": "Construction Built on Precision, Coordination, and Craft",
+      "slug": "construction-built-on-precision-coordination-and-craft",
+      "description": "From structural framing to final finishes, SEECA construction delivers architectural intent with disciplined site execution and clear project control.",
+      "content": "Design only becomes real when it is built well. SEECA’s construction approach is grounded in coordination, sequencing, and an insistence that drawings and site work stay aligned from groundbreaking to handover.\n\nEvery project begins with a clear build plan: structural logic, material lead times, trade dependencies, and quality checkpoints. We treat the site as a place of craft, not just logistics. Steel, concrete, envelope systems, and finishes are installed with the same attention we give to the design itself.\n\nCommunication is as important as construction. Clients, consultants, and contractors need shared visibility into progress, decisions, and risks. That transparency keeps schedules honest and protects the integrity of the original concept when field conditions demand adaptation.\n\nOur teams focus on the details that decide whether a building feels carefully made — alignment, tolerances, waterproofing, and the handoff between structure and finish. When construction is disciplined, architecture holds its shape for decades.",
+      "article": "Design only becomes real when it is built well. SEECA’s construction approach is grounded in coordination, sequencing, and an insistence that drawings and site work stay aligned from groundbreaking to handover.\n\nEvery project begins with a clear build plan: structural logic, material lead times, trade dependencies, and quality checkpoints. We treat the site as a place of craft, not just logistics. Steel, concrete, envelope systems, and finishes are installed with the same attention we give to the design itself.\n\nCommunication is as important as construction. Clients, consultants, and contractors need shared visibility into progress, decisions, and risks. That transparency keeps schedules honest and protects the integrity of the original concept when field conditions demand adaptation.\n\nOur teams focus on the details that decide whether a building feels carefully made — alignment, tolerances, waterproofing, and the handoff between structure and finish. When construction is disciplined, architecture holds its shape for decades.",
+      "img": "/innerpages/assets/img/blog/b5.jpg",
+      "coverImage": "/innerpages/assets/img/blog/b5.jpg",
+      "subTitle": "Construction",
+      "categoryId": "eef45f4b-a24b-4c50-9616-2f383706fcde",
+      "history": "July 15, 2026",
+      "num": "15",
+      "month": "July",
+      "year": "2026"
+    },
+    {
+      "id": "20640dca-9ad7-4ea6-a824-9e6b580af068",
+      "title": "Interior Design That Turns Space Into Experience",
+      "slug": "interior-design-that-turns-space-into-experience",
+      "description": "SEECA interiors are crafted around light, material, and movement — spaces that feel refined, livable, and unmistakably complete.",
+      "content": "Interior design is where architecture becomes personal. At SEECA, we shape rooms that feel composed from the moment you enter — balanced in proportion, warm in material, and clear in purpose.\n\nOur process begins with how people actually move through a space. Circulation, seating, storage, and sightlines are planned together so the interior never feels like decoration applied after the fact. Every surface has a role: wood for warmth, stone for permanence, textiles for comfort, and carefully placed lighting for mood across the day.\n\nWe favor calm palettes with intentional contrast. Instead of filling rooms with objects, we edit carefully — choosing fewer pieces with stronger presence. Custom millwork, layered lighting, and tactile finishes give each project a quiet signature without visual noise.\n\nWhether we are designing a private residence or a commercial interior, the goal is the same: a space that feels finished, functional, and ready to be lived in. Good interior design should not demand attention. It should reward it.",
+      "article": "Interior design is where architecture becomes personal. At SEECA, we shape rooms that feel composed from the moment you enter — balanced in proportion, warm in material, and clear in purpose.\n\nOur process begins with how people actually move through a space. Circulation, seating, storage, and sightlines are planned together so the interior never feels like decoration applied after the fact. Every surface has a role: wood for warmth, stone for permanence, textiles for comfort, and carefully placed lighting for mood across the day.\n\nWe favor calm palettes with intentional contrast. Instead of filling rooms with objects, we edit carefully — choosing fewer pieces with stronger presence. Custom millwork, layered lighting, and tactile finishes give each project a quiet signature without visual noise.\n\nWhether we are designing a private residence or a commercial interior, the goal is the same: a space that feels finished, functional, and ready to be lived in. Good interior design should not demand attention. It should reward it.",
+      "img": "/innerpages/assets/img/blog/b5.jpg",
+      "coverImage": "/innerpages/assets/img/blog/b5.jpg",
+      "subTitle": "Interior Design",
+      "categoryId": "aab7c233-59f5-43ed-b731-a953554090d6",
+      "history": "July 15, 2026",
+      "num": "15",
+      "month": "July",
+      "year": "2026"
+    },
+    {
+      "id": "ffeba579-e334-4d1b-aaa6-3bcb2e03ef48",
+      "title": "Architecture That Shapes How People Live and Work",
+      "slug": "architecture-that-shapes-how-people-live-and-work",
+      "description": "How SEECA approaches architectural design as a balance of form, function, and place — creating buildings that feel intentional from the first sketch to the final detail.",
+      "content": "Great architecture begins long before the first wall is drawn. At SEECA, we treat every project as a conversation between site, climate, culture, and the people who will inhabit the finished space.\n\nWe start by reading the land carefully: orientation, views, circulation, and the surrounding fabric of the neighborhood. Those conditions become the foundation for a clear design concept — one that is strong enough to guide decisions and flexible enough to evolve as the brief unfolds.\n\nForm follows purpose, but never at the expense of atmosphere. Our architectural work looks for quiet clarity: well-proportioned volumes, honest materials, and daylight that does real work. We design for longevity, so buildings remain relevant as uses change and cities grow around them.\n\nFrom concept sketches to construction documentation, we stay close to the details that make architecture feel considered — thresholds, overhangs, structural rhythm, and the way a facade meets the sky. The result is architecture that does more than look resolved. It supports daily life with calm precision.",
+      "article": "Great architecture begins long before the first wall is drawn. At SEECA, we treat every project as a conversation between site, climate, culture, and the people who will inhabit the finished space.\n\nWe start by reading the land carefully: orientation, views, circulation, and the surrounding fabric of the neighborhood. Those conditions become the foundation for a clear design concept — one that is strong enough to guide decisions and flexible enough to evolve as the brief unfolds.\n\nForm follows purpose, but never at the expense of atmosphere. Our architectural work looks for quiet clarity: well-proportioned volumes, honest materials, and daylight that does real work. We design for longevity, so buildings remain relevant as uses change and cities grow around them.\n\nFrom concept sketches to construction documentation, we stay close to the details that make architecture feel considered — thresholds, overhangs, structural rhythm, and the way a facade meets the sky. The result is architecture that does more than look resolved. It supports daily life with calm precision.",
+      "img": "/innerpages/assets/img/blog/b5.jpg",
+      "coverImage": "/innerpages/assets/img/blog/b5.jpg",
+      "subTitle": "Architecture",
+      "categoryId": "52feb2e8-95eb-4cc9-9039-6f47cec1cad3",
+      "history": "July 15, 2026",
+      "num": "15",
+      "month": "July",
+      "year": "2026"
+    }
+  ],
+  "partners": [
+    {
+      "id": "992296c3-f285-4880-b1e7-a416e857f3a6",
+      "name": "clapit solutions",
+      "logo": "",
+      "writeup": "At Inspired2Empower, we understand the challenges that individuals and families face when searching for affordable housing and we're committed to making the process as easy as possible."
+    },
+    {
+      "id": "6938c788-c1e8-46e0-9bf3-4f3791480685",
+      "name": "Momentum Fitness",
+      "logo": "/home_preview/assets/img/OurPartners/5561.MomentumFitness.png",
+      "writeup": "Fitness and wellness brand we have supported with interior planning, spatial flow, and durable finishes suited to high-traffic training spaces."
+    },
+    {
+      "id": "21ccdac0-ee32-4df6-a7b0-cd864446d4ec",
+      "name": "ALICIA BUSINESS CONSULTING",
+      "logo": "/home_preview/assets/img/OurPartners/5562(1).png",
+      "writeup": "Commercial collaborator on mixed-use and retail environments, aligned with our documentation and site coordination standards."
+    },
+    {
+      "id": "b78779e7-522f-43cc-bdf4-9a21a53ea58b",
+      "name": "PRISMATIC",
+      "logo": "/home_preview/assets/img/OurPartners/5562(2).png",
+      "writeup": "Repeat project partner for hospitality-led briefs, from early concept alignment through contractor-ready packages."
+    },
+    {
+      "id": "a7ce756a-6840-4fcc-a95f-3b472c54a9b3",
+      "name": "Hunbul Tex Pvt Ltd",
+      "logo": "/home_preview/assets/img/OurPartners/5566.HunbulTexPvtLtd.png",
+      "writeup": "Textile-sector client for industrial layouts, office amenity zones, and pragmatic building envelopes tailored to operations."
+    },
+    {
+      "id": "ce2c8b28-e6bd-48fb-b619-6175c0952a03",
+      "name": "Maxim Agri Pvt Ltd",
+      "logo": "/home_preview/assets/img/OurPartners/5584.MaximAgriPvtLtd.png",
+      "writeup": "Agriculture-focused programmes where site planning, structures, and circulation support processing and logistics."
+    },
+    {
+      "id": "126d33d4-b001-4161-8941-2089830cca64",
+      "name": "Acamar",
+      "logo": "/home_preview/assets/img/OurPartners/5611.AcamarLogo.png",
+      "writeup": "Lifestyle and residential-facing partner emphasising refined material palettes, daylight, and calm, ordered spaces."
+    },
+    {
+      "id": "ab29ff00-2d68-4ae8-a19f-4e1fe35c3402",
+      "name": "Hamza Arcade",
+      "logo": "/home_preview/assets/img/OurPartners/5618.HamzaArcade.png",
+      "writeup": "Retail arcade development showcasing integrated façades, wayfinding, and tenant-ready shell coordination."
+    },
+    {
+      "id": "1afe7c50-2b3d-4065-8ca3-dd34a80e1cf0",
+      "name": "CNL UK",
+      "logo": "/home_preview/assets/img/OurPartners/5636.CNLUK.png",
+      "writeup": "UK-linked collaboration bringing international benchmarks to detailing, specifications, and client reporting."
+    },
+    {
+      "id": "786b5791-819c-4706-bab8-ddf66322481e",
+      "name": "Pakistan Army",
+      "logo": "/home_preview/assets/img/OurPartners/5639.PakistanArmy.png",
+      "writeup": "Institutional work delivered with rigorous compliance, security-aware planning, and clear construction sequencing."
+    },
+    {
+      "id": "929ab8b7-2bcd-4d94-a0b9-ae965d3ea980",
+      "name": "Punjab Food Authority",
+      "logo": "/home_preview/assets/img/OurPartners/5646.Punjab_Food_Authority_logo.png",
+      "writeup": "Public-sector facilities supporting regulatory operations, staff workflow, and transparent public-facing areas."
+    },
+    {
+      "id": "f5aaaaf6-be53-4064-b95b-be97c7d52045",
+      "name": "Momin Solutions",
+      "logo": "/home_preview/assets/img/OurPartners/5662.Momin-Solutions.png",
+      "writeup": "Systems and integration partner helping align MEP, controls, and smart-building intent with architectural intent."
+    },
+    {
+      "id": "68e826a3-66e8-4af0-8eac-a99fc0b5a0c0",
+      "name": "Masaud Tech",
+      "logo": "/home_preview/assets/img/OurPartners/5682.MasaudTech.png",
+      "writeup": "Technology partner supporting digital coordination, documentation exchange, and responsive design iterations."
+    },
+    {
+      "id": "5836cb5d-b594-4d1e-8f97-7e66c9164241",
+      "name": "USA Pearl",
+      "logo": "/home_preview/assets/img/OurPartners/5687.USAperalLOGO-E.png",
+      "writeup": "Lifestyle retail with bespoke display planning, focal lighting, and customer journey clarity throughout the store."
+    },
+    {
+      "id": "f4755831-62fa-48bc-aaaa-fdaec4952015",
+      "name": "TIKSOM",
+      "logo": "/home_preview/assets/img/OurPartners/5689.Logo.png",
+      "writeup": "Local collaborator trusted across multiple commissions from schematic design to site troubleshooting."
+    },
+    {
+      "id": "12676a8f-4ddd-4141-8084-be523216070c",
+      "name": "Access",
+      "logo": "/home_preview/assets/img/OurPartners/5696.Accesslogo-1.png",
+      "writeup": "Workplace and corporate environments planned for accessibility, adjacencies, and growth-ready floor plates."
+    },
+    {
+      "id": "13196721-04e4-4bdd-91f1-53531b34a2da",
+      "name": "FITNATION",
+      "logo": "/home_preview/assets/img/OurPartners/5705.Logo-1.png",
+      "writeup": "Joint delivery on residential and small commercial portfolios with shared quality gates and timelines."
+    },
+    {
+      "id": "96850b26-8c78-40cb-85c5-56a8fb232762",
+      "name": "SUGAR VILLA",
+      "logo": "/home_preview/assets/img/OurPartners/5717.Logo.png",
+      "writeup": "Aligned partner on sustainable material choices, waste reduction on site, and lifecycle-minded detailing."
+    },
+    {
+      "id": "7f27156b-7c3f-41d9-b965-2b64822f4aa1",
+      "name": "CYNO SURE Designs",
+      "logo": "/home_preview/assets/img/OurPartners/5719.Logo.png",
+      "writeup": "Contributor to fast-track programmes where clear drawing sets and decision logs keep contractors unblocked."
+    },
+    {
+      "id": "1ec10956-ec56-48b9-ba85-681c9af5d06b",
+      "name": "Bahria University",
+      "logo": "/home_preview/assets/img/OurPartners/5720.bahria-university-logo.png",
+      "writeup": "Academic and campus-adjacent projects balancing learning environments, gathering spaces, and safe circulation."
+    },
+    {
+      "id": "67ec813f-2fb5-4519-a3ea-674ae1fb6f84",
+      "name": "DAR-E-ARQAM",
+      "logo": "/home_preview/assets/img/OurPartners/5721.Logo.png",
+      "writeup": "Specialist partner on interior fit-outs where finishes, ceilings, and joinery must meet brand and budget."
+    },
+    {
+      "id": "80db6c17-7aea-464a-990f-04497b9c2c45",
+      "name": "JEENY",
+      "logo": "/home_preview/assets/img/OurPartners/5730.Logo.png",
+      "writeup": "Regional collaborator extending our reach on surveys, site visits, and local authority engagement."
+    },
+    {
+      "id": "a4f473d1-8070-4edb-9cee-d056d9fb09ce",
+      "name": "ONYX TEC",
+      "logo": "/home_preview/assets/img/OurPartners/5762.Logo.png",
+      "writeup": "Supporting partner on façade studies, shop drawings review, and mock-up sign-offs before full rollout."
+    },
+    {
+      "id": "8efd7782-32d4-40e4-977f-45dc0aa61b19",
+      "name": "Shumaila's",
+      "logo": "",
+      "writeup": "Beauty and wellness retail featuring tailored display niches, soft lighting layers, and resilient wet areas."
+    },
+    {
+      "id": "81dd9471-fac8-4564-a36b-69b7c585d9d3",
+      "name": "Ignition Pro",
+      "logo": "/home_preview/assets/img/OurPartners/5770.Logo.png",
+      "writeup": "Value-aligned partner on phased renovations with minimal disruption to occupied spaces."
+    },
+    {
+      "id": "f9aecfd9-5349-40a8-afc0-df0439b3a560",
+      "name": "ZAK SHINWARI",
+      "logo": "/home_preview/assets/img/OurPartners/5806.zak-logo.png",
+      "writeup": "Brand-forward built work where identity, signage, and architecture read as one coherent customer experience."
+    },
+    {
+      "id": "bf42a4bc-bf58-45f6-9db2-dbf6fc768f3d",
+      "name": "Muslim Dental Clinic",
+      "logo": "",
+      "writeup": "Delivery partner on turnkey interiors including loose furniture, artwork placement, and launch readiness."
+    },
+    {
+      "id": "adaaef65-fd7b-467a-880f-5d5ffdab5d4a",
+      "name": "CALROM PAKISTAN",
+      "logo": "/home_preview/assets/img/OurPartners/5850.Logo.png",
+      "writeup": "Consulting partner for code-aware egress, fire strategy interfaces, and assembly occupancy planning."
+    },
+    {
+      "id": "ad24e207-dd0b-444d-a5e9-8341ed8693a4",
+      "name": "BRAINX",
+      "logo": "/home_preview/assets/img/OurPartners/5853.Logo.png",
+      "writeup": "Repeat ally on multi-unit housing, parking logic, and amenity cores shared across towers or blocks."
+    },
+    {
+      "id": "79a90db4-fa84-428f-ac93-7d02d6541a61",
+      "name": "Fatima Group",
+      "logo": "",
+      "writeup": "Collaborator on landscape interfaces, outdoor rooms, and transition zones between building and site."
+    },
+    {
+      "id": "0f87f470-919b-4bee-8c89-a330a01e3824",
+      "name": "SPICE MYSTERY",
+      "logo": "/home_preview/assets/img/OurPartners/5890.GLogo.png",
+      "writeup": "Supplier and execution partner ensuring specified products arrive tested, labelled, and install-ready."
+    },
+    {
+      "id": "8c1020fc-5be2-44d1-91bb-7322a3d4d136",
+      "name": "GOLDSHEFF NUTRACEUTICALS (Pvt.) Ltd.",
+      "logo": "/home_preview/assets/img/OurPartners/5891.Logo.png",
+      "writeup": "Finance-adjacent or back-office fit-out partner prioritising acoustic privacy and efficient workstations."
+    },
+    {
+      "id": "d737ce01-b47f-4d4d-b0ee-e44fecbd882e",
+      "name": "Sheikh new CHARGHA HOUSE",
+      "logo": "/home_preview/assets/img/OurPartners/5897.Logo_B.png",
+      "writeup": "Experimental briefs where rapid prototyping, sample boards, and visual storytelling win stakeholder buy-in."
+    },
+    {
+      "id": "347aabdd-d5bc-4ea8-8f6c-20c038727f79",
+      "name": "Rafayel on the Left Bank",
+      "logo": "/home_preview/assets/img/OurPartners/5906.logo.png",
+      "writeup": "Logistics and operations-aware partner helping us size loading, service yards, and vertical circulation early."
+    },
+    {
+      "id": "14ffa2c5-6f27-47ef-ba14-3eaf80e3b34c",
+      "name": "Arafat",
+      "logo": "/home_preview/assets/img/OurPartners/5920.LogoArafat.png",
+      "writeup": "Hospitality and brand build-outs combining kitchen planning, guest seating zones, and memorable entry sequences."
+    },
+    {
+      "id": "4ccbd593-7ad0-4cb9-8c63-5915120e6a30",
+      "name": "CRAVINGS BAKESHOP",
+      "logo": "/home_preview/assets/img/OurPartners/5950.CravingsLogoEPS.png",
+      "writeup": "Food and beverage concept where kitchen-to-floor layout, queue geometry, and ambiance support peak service."
+    },
+    {
+      "id": "72951abf-18a3-4a92-9fdf-2dbfffca2c78",
+      "name": "optronix.ai",
+      "logo": "/home_preview/assets/img/OurPartners/5952.Logo.png",
+      "writeup": "Healthcare-adjacent or clinical support space partner focusing on hygiene, durability, and staff ergonomics."
+    },
+    {
+      "id": "46376c90-1e82-49d2-bd13-f8f7835df55a",
+      "name": "HPI",
+      "logo": "/home_preview/assets/img/OurPartners/5958.hpi-logo-dark.png",
+      "writeup": "Professional and medical infrastructure aligned with equipment plans, infection-control routes, and privacy."
+    },
+    {
+      "id": "640a93b1-cbb4-4149-8be4-e9858330cb44",
+      "name": "Datum Labs",
+      "logo": "/home_preview/assets/img/OurPartners/5991.Datumlabs-logo.png",
+      "writeup": "Innovation partner backing data-informed massing studies, performance feedback, and iterative design sprints."
+    },
+    {
+      "id": "3e9e35e6-fcb6-4fba-b619-d72e9b437b06",
+      "name": "GA Family Restaurant",
+      "logo": "/home_preview/assets/img/OurPartners/GA_Family_Restaurant_logo_upscaled_4096.png",
+      "writeup": "Family dining destinations with warm materials, flexible seating groups, and acoustic comfort for conversation."
+    },
+    {
+      "id": "e6afcf06-086f-4219-9a95-5a7f0cb7dfd0",
+      "name": "TechScale",
+      "logo": "/home_preview/assets/img/OurPartners/TechScale.png",
+      "writeup": "Scaling technology workplaces and labs with agile neighbourhoods, focus rooms, and robust cable pathways."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "cfefd326-081d-4c74-ae80-2d95ed1b34d3",
+      "text": "SEE team is very professional and friendly. Response time, job update, and support are extremely good. From my experience, I would say a great job by great team. Highly recommended.",
+      "name": "Mr. Asad Ali Khan",
+      "role": "CLIENT OF COMPANY"
+    },
+    {
+      "id": "3a316d4b-7d50-49da-969f-b33734718ccf",
+      "text": "A place where you can get your designs and get them implemented too. It was my first time trying their services and I'm completely satisfied and even gratified by the quickness of their responses and the ease of communication",
+      "name": "Dr. Ahmed Arif",
+      "role": "CLIENT OF COMPANY"
+    },
+    {
+      "id": "fea5510f-4751-4e4b-88fc-168989c8d88e",
+      "text": "I got the interior design from SEECA team, they are professional and committed to their timeline. They communicate everything clearly. Their design team is very creative and they prioritise customer satisfaction at every phase. Strongly recommended from me.",
+      "name": "Mr. Junaid Riaz",
+      "role": "CLIENT OF COMPANY"
+    },
+    {
+      "id": "4bdbd312-163b-4a6e-97f9-529d0acee136",
+      "text": "I got my house renovated from SEECA and they did an amazing job. I was particularly happy with the Chic windows and fancy yet decent lightening. The charges were also reasonable as compared to other companies. Highly recommended!",
+      "name": "Ms Farwa Qazalbash",
+      "role": "CLIENT OF COMPANY"
+    },
+    {
+      "id": "aa6e665f-7673-4ae2-8e87-996307c93ea1",
+      "text": "SEE team is very professional and friendly. Response time, job update, and support are extremely good. From my experience, I would say a great job by great team. Highly recommended.",
+      "name": "Mr. Asad Ali Khan",
+      "role": "CLIENT OF COMPANY"
+    }
+  ]
+}

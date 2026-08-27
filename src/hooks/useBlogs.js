@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { snapshot, useSnapshotFor } from '../lib/cmsFallback';
 import { getPublicImageUrl, supabase } from '../lib/supabase';
 
 function asRelation(value) {
@@ -21,9 +22,9 @@ function formatBlogDate(value) {
 }
 
 export default function useBlogs() {
-  const [categories, setCategories] = useState([]);
-  const [blogs, setBlogs] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [categories, setCategories] = useState(snapshot.blogCategories);
+  const [blogs, setBlogs] = useState(snapshot.blogs);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     let active = true;
@@ -46,14 +47,23 @@ export default function useBlogs() {
 
       if (!active) return;
 
+      if (useSnapshotFor(categoriesResult) || useSnapshotFor(blogsResult)) {
+        setCategories(snapshot.blogCategories);
+        setBlogs(snapshot.blogs);
+        setLoading(false);
+        return;
+      }
+
       if (categoriesResult.error) {
         console.error('Could not load blog categories:', categoriesResult.error.message);
+        setCategories(snapshot.blogCategories);
       } else {
         setCategories(categoriesResult.data || []);
       }
 
       if (blogsResult.error) {
         console.error('Could not load blogs:', blogsResult.error.message);
+        setBlogs(snapshot.blogs);
         setLoading(false);
         return;
       }
