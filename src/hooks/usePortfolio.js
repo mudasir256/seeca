@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { snapshot, useSnapshotFor } from '../lib/cmsFallback';
+import { snapshot, shouldUseSnapshot } from '../lib/cmsFallback';
 import { getPublicImageUrl, supabase } from '../lib/supabase';
 
 function asRelation(value) {
@@ -41,7 +41,7 @@ export default function usePortfolio() {
 
       if (!active) return;
 
-      if (useSnapshotFor(categoriesResult) || useSnapshotFor(projectsResult)) {
+      if (shouldUseSnapshot(categoriesResult) || shouldUseSnapshot(projectsResult)) {
         setCategories(snapshot.portfolioCategories);
         setProjects(snapshot.projects);
         setLoading(false);

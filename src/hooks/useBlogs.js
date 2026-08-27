@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { snapshot, useSnapshotFor } from '../lib/cmsFallback';
+import { snapshot, shouldUseSnapshot } from '../lib/cmsFallback';
 import { getPublicImageUrl, supabase } from '../lib/supabase';
 
 function asRelation(value) {
@@ -47,7 +47,7 @@ export default function useBlogs() {
 
       if (!active) return;
 
-      if (useSnapshotFor(categoriesResult) || useSnapshotFor(blogsResult)) {
+      if (shouldUseSnapshot(categoriesResult) || shouldUseSnapshot(blogsResult)) {
         setCategories(snapshot.blogCategories);
         setBlogs(snapshot.blogs);
         setLoading(false);

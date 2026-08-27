@@ -2,7 +2,7 @@ import snapshot from '../data/cms-snapshot.json';
 
 export { snapshot };
 
-export function useSnapshotFor(resultOrError) {
+export function shouldUseSnapshot(resultOrError) {
   if (!resultOrError) return false;
 
   const error = resultOrError.error || resultOrError;
