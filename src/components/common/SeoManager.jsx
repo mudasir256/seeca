@@ -1,6 +1,9 @@
+import { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import { useLocation } from 'react-router-dom';
 import blogPosts from '../../data/innerpages/blog/filter.json';
+
+const GA_MEASUREMENT_ID = 'G-JMF0RQ1LD0';
 
 const SITE_NAME = 'SEECA';
 const DEFAULT_TITLE =
@@ -313,7 +316,8 @@ function buildBreadcrumbSchema(pathname, siteUrl) {
 }
 
 export default function SeoManager() {
-  const { pathname, state } = useLocation();
+  const { pathname, search, state } = useLocation();
+  const isFirstPageView = useRef(true);
   const isBlogPostRoute = pathname.startsWith('/blog/');
   const blogSlug = isBlogPostRoute ? pathname.split('/').pop() : null;
   const blogFromRoute = blogSlug ? blogPosts.find((post) => post.slug === blogSlug) : null;
@@ -431,6 +435,23 @@ export default function SeoManager() {
         keywords,
       }
     : null;
+
+  useEffect(() => {
+    if (typeof window.gtag !== 'function') return;
+
+    // First page_view is sent by the gtag snippet in public/index.html.
+    if (isFirstPageView.current) {
+      isFirstPageView.current = false;
+      return;
+    }
+
+    window.gtag('event', 'page_view', {
+      page_title: title,
+      page_location: canonical,
+      page_path: `${pathname}${search}`,
+      send_to: GA_MEASUREMENT_ID,
+    });
+  }, [pathname, search, title, canonical]);
 
   return (
     <Helmet>
