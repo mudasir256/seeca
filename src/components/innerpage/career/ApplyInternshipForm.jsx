@@ -1,11 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
-import emailjs from '@emailjs/browser';
 import {
   initEmailJS,
-  EMAILJS_SERVICE_ID,
   EMAILJS_INTERNSHIP_TEMPLATE_ID,
 } from '../../../config/emailjs';
-import { uploadResume } from '../../../lib/resumeUpload';
+import { submitCareerApplication } from '../../../lib/careerApplication';
 
 const MAX_RESUME_SIZE = 5 * 1024 * 1024;
 const RESUME_EXTENSIONS = /\.(pdf|doc|docx)$/i;
@@ -60,7 +58,7 @@ function ApplyInternshipForm() {
       return;
     }
 
-    if (!EMAILJS_SERVICE_ID || !EMAILJS_INTERNSHIP_TEMPLATE_ID) {
+    if (!EMAILJS_INTERNSHIP_TEMPLATE_ID) {
       setStatus('error');
       setErrorMsg('Email service is not configured. Please try again later.');
       return;
@@ -69,21 +67,48 @@ function ApplyInternshipForm() {
     setStatus('sending');
 
     try {
-      const resumeUrl = await uploadResume(resume, 'internships');
-      resumeUrlRef.current.value = resumeUrl;
-      formRef.current.elements.coverLetter.value = [
+      const coverLetter = [
         formData.coverLetter,
         formData.portfolio ? `Portfolio link: ${formData.portfolio}` : '',
-        `Click here to get Resume: ${resumeUrl}`,
+        `Resume file: ${resume.name}`,
       ]
         .filter(Boolean)
         .join('\n\n');
+      formRef.current.elements.coverLetter.value = coverLetter;
+      if (resumeUrlRef.current) {
+        resumeUrlRef.current.value = resume.name;
+      }
 
-      await emailjs.sendForm(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_INTERNSHIP_TEMPLATE_ID,
-        formRef.current
-      );
+      await submitCareerApplication({
+        templateId: EMAILJS_INTERNSHIP_TEMPLATE_ID,
+        emailFields: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          institution: formData.institution,
+          degree: formData.degree,
+          fieldOfStudy: formData.fieldOfStudy,
+          preferredDuration: formData.preferredDuration,
+          portfolio: formData.portfolio,
+          coverLetter,
+          resume_url: resume.name,
+        },
+        inboxFields: {
+          'Application type': 'Internship',
+          'Full name': formData.name,
+          Email: formData.email,
+          Phone: formData.phone,
+          Institution: formData.institution,
+          Degree: formData.degree,
+          'Field of study': formData.fieldOfStudy,
+          'Preferred duration': formData.preferredDuration,
+          Portfolio: formData.portfolio,
+          'Cover letter': formData.coverLetter,
+          'Resume file name': resume.name,
+        },
+        resume,
+        subject: `Internship application — ${formData.name}`,
+      });
 
       setStatus('success');
       setFormData({
@@ -396,6 +421,7 @@ function ApplyInternshipForm() {
                 <input
                   id="internship-resume"
                   type="file"
+                  name="resume"
                   ref={resumeInputRef}
                   className="form-control"
                   accept=".pdf,.doc,.docx"

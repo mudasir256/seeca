@@ -1,11 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
-import emailjs from '@emailjs/browser';
 import {
   initEmailJS,
-  EMAILJS_SERVICE_ID,
   EMAILJS_JOB_TEMPLATE_ID,
 } from '../../../config/emailjs';
-import { uploadResume } from '../../../lib/resumeUpload';
+import { submitCareerApplication } from '../../../lib/careerApplication';
 
 const MAX_RESUME_SIZE = 5 * 1024 * 1024;
 const RESUME_EXTENSIONS = /\.(pdf|doc|docx)$/i;
@@ -58,7 +56,7 @@ function ApplyJobForm() {
       return;
     }
 
-    if (!EMAILJS_SERVICE_ID || !EMAILJS_JOB_TEMPLATE_ID) {
+    if (!EMAILJS_JOB_TEMPLATE_ID) {
       setStatus('error');
       setErrorMsg('Email service is not configured. Please try again later.');
       return;
@@ -67,21 +65,44 @@ function ApplyJobForm() {
     setStatus('sending');
 
     try {
-      const resumeUrl = await uploadResume(resume, 'jobs');
-      resumeUrlRef.current.value = resumeUrl;
-      formRef.current.elements.coverLetter.value = [
+      const coverLetter = [
         formData.coverLetter,
         formData.portfolio ? `Portfolio link: ${formData.portfolio}` : '',
-        `Click here to get Resume:: ${resumeUrl}`,
+        `Resume file: ${resume.name}`,
       ]
         .filter(Boolean)
         .join('\n\n');
+      formRef.current.elements.coverLetter.value = coverLetter;
+      if (resumeUrlRef.current) {
+        resumeUrlRef.current.value = resume.name;
+      }
 
-      await emailjs.sendForm(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_JOB_TEMPLATE_ID,
-        formRef.current
-      );
+      await submitCareerApplication({
+        templateId: EMAILJS_JOB_TEMPLATE_ID,
+        emailFields: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          position: formData.position,
+          experience: formData.experience,
+          portfolio: formData.portfolio,
+          coverLetter,
+          resume_url: resume.name,
+        },
+        inboxFields: {
+          'Application type': 'Job',
+          'Full name': formData.name,
+          Email: formData.email,
+          Phone: formData.phone,
+          Position: formData.position,
+          Experience: formData.experience,
+          Portfolio: formData.portfolio,
+          'Cover letter': formData.coverLetter,
+          'Resume file name': resume.name,
+        },
+        resume,
+        subject: `Job application — ${formData.position || formData.name}`,
+      });
 
       setStatus('success');
       setFormData({
@@ -368,6 +389,7 @@ function ApplyJobForm() {
                 <input
                   id="job-resume"
                   type="file"
+                  name="resume"
                   ref={resumeInputRef}
                   className="form-control"
                   accept=".pdf,.doc,.docx"
