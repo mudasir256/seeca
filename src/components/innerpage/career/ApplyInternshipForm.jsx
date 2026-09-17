@@ -3,15 +3,10 @@ import {
   initEmailJS,
   EMAILJS_INTERNSHIP_TEMPLATE_ID,
 } from '../../../config/emailjs';
-import { submitCareerApplication } from '../../../lib/careerApplication';
-
-const MAX_RESUME_SIZE = 5 * 1024 * 1024;
-const RESUME_EXTENSIONS = /\.(pdf|doc|docx)$/i;
+import { normalizeResumeLink, submitCareerApplication } from '../../../lib/careerApplication';
 
 function ApplyInternshipForm() {
   const formRef = useRef();
-  const resumeInputRef = useRef();
-  const resumeUrlRef = useRef();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,6 +16,7 @@ function ApplyInternshipForm() {
     fieldOfStudy: '',
     preferredDuration: '',
     portfolio: '',
+    resume_url: '',
     coverLetter: '',
   });
   const [status, setStatus] = useState('idle');
@@ -41,20 +37,10 @@ function ApplyInternshipForm() {
     e.preventDefault();
     setErrorMsg('');
 
-    const resume = resumeInputRef.current?.files?.[0];
-    if (!resume) {
+    const resumeUrl = normalizeResumeLink(formData.resume_url);
+    if (!resumeUrl) {
       setStatus('error');
-      setErrorMsg('Please upload your resume.');
-      return;
-    }
-    if (!RESUME_EXTENSIONS.test(resume.name)) {
-      setStatus('error');
-      setErrorMsg('Resume must be a PDF, DOC, or DOCX file.');
-      return;
-    }
-    if (resume.size > MAX_RESUME_SIZE) {
-      setStatus('error');
-      setErrorMsg('Resume must be 5 MB or smaller.');
+      setErrorMsg('Please paste a link to your resume.');
       return;
     }
 
@@ -70,14 +56,10 @@ function ApplyInternshipForm() {
       const coverLetter = [
         formData.coverLetter,
         formData.portfolio ? `Portfolio link: ${formData.portfolio}` : '',
-        `Resume file: ${resume.name}`,
+        `Click here to get Resume: ${resumeUrl}`,
       ]
         .filter(Boolean)
         .join('\n\n');
-      formRef.current.elements.coverLetter.value = coverLetter;
-      if (resumeUrlRef.current) {
-        resumeUrlRef.current.value = resume.name;
-      }
 
       await submitCareerApplication({
         templateId: EMAILJS_INTERNSHIP_TEMPLATE_ID,
@@ -91,23 +73,8 @@ function ApplyInternshipForm() {
           preferredDuration: formData.preferredDuration,
           portfolio: formData.portfolio,
           coverLetter,
-          resume_url: resume.name,
+          resume_url: resumeUrl,
         },
-        inboxFields: {
-          'Application type': 'Internship',
-          'Full name': formData.name,
-          Email: formData.email,
-          Phone: formData.phone,
-          Institution: formData.institution,
-          Degree: formData.degree,
-          'Field of study': formData.fieldOfStudy,
-          'Preferred duration': formData.preferredDuration,
-          Portfolio: formData.portfolio,
-          'Cover letter': formData.coverLetter,
-          'Resume file name': resume.name,
-        },
-        resume,
-        subject: `Internship application — ${formData.name}`,
       });
 
       setStatus('success');
@@ -120,6 +87,7 @@ function ApplyInternshipForm() {
         fieldOfStudy: '',
         preferredDuration: '',
         portfolio: '',
+        resume_url: '',
         coverLetter: '',
       });
       if (formRef.current) formRef.current.reset();
@@ -404,6 +372,19 @@ function ApplyInternshipForm() {
             </div>
             <div className="form-row-full">
               <div className="form-group">
+                <input
+                  type="text"
+                  name="resume_url"
+                  className="form-control"
+                  placeholder="Paste your resume link *"
+                  value={formData.resume_url}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+            <div className="form-row-full">
+              <div className="form-group">
                 <textarea
                   name="coverLetter"
                   className="form-control"
@@ -413,24 +394,6 @@ function ApplyInternshipForm() {
                 />
               </div>
             </div>
-            <div className="form-row-full">
-              <div className="form-group">
-                <label className="file-label" htmlFor="internship-resume">
-                  Upload resume *
-                </label>
-                <input
-                  id="internship-resume"
-                  type="file"
-                  name="resume"
-                  ref={resumeInputRef}
-                  className="form-control"
-                  accept=".pdf,.doc,.docx"
-                  required
-                />
-                <small className="file-help">PDF, DOC, or DOCX — maximum 5 MB</small>
-              </div>
-            </div>
-            <input ref={resumeUrlRef} type="hidden" name="resume_url" />
             <div className="submit-wrap">
               <button type="submit" className="submit-btn" disabled={status === 'sending'}>
                 {status === 'sending' ? 'Sending...' : 'Submit Application'}
