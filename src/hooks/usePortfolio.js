@@ -1,5 +1,11 @@
 import { useEffect, useState } from 'react';
-import { snapshot, shouldUseSnapshot } from '../lib/cmsFallback';
+import {
+  categoryIdByName,
+  mergeCategories,
+  mergeWithSnapshot,
+  shouldUseSnapshot,
+  snapshot,
+} from '../lib/cmsFallback';
 import { getPublicImageUrl, supabase } from '../lib/supabase';
 
 function asRelation(value) {
@@ -7,7 +13,7 @@ function asRelation(value) {
 }
 
 function asList(value) {
-  return (value || [])
+  return (value || '')
     .split(/\r?\n/)
     .map((line) => line.trim().replace(/^[-*\u2022]\s*/, ''))
     .filter(Boolean);
@@ -50,10 +56,13 @@ export default function usePortfolio() {
 
       if (categoriesResult.error) {
         console.error('Could not load portfolio categories:', categoriesResult.error.message);
-        setCategories(snapshot.portfolioCategories);
-      } else {
-        setCategories(categoriesResult.data || []);
       }
+
+      const mergedCategories = mergeCategories(
+        categoriesResult.error ? [] : categoriesResult.data,
+        snapshot.portfolioCategories,
+      );
+      setCategories(mergedCategories);
 
       if (projectsResult.error) {
         console.error('Could not load portfolio projects:', projectsResult.error.message);
@@ -62,35 +71,41 @@ export default function usePortfolio() {
         return;
       }
 
-      setProjects(
-        (projectsResult.data || []).map((project) => {
-          const category = asRelation(project.category);
-          const gallery = [...(project.images || [])].sort(
-            (a, b) => a.position - b.position,
-          );
+      const remoteProjects = (projectsResult.data || []).map((project) => {
+        const category = asRelation(project.category);
+        const gallery = [...(project.images || [])].sort(
+          (a, b) => a.position - b.position,
+        );
 
-          return {
-            id: project.id,
-            title: project.title,
-            sub1: category?.name || '',
-            sub2: '',
-            desc: project.description,
-            img: getPublicImageUrl('portfolio-images', project.main_image_path),
-            client: project.client,
-            location: project.location,
-            area: project.area,
-            categoryId: project.category_id,
-            images: gallery.map((image) =>
-              getPublicImageUrl('portfolio-images', image.image_path),
-            ),
-            challenges: asList(project.challenges),
-            solutions: asList(project.solutions),
-            endingImage: getPublicImageUrl(
-              'portfolio-images',
-              project.ending_image_path,
-            ),
-          };
-        }),
+        return {
+          id: project.id,
+          title: project.title,
+          sub1: category?.name || '',
+          sub2: '',
+          desc: project.description,
+          img: getPublicImageUrl('portfolio-images', project.main_image_path),
+          client: project.client,
+          location: project.location,
+          area: project.area,
+          categoryId: categoryIdByName(
+            mergedCategories,
+            category?.name,
+            project.category_id,
+          ),
+          images: gallery.map((image) =>
+            getPublicImageUrl('portfolio-images', image.image_path),
+          ),
+          challenges: asList(project.challenges),
+          solutions: asList(project.solutions),
+          endingImage: getPublicImageUrl(
+            'portfolio-images',
+            project.ending_image_path,
+          ),
+        };
+      });
+
+      setProjects(
+        mergeWithSnapshot(remoteProjects, snapshot.projects, { remoteFirst: true }),
       );
       setLoading(false);
       } catch (error) {

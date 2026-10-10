@@ -1,5 +1,11 @@
 import { useEffect, useState } from 'react';
-import { snapshot, shouldUseSnapshot } from '../lib/cmsFallback';
+import {
+  categoryIdByName,
+  mergeCategories,
+  mergeWithSnapshot,
+  shouldUseSnapshot,
+  snapshot,
+} from '../lib/cmsFallback';
 import { getPublicImageUrl, supabase } from '../lib/supabase';
 
 function asRelation(value) {
@@ -56,10 +62,13 @@ export default function useBlogs() {
 
       if (categoriesResult.error) {
         console.error('Could not load blog categories:', categoriesResult.error.message);
-        setCategories(snapshot.blogCategories);
-      } else {
-        setCategories(categoriesResult.data || []);
       }
+
+      const mergedCategories = mergeCategories(
+        categoriesResult.error ? [] : categoriesResult.data,
+        snapshot.blogCategories,
+      );
+      setCategories(mergedCategories);
 
       if (blogsResult.error) {
         console.error('Could not load blogs:', blogsResult.error.message);
@@ -68,26 +77,30 @@ export default function useBlogs() {
         return;
       }
 
-      setBlogs(
-        (blogsResult.data || []).map((blog) => {
-          const category = asRelation(blog.category);
-          const imageUrl = getPublicImageUrl('blog-images', blog.main_image_path);
+      const remoteBlogs = (blogsResult.data || []).map((blog) => {
+        const category = asRelation(blog.category);
+        const imageUrl = getPublicImageUrl('blog-images', blog.main_image_path);
 
-          return {
-            id: blog.id,
-            title: blog.title,
-            slug: blog.slug,
-            description: blog.description,
-            content: blog.article,
-            article: blog.article,
-            img: imageUrl,
-            coverImage: imageUrl,
-            subTitle: category?.name || '',
-            categoryId: blog.category_id,
-            ...formatBlogDate(blog.created_at),
-          };
-        }),
-      );
+        return {
+          id: blog.id,
+          title: blog.title,
+          slug: blog.slug,
+          description: blog.description,
+          content: blog.article,
+          article: blog.article,
+          img: imageUrl,
+          coverImage: imageUrl,
+          subTitle: category?.name || '',
+          categoryId: categoryIdByName(
+            mergedCategories,
+            category?.name,
+            blog.category_id,
+          ),
+          ...formatBlogDate(blog.created_at),
+        };
+      });
+
+      setBlogs(mergeWithSnapshot(remoteBlogs, snapshot.blogs, { remoteFirst: true }));
       setLoading(false);
     }
 

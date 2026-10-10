@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { snapshot } from '../lib/cmsFallback';
+import { mergeWithSnapshot, snapshot } from '../lib/cmsFallback';
 import { getPublicImageUrl, supabase } from '../lib/supabase';
 
 export default function usePartners() {
@@ -25,12 +25,15 @@ export default function usePartners() {
       }
 
       setPartners(
-        (result.data || []).map((partner) => ({
-          id: partner.id,
-          name: partner.title,
-          logo: getPublicImageUrl('partner-logos', partner.logo_path),
-          writeup: partner.description,
-        })),
+        mergeWithSnapshot(
+          (result.data || []).map((partner) => ({
+            id: partner.id,
+            name: partner.title,
+            logo: getPublicImageUrl('partner-logos', partner.logo_path),
+            writeup: partner.description,
+          })),
+          snapshot.partners,
+        ),
       );
       setLoading(false);
     }

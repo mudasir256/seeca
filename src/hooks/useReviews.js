@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { snapshot } from '../lib/cmsFallback';
+import { mergeWithSnapshot, snapshot } from '../lib/cmsFallback';
 import { supabase } from '../lib/supabase';
 
 export default function useReviews() {
@@ -23,12 +23,15 @@ export default function useReviews() {
       }
 
       setReviews(
-        (result.data || []).map((item) => ({
-          id: item.id,
-          text: item.review,
-          name: item.username,
-          role: item.company,
-        })),
+        mergeWithSnapshot(
+          (result.data || []).map((item) => ({
+            id: item.id,
+            text: item.review,
+            name: item.username,
+            role: item.company,
+          })),
+          snapshot.reviews,
+        ),
       );
     }
 
