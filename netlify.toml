@@ -1,0 +1,18 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "20"
+  # Netlify sets CI=true, which makes Create React App fail on lint warnings.
+  CI = "false"
+  # react-snap needs Chromium, which the build image cannot launch.
+  SKIP_REACT_SNAP = "1"
+  PUPPETEER_SKIP_DOWNLOAD = "1"
+  PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "1"
+
+# React Router: send every unknown path to the app.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
