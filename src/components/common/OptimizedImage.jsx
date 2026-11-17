@@ -1,7 +1,7 @@
 import React from 'react';
 
 /**
- * OptimizedImage – drop-in replacement for <img> with performance optimizations.
+ * OptimizedImage – drop-in replacement for <img loading="lazy" decoding="async"> with performance optimizations.
  * Uses native loading="lazy" and decoding="async" for faster page load.
  * (Next.js Image is only available in Next.js; this gives similar benefits in Create React App.)
  */

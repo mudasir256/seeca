@@ -4,6 +4,7 @@ import {
   EMAILJS_JOB_TEMPLATE_ID,
 } from '../../../config/emailjs';
 import { normalizeResumeLink, submitCareerApplication } from '../../../lib/careerApplication';
+import { trackEvent } from '../../../lib/analytics';
 
 function ApplyJobForm() {
   const formRef = useRef();
@@ -74,6 +75,7 @@ function ApplyJobForm() {
       });
 
       setStatus('success');
+        trackEvent('job_application_submit');
       setFormData({
         name: '',
         email: '',

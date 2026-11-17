@@ -18,7 +18,7 @@ function BlogPage() {
       fixedElements={<><Menu /><Navbar /></>}
     >
       <Header
-        title="Blog"
+        title="Architecture &amp; Interior Design Blog"
         description="Stay updated with our latest news, insights, and architectural trends"
         backgroundImage="/home_preview/assets/img/blogbg.jpg"
       />

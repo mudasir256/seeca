@@ -1,0 +1,79 @@
+{
+  "/": {
+    "title": "Architects & Interior Designers in Lahore | SEECA",
+    "description": "SEECA designs and builds premium homes and commercial spaces in Lahore and across Pakistan: architecture, interior design and turnkey construction under one roof.",
+    "schemaType": "WebPage"
+  },
+  "/about": {
+    "title": "About SEECA | Architecture & Construction Firm in Lahore",
+    "description": "SEE Consultants & Architects (SEECA) is a Lahore design-and-build firm of architects, interior designers and engineers, delivering projects since 2018.",
+    "schemaType": "AboutPage"
+  },
+  "/blog": {
+    "title": "Architecture & Interior Design Blog | SEECA Lahore",
+    "description": "Ideas and guidance from SEECA architects on home design, interiors, construction and sustainable building in Lahore and across Pakistan.",
+    "schemaType": "Blog"
+  },
+  "/contact": {
+    "title": "Contact SEECA | Architects in Faisal Town, Lahore",
+    "description": "Talk to SEECA about your house, interior or commercial project. Visit our Faisal Town, Lahore office, call 0333-1498340 or message us on WhatsApp.",
+    "schemaType": "ContactPage"
+  },
+  "/portfolio": {
+    "title": "Our Projects | Homes, Interiors & Commercial | SEECA",
+    "description": "See SEECA projects across Pakistan: luxury residences, apartments, restaurants, boutiques, clinics and commercial buildings, from design to finished build.",
+    "schemaType": "CollectionPage"
+  },
+  "/services": {
+    "title": "Design & Build Services in Lahore | SEECA",
+    "description": "Architecture, interior design, construction, sustainable design and smart building technology from one Lahore team, from first concept to handover.",
+    "schemaType": "Service"
+  },
+  "/architecture": {
+    "title": "Architects in Lahore | House & Commercial Design | SEECA",
+    "description": "SEECA architects design houses, villas and commercial buildings in Lahore: concept, 3D visualisation, working drawings and approvals, ready for construction.",
+    "schemaType": "Service"
+  },
+  "/interior-design": {
+    "title": "Interior Designers in Lahore | Homes & Commercial | SEECA",
+    "description": "SEECA interior designers create residential and commercial interiors in Lahore, from space planning, 3D renders and material selection to complete fit-out.",
+    "schemaType": "Service"
+  },
+  "/construction": {
+    "title": "Construction Company in Lahore | Turnkey Build | SEECA",
+    "description": "SEECA builds homes and commercial projects in Lahore with its design team involved through construction: quality control, clear timelines and turnkey handover.",
+    "schemaType": "Service"
+  },
+  "/building-sustainability": {
+    "title": "Sustainable Building Design in Lahore | SEECA",
+    "description": "Energy-efficient, climate-responsive building design from SEECA in Lahore: passive cooling, daylight, efficient materials and lower running costs.",
+    "schemaType": "Service"
+  },
+  "/smart-building-technologies": {
+    "title": "Smart Home & Building Technology | SEECA Lahore",
+    "description": "SEECA plans smart building systems into homes and offices in Lahore: lighting, security, climate control and automation designed in from the start.",
+    "schemaType": "Service"
+  },
+  "/our-process": {
+    "title": "Our Design & Build Process | SEECA Lahore",
+    "description": "How SEECA takes your project from first meeting to handover: brief, concept, 3D design, drawings, approvals, construction and finishing, with one team.",
+    "schemaType": "WebPage"
+  },
+  "/partners": {
+    "title": "Our Partners | SEECA Lahore",
+    "description": "The suppliers, manufacturers and specialists SEECA works with to deliver architecture, interior and construction projects across Pakistan.",
+    "schemaType": "WebPage"
+  },
+  "/career/internship": {
+    "title": "Apply Internship | SEECA Careers Lahore",
+    "description": "Apply for internship opportunities at SEECA Lahore and build experience in architecture, design, and construction.",
+    "schemaType": "WebPage",
+    "robots": "noindex, follow"
+  },
+  "/career/job": {
+    "title": "Apply Job | SEECA Careers Lahore",
+    "description": "Join SEECA Lahore by applying for roles in architecture, design, engineering, and project operations.",
+    "schemaType": "WebPage",
+    "robots": "noindex, follow"
+  }
+}

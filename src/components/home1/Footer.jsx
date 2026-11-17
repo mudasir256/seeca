@@ -469,7 +469,7 @@ function Footer() {
             <div className="row gx-5">
               <div className="col-12 col-md-6 col-lg-4">
                 <div className="footer-brand">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src="/home_preview/assets/img/Logo-card-white.png"
                     alt="SEECA"
                     className="logo"

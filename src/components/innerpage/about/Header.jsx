@@ -68,7 +68,7 @@ function Header() {
         <div className="img">
           <img
             src="/innerpages/assets/img/about/5918.Exterior04.jpg"
-            alt=""
+            alt="Contemporary house exterior designed by SEECA"
             className="img-cover"
           />
         </div>
@@ -104,7 +104,7 @@ function Header() {
                 <h5 className="fsz-30 mt-30 fw-400">
                   Architecture and Interior <br /> Design
                 </h5>
-                <h1> About us </h1>
+                <h1> About SEECA </h1>
               </div>
             </div>
             <ul className="features-txt ps-lg-5">

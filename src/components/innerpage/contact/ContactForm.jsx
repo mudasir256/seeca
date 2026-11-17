@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { trackEvent } from '../../../lib/analytics';
 
 function ContactForm() {
   const formRef = useRef();
@@ -33,6 +34,7 @@ function ContactForm() {
       )
       .then(() => {
         setStatus('success');
+        trackEvent('contact_form_submit');
         setFormData({ name: '', email: '', subject: '', message: '' });
         if (formRef.current) formRef.current.reset();
       })

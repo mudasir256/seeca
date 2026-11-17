@@ -31,7 +31,7 @@ function PortfolioPage() {
         }
       `}} />
       <Header
-        title="Portfolio"
+        title="Our Projects"
         description="Explore our exceptional portfolio of architectural and design projects"
         backgroundImage="/home_preview/assets/img/pages/portfoliobg.jpg"
       />

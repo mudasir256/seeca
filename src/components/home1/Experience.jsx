@@ -288,7 +288,7 @@ function Experience() {
             <div className="img wow">
               <img
                 src="/home1/assets/img/5804.Renders(6).jpg"
-                alt=""
+                alt="Modern residence exterior rendering by SEECA"
                 className="img-cover"
                 loading="lazy"
                 decoding="async"

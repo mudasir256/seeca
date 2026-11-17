@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { useLocation, useParams } from 'react-router-dom';
 import PageLayout from '../../components/common/PageLayout';
 import Footer from '../../components/home1/Footer';
@@ -10,14 +11,20 @@ import Content from '../../components/innerpage/single_post/Content';
 import Testimonials from '../../components/home1/Testimonials';
 import ContactSection from '../../components/innerpage/architecture/ContactSection';
 import useBlogs from '../../hooks/useBlogs';
+import NotFound from '../NotFound';
 
 function SinglePost() {
   const location = useLocation();
   const { slug } = useParams();
-  const { blogs } = useBlogs();
+  const { blogs, loaded } = useBlogs();
   const blogFromState = location.state?.blog;
   const blogFromSlug = slug ? blogs.find((item) => item.slug === slug) : null;
   const blog = blogFromState || blogFromSlug;
+
+  // The CMS has answered and there is no post with this address: show a real 404 page.
+  if (!blog && loaded) {
+    return <NotFound />;
+  }
 
   // Default header values
   const headerTitle = blog?.title || 'Blog Post';
@@ -33,6 +40,16 @@ function SinglePost() {
       bodyClassName="inner-pages-style1 post-pg-style1"
       fixedElements={<><Menu /><Navbar /></>}
     >
+      {blog && (
+        <Helmet>
+          <title>{`${blog.title} | SEECA Blog`}</title>
+          <meta name="description" content={blog.description} />
+          <meta property="og:title" content={`${blog.title} | SEECA Blog`} />
+          <meta property="og:description" content={blog.description} />
+          <meta name="twitter:title" content={`${blog.title} | SEECA Blog`} />
+          <meta name="twitter:description" content={blog.description} />
+        </Helmet>
+      )}
       <Header
         title={headerTitle}
         description={headerDescription}

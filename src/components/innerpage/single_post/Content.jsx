@@ -103,7 +103,7 @@ function RelatedPosts({ currentBlog, blogs }) {
                   onClick={() => navigate(`/blog/${item.slug}`, { state: { blog: item } })}
                   style={{ cursor: 'pointer' }}
                       >
-                        <img
+                        <img loading="lazy" decoding="async"
                     src={item.img}
                     alt={item.title}
                           className="img-cover"

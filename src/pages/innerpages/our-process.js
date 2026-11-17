@@ -69,7 +69,7 @@ function OurProcessPage() {
       enableScrollSmoother={false}
     >
       <Header
-        title="Our Process"
+        title="Our Design &amp; Build Process"
         description="Discover how we transform your vision into reality through our proven methodology"
         backgroundImage="/home_preview/assets/img/architecturecontact.jpg"
       />

@@ -155,7 +155,7 @@ function FilterPosts() {
                     }}
                     style={{ cursor: 'pointer' }}
                   >
-                    <img src={item.img} alt={item.title} className="img-cover" />
+                    <img loading="lazy" decoding="async" src={item.img} alt={item.title} className="img-cover" />
                   </div>
                   <div className="info pt-30">
                     <div className="tags color-666 text-uppercase fsz-12">

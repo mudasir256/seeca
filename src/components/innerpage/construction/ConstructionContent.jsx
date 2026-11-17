@@ -164,7 +164,7 @@ function ConstructionContent() {
               </div>
             </div>
             <div className="construction-image">
-              <img
+              <img loading="lazy" decoding="async"
                 src="/home_preview/assets/img/Architecture_Deisgn/5880.FahadResidence-Lahore/LightTest-1(1).jpg"
                 alt="Construction Building"
                 className="img-cover"

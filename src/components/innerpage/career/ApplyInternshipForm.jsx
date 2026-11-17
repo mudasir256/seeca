@@ -4,6 +4,7 @@ import {
   EMAILJS_INTERNSHIP_TEMPLATE_ID,
 } from '../../../config/emailjs';
 import { normalizeResumeLink, submitCareerApplication } from '../../../lib/careerApplication';
+import { trackEvent } from '../../../lib/analytics';
 
 function ApplyInternshipForm() {
   const formRef = useRef();
@@ -78,6 +79,7 @@ function ApplyInternshipForm() {
       });
 
       setStatus('success');
+        trackEvent('internship_application_submit');
       setFormData({
         name: '',
         email: '',

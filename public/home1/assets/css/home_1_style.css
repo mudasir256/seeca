@@ -295,7 +295,8 @@
   z-index: 20;
   color: #fff;
 }
-.tc-header-style1 .slider-card .info h1 {
+.tc-header-style1 .slider-card .info h1,
+.tc-header-style1 .slider-card .info .slide-title {
   font-size: calc(12vw + 20px);
   font-weight: 500;
   line-height: 1;

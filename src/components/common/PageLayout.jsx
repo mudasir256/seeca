@@ -34,11 +34,6 @@ const SMOOTH_SCROLL_STYLES = `
     -webkit-backface-visibility: hidden;
     contain: layout style paint;
   }
-  /* Optimize images for better scrolling performance */
-  img {
-    content-visibility: auto;
-    contain-intrinsic-size: auto 300px;
-  }
   * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -99,7 +94,7 @@ const PageLayout = memo(({
   children, 
   cssFiles = [], 
   bodyClassName = '',
-  showLoader = true,
+  showLoader = false,
   enableScrollSmoother = true,
   containerId = 'scrollsmoother-container',
   fixedElements = null // Elements that should be outside scroll container (like fixed navbar)
@@ -203,7 +198,6 @@ const PageLayout = memo(({
         )}
         {cssLinks}
         {/* Resource hints for better performance */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
       </Helmet>
       {showLoader && <Loader />}
       {fixedElements}

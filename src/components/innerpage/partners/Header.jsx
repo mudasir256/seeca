@@ -35,7 +35,7 @@ function Header() {
         <div className="partners-pg-hero-inner">
           <img
             src="/innerpages/assets/img/about/5918.Exterior04.jpg"
-            alt=""
+            alt="Contemporary house exterior designed by SEECA"
           />
         </div>
       </header>

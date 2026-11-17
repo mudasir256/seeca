@@ -502,7 +502,7 @@ const Services = memo(function Services({ removeTopPadding = false }) {
       </div>
     </section>
       <div className="ser-img">
-        <img src="/home1/assets/img/services/villa_white_sky_upscaled_8k2.jpg" alt="" loading="lazy" decoding="async" />
+        <img src="/home1/assets/img/services/villa_white_sky_upscaled_8k2.jpg" alt="White modern villa designed and built by SEECA" loading="lazy" decoding="async" />
       </div>
     </> 
   );

@@ -161,7 +161,7 @@ function SmartBuildingTechnologiesContent() {
               </div>
             </div>
             <div className="smart-building-technologies-image">
-              <img
+              <img loading="lazy" decoding="async"
                 src="/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/BoardRoom(1).jpg"
                 alt="Smart Building Technologies"
                 className="img-cover"

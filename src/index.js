@@ -1,7 +1,9 @@
 import React from 'react';
-import { createRoot, hydrateRoot } from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App';
+import { preloadRoute } from './routes';
+import { initLeadTracking } from './lib/analytics';
 
 // Prevent noisy browser ResizeObserver warnings from breaking CRA error overlay.
 if (typeof window !== 'undefined') {
@@ -42,12 +44,13 @@ if (typeof window !== 'undefined') {
   }
 }
 
-const rootElement = document.getElementById('root');
-const app = <App />;
+initLeadTracking();
 
-// react-snap prerenders HTML; hydrate when root already has content.
-if (rootElement.hasChildNodes()) {
-  hydrateRoot(rootElement, app);
-} else {
-  createRoot(rootElement).render(app);
-}
+const rootElement = document.getElementById('root');
+
+// Pages are pre-rendered to static HTML at build time so search engines see full
+// content. In the browser we load the current page's code first, then let React
+// take over and replace the static HTML in a single step.
+preloadRoute(window.location.pathname).then(() => {
+  createRoot(rootElement).render(<App />);
+});

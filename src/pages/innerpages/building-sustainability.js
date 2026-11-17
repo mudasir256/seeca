@@ -20,7 +20,7 @@ function BuildingSustainabilityPage() {
       fixedElements={<><Menu /><Navbar /></>}
     >
       <Header
-        title="Building Sustainability"
+        title="Building Sustainability Services"
         description="Designing eco-friendly and sustainable buildings for a better future"
         backgroundImage="/home_preview/assets/img/Architecture_Deisgn/5832.AbdulAzizAbdullah-Nairobi,Kenya/CAM06.jpg"
       />

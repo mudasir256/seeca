@@ -408,9 +408,9 @@ function Process() {
             </div>
             <div className="col-lg-4 offset-lg-2 col-md-12 col-sm-12">
               <div className="img wow">
-                <img
+                <img loading="lazy" decoding="async"
                   src="/home1/assets/img/process.jpg"
-                  alt=""
+                  alt="SEECA design and build process"
                   className="img-cover"
                 />
               </div>
@@ -418,7 +418,7 @@ function Process() {
           </div>
         </div>
       </div>
-      <img src="/home1/assets/img/c_line2.png" alt="" className="c-line wow" />
+      <img loading="lazy" decoding="async" src="/home1/assets/img/c_line2.png" alt="" className="c-line wow" />
     </section>
     </>
   );
