@@ -108,7 +108,14 @@ export default function useBlogs() {
         setLoaded(true);
     }
 
-    loadBlogs();
+    loadBlogs().catch((error) => {
+      // Network failure: keep the snapshot posts and stop waiting.
+      console.error('Could not load blogs:', error?.message || error);
+      if (!active) return;
+      setBlogs(snapshot.blogs);
+      setLoading(false);
+      setLoaded(true);
+    });
 
     return () => {
       active = false;
