@@ -535,7 +535,7 @@ function Process() {
                   {sliderData.map((item) => (
                     <div key={item.id} className="swiper-slide">
                       <div className="img">
-                        <img
+                        <img loading="lazy" decoding="async"
                           src={item.image}
                           alt={item.text}
                           className="img-cover"
@@ -560,7 +560,7 @@ function Process() {
           </div>
         </div>
       </div>
-      <img
+      <img loading="lazy" decoding="async"
         src="/innerpages/assets/img/prc_bg.png"
         alt=""
         className="bg"

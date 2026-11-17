@@ -256,7 +256,7 @@ function Blog({ limit = 3, showViewAll = true }) {
                   onClick={() => openBlogDetails(item)}
                   style={{ cursor: 'pointer' }}
                 >
-                  <img src={item.coverImage || item.img} alt={item.title} className="img-cover" />
+                  <img loading="lazy" decoding="async" src={item.coverImage || item.img} alt={item.title} className="img-cover" />
                 </div>
                 <div className="info">
                   <div className="date">

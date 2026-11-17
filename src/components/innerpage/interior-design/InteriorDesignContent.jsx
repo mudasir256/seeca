@@ -161,7 +161,7 @@ function InteriorDesignContent() {
               </div>
             </div>
             <div className="interior-image">
-              <img
+              <img loading="lazy" decoding="async"
                 src="/home_preview/assets/img/CAM01.jpg"
                 alt="Interior Design Space"
                 className="img-cover"

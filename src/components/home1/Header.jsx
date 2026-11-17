@@ -211,7 +211,14 @@ function Header() {
             <div key={i} className="swiper-slide">
               <div className="slider-card">
                 <div className="img">
-                  <img src={item.img} alt="" className="img-cover" />
+                  <img
+                    src={item.img}
+                    alt={`${item.title} project by SEECA, Lahore`}
+                    className="img-cover"
+                    loading={i === 0 ? 'eager' : 'lazy'}
+                    fetchpriority={i === 0 ? 'high' : 'auto'}
+                    decoding={i === 0 ? 'sync' : 'async'}
+                  />
                 </div>
                 <div className="info section-padding-x pb-70">
                   <div className="row align-items-end gx-5">

@@ -530,7 +530,7 @@ function Testimonials() {
                 >
                   <div className="testimonial-avatar">
                     {testimonial.img ? (
-                      <img src={testimonial.img} alt={testimonial.name} />
+                      <img loading="lazy" decoding="async" src={testimonial.img} alt={testimonial.name} />
                     ) : (
                       <div className="testimonial-avatar-icon">
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -626,7 +626,7 @@ function Testimonials() {
           </div>
         </div>
       </div>
-      <img src="/home1/assets/img/c_line3.png" alt="" className="c-line" />
+      <img loading="lazy" decoding="async" src="/home1/assets/img/c_line3.png" alt="" className="c-line" />
 
     </section>
     </>

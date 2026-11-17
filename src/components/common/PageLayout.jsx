@@ -34,11 +34,6 @@ const SMOOTH_SCROLL_STYLES = `
     -webkit-backface-visibility: hidden;
     contain: layout style paint;
   }
-  /* Optimize images for better scrolling performance */
-  img {
-    content-visibility: auto;
-    contain-intrinsic-size: auto 300px;
-  }
   * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

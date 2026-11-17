@@ -161,7 +161,7 @@ function BuildingSustainabilityContent() {
               </div>
             </div>
             <div className="building-sustainability-image">
-              <img
+              <img loading="lazy" decoding="async"
                 src="/home_preview/assets/img/Architecture_Deisgn/5804.AhmadHeight-Somalia/5804.Renders(2).jpg"
                 alt="Sustainable Building"
                 className="img-cover"

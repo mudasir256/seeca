@@ -157,7 +157,7 @@ function ArchitectureContent() {
               </div>
             </div>
             <div className="architecture-image">
-              <img
+              <img loading="lazy" decoding="async"
                 src="/home_preview/assets/img/Architecture_Deisgn/5932.Mr.RafiullahKhan(1.2KanalArch.)-Bhakkar/View-66.jpg"
                 alt="Custom Architecture Design"
                 className="img-cover"

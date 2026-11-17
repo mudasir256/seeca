@@ -207,7 +207,7 @@ function Advantages() {
 
           <div className="advantages-content">
             <div className="advantages-image-wrapper">
-              <img
+              <img loading="lazy" decoding="async"
                 src="/innerpages/assets/img/process/5920.veiw1.1.jpg"
                 alt="Interior Design"
                 className="advantages-image"

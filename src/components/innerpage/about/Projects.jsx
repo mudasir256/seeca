@@ -541,14 +541,14 @@ function Projects() {
                           className="img"
                           onClick={(e) => handleProjectClick(e, project)}
                         >
-                          <img
+                          <img loading="lazy" decoding="async"
                             src={project.img}
                             alt={project.title}
                         className="img-cover"
                       />
                       <div className="year">
                         <span className="txt"> 2025 </span>
-                        <img
+                        <img loading="lazy" decoding="async"
                           src="/innerpages/assets/img/project_shape.png"
                           alt=""
                           className="bg"
@@ -602,14 +602,14 @@ function Projects() {
                           className="img"
                           onClick={(e) => handleProjectClick(e, project)}
                         >
-                          <img
+                          <img loading="lazy" decoding="async"
                             src={project.img}
                             alt={project.title}
                         className="img-cover"
                       />
                       <div className="year">
                         <span className="txt"> 2025 </span>
-                        <img
+                        <img loading="lazy" decoding="async"
                           src="/innerpages/assets/img/project_shape.png"
                           alt=""
                           className="bg"
@@ -663,14 +663,14 @@ function Projects() {
                           className="img"
                           onClick={(e) => handleProjectClick(e, project)}
                         >
-                          <img
+                          <img loading="lazy" decoding="async"
                             src={project.img}
                             alt={project.title}
                         className="img-cover"
                       />
                       <div className="year">
                         <span className="txt"> 2025 </span>
-                        <img
+                        <img loading="lazy" decoding="async"
                           src="/innerpages/assets/img/project_shape.png"
                           alt=""
                           className="bg"
@@ -724,14 +724,14 @@ function Projects() {
                           className="img"
                           onClick={(e) => handleProjectClick(e, project)}
                         >
-                          <img
+                          <img loading="lazy" decoding="async"
                             src={project.img}
                             alt={project.title}
                         className="img-cover"
                       />
                       <div className="year">
                         <span className="txt"> 2025 </span>
-                        <img
+                        <img loading="lazy" decoding="async"
                           src="/innerpages/assets/img/project_shape.png"
                           alt=""
                           className="bg"
