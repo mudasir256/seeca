@@ -99,7 +99,7 @@ const PageLayout = memo(({
   children, 
   cssFiles = [], 
   bodyClassName = '',
-  showLoader = true,
+  showLoader = false,
   enableScrollSmoother = true,
   containerId = 'scrollsmoother-container',
   fixedElements = null // Elements that should be outside scroll container (like fixed navbar)

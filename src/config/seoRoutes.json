@@ -1,0 +1,94 @@
+{
+  "/": {
+    "title": "SEECA | Architecture, Interior Design & Construction in Lahore",
+    "description": "SEECA delivers architecture, interior design, and construction services in Lahore for modern residential and commercial spaces across Pakistan.",
+    "keywords": "architecture company Lahore, interior design studio Lahore, construction services Pakistan, SEECA",
+    "schemaType": "WebPage"
+  },
+  "/about": {
+    "title": "About SEECA | Architecture & Construction Firm in Lahore",
+    "description": "Learn about SEECA, a Lahore architecture and construction team delivering design-led residential and commercial projects across Pakistan.",
+    "keywords": "about SEECA Lahore, architecture team Pakistan, construction experts Lahore",
+    "schemaType": "AboutPage"
+  },
+  "/blog": {
+    "title": "Design & Construction Blog | SEECA Lahore",
+    "description": "Read SEECA insights on architecture, interior design, and construction trends for projects in Lahore and across Pakistan.",
+    "keywords": "architecture blog Lahore, interior design blog Pakistan, construction insights",
+    "schemaType": "Blog"
+  },
+  "/contact": {
+    "title": "Contact SEECA Lahore | Architecture & Construction Consultation",
+    "description": "Contact SEECA in Faisal Town, Lahore for architecture, interior design, construction, and project consultation.",
+    "keywords": "contact SEECA Lahore, architecture consultation Lahore, construction inquiry Pakistan",
+    "schemaType": "ContactPage"
+  },
+  "/portfolio": {
+    "title": "Project Portfolio | SEECA Architecture & Construction Lahore",
+    "description": "Browse SEECA architecture, interior, and construction projects completed in Lahore and across Pakistan.",
+    "keywords": "architecture portfolio Lahore, construction projects Pakistan, SEECA case studies",
+    "schemaType": "CollectionPage"
+  },
+  "/services": {
+    "title": "Architecture, Interior Design & Construction Services in Lahore | SEECA",
+    "description": "Explore SEECA services in Lahore: architecture, interior design, construction management, sustainability, and smart buildings.",
+    "keywords": "architecture services Lahore, interior design services Lahore, construction company Lahore",
+    "schemaType": "Service"
+  },
+  "/architecture": {
+    "title": "Architecture Services in Lahore | SEECA",
+    "description": "SEECA architecture services in Lahore cover concept design, planning, and execution-focused building design for homes and commercial spaces.",
+    "keywords": "architectural design Lahore, building planning Pakistan, architecture consultancy Lahore",
+    "schemaType": "Service"
+  },
+  "/interior-design": {
+    "title": "Interior Design Services in Lahore | SEECA",
+    "description": "SEECA interior design services in Lahore create balanced residential and commercial spaces through layout, material, and lighting strategy.",
+    "keywords": "interior design Lahore, home interiors Lahore, commercial interiors Pakistan",
+    "schemaType": "Service"
+  },
+  "/construction": {
+    "title": "Construction Services in Lahore | SEECA",
+    "description": "Plan and build with SEECA construction management in Lahore — quality control, timelines, and budget-focused project delivery.",
+    "keywords": "construction company Lahore, building contractor Lahore, construction management Pakistan",
+    "schemaType": "Service"
+  },
+  "/building-sustainability": {
+    "title": "Building Sustainability Services | SEECA Lahore",
+    "description": "SEECA sustainability services improve building performance in Lahore through efficient design and smart material choices.",
+    "keywords": "sustainable architecture Lahore, green building Pakistan, energy efficient design",
+    "schemaType": "Service"
+  },
+  "/smart-building-technologies": {
+    "title": "Smart Building Technologies | SEECA Lahore",
+    "description": "Integrate modern smart building systems with SEECA in Lahore for comfort, performance, and operational efficiency.",
+    "keywords": "smart building Lahore, building automation Pakistan, intelligent buildings",
+    "schemaType": "Service"
+  },
+  "/our-process": {
+    "title": "Our Process | SEECA Architecture & Construction Lahore",
+    "description": "Understand SEECA’s project workflow in Lahore from consultation and concept through construction delivery and support.",
+    "keywords": "design process Lahore, construction workflow Pakistan, SEECA project lifecycle",
+    "schemaType": "WebPage"
+  },
+  "/partners": {
+    "title": "Partners | SEECA Lahore",
+    "description": "Meet SEECA project partners and collaborators who support reliable architecture and construction delivery in Pakistan.",
+    "keywords": "construction partners Lahore, design collaborators Pakistan, SEECA partners",
+    "schemaType": "WebPage"
+  },
+  "/career/internship": {
+    "title": "Apply Internship | SEECA Careers Lahore",
+    "description": "Apply for internship opportunities at SEECA Lahore and build experience in architecture, design, and construction.",
+    "keywords": "architecture internship Lahore, design internship Pakistan, construction internship",
+    "schemaType": "WebPage",
+    "robots": "noindex, follow"
+  },
+  "/career/job": {
+    "title": "Apply Job | SEECA Careers Lahore",
+    "description": "Join SEECA Lahore by applying for roles in architecture, design, engineering, and project operations.",
+    "keywords": "architecture jobs Lahore, construction jobs Pakistan, design careers Lahore",
+    "schemaType": "WebPage",
+    "robots": "noindex, follow"
+  }
+}

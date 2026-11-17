@@ -3,16 +3,161 @@
   publish = "build"
 
 [build.environment]
-  NODE_VERSION = "20"
+  # Node 22 is required by the pre-render step (puppeteer-core / @sparticuz/chromium).
+  NODE_VERSION = "22"
   # Netlify sets CI=true, which makes Create React App fail on lint warnings.
   CI = "false"
-  # react-snap needs Chromium, which the build image cannot launch.
-  SKIP_REACT_SNAP = "1"
+  # The pre-render step uses its own bundled Chromium; skip Puppeteer's download.
   PUPPETEER_SKIP_DOWNLOAD = "1"
   PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "1"
 
-# React Router: send every unknown path to the app.
+# ---------------------------------------------------------------------------
+# Every public page is pre-rendered to its own HTML file at build time
+# (scripts/prerender.js), so there is no catch-all "/* -> /index.html" rule.
+# Unknown URLs get build/404.html with a real 404 status.
+# ---------------------------------------------------------------------------
+
+# Old URLs from the previous website and template routes -> current pages.
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  from = "/innerpages/*"
+  to = "/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/contact-us"
+  to = "/contact"
+  status = 301
+
+[[redirects]]
+  from = "/about-us"
+  to = "/about"
+  status = 301
+
+[[redirects]]
+  from = "/our-services"
+  to = "/services"
+  status = 301
+
+[[redirects]]
+  from = "/category/interior/*"
+  to = "/interior-design"
+  status = 301
+
+[[redirects]]
+  from = "/category/achitecture/*"
+  to = "/architecture"
+  status = 301
+
+[[redirects]]
+  from = "/category/architecture/*"
+  to = "/architecture"
+  status = 301
+
+[[redirects]]
+  from = "/category/construction/*"
+  to = "/construction"
+  status = 301
+
+[[redirects]]
+  from = "/category/*"
+  to = "/blog"
+  status = 301
+
+[[redirects]]
+  from = "/home-preview"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/home1"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/home1-rtl"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/home2"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/home3_construction"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/home4_personal_architect"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/home5_residence"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/home6_furniture"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/home7_landscape"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/home8_portfolio"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/single_post"
+  to = "/blog"
+  status = 301
+
+[[redirects]]
+  from = "/single_project"
+  to = "/portfolio"
+  status = 301
+
+[[redirects]]
+  from = "/single_project2"
+  to = "/portfolio"
+  status = 301
+
+# ---------------------------------------------------------------------------
+# Caching: hashed JS/CSS bundles never change; images change rarely.
+# ---------------------------------------------------------------------------
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/common/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/home_preview/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/home1/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/innerpages/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

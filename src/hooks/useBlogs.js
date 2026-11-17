@@ -31,6 +31,7 @@ export default function useBlogs() {
   const [categories, setCategories] = useState(snapshot.blogCategories);
   const [blogs, setBlogs] = useState(snapshot.blogs);
   const [loading, setLoading] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     let active = true;
@@ -57,6 +58,7 @@ export default function useBlogs() {
         setCategories(snapshot.blogCategories);
         setBlogs(snapshot.blogs);
         setLoading(false);
+        setLoaded(true);
         return;
       }
 
@@ -74,6 +76,7 @@ export default function useBlogs() {
         console.error('Could not load blogs:', blogsResult.error.message);
         setBlogs(snapshot.blogs);
         setLoading(false);
+        setLoaded(true);
         return;
       }
 
@@ -102,6 +105,7 @@ export default function useBlogs() {
 
       setBlogs(mergeWithSnapshot(remoteBlogs, snapshot.blogs, { remoteFirst: true }));
       setLoading(false);
+        setLoaded(true);
     }
 
     loadBlogs();
@@ -111,5 +115,5 @@ export default function useBlogs() {
     };
   }, []);
 
-  return { categories, blogs, loading };
+  return { categories, blogs, loading, loaded };
 }
