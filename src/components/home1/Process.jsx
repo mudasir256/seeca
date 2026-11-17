@@ -410,7 +410,7 @@ function Process() {
               <div className="img wow">
                 <img loading="lazy" decoding="async"
                   src="/home1/assets/img/process.jpg"
-                  alt=""
+                  alt="SEECA design and build process"
                   className="img-cover"
                 />
               </div>

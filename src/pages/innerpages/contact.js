@@ -113,7 +113,7 @@ function ContactPage() {
         }
       `}} />
       <Header
-        title="Contact Us"
+        title="Contact SEECA"
         description="Want to chat further? We'd love to hear from you, let us opportunity to make your dream become reality"
         backgroundImage="/home_preview/assets/img/architecturecontact.jpg"
       />

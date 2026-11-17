@@ -20,7 +20,7 @@ function SmartBuildingTechnologiesPage() {
       fixedElements={<><Menu /><Navbar /></>}
     >
       <Header
-        title="Building Technologies"
+        title="Smart Building Technologies"
         description="Integrating cutting-edge technology to create intelligent and efficient buildings"
         backgroundImage="/home_preview/assets/img/Interior_Design/5952.Mr.UsmanPasha(OPTConsultingPvtLtd-ID)-OPFSociety,Lahore/A2.jpg"
       />

@@ -11,7 +11,25 @@ const DEFAULT_TITLE =
   'SEECA | Architecture, Interior Design & Construction in Lahore';
 const DEFAULT_DESCRIPTION =
   'SEECA is a Lahore-based architecture, interior design, and construction firm delivering residential and commercial projects across Pakistan.';
-const DEFAULT_OG_IMAGE = '/logo512.png';
+const DEFAULT_OG_IMAGE = '/og-image.jpg';
+const LOGO_IMAGE = '/logo512.png';
+const LEGAL_NAME = 'SEE Consultants & Architects (Private) Limited';
+const SOCIAL_PROFILES = [
+  'https://www.facebook.com/seecapl.pk/',
+  'https://www.instagram.com/seeca_pk/',
+  'https://www.pinterest.com/seeconsultantsarchitects/',
+  'https://x.com/seeca_pk',
+  'https://www.threads.net/@seeca_pk',
+];
+
+// Service pages get Service structured data.
+const SERVICE_PAGES = {
+  '/architecture': 'Architectural design',
+  '/interior-design': 'Interior design',
+  '/construction': 'Construction and project management',
+  '/building-sustainability': 'Sustainable building design',
+  '/smart-building-technologies': 'Smart building technology',
+};
 const DEFAULT_KEYWORDS =
   'architecture firm Lahore, interior design Lahore, construction company Lahore, SEECA, building design Pakistan, sustainable architecture';
 const BASE_URL =
@@ -138,21 +156,25 @@ export default function SeoManager() {
     '@type': 'Organization',
     name: SITE_NAME,
     url: siteUrl,
-    logo: `${siteUrl}${DEFAULT_OG_IMAGE}`,
-    email: 'seeca.pk@gmail.com',
+    legalName: LEGAL_NAME,
+    logo: `${siteUrl}${LOGO_IMAGE}`,
+    email: 'info@seeca.pk',
     telephone: '+92-333-1498340',
-    sameAs: ['https://www.threads.net/@seeca_pk'],
+    sameAs: SOCIAL_PROFILES,
   };
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': ['ProfessionalService', 'GeneralContractor'],
     '@id': `${siteUrl}/#localbusiness`,
     name: SITE_NAME,
+    legalName: LEGAL_NAME,
     image: `${siteUrl}${DEFAULT_OG_IMAGE}`,
+    logo: `${siteUrl}${LOGO_IMAGE}`,
+    sameAs: SOCIAL_PROFILES,
     url: siteUrl,
     telephone: '+92-333-1498340',
-    email: 'seeca.pk@gmail.com',
+    email: 'info@seeca.pk',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '903C, Maulana Shaukat Ali Road, Faisal Town',
@@ -170,14 +192,6 @@ export default function SeoManager() {
       { '@type': 'City', name: 'Lahore' },
       { '@type': 'Country', name: 'Pakistan' },
     ],
-    priceRange: '$$',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '160',
-      bestRating: '5',
-      worstRating: '1',
-    },
   };
 
   const websiteSchema = {
@@ -189,7 +203,7 @@ export default function SeoManager() {
 
   const webPageSchema = {
     '@context': 'https://schema.org',
-    '@type': pageType,
+    '@type': ['Service', 'Article'].includes(pageType) ? 'WebPage' : pageType,
     name: title,
     description,
     url: canonical,
@@ -201,6 +215,22 @@ export default function SeoManager() {
   };
 
   const breadcrumbSchema = buildBreadcrumbSchema(pathname, siteUrl);
+  const serviceType = SERVICE_PAGES[normalizedPathname];
+  const serviceSchema = serviceType
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: pageSeo.title ? pageSeo.title.split('|')[0].trim() : serviceType,
+        serviceType,
+        description,
+        url: canonical,
+        provider: { '@id': `${siteUrl}/#localbusiness` },
+        areaServed: [
+          { '@type': 'City', name: 'Lahore' },
+          { '@type': 'Country', name: 'Pakistan' },
+        ],
+      }
+    : null;
   const blogPostingSchema = blog
     ? {
         '@context': 'https://schema.org',
@@ -216,7 +246,7 @@ export default function SeoManager() {
           name: SITE_NAME,
           logo: {
             '@type': 'ImageObject',
-            url: `${siteUrl}${DEFAULT_OG_IMAGE}`,
+            url: `${siteUrl}${LOGO_IMAGE}`,
           },
         },
         author: {
@@ -248,7 +278,6 @@ export default function SeoManager() {
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
       <meta name="robots" content={robots} />
       <meta name="author" content={SITE_NAME} />
       <meta name="geo.region" content="PK-PB" />
@@ -262,8 +291,8 @@ export default function SeoManager() {
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonical} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content="512" />
-      <meta property="og:image:height" content="512" />
+      {!blog && <meta property="og:image:width" content="1200" />}
+      {!blog && <meta property="og:image:height" content="630" />}
       <meta property="og:image:alt" content={title} />
 
       <meta name="twitter:card" content="summary_large_image" />
@@ -276,6 +305,9 @@ export default function SeoManager() {
       <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
       <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
       <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+      {serviceSchema && (
+        <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
+      )}
       {blogPostingSchema && (
         <script type="application/ld+json">{JSON.stringify(blogPostingSchema)}</script>
       )}

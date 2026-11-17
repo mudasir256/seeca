@@ -112,7 +112,8 @@ function Header() {
             padding-left: 30px !important;
             padding-right: 30px !important;
           }
-          .tc-header-style1 .header-slider .slider-card .info h1 {
+          .tc-header-style1 .header-slider .slider-card .info h1,
+          .tc-header-style1 .header-slider .slider-card .info .slide-title {
             font-size: 56px !important;
             line-height: 1.2;
           }
@@ -149,7 +150,8 @@ function Header() {
             max-width: 100%;
             text-align: center;
           }
-          .tc-header-style1 .header-slider .slider-card .info h1 {
+          .tc-header-style1 .header-slider .slider-card .info h1,
+          .tc-header-style1 .header-slider .slider-card .info .slide-title {
             font-size: 42px !important;
             line-height: 1.2;
             text-align: center;
@@ -182,7 +184,8 @@ function Header() {
             padding-right: 30px !important;
             padding-bottom: 0 !important;
           }
-          .tc-header-style1 .header-slider .slider-card .info h1 {
+          .tc-header-style1 .header-slider .slider-card .info h1,
+          .tc-header-style1 .header-slider .slider-card .info .slide-title {
             font-size: 32px !important;
             line-height: 1.2;
             text-align: center;
@@ -205,6 +208,9 @@ function Header() {
         }
       `}} />
       <header className="tc-header-style1">
+        <h1 className="visually-hidden">
+          SEECA – Architecture, Interior Design &amp; Construction Company in Lahore
+        </h1>
         <div className="header-slider" ref={sliderRef}>
         <div className="swiper-wrapper">
           {data.map((item, i) => (
@@ -223,9 +229,9 @@ function Header() {
                 <div className="info section-padding-x pb-70">
                   <div className="row align-items-end gx-5">
                     <div className="col-lg-6 offset-lg-2">
-                      <h1 data-swiper-parallax="-2000" className="js-title" style={{ fontSize: '100px' }}>
+                      <h2 data-swiper-parallax="-2000" className="js-title slide-title" style={{ fontSize: '100px' }}>
                         {item.title}
-                      </h1>
+                      </h2>
                       <h5 className="fsz-30 mt-30 fw-400">{item.subTitle}</h5>
                     </div>
                     <div className="col-lg-3">

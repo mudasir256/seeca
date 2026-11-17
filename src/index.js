@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { preloadRoute } from './routes';
+import { initLeadTracking } from './lib/analytics';
 
 // Prevent noisy browser ResizeObserver warnings from breaking CRA error overlay.
 if (typeof window !== 'undefined') {
@@ -42,6 +43,8 @@ if (typeof window !== 'undefined') {
     window.__seecaResizeObserverPatched = true;
   }
 }
+
+initLeadTracking();
 
 const rootElement = document.getElementById('root');
 

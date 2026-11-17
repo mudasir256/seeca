@@ -75,7 +75,7 @@ function WhatsAppFloat() {
       <a
         href="https://wa.me/923331498340"
         className="whatsapp-float-global"
-        aria-label="WhatsApp"
+        aria-label="Chat with SEECA on WhatsApp"
         target="_blank"
         rel="noopener noreferrer"
       >
