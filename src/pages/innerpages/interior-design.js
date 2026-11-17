@@ -8,6 +8,7 @@ import Header from '../../components/innerpage/contact/Header';
 import InteriorDesignContent from '../../components/innerpage/interior-design/InteriorDesignContent';
 import Testimonials from '../../components/home1/Testimonials';
 import ContactSection from '../../components/innerpage/interior-design/ContactSection';
+import ServiceExtras from '../../components/innerpage/services/ServiceExtras';
 
 function InteriorDesignPage() {
   return (
@@ -26,6 +27,7 @@ function InteriorDesignPage() {
       />
       <main>
         <InteriorDesignContent />
+        <ServiceExtras path="/interior-design" />
         <Testimonials />
         <ContactSection />
       </main>
