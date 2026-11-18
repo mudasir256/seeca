@@ -234,39 +234,47 @@ async function prerenderWithBrowser(routes, shellHtml) {
   const browser = await launchBrowser();
   const results = { ok: [], failed: [] };
   try {
-    for (const route of routes) {
-      const page = await browser.newPage();
-      try {
-        await page.setViewport({ width: 1366, height: 900 });
-        await page.setRequestInterception(true);
-        page.on('request', (req) => {
-          const url = req.url();
-          if (BLOCKED_HOSTS.some((h) => url.includes(h))) return req.abort();
-          return req.continue();
-        });
-        await page.evaluateOnNewDocument(() => {
-          window.__PRERENDER__ = true;
-        });
-        await page.goto(`http://127.0.0.1:${port}${route}`, { waitUntil: 'networkidle0', timeout: 45000 });
-        // Wait until React has set this page's title, then give data requests a moment.
-        await page.waitForFunction(() => document.querySelector('title[data-react-helmet]') || document.title.includes('|'), { timeout: 15000 }).catch(() => {});
-        await new Promise((r) => setTimeout(r, 1500));
-        await page.evaluate(cleanUpPageInBrowser);
-        const html = '<!DOCTYPE html>' + (await page.evaluate(() => document.documentElement.outerHTML));
-        const rootText = await page.evaluate(() => (document.getElementById('root') || {}).innerText || '');
-        if (rootText.trim().length < 50) throw new Error('rendered page has almost no text');
-        const file = outputFileFor(route);
-        fs.mkdirSync(path.dirname(file), { recursive: true });
-        fs.writeFileSync(file, html);
-        results.ok.push(route);
-        log('OK  ', route);
-      } catch (err) {
-        results.failed.push(route);
-        log('FAIL', route, '-', err.message);
-      } finally {
-        await page.close();
-      }
-    }
+    // Render a few pages in parallel to keep build times short.
+    const CONCURRENCY = Number(process.env.PRERENDER_CONCURRENCY || 4);
+    const queue = [...routes];
+    const renderOne = async (route) => {
+        const page = await browser.newPage();
+        try {
+          await page.setViewport({ width: 1366, height: 900 });
+          await page.setRequestInterception(true);
+          page.on('request', (req) => {
+            const url = req.url();
+            if (BLOCKED_HOSTS.some((h) => url.includes(h))) return req.abort();
+            return req.continue();
+          });
+          await page.evaluateOnNewDocument(() => {
+            window.__PRERENDER__ = true;
+          });
+          await page.goto(`http://127.0.0.1:${port}${route}`, { waitUntil: 'networkidle0', timeout: 45000 });
+          // Wait until React has set this page's title, then give data requests a moment.
+          await page.waitForFunction(() => document.querySelector('title[data-react-helmet]') || document.title.includes('|'), { timeout: 15000 }).catch(() => {});
+          await new Promise((r) => setTimeout(r, 1500));
+          await page.evaluate(cleanUpPageInBrowser);
+          const html = '<!DOCTYPE html>' + (await page.evaluate(() => document.documentElement.outerHTML));
+          const rootText = await page.evaluate(() => (document.getElementById('root') || {}).innerText || '');
+          if (rootText.trim().length < 50) throw new Error('rendered page has almost no text');
+          const file = outputFileFor(route);
+          fs.mkdirSync(path.dirname(file), { recursive: true });
+          fs.writeFileSync(file, html);
+          results.ok.push(route);
+          log('OK  ', route);
+        } catch (err) {
+          results.failed.push(route);
+          log('FAIL', route, '-', err.message);
+        } finally {
+          await page.close();
+        }
+    };
+    await Promise.all(
+      Array.from({ length: CONCURRENCY }, async () => {
+        while (queue.length) await renderOne(queue.shift());
+      })
+    );
   } finally {
     await browser.close();
     server.close();
