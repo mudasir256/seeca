@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import serviceContent, { OTHER_SERVICES } from '../../../data/serviceContent';
 import { snapshot } from '../../../lib/cmsFallback';
+import { hasOwnDescription, projectPath } from '../../../lib/projects';
 
 const STYLES = `
   .tc-service-extras { padding: 90px 0 40px; background: #fff; color: #1a1a1a; }
@@ -57,7 +58,12 @@ function ServiceExtras({ path }) {
   const content = serviceContent[path];
   if (!content) return null;
 
-  const projects = snapshot.projects.filter(content.projectFilter).filter((p) => p.img).slice(0, 6);
+  // Projects with a full write-up first (their pages are indexed), then the rest.
+  const projects = snapshot.projects
+    .filter(content.projectFilter)
+    .filter((p) => p.img)
+    .sort((a, b) => Number(hasOwnDescription(b, snapshot.projects)) - Number(hasOwnDescription(a, snapshot.projects)))
+    .slice(0, 6);
   const posts = content.relatedPosts
     .map((slug) => snapshot.blogs.find((b) => b.slug === slug))
     .filter(Boolean);
@@ -124,7 +130,7 @@ function ServiceExtras({ path }) {
             <h2>{`Selected ${content.name.toLowerCase()} projects`}</h2>
             <div className="se-projects">
               {projects.map((p) => (
-                <Link key={p.id} to="/portfolio" className="se-project">
+                <Link key={p.id} to={projectPath(p, snapshot.projects)} className="se-project">
                   <img
                     src={p.img}
                     alt={`${p.title} – ${content.name.toLowerCase()} project by SEECA`}
