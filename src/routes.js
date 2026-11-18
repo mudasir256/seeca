@@ -35,6 +35,7 @@ export const PartnersPage = lazyWithPreload(() => import('./pages/innerpages/par
 export const ApplyInternshipPage = lazyWithPreload(() => import('./pages/innerpages/apply-internship'));
 export const ApplyJobPage = lazyWithPreload(() => import('./pages/innerpages/apply-job'));
 export const SinglePost = lazyWithPreload(() => import('./pages/innerpages/single_post'));
+export const ProjectPage = lazyWithPreload(() => import('./pages/innerpages/project'));
 export const NotFound = lazyWithPreload(() => import('./pages/NotFound'));
 
 const PRELOAD_TABLE = [
@@ -43,6 +44,7 @@ const PRELOAD_TABLE = [
   ['/blog/:slug', SinglePost],
   ['/contact', ContactPage],
   ['/portfolio', PortfolioPage],
+  ['/portfolio/:slug', ProjectPage],
   ['/services', ServicesPage],
   ['/architecture', ArchitecturePage],
   ['/interior-design', InteriorDesignPage],

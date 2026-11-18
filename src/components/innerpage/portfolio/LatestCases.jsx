@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useState, useMemo, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { projectPath } from '../../../lib/projects';
 import OptimizedImage from '../../common/OptimizedImage';
 import usePortfolio from '../../../hooks/usePortfolio';
 
@@ -239,7 +240,7 @@ function LatestCases() {
                   <div key={item.id || i} className={`col-lg-4 mix-item ${getFilterClasses(item)}`}>
                     <div 
                       className="case-card"
-                      onClick={() => navigate(`/single_project?project=${encodeURIComponent(item.id)}`, { state: { project: item } })}
+                      onClick={() => navigate(projectPath(item, data))}
                     >
                       <div className="img">
                         <OptimizedImage src={item.img} alt={item.title || ''} className="img-cover" />
@@ -252,9 +253,14 @@ function LatestCases() {
                           )}
                         </div>
                         <h3 className="title mb-20">
-                          <span className="hover-orange1">
+                          <Link
+                            to={projectPath(item, data)}
+                            className="hover-orange1"
+                            style={{ color: 'inherit' }}
+                            onClick={(e) => e.stopPropagation()}
+                          >
                             {item.title}
-                          </span>
+                          </Link>
                         </h3>
                         <div className="text color-666">
                           {item.desc}

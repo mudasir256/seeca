@@ -31,6 +31,37 @@ const cmsSnapshot = require('../src/data/cms-snapshot.json');
 // Blog posts: the CMS snapshot shipped with the site, plus any newer posts in Supabase.
 let blogPosts = cmsSnapshot.blogs.map((b) => ({ slug: b.slug, title: b.title, description: b.description, date: b.history }));
 
+// Projects: snapshot shipped with the site, updated/extended by Supabase (same merge as the app).
+let projects = cmsSnapshot.projects.map((p) => ({ id: p.id, title: p.title, desc: p.desc }));
+
+async function loadProjectsFromCms() {
+  const url = process.env.REACT_APP_SUPABASE_URL;
+  const key = process.env.REACT_APP_SUPABASE_PUBLISHABLE_KEY;
+  if (!url || !key) return;
+  try {
+    const res = await fetch(`${url}/rest/v1/portfolios?select=id,title,description&order=created_at.desc`, {
+      headers: { apikey: key, Authorization: `Bearer ${key}` },
+      signal: AbortSignal.timeout(15000),
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const rows = (await res.json()).map((r) => ({ id: r.id, title: r.title, desc: r.description }));
+    const byId = new Map(rows.map((r) => [r.id, r]));
+    const localIds = new Set(projects.map((p) => p.id));
+    projects = [...rows.filter((r) => !localIds.has(r.id)), ...projects.map((p) => byId.get(p.id) || p)];
+    log(`Projects: ${projects.length} (CMS reachable).`);
+  } catch (err) {
+    log('CMS not reachable, using the snapshot project list:', err.message);
+  }
+}
+
+/** Project pages with their own description (see src/lib/projects.js). */
+async function getProjectRoutes() {
+  const lib = await import('../src/lib/projects.js');
+  return projects
+    .filter((p) => lib.hasOwnDescription(p, projects))
+    .map((p) => lib.projectPath(p, projects));
+}
+
 async function loadBlogPostsFromCms() {
   const url = process.env.REACT_APP_SUPABASE_URL;
   const key = process.env.REACT_APP_SUPABASE_PUBLISHABLE_KEY;
@@ -271,7 +302,7 @@ function writeShellWithHead(route, shellHtml) {
 
 function writeSitemap(routes) {
   const today = new Date().toISOString().slice(0, 10);
-  const priority = (r) => (r === '/' ? '1.0' : ['/services', '/architecture', '/interior-design', '/construction', '/portfolio'].includes(r) ? '0.9' : r.startsWith('/blog/') ? '0.6' : '0.7');
+  const priority = (r) => (r === '/' ? '1.0' : ['/services', '/architecture', '/interior-design', '/construction', '/portfolio'].includes(r) ? '0.9' : r.startsWith('/blog/') || r.startsWith('/portfolio/') ? '0.6' : '0.7');
   const urls = routes.map((r) => {
     const post = r.startsWith('/blog/') ? blogPosts.find((p) => `/blog/${p.slug}` === r) : null;
     const parsed = post ? new Date(post.date) : null;
@@ -295,12 +326,16 @@ async function main() {
     return;
   }
   await loadBlogPostsFromCms();
+  await loadProjectsFromCms();
+  const projectRoutes = await getProjectRoutes();
+  log(`Indexable project pages: ${projectRoutes.length}.`);
   // Keep an untouched copy of the app shell (index.html is overwritten with the homepage).
   const shellFile = path.join(BUILD_DIR, 'app-shell.html');
   if (!fs.existsSync(shellFile)) fs.copyFileSync(indexFile, shellFile);
   const shellHtml = fs.readFileSync(shellFile, 'utf8');
 
-  const { indexable, other } = getRoutes();
+  const { indexable: pageRoutes, other } = getRoutes();
+  const indexable = [...pageRoutes, ...projectRoutes];
   const allRoutes = [...indexable, ...other, NOT_FOUND_PATH];
   let failed = allRoutes;
   try {

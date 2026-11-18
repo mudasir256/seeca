@@ -374,7 +374,7 @@ function Projects() {
 
     const handleProjectClick = (e, project) => {
       e.preventDefault();
-      navigate('/single_project', { state: { project } });
+      navigate('/portfolio');
     };
 
   return (

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { projectPath } from '../../lib/projects';
 import OptimizedImage from '../common/OptimizedImage';
 import usePortfolio from '../../hooks/usePortfolio';
 
@@ -16,10 +17,8 @@ function Projects() {
   const [activeTab, setActiveTab] = useState('pills-proj1');
 
   const openProject = useCallback((item) => {
-    navigate(`/single_project?project=${encodeURIComponent(item.id)}`, {
-      state: { project: item },
-    });
-  }, [navigate]);
+    navigate(projectPath(item, projects));
+  }, [navigate, projects]);
 
   const nextSlide = useCallback(() => {
     if (isAnimating || projectsData.length === 0) return;
@@ -1041,7 +1040,7 @@ function Projects() {
                                   </div>
                                   <h3 className="project-card-title">
                                     <a 
-                                      href="#"
+                                      href={projectPath(item, projects)}
                                       onClick={(e) => {
                                         e.preventDefault();
                                         e.stopPropagation();
@@ -1196,7 +1195,7 @@ function Projects() {
                                   </div>
                                   <h3 className="project-card-title">
                                     <a 
-                                      href="#"
+                                      href={projectPath(item, projects)}
                                       onClick={(e) => {
                                         e.preventDefault();
                                         e.stopPropagation();
