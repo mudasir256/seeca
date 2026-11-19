@@ -31,6 +31,37 @@ const cmsSnapshot = require('../src/data/cms-snapshot.json');
 // Blog posts: the CMS snapshot shipped with the site, plus any newer posts in Supabase.
 let blogPosts = cmsSnapshot.blogs.map((b) => ({ slug: b.slug, title: b.title, description: b.description, date: b.history }));
 
+// Projects: snapshot shipped with the site, updated/extended by Supabase (same merge as the app).
+let projects = cmsSnapshot.projects.map((p) => ({ id: p.id, title: p.title, desc: p.desc }));
+
+async function loadProjectsFromCms() {
+  const url = process.env.REACT_APP_SUPABASE_URL;
+  const key = process.env.REACT_APP_SUPABASE_PUBLISHABLE_KEY;
+  if (!url || !key) return;
+  try {
+    const res = await fetch(`${url}/rest/v1/portfolios?select=id,title,description&order=created_at.desc`, {
+      headers: { apikey: key, Authorization: `Bearer ${key}` },
+      signal: AbortSignal.timeout(15000),
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const rows = (await res.json()).map((r) => ({ id: r.id, title: r.title, desc: r.description }));
+    const byId = new Map(rows.map((r) => [r.id, r]));
+    const localIds = new Set(projects.map((p) => p.id));
+    projects = [...rows.filter((r) => !localIds.has(r.id)), ...projects.map((p) => byId.get(p.id) || p)];
+    log(`Projects: ${projects.length} (CMS reachable).`);
+  } catch (err) {
+    log('CMS not reachable, using the snapshot project list:', err.message);
+  }
+}
+
+/** Project pages with their own description (see src/lib/projects.js). */
+async function getProjectRoutes() {
+  const lib = await import('../src/lib/projects.js');
+  return projects
+    .filter((p) => lib.hasOwnDescription(p, projects))
+    .map((p) => lib.projectPath(p, projects));
+}
+
 async function loadBlogPostsFromCms() {
   const url = process.env.REACT_APP_SUPABASE_URL;
   const key = process.env.REACT_APP_SUPABASE_PUBLISHABLE_KEY;
@@ -203,39 +234,47 @@ async function prerenderWithBrowser(routes, shellHtml) {
   const browser = await launchBrowser();
   const results = { ok: [], failed: [] };
   try {
-    for (const route of routes) {
-      const page = await browser.newPage();
-      try {
-        await page.setViewport({ width: 1366, height: 900 });
-        await page.setRequestInterception(true);
-        page.on('request', (req) => {
-          const url = req.url();
-          if (BLOCKED_HOSTS.some((h) => url.includes(h))) return req.abort();
-          return req.continue();
-        });
-        await page.evaluateOnNewDocument(() => {
-          window.__PRERENDER__ = true;
-        });
-        await page.goto(`http://127.0.0.1:${port}${route}`, { waitUntil: 'networkidle0', timeout: 45000 });
-        // Wait until React has set this page's title, then give data requests a moment.
-        await page.waitForFunction(() => document.querySelector('title[data-react-helmet]') || document.title.includes('|'), { timeout: 15000 }).catch(() => {});
-        await new Promise((r) => setTimeout(r, 1500));
-        await page.evaluate(cleanUpPageInBrowser);
-        const html = '<!DOCTYPE html>' + (await page.evaluate(() => document.documentElement.outerHTML));
-        const rootText = await page.evaluate(() => (document.getElementById('root') || {}).innerText || '');
-        if (rootText.trim().length < 50) throw new Error('rendered page has almost no text');
-        const file = outputFileFor(route);
-        fs.mkdirSync(path.dirname(file), { recursive: true });
-        fs.writeFileSync(file, html);
-        results.ok.push(route);
-        log('OK  ', route);
-      } catch (err) {
-        results.failed.push(route);
-        log('FAIL', route, '-', err.message);
-      } finally {
-        await page.close();
-      }
-    }
+    // Render a few pages in parallel to keep build times short.
+    const CONCURRENCY = Number(process.env.PRERENDER_CONCURRENCY || 4);
+    const queue = [...routes];
+    const renderOne = async (route) => {
+        const page = await browser.newPage();
+        try {
+          await page.setViewport({ width: 1366, height: 900 });
+          await page.setRequestInterception(true);
+          page.on('request', (req) => {
+            const url = req.url();
+            if (BLOCKED_HOSTS.some((h) => url.includes(h))) return req.abort();
+            return req.continue();
+          });
+          await page.evaluateOnNewDocument(() => {
+            window.__PRERENDER__ = true;
+          });
+          await page.goto(`http://127.0.0.1:${port}${route}`, { waitUntil: 'networkidle0', timeout: 45000 });
+          // Wait until React has set this page's title, then give data requests a moment.
+          await page.waitForFunction(() => document.querySelector('title[data-react-helmet]') || document.title.includes('|'), { timeout: 15000 }).catch(() => {});
+          await new Promise((r) => setTimeout(r, 1500));
+          await page.evaluate(cleanUpPageInBrowser);
+          const html = '<!DOCTYPE html>' + (await page.evaluate(() => document.documentElement.outerHTML));
+          const rootText = await page.evaluate(() => (document.getElementById('root') || {}).innerText || '');
+          if (rootText.trim().length < 50) throw new Error('rendered page has almost no text');
+          const file = outputFileFor(route);
+          fs.mkdirSync(path.dirname(file), { recursive: true });
+          fs.writeFileSync(file, html);
+          results.ok.push(route);
+          log('OK  ', route);
+        } catch (err) {
+          results.failed.push(route);
+          log('FAIL', route, '-', err.message);
+        } finally {
+          await page.close();
+        }
+    };
+    await Promise.all(
+      Array.from({ length: CONCURRENCY }, async () => {
+        while (queue.length) await renderOne(queue.shift());
+      })
+    );
   } finally {
     await browser.close();
     server.close();
@@ -271,7 +310,7 @@ function writeShellWithHead(route, shellHtml) {
 
 function writeSitemap(routes) {
   const today = new Date().toISOString().slice(0, 10);
-  const priority = (r) => (r === '/' ? '1.0' : ['/services', '/architecture', '/interior-design', '/construction', '/portfolio'].includes(r) ? '0.9' : r.startsWith('/blog/') ? '0.6' : '0.7');
+  const priority = (r) => (r === '/' ? '1.0' : ['/services', '/architecture', '/interior-design', '/construction', '/portfolio'].includes(r) ? '0.9' : r.startsWith('/blog/') || r.startsWith('/portfolio/') ? '0.6' : '0.7');
   const urls = routes.map((r) => {
     const post = r.startsWith('/blog/') ? blogPosts.find((p) => `/blog/${p.slug}` === r) : null;
     const parsed = post ? new Date(post.date) : null;
@@ -295,12 +334,16 @@ async function main() {
     return;
   }
   await loadBlogPostsFromCms();
+  await loadProjectsFromCms();
+  const projectRoutes = await getProjectRoutes();
+  log(`Indexable project pages: ${projectRoutes.length}.`);
   // Keep an untouched copy of the app shell (index.html is overwritten with the homepage).
   const shellFile = path.join(BUILD_DIR, 'app-shell.html');
   if (!fs.existsSync(shellFile)) fs.copyFileSync(indexFile, shellFile);
   const shellHtml = fs.readFileSync(shellFile, 'utf8');
 
-  const { indexable, other } = getRoutes();
+  const { indexable: pageRoutes, other } = getRoutes();
+  const indexable = [...pageRoutes, ...projectRoutes];
   const allRoutes = [...indexable, ...other, NOT_FOUND_PATH];
   let failed = allRoutes;
   try {

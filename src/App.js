@@ -22,6 +22,7 @@ import {
   ApplyInternshipPage,
   ApplyJobPage,
   SinglePost,
+  ProjectPage,
   NotFound,
 } from './routes';
 
@@ -101,6 +102,7 @@ function App() {
           <Route path="/blog/:slug" element={<SinglePost />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
+          <Route path="/portfolio/:slug" element={<ProjectPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/architecture" element={<ArchitecturePage />} />
           <Route path="/interior-design" element={<InteriorDesignPage />} />

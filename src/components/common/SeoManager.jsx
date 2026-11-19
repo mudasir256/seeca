@@ -132,13 +132,16 @@ export default function SeoManager() {
   const blog = blogFromRoute || (isBlogPostRoute ? blogFromState : null) || null;
 
   const normalizedPathname = pathname === '/' ? '/' : pathname.replace(/\/+$/, '');
-  const isNotFound = !isBlogPostRoute && !routeSeo[normalizedPathname];
+  const isProjectRoute = normalizedPathname.startsWith('/portfolio/');
+  const isNotFound = !isBlogPostRoute && !isProjectRoute && !routeSeo[normalizedPathname];
   const pageSeo = isNotFound ? NOT_FOUND_SEO : routeSeo[normalizedPathname] || {};
   const title = blog
     ? `${blog.title} | SEECA Blog`
     : isBlogPostRoute
       ? 'Blog | SEECA Lahore'
-      : pageSeo.title || DEFAULT_TITLE;
+      : isProjectRoute
+        ? 'Project | SEECA'
+        : pageSeo.title || DEFAULT_TITLE;
   const description = blog?.description || pageSeo.description || DEFAULT_DESCRIPTION;
   const keywords = blog ? buildBlogKeywords(blog) : (pageSeo.keywords || DEFAULT_KEYWORDS);
   const robots = pageSeo.robots || 'index, follow, max-image-preview:large';

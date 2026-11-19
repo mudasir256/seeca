@@ -23,6 +23,7 @@ export default function usePortfolio() {
   const [categories, setCategories] = useState(snapshot.portfolioCategories);
   const [projects, setProjects] = useState(snapshot.projects);
   const [loading, setLoading] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     let active = true;
@@ -51,6 +52,7 @@ export default function usePortfolio() {
         setCategories(snapshot.portfolioCategories);
         setProjects(snapshot.projects);
         setLoading(false);
+        setLoaded(true);
         return;
       }
 
@@ -68,6 +70,7 @@ export default function usePortfolio() {
         console.error('Could not load portfolio projects:', projectsResult.error.message);
         setProjects(snapshot.projects);
         setLoading(false);
+        setLoaded(true);
         return;
       }
 
@@ -108,12 +111,14 @@ export default function usePortfolio() {
         mergeWithSnapshot(remoteProjects, snapshot.projects, { remoteFirst: true }),
       );
       setLoading(false);
+        setLoaded(true);
       } catch (error) {
         if (!active) return;
         console.error('Could not load portfolio projects:', error);
         setCategories(snapshot.portfolioCategories);
         setProjects(snapshot.projects);
         setLoading(false);
+        setLoaded(true);
       }
     }
 
@@ -124,5 +129,5 @@ export default function usePortfolio() {
     };
   }, []);
 
-  return { categories, projects, loading };
+  return { categories, projects, loading, loaded };
 }

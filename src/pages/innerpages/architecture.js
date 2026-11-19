@@ -8,6 +8,7 @@ import Header from '../../components/innerpage/contact/Header';
 import ArchitectureContent from '../../components/innerpage/architecture/ArchitectureContent';
 import Testimonials from '../../components/home1/Testimonials';
 import ContactSection from '../../components/innerpage/architecture/ContactSection';
+import ServiceExtras from '../../components/innerpage/services/ServiceExtras';
 
 function ArchitecturePage() {
   return (
@@ -26,6 +27,7 @@ function ArchitecturePage() {
       />
       <main>
         <ArchitectureContent />
+        <ServiceExtras path="/architecture" />
         <Testimonials />
         <ContactSection />
       </main>

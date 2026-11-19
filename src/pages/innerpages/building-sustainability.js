@@ -8,6 +8,7 @@ import Header from '../../components/innerpage/contact/Header';
 import BuildingSustainabilityContent from '../../components/innerpage/building-sustainability/BuildingSustainabilityContent';
 import Testimonials from '../../components/home1/Testimonials';
 import ContactSection from '../../components/innerpage/building-sustainability/ContactSection';
+import ServiceExtras from '../../components/innerpage/services/ServiceExtras';
 
 function BuildingSustainabilityPage() {
   return (
@@ -26,6 +27,7 @@ function BuildingSustainabilityPage() {
       />
       <main>
         <BuildingSustainabilityContent />
+        <ServiceExtras path="/building-sustainability" />
         <Testimonials />
         <ContactSection />
       </main>

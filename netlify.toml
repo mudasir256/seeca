@@ -17,6 +17,13 @@
 # Unknown URLs get build/404.html with a real 404 status.
 # ---------------------------------------------------------------------------
 
+# Project pages: those with their own description are pre-rendered; the rest
+# (not indexed yet) are served by the app shell, which renders them in the browser.
+[[redirects]]
+  from = "/portfolio/*"
+  to = "/app-shell.html"
+  status = 200
+
 # Old URLs from the previous website and template routes -> current pages.
 [[redirects]]
   from = "/innerpages/*"

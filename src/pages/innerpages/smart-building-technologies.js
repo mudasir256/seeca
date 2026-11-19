@@ -8,6 +8,7 @@ import Header from '../../components/innerpage/contact/Header';
 import SmartBuildingTechnologiesContent from '../../components/innerpage/smart-building-technologies/SmartBuildingTechnologiesContent';
 import Testimonials from '../../components/home1/Testimonials';
 import ContactSection from '../../components/innerpage/smart-building-technologies/ContactSection';
+import ServiceExtras from '../../components/innerpage/services/ServiceExtras';
 
 function SmartBuildingTechnologiesPage() {
   return (
@@ -26,6 +27,7 @@ function SmartBuildingTechnologiesPage() {
       />
       <main>
         <SmartBuildingTechnologiesContent />
+        <ServiceExtras path="/smart-building-technologies" />
         <Testimonials />
         <ContactSection />
       </main>
