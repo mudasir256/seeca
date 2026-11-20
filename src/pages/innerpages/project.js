@@ -19,6 +19,7 @@ import {
   projectService,
   projectSlug,
 } from '../../lib/projects';
+import { cdnImage, cdnSrcSet } from '../../lib/imageCdn';
 
 const SITE_URL = (process.env.REACT_APP_SITE_URL || 'https://seeca.pk').replace(/\/+$/, '');
 
@@ -175,9 +176,11 @@ function ProjectPage() {
               <h2>Project gallery</h2>
               <div className="pp-gallery">
                 {gallery.map((src, i) => (
-                  <a key={src} href={src} data-fancybox="project-gallery" data-caption={project.title}>
+                  <a key={src} href={cdnImage(src, 1920, 80)} data-type="image" data-fancybox="project-gallery" data-caption={project.title}>
                     <img
-                      src={src}
+                      src={cdnImage(src, 800)}
+                      srcSet={cdnSrcSet(src, [400, 800])}
+                      sizes="(max-width: 767px) 100vw, 33vw"
                       alt={`${project.title} – view ${i + 1}`}
                       loading={i < 3 ? 'eager' : 'lazy'}
                       decoding="async"
@@ -196,7 +199,7 @@ function ProjectPage() {
               <div className="pp-related">
                 {related.map((p) => (
                   <Link key={p.id} to={projectPath(p, projects)}>
-                    <img src={p.img} alt={p.title} loading="lazy" decoding="async" width="400" height="300" />
+                    <img src={cdnImage(p.img, 600)} alt={p.title} loading="lazy" decoding="async" width="400" height="300" />
                     <span>{p.title}</span>
                   </Link>
                 ))}

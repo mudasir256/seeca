@@ -1,16 +1,25 @@
-import React, { lazy } from 'react';
+import React, { Suspense, lazy, useState } from 'react';
 import { matchPath } from 'react-router-dom';
 
 /**
  * Lazy-loaded page that can also be loaded ahead of time.
- * Preloading the current page before the first render lets the app replace the
- * pre-rendered HTML in one step, without a blank flash while the page code loads.
+ * The current page is preloaded before the first render, so React can take over
+ * (hydrate) the pre-rendered HTML without a blank flash or a full redraw.
  */
 function lazyWithPreload(factory) {
   let LoadedComponent = null;
   const LazyComponent = lazy(factory);
   function PreloadablePage(props) {
-    return LoadedComponent ? <LoadedComponent {...props} /> : <LazyComponent {...props} />;
+    // Decided once per mount so the page is never swapped (and its state lost) mid-visit.
+    // A page whose code is already loaded renders directly, with no Suspense boundary:
+    // that is what lets React hydrate the pre-rendered HTML on the first visit.
+    const [Ready] = useState(() => LoadedComponent);
+    if (Ready) return <Ready {...props} />;
+    return (
+      <Suspense fallback={null}>
+        <LazyComponent {...props} />
+      </Suspense>
+    );
   }
   PreloadablePage.preload = () =>
     factory().then((module) => {

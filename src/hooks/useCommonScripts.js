@@ -10,6 +10,11 @@ export const useCommonScripts = () => {
 
     // Initialize WOW if available
     if (window.WOW) {
+      // Content already visible on the first screen stays put; only content further
+      // down the page fades in as you scroll (avoids the "patchy" first load).
+      document.querySelectorAll('.wow').forEach((el) => {
+        if (el.getBoundingClientRect().top < window.innerHeight) el.classList.remove('wow');
+      });
       const wow = new window.WOW({
         boxClass: 'wow',
         animateClass: 'animated',

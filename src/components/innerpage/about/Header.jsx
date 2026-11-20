@@ -1,4 +1,5 @@
 import React from 'react';
+import { cdnImage } from '../../../lib/imageCdn';
 
 function Header() {
   return (
@@ -67,7 +68,8 @@ function Header() {
       <div className="slider-card">
         <div className="img">
           <img
-            src="/innerpages/assets/img/about/5918.Exterior04.jpg"
+            src={cdnImage('/innerpages/assets/img/about/5918.Exterior04.jpg', 1600, 72)}
+            fetchpriority="high"
             alt="Contemporary house exterior designed by SEECA"
             className="img-cover"
           />

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import serviceContent, { OTHER_SERVICES } from '../../../data/serviceContent';
 import { snapshot } from '../../../lib/cmsFallback';
 import { hasOwnDescription, projectPath } from '../../../lib/projects';
+import { cdnImage } from '../../../lib/imageCdn';
 
 const STYLES = `
   .tc-service-extras { padding: 90px 0 40px; background: #fff; color: #1a1a1a; }
@@ -132,7 +133,7 @@ function ServiceExtras({ path }) {
               {projects.map((p) => (
                 <Link key={p.id} to={projectPath(p, snapshot.projects)} className="se-project">
                   <img
-                    src={p.img}
+                    src={cdnImage(p.img, 600)}
                     alt={`${p.title} – ${content.name.toLowerCase()} project by SEECA`}
                     loading="lazy"
                     decoding="async"

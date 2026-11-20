@@ -54,6 +54,21 @@ async function loadProjectsFromCms() {
   }
 }
 
+let snapshotRoutes = new Set();
+
+/** Detail pages whose content is not in the bundled snapshot need live CMS data. */
+function needsLiveCms(route) {
+  if (!/^\/(portfolio|blog)\/./.test(route)) return false;
+  return !snapshotRoutes.has(route);
+}
+
+async function collectSnapshotRoutes() {
+  const lib = await import('../src/lib/projects.js');
+  const snap = cmsSnapshot.projects;
+  snap.forEach((p) => snapshotRoutes.add(lib.projectPath(p, projects)));
+  cmsSnapshot.blogs.forEach((b) => snapshotRoutes.add(`/blog/${b.slug}`));
+}
+
 /** Project pages with their own description (see src/lib/projects.js). */
 async function getProjectRoutes() {
   const lib = await import('../src/lib/projects.js');
@@ -136,6 +151,19 @@ const MIME = {
 
 function startServer(shellHtml) {
   const server = http.createServer((req, res) => {
+    // Netlify Image CDN URLs (/.netlify/images?url=...) -> the original file, for local rendering.
+    if (req.url.startsWith('/.netlify/images')) {
+      const target = new URL(req.url, 'http://local').searchParams.get('url') || '';
+      const imageFile = path.join(BUILD_DIR, decodeURIComponent(target));
+      if (target.startsWith('/') && imageFile.startsWith(BUILD_DIR) && fs.existsSync(imageFile)) {
+        res.writeHead(200, { 'Content-Type': MIME[path.extname(imageFile).toLowerCase()] || 'image/jpeg' });
+        fs.createReadStream(imageFile).pipe(res);
+      } else {
+        res.writeHead(404);
+        res.end();
+      }
+      return;
+    }
     const urlPath = decodeURIComponent(req.url.split('?')[0]);
     const filePath = path.join(BUILD_DIR, urlPath);
     if (filePath.startsWith(BUILD_DIR) && fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
@@ -193,6 +221,19 @@ async function launchBrowser() {
 
 /** Runs inside the page: removes things that should not be frozen into static HTML. */
 function cleanUpPageInBrowser() {
+  // React renders "Latest{' '}" as two text nodes, but saved HTML merges them into one, which
+  // breaks hydration. Separate neighbouring text nodes with an empty comment, as React's own
+  // server rendering does.
+  const root = document.getElementById('root');
+  if (root) {
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    const texts = [];
+    while (walker.nextNode()) texts.push(walker.currentNode);
+    texts.forEach((node) => {
+      const prev = node.previousSibling;
+      if (prev && prev.nodeType === Node.TEXT_NODE) node.parentNode.insertBefore(document.createComment(' '), node);
+    });
+  }
   // Animation libraries hide elements until they scroll into view; keep content visible.
   document.querySelectorAll('[style]').forEach((el) => {
     const s = el.style;
@@ -252,9 +293,17 @@ async function prerenderWithBrowser(routes, shellHtml) {
         try {
           await page.setViewport({ width: 1366, height: 900 });
           await page.setRequestInterception(true);
+          const allowCms = needsLiveCms(route);
           page.on('request', (req) => {
             const url = req.url();
             if (BLOCKED_HOSTS.some((h) => url.includes(h))) return req.abort();
+            // Animation/slider plugins (jQuery, GSAP, WOW, Swiper...) change the page after
+            // React renders it. Leave them out so the saved HTML is exactly React's output;
+            // the browser can then "hydrate" it instead of redrawing the whole page.
+            if (url.includes('/common/assets/js/')) return req.abort();
+            // Use the CMS snapshot the browser starts with, so the HTML matches its first
+            // render. Only pages that exist solely in Supabase load live data.
+            if (!allowCms && url.includes('.supabase.co')) return req.abort();
             return req.continue();
           });
           await page.evaluateOnNewDocument(() => {
@@ -392,6 +441,7 @@ async function main() {
   await loadBlogPostsFromCms();
   await loadProjectsFromCms();
   const projectRoutes = await getProjectRoutes();
+  await collectSnapshotRoutes();
   log(`Indexable project pages: ${projectRoutes.length}.`);
   // Keep an untouched copy of the app shell (index.html is overwritten with the homepage).
   const shellFile = path.join(BUILD_DIR, 'app-shell.html');
