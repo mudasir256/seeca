@@ -10,7 +10,7 @@ function Header({
   minHeight = 500,
   titleClassName = 'js-title'
 }) {
-  const headerImage = cdnImage(backgroundImage, 1600, 70);
+  const headerImage = cdnImage(backgroundImage, 1600, 85);
   return (
     <>
       {/* The header photo is the largest element on screen: start loading it right away. */}
