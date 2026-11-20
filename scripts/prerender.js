@@ -32,7 +32,7 @@ const cmsSnapshot = require('../src/data/cms-snapshot.json');
 let blogPosts = cmsSnapshot.blogs.map((b) => ({ slug: b.slug, title: b.title, description: b.description, date: b.history }));
 
 // Projects: snapshot shipped with the site, updated/extended by Supabase (same merge as the app).
-let projects = cmsSnapshot.projects.map((p) => ({ id: p.id, title: p.title, desc: p.desc }));
+let projects = cmsSnapshot.projects.map((p) => ({ id: p.id, title: p.title, desc: p.desc, previousSlugs: p.previousSlugs || [] }));
 
 async function loadProjectsFromCms() {
   const url = process.env.REACT_APP_SUPABASE_URL;
@@ -52,6 +52,21 @@ async function loadProjectsFromCms() {
   } catch (err) {
     log('CMS not reachable, using the snapshot project list:', err.message);
   }
+}
+
+let snapshotRoutes = new Set();
+
+/** Detail pages whose content is not in the bundled snapshot need live CMS data. */
+function needsLiveCms(route) {
+  if (!/^\/(portfolio|blog)\/./.test(route)) return false;
+  return !snapshotRoutes.has(route);
+}
+
+async function collectSnapshotRoutes() {
+  const lib = await import('../src/lib/projects.js');
+  const snap = cmsSnapshot.projects;
+  snap.forEach((p) => snapshotRoutes.add(lib.projectPath(p, projects)));
+  cmsSnapshot.blogs.forEach((b) => snapshotRoutes.add(`/blog/${b.slug}`));
 }
 
 /** Project pages with their own description (see src/lib/projects.js). */
@@ -136,6 +151,19 @@ const MIME = {
 
 function startServer(shellHtml) {
   const server = http.createServer((req, res) => {
+    // Netlify Image CDN URLs (/.netlify/images?url=...) -> the original file, for local rendering.
+    if (req.url.startsWith('/.netlify/images')) {
+      const target = new URL(req.url, 'http://local').searchParams.get('url') || '';
+      const imageFile = path.join(BUILD_DIR, decodeURIComponent(target));
+      if (target.startsWith('/') && imageFile.startsWith(BUILD_DIR) && fs.existsSync(imageFile)) {
+        res.writeHead(200, { 'Content-Type': MIME[path.extname(imageFile).toLowerCase()] || 'image/jpeg' });
+        fs.createReadStream(imageFile).pipe(res);
+      } else {
+        res.writeHead(404);
+        res.end();
+      }
+      return;
+    }
     const urlPath = decodeURIComponent(req.url.split('?')[0]);
     const filePath = path.join(BUILD_DIR, urlPath);
     if (filePath.startsWith(BUILD_DIR) && fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
@@ -154,7 +182,17 @@ function startServer(shellHtml) {
 
 async function launchBrowser() {
   const puppeteer = require('puppeteer-core');
-  const args = ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage', '--disable-gpu'];
+  const args = [
+    '--no-sandbox',
+    '--disable-setuid-sandbox',
+    '--disable-dev-shm-usage',
+    '--disable-gpu',
+    // Pages render in parallel tabs; stop Chrome pausing the background ones
+    // (React Helmet writes titles/meta on animation frames).
+    '--disable-background-timer-throttling',
+    '--disable-renderer-backgrounding',
+    '--disable-backgrounding-occluded-windows',
+  ];
   const candidates = [];
   if (process.env.PUPPETEER_EXECUTABLE_PATH) candidates.push(async () => process.env.PUPPETEER_EXECUTABLE_PATH);
   // Self-contained Chromium build that runs on Linux build images (Netlify, Vercel, CI).
@@ -183,6 +221,19 @@ async function launchBrowser() {
 
 /** Runs inside the page: removes things that should not be frozen into static HTML. */
 function cleanUpPageInBrowser() {
+  // React renders "Latest{' '}" as two text nodes, but saved HTML merges them into one, which
+  // breaks hydration. Separate neighbouring text nodes with an empty comment, as React's own
+  // server rendering does.
+  const root = document.getElementById('root');
+  if (root) {
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    const texts = [];
+    while (walker.nextNode()) texts.push(walker.currentNode);
+    texts.forEach((node) => {
+      const prev = node.previousSibling;
+      if (prev && prev.nodeType === Node.TEXT_NODE) node.parentNode.insertBefore(document.createComment(' '), node);
+    });
+  }
   // Animation libraries hide elements until they scroll into view; keep content visible.
   document.querySelectorAll('[style]').forEach((el) => {
     const s = el.style;
@@ -237,14 +288,22 @@ async function prerenderWithBrowser(routes, shellHtml) {
     // Render a few pages in parallel to keep build times short.
     const CONCURRENCY = Number(process.env.PRERENDER_CONCURRENCY || 4);
     const queue = [...routes];
-    const renderOne = async (route) => {
-        const page = await browser.newPage();
+    const renderOne = async (route, context) => {
+        const page = await context.newPage();
         try {
           await page.setViewport({ width: 1366, height: 900 });
           await page.setRequestInterception(true);
+          const allowCms = needsLiveCms(route);
           page.on('request', (req) => {
             const url = req.url();
             if (BLOCKED_HOSTS.some((h) => url.includes(h))) return req.abort();
+            // Animation/slider plugins (jQuery, GSAP, WOW, Swiper...) change the page after
+            // React renders it. Leave them out so the saved HTML is exactly React's output;
+            // the browser can then "hydrate" it instead of redrawing the whole page.
+            if (url.includes('/common/assets/js/')) return req.abort();
+            // Use the CMS snapshot the browser starts with, so the HTML matches its first
+            // render. Only pages that exist solely in Supabase load live data.
+            if (!allowCms && url.includes('.supabase.co')) return req.abort();
             return req.continue();
           });
           await page.evaluateOnNewDocument(() => {
@@ -252,12 +311,13 @@ async function prerenderWithBrowser(routes, shellHtml) {
           });
           await page.goto(`http://127.0.0.1:${port}${route}`, { waitUntil: 'networkidle0', timeout: 45000 });
           // Wait until React has set this page's title, then give data requests a moment.
-          await page.waitForFunction(() => document.querySelector('title[data-react-helmet]') || document.title.includes('|'), { timeout: 15000 }).catch(() => {});
+          await page.waitForFunction(() => document.querySelector('meta[name="robots"][data-react-helmet]'), { timeout: 20000 });
           await new Promise((r) => setTimeout(r, 1500));
           await page.evaluate(cleanUpPageInBrowser);
           const html = '<!DOCTYPE html>' + (await page.evaluate(() => document.documentElement.outerHTML));
           const rootText = await page.evaluate(() => (document.getElementById('root') || {}).innerText || '');
           if (rootText.trim().length < 50) throw new Error('rendered page has almost no text');
+        if (!html.includes('data-react-helmet')) throw new Error('page metadata was not set');
           const file = outputFileFor(route);
           fs.mkdirSync(path.dirname(file), { recursive: true });
           fs.writeFileSync(file, html);
@@ -272,7 +332,13 @@ async function prerenderWithBrowser(routes, shellHtml) {
     };
     await Promise.all(
       Array.from({ length: CONCURRENCY }, async () => {
-        while (queue.length) await renderOne(queue.shift());
+        // Each worker gets its own window, so Chrome never treats its tab as a hidden background tab.
+        const context = await browser.createBrowserContext();
+        try {
+          while (queue.length) await renderOne(queue.shift(), context);
+        } finally {
+          await context.close();
+        }
       })
     );
   } finally {
@@ -308,6 +374,42 @@ function writeShellWithHead(route, shellHtml) {
   fs.writeFileSync(file, html);
 }
 
+/** 301s from earlier project addresses (renamed projects) to their current page. */
+async function writeProjectRedirects() {
+  const lib = await import('../src/lib/projects.js');
+  const lines = [];
+  projects.forEach((p) => {
+    const current = lib.projectPath(p, projects);
+    (p.previousSlugs || []).forEach((old) => {
+      if (`/portfolio/${old}` !== current) lines.push(`/portfolio/${old}  ${current}  301!`);
+    });
+  });
+  fs.writeFileSync(path.join(BUILD_DIR, '_redirects'), `# Generated by scripts/prerender.js\n${lines.join('\n')}\n`);
+  return lines.length;
+}
+
+const SKIP_IMAGE = /(logo|icon|favicon|shape|c_line|pattern|chat_pat|dark_bg|circle|placeholder|loader)/i;
+
+/** Content images on a pre-rendered page, as absolute URLs (for the image sitemap). */
+function pageImages(route) {
+  const file = outputFileFor(route);
+  if (!fs.existsSync(file)) return [];
+  const html = fs.readFileSync(file, 'utf8');
+  const found = new Set();
+  for (const m of html.matchAll(/<img[^>]+src="([^"]+)"/g)) {
+    let src = m[1].replace(/&amp;/g, '&');
+    if (!/\.(jpe?g|png|webp)(\?|$)/i.test(src) || SKIP_IMAGE.test(src)) continue;
+    if (src.startsWith('/')) src = SITE_URL + encodeURI(decodeURI(src));
+    if (!/^https?:/.test(src)) continue;
+    found.add(src);
+  }
+  return [...found].slice(0, 50);
+}
+
+function escapeXml(text) {
+  return String(text).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
 function writeSitemap(routes) {
   const today = new Date().toISOString().slice(0, 10);
   const priority = (r) => (r === '/' ? '1.0' : ['/services', '/architecture', '/interior-design', '/construction', '/portfolio'].includes(r) ? '0.9' : r.startsWith('/blog/') || r.startsWith('/portfolio/') ? '0.6' : '0.7');
@@ -315,11 +417,14 @@ function writeSitemap(routes) {
     const post = r.startsWith('/blog/') ? blogPosts.find((p) => `/blog/${p.slug}` === r) : null;
     const parsed = post ? new Date(post.date) : null;
     const lastmod = parsed && !Number.isNaN(parsed.getTime()) ? parsed.toISOString().slice(0, 10) : today;
-    return `  <url>\n    <loc>${SITE_URL}${r === '/' ? '/' : r}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <priority>${priority(r)}</priority>\n  </url>`;
+    const images = pageImages(r)
+      .map((src) => `\n    <image:image><image:loc>${escapeXml(src)}</image:loc></image:image>`)
+      .join('');
+    return `  <url>\n    <loc>${SITE_URL}${r === '/' ? '/' : r}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <priority>${priority(r)}</priority>${images}\n  </url>`;
   });
   fs.writeFileSync(
     path.join(BUILD_DIR, 'sitemap.xml'),
-    `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`
+    `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${urls.join('\n')}\n</urlset>\n`
   );
 }
 
@@ -336,6 +441,7 @@ async function main() {
   await loadBlogPostsFromCms();
   await loadProjectsFromCms();
   const projectRoutes = await getProjectRoutes();
+  await collectSnapshotRoutes();
   log(`Indexable project pages: ${projectRoutes.length}.`);
   // Keep an untouched copy of the app shell (index.html is overwritten with the homepage).
   const shellFile = path.join(BUILD_DIR, 'app-shell.html');
@@ -357,6 +463,8 @@ async function main() {
   if (failed.length) log(`Head-only fallback used for ${failed.length} page(s).`);
 
   writeSitemap(indexable);
+  const redirectCount = await writeProjectRedirects();
+  log(`Redirects for renamed projects: ${redirectCount}.`);
   log(`Sitemap: ${indexable.length} URLs.`);
 }
 

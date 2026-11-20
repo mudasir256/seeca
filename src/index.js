@@ -1,5 +1,5 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+import { createRoot, hydrateRoot } from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { preloadRoute } from './routes';
@@ -50,7 +50,16 @@ const rootElement = document.getElementById('root');
 
 // Pages are pre-rendered to static HTML at build time so search engines see full
 // content. In the browser we load the current page's code first, then let React
-// take over and replace the static HTML in a single step.
+// take over the existing HTML (hydration).
+const isPrerendered =
+  rootElement.hasChildNodes() && document.documentElement.getAttribute('data-prerendered') === 'true';
+
 preloadRoute(window.location.pathname).then(() => {
-  createRoot(rootElement).render(<App />);
+  if (isPrerendered) {
+    // Attach to the existing HTML instead of redrawing it: no flash, no jump.
+    // If something differs (e.g. newer CMS data), React quietly re-renders just that part.
+    hydrateRoot(rootElement, <App />, { onRecoverableError: () => {} });
+  } else {
+    createRoot(rootElement).render(<App />);
+  }
 });

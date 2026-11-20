@@ -1,4 +1,5 @@
 import React from 'react';
+import { cdnImage, cdnSrcSet } from '../../lib/imageCdn';
 
 /**
  * OptimizedImage – drop-in replacement for <img loading="lazy" decoding="async"> with performance optimizations.
@@ -12,11 +13,14 @@ function OptimizedImage({
   style,
   loading = 'lazy',
   decoding = 'async',
+  sizes = '(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw',
   ...rest
 }) {
   return (
     <img
-      src={src}
+      src={cdnImage(src, 800)}
+      srcSet={cdnSrcSet(src, [400, 800, 1200])}
+      sizes={sizes}
       alt={alt}
       className={className}
       style={style}

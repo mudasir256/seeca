@@ -11,16 +11,21 @@ import NotFound from '../NotFound';
 import {
   cleanArea,
   cleanLocation,
+  clientLine,
   findProjectBySlug,
   hasOwnDescription,
   isSharedText,
   projectPath,
   projectService,
+  projectSlug,
 } from '../../lib/projects';
+import { cdnImage, cdnSrcSet } from '../../lib/imageCdn';
 
 const SITE_URL = (process.env.REACT_APP_SITE_URL || 'https://seeca.pk').replace(/\/+$/, '');
 
 const STYLES = `
+  /* Project titles are long and descriptive: let them wrap instead of being cut off. */
+  .tc-contact-header .info h1 { white-space: normal !important; overflow: visible !important; text-overflow: clip !important; font-size: clamp(30px, 4.6vw, 60px) !important; line-height: 1.15; letter-spacing: 1px !important; max-width: 1100px; margin-left: auto; margin-right: auto; }
   .tc-project-page { padding: 80px 0 40px; color: #1a1a1a; }
   .tc-project-page .pp-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 50px; }
   .tc-project-page .pp-fact { background: #f6f6f6; border-radius: 12px; padding: 18px 20px; }
@@ -79,7 +84,8 @@ function ProjectPage() {
   const metaDescription = (ownDescription ? project.desc : `${summary} See photos and details of this SEECA project.`)
     .replace(/\s+/g, ' ')
     .slice(0, 158);
-  const canonical = `${SITE_URL}/portfolio/${slug}`;
+  const canonical = `${SITE_URL}/portfolio/${projectSlug(project, projects)}`;
+  const client = clientLine(project);
 
   const schema = {
     '@context': 'https://schema.org',
@@ -114,7 +120,7 @@ function ProjectPage() {
       <style dangerouslySetInnerHTML={{ __html: STYLES }} />
       <Header
         title={project.title}
-        description={[type, location].filter(Boolean).join(' – ')}
+        description={client || [type, location].filter(Boolean).join(' – ')}
         backgroundImage={project.img}
         minHeight={460}
       />
@@ -131,6 +137,12 @@ function ProjectPage() {
               <div className="pp-fact"><small>Size</small><strong>{area}</strong></div>
             )}
             <div className="pp-fact"><small>Service</small><strong>{service.label}</strong></div>
+            {client && (
+              <div className="pp-fact">
+                <small>{project.clientLabel || 'Client'}</small>
+                <strong>{client.replace(/^[^:]+:\s*/, '')}</strong>
+              </div>
+            )}
           </div>
 
           <div className="pp-block">
@@ -164,9 +176,11 @@ function ProjectPage() {
               <h2>Project gallery</h2>
               <div className="pp-gallery">
                 {gallery.map((src, i) => (
-                  <a key={src} href={src} data-fancybox="project-gallery" data-caption={project.title}>
+                  <a key={src} href={cdnImage(src, 1920, 80)} data-type="image" data-fancybox="project-gallery" data-caption={project.title}>
                     <img
-                      src={src}
+                      src={cdnImage(src, 800)}
+                      srcSet={cdnSrcSet(src, [400, 800])}
+                      sizes="(max-width: 767px) 100vw, 33vw"
                       alt={`${project.title} – view ${i + 1}`}
                       loading={i < 3 ? 'eager' : 'lazy'}
                       decoding="async"
@@ -185,7 +199,7 @@ function ProjectPage() {
               <div className="pp-related">
                 {related.map((p) => (
                   <Link key={p.id} to={projectPath(p, projects)}>
-                    <img src={p.img} alt={p.title} loading="lazy" decoding="async" width="400" height="300" />
+                    <img src={cdnImage(p.img, 600)} alt={p.title} loading="lazy" decoding="async" width="400" height="300" />
                     <span>{p.title}</span>
                   </Link>
                 ))}

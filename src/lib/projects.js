@@ -28,7 +28,19 @@ export function projectPath(project, allProjects = []) {
 }
 
 export function findProjectBySlug(slug, allProjects = []) {
-  return allProjects.find((p) => projectSlug(p, allProjects) === slug) || null;
+  return (
+    allProjects.find((p) => projectSlug(p, allProjects) === slug) ||
+    // Earlier addresses of renamed projects (the server also 301-redirects these).
+    allProjects.find((p) => (p.previousSlugs || []).includes(slug)) ||
+    null
+  );
+}
+
+/** "Client: Mr. Faraz Ali" / "Project: Fahad Residence" (empty when no real client name). */
+export function clientLine(project) {
+  const name = String(project.client || '').trim();
+  if (!name || /^client$/i.test(name)) return '';
+  return `${project.clientLabel || 'Client'}: ${name}`;
 }
 
 /**

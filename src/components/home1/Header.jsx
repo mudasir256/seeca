@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import data from '../../data/home1/header-slider';
+import { cdnImage, cdnSrcSet } from '../../lib/imageCdn';
 
 function Header() {
   const swiperRef = useRef(null);
@@ -218,7 +219,9 @@ function Header() {
               <div className="slider-card">
                 <div className="img">
                   <img
-                    src={item.img}
+                    src={cdnImage(item.img, 1600, 72)}
+                    srcSet={cdnSrcSet(item.img, [800, 1200, 1600, 1920])}
+                    sizes="100vw"
                     alt={`${item.title} project by SEECA, Lahore`}
                     className="img-cover"
                     loading={i === 0 ? 'eager' : 'lazy'}

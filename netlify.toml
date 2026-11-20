@@ -10,6 +10,12 @@
   # The pre-render step uses its own bundled Chromium; skip Puppeteer's download.
   PUPPETEER_SKIP_DOWNLOAD = "1"
   PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "1"
+  # Serve images through Netlify Image CDN (resized, WebP/AVIF): src/lib/imageCdn.js
+  REACT_APP_IMAGE_CDN = "netlify"
+
+# Allow Netlify Image CDN to resize project images stored in Supabase.
+[images]
+  remote_images = ["https://pgezjiosisebtspxfgeb\\.supabase\\.co/.*"]
 
 # ---------------------------------------------------------------------------
 # Every public page is pre-rendered to its own HTML file at build time

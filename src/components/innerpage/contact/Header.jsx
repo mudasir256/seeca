@@ -1,4 +1,6 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
+import { cdnImage } from '../../../lib/imageCdn';
 
 function Header({
   title = 'Contact Us',
@@ -8,8 +10,13 @@ function Header({
   minHeight = 500,
   titleClassName = 'js-title'
 }) {
+  const headerImage = cdnImage(backgroundImage, 1600, 70);
   return (
     <>
+      {/* The header photo is the largest element on screen: start loading it right away. */}
+      <Helmet>
+        <link rel="preload" as="image" href={headerImage} fetchpriority="high" />
+      </Helmet>
       <style dangerouslySetInnerHTML={{__html: `
         .tc-contact-header {
           position: relative;
@@ -17,7 +24,7 @@ function Header({
           display: flex;
           align-items: center;
           justify-content: center;
-          background-image: url('${backgroundImage}');
+          background-image: url('${headerImage}');
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;

@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Home1 from './pages/home1';
 import ScrollToTop from './components/common/ScrollToTop';
@@ -94,30 +94,28 @@ function App() {
       <ScrollToTop />
       <ChatBot />
       <WhatsAppFloat />
-      <Suspense fallback={null}>
-        <Routes>
-          <Route path="/" element={<Home1 />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/blog/:slug" element={<SinglePost />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/portfolio" element={<PortfolioPage />} />
-          <Route path="/portfolio/:slug" element={<ProjectPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/architecture" element={<ArchitecturePage />} />
-          <Route path="/interior-design" element={<InteriorDesignPage />} />
-          <Route path="/construction" element={<ConstructionPage />} />
-          <Route path="/building-sustainability" element={<BuildingSustainabilityPage />} />
-          <Route path="/smart-building-technologies" element={<SmartBuildingTechnologiesPage />} />
-          <Route path="/our-process" element={<OurProcessPage />} />
-          <Route path="/partners" element={<PartnersPage />} />
-          <Route path="/career/internship" element={<ApplyInternshipPage />} />
-          <Route path="/career/job" element={<ApplyJobPage />} />
-          {/* Redirect old /innerpages/* URLs */}
-          <Route path="/innerpages/*" element={<InnerpagesRedirect />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Suspense>
+      <Routes>
+        <Route path="/" element={<Home1 />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:slug" element={<SinglePost />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/portfolio" element={<PortfolioPage />} />
+        <Route path="/portfolio/:slug" element={<ProjectPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/architecture" element={<ArchitecturePage />} />
+        <Route path="/interior-design" element={<InteriorDesignPage />} />
+        <Route path="/construction" element={<ConstructionPage />} />
+        <Route path="/building-sustainability" element={<BuildingSustainabilityPage />} />
+        <Route path="/smart-building-technologies" element={<SmartBuildingTechnologiesPage />} />
+        <Route path="/our-process" element={<OurProcessPage />} />
+        <Route path="/partners" element={<PartnersPage />} />
+        <Route path="/career/internship" element={<ApplyInternshipPage />} />
+        <Route path="/career/job" element={<ApplyJobPage />} />
+        {/* Redirect old /innerpages/* URLs */}
+        <Route path="/innerpages/*" element={<InnerpagesRedirect />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </Router>
   );
 }
