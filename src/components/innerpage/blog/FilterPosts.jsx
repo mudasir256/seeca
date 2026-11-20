@@ -2,6 +2,7 @@
 import React, { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useBlogs from '../../../hooks/useBlogs';
+import { cdnImage, cdnSrcSet } from '../../../lib/imageCdn';
 function FilterPosts() {
   const { categories, blogs: data, loading } = useBlogs();
   const [activeFilter, setActiveFilter] = useState('All');
@@ -30,12 +31,51 @@ function FilterPosts() {
           position: relative;
           overflow: hidden;
         }
-        .tc-filter-posts-style1 .filter-btn.active {
-          color: #73bf44 !important;
+        .tc-filter-posts-style1 .blog-filter-chips {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 12px;
+          margin: 0;
+          padding: 0;
+          list-style: none;
         }
-        .tc-filter-posts-style1 .filter-btn:hover {
+        .tc-filter-posts-style1 .blog-filter-chips .filter-btn {
+          display: inline-flex;
+          align-items: center;
+          padding: 10px 22px;
+          margin: 0;
+          border: 1px solid #dcdcdc;
+          border-radius: 999px;
+          background: #fff;
+          color: #333;
+          font-size: 13px;
+          font-weight: 500;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          line-height: 1.2;
+          white-space: nowrap;
+          cursor: pointer;
+          transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+        }
+        .tc-filter-posts-style1 .blog-filter-chips .filter-btn:hover {
           color: #73bf44;
-          border-color: rgba(115, 191, 68, 0.3);
+          border-color: #73bf44;
+        }
+        .tc-filter-posts-style1 .blog-filter-chips .filter-btn.active,
+        .tc-filter-posts-style1 .blog-filter-chips .filter-btn.active:hover {
+          color: #fff !important;
+          background: #73bf44;
+          border-color: #73bf44;
+        }
+        @media (max-width: 767px) {
+          .tc-filter-posts-style1 .blog-filter-chips {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding-bottom: 6px;
+            scrollbar-width: none;
+          }
+          .tc-filter-posts-style1 .blog-filter-chips::-webkit-scrollbar { display: none; }
+          .tc-filter-posts-style1 .blog-filter-chips .filter-btn { padding: 9px 18px; font-size: 12px; }
         }
         .tc-filter-posts-style1 .post-card .title a:hover,
         .tc-filter-posts-style1 .post-card .title a.hover-orange1:hover {
@@ -93,36 +133,30 @@ function FilterPosts() {
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div className="filter-row wow fadeInUp slow" data-wow-delay="0.2s">
           <div className="row align-items-center">
-            <div className="col-lg-9">
-              <div className="filter">
-                <div className="links">
-                  <a
-                    onClick={() => handleFilterClick('All')}
-                    href="#0"
-                    className={`filter-btn ${
-                      activeFilter === 'All' ? 'active' : ''
-                    }`}
-                    data-filter="*"
+            <div className="col-12">
+              <div className="blog-filter-chips" role="group" aria-label="Filter posts by category">
+                <button
+                  type="button"
+                  onClick={() => handleFilterClick('All')}
+                  className={`filter-btn ${activeFilter === 'All' ? 'active' : ''}`}
+                  aria-pressed={activeFilter === 'All'}
+                >
+                  All
+                </button>
+                {categories.map((category) => (
+                  <button
+                    type="button"
+                    key={category.id}
+                    onClick={() => handleFilterClick(category.id)}
+                    className={`filter-btn ${activeFilter === category.id ? 'active' : ''}`}
+                    aria-pressed={activeFilter === category.id}
                   >
-                    All
-                  </a>
-                  {categories.map((category) => (
-                    <a
-                      key={category.id}
-                      href="#0"
-                      onClick={() => handleFilterClick(category.id)}
-                      className={`filter-btn ${
-                        activeFilter === category.id ? 'active' : ''
-                      }`}
-                      data-filter={`.BlogCategory-${category.id}`}
-                    >
-                      {category.name}
-                    </a>
-                  ))}
-                </div>
+                    {category.name}
+                  </button>
+                ))}
               </div>
             </div>
-            <div className="col-lg-3 mt-5 mt-lg-0">
+            <div className="col-lg-4 ms-auto mt-4">
               <div className="search-group">
                 <input
                   type="text"
@@ -155,7 +189,7 @@ function FilterPosts() {
                     }}
                     style={{ cursor: 'pointer' }}
                   >
-                    <img loading="lazy" decoding="async" src={item.img} alt={item.title} className="img-cover" />
+                    <img loading="lazy" decoding="async" src={cdnImage(item.img, 800, 82)} srcSet={cdnSrcSet(item.img, [480, 800, 1200])} sizes="(max-width: 991px) 100vw, 33vw" alt={item.title} className="img-cover" />
                   </div>
                   <div className="info pt-30">
                     <div className="tags color-666 text-uppercase fsz-12">

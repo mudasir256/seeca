@@ -176,7 +176,7 @@ function ProjectPage() {
               <h2>Project gallery</h2>
               <div className="pp-gallery">
                 {gallery.map((src, i) => (
-                  <a key={src} href={cdnImage(src, 1920, 80)} data-type="image" data-fancybox="project-gallery" data-caption={project.title}>
+                  <a key={src} href={cdnImage(src, 1920, 85)} data-type="image" data-fancybox="project-gallery" data-caption={project.title}>
                     <img
                       src={cdnImage(src, 800)}
                       srcSet={cdnSrcSet(src, [400, 800])}

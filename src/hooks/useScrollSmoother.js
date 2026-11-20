@@ -167,6 +167,9 @@ export const useScrollSmoother = (containerId = 'scrollsmoother-container', enab
       const splitTextLines = window.gsap.utils.toArray('.js-splittext-lines');
       splitTextLines.forEach((splitTextLine) => {
         if (!window.SplitText || !splitTextLine || !splitTextLine.parentElement) return;
+        // Text that is already on screen when the page opens stays put: animating it in
+        // again (it was already visible) looks like the page is shaking.
+        if (splitTextLine.getBoundingClientRect().top < window.innerHeight) return;
 
         try {
           const tl = window.gsap.timeline({
