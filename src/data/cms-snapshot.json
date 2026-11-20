@@ -39,12 +39,12 @@
   "projects": [
     {
       "id": "53b25296-3f70-480f-9201-114e7899fe4d",
-      "title": "Cravings (4th Branch ID) – Gulshan, Multan",
+      "title": "Bakery Interior & Facade Design – Gulshan, Multan",
       "sub1": "Interior Design",
       "sub2": "Commercial",
       "desc": "Interior and facade design for the fourth branch of Cravings in Gulshan, Multan. A tall arched shopfront in cream with a scalloped, fan-patterned feature wall opens into a bright double-height bakery, where a floating white staircase, glass display counters and the brand's signature purple accents guide customers from the entrance to the seating upstairs.",
       "img": "/home_preview/assets/img/Interior_Design/5996.Cravings(4thBranchID)-Gulshan,Multan/5996.(1).jpg",
-      "client": "Client",
+      "client": "Cravings",
       "location": "Gulshan, Multan",
       "area": "N/A",
       "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
@@ -66,16 +66,19 @@
         "Selected materials and finishes that combine durability with visual appeal",
         "Integrated brand elements seamlessly into the overall design concept"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "cravings-4th-branch-id-gulshan-multan"
+      ]
     },
     {
       "id": "c2068eaf-e1ed-4978-9644-d3adb9bb115e",
-      "title": "Mr. Faraz Ali (1 Kanal ID) – Bahria Town, Lahore",
+      "title": "1 Kanal House Interior Design – Bahria Town, Lahore",
       "sub1": "Residential",
       "sub2": "Interior Design",
       "desc": "Complete interior design for a 1 kanal home in Bahria Town, Lahore. The bedrooms pair sculpted circular feature walls with dark timber slats and soft cove lighting, the formal lounge combines tufted ivory sofas with a marble-effect wall and a statement crystal chandelier, and a double-height entrance is anchored by a dramatic veined stone wall.",
       "img": "/home_preview/assets/img/Interior_Design/5987.Mr.FarazAli(1KanalID)-BahriaTown,Lahore/Atrium/5987.AtriumV1.jpg",
-      "client": "Client",
+      "client": "Mr. Faraz Ali",
       "location": "Bahria Town, Lahore",
       "area": "1 Kanal",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -109,16 +112,19 @@
         "Designed custom solutions for storage, lighting, and spatial flow",
         "Selected durable, family-friendly materials that maintain their appearance over time"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "mr-faraz-ali-1-kanal-id-bahria-town-lahore"
+      ]
     },
     {
       "id": "b727a097-6d65-4904-84a9-7d0a519f775b",
-      "title": "Mr. Naeem Khan (Apartments ID) – Jutial, Gilgit",
+      "title": "Apartment Interior Design – Jutial, Gilgit",
       "sub1": "Residential",
       "sub2": "Interior Design",
       "desc": "Interior design for apartments in Jutial, Gilgit, inspired by the landscape and craft of the northern areas. Bedrooms combine natural stone cladding, warm timber panelling and woven rattan art with mountain-themed artwork, handmade rugs and kilim-patterned feature walls, creating calm, comfortable rooms with a strong sense of place.",
       "img": "/home_preview/assets/img/Interior_Design/5985.Mr.NaeemKhan(ApartmentsID)-Jutial,Gilgit/BED2,4,6,8(1).jpg",
-      "client": "Client",
+      "client": "Mr. Naeem Khan",
       "location": "Jutial, Gilgit",
       "area": "N/A",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -141,16 +147,19 @@
         "Designed custom solutions for storage, lighting, and spatial flow",
         "Selected durable, family-friendly materials that maintain their appearance over time"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "mr-naeem-khan-apartments-id-jutial-gilgit"
+      ]
     },
     {
       "id": "67cdd65d-e594-45d5-a5ea-5e736c5dea8c",
-      "title": "Ch Nouman Latif (Marquee Design) – GA Family, Sialkot",
+      "title": "Marquee & Banquet Hall Interior Design – Sialkot",
       "sub1": "Interior Design",
       "sub2": "Commercial",
       "desc": "Interior design for a grand marquee and banquet hall for GA Family in Sialkot. Arched bays in deep blue and gold line the hall, framed by red velvet drapery, while an illuminated coffered ceiling with crystal chandeliers, gold-finished furniture and a mirrored stage area create a formal setting for weddings and large events.",
       "img": "/home_preview/assets/img/Interior_Design/5967.ChNoumanLatif(MarqueeDesign)-GAFamily,Sialkot/CAM01.jpg",
-      "client": "Client",
+      "client": "Ch. Nouman Latif (GA Family)",
       "location": "GA Family, Sialkot",
       "area": "N/A",
       "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
@@ -170,16 +179,19 @@
         "Selected materials and finishes that combine durability with visual appeal",
         "Integrated brand elements seamlessly into the overall design concept"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "ch-nouman-latif-marquee-design-ga-family-sialkot"
+      ]
     },
     {
       "id": "56ccc66b-5202-4d62-ac28-0658d14c6876",
-      "title": "Mr. Usman Pasha (OPT Consulting Pvt Ltd ID) – OPF Society, Lahore",
+      "title": "AI Company Office Interior Design – OPF Society, Lahore",
       "sub1": "Office",
       "sub2": "Interior Design",
       "desc": "Office interior design for OPT Consulting (Optronix AI) in OPF Society, Lahore. The workplace mixes focused and social spaces: a meeting room with a coffered ceiling and typographic quote walls, glass-fronted cabins and phone booths, open workstations under linear lighting, and a breakout lounge and coffee bar with bean bags and foosball for the team.",
       "img": "/home_preview/assets/img/Interior_Design/5952.Mr.UsmanPasha(OPTConsultingPvtLtd-ID)-OPFSociety,Lahore/A1.jpg",
-      "client": "Client",
+      "client": "Mr. Usman Pasha (OPT Consulting)",
       "location": "OPF Society, Lahore",
       "area": "N/A",
       "categoryId": "107aa9fb-f253-4043-a339-0f5d0f2b4b10",
@@ -206,16 +218,19 @@
         "Selected materials and finishes that combine durability with visual appeal",
         "Integrated brand elements seamlessly into the overall design concept"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "mr-usman-pasha-opt-consulting-pvt-ltd-id-opf-society-lahore"
+      ]
     },
     {
       "id": "e90e47c8-8a3a-475b-a7bf-0f0e470dbefd",
-      "title": "Mr. Saad Hamayun (Cravings Bakeshop ID) – Multan",
+      "title": "Bakery & Coffee Shop Interior Design – Multan",
       "sub1": "Interior Design",
       "sub2": "Commercial",
       "desc": "Interior design for Cravings Bakeshop in Multan, a bakery and coffee shop with a playful, Instagram-ready identity. A timber grid ceiling, floral installations and purple neon signage frame the long display counters, while a spiral staircase, a feature chandelier and 'But First Coffee' graphics lead guests to lavender-accented seating areas.",
       "img": "/home_preview/assets/img/Interior_Design/5950.Mr.SaadHamayun(Cravingsbakeshop-ID)-Multan/A1.jpg",
-      "client": "Client",
+      "client": "Mr. Saad Hamayun (Cravings Bakeshop)",
       "location": "Multan",
       "area": "N/A",
       "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
@@ -240,16 +255,19 @@
         "Selected materials and finishes that combine durability with visual appeal",
         "Integrated brand elements seamlessly into the overall design concept"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "mr-saad-hamayun-cravings-bakeshop-id-multan"
+      ]
     },
     {
       "id": "f76f0cff-e5be-4581-b69e-085d544a80c4",
-      "title": "Mr. Naeem Khan (Rest ID) – Jutial, Gilgit",
+      "title": "Sakura Restaurant Interior Design – Jutial, Gilgit",
       "sub1": "Restaurant",
       "sub2": "Interior Design",
       "desc": "Interior design for Sakura, a restaurant in Jutial, Gilgit built around a cherry-blossom theme. Pink blossom canopies float over the dining areas, circular lattice screens define private booths, and blush velvet seating, warm neon quotes, a marble reception counter and a central bar create a soft, memorable dining experience.",
       "img": "/home_preview/assets/img/Interior_Design/5940.Mr.NaeemKhan(RestID)-Jutial,Gilgit/A1.1.jpg",
-      "client": "Client",
+      "client": "Mr. Naeem Khan",
       "location": "Jutial, Gilgit",
       "area": "N/A",
       "categoryId": "b2b00105-badf-4f18-aa4e-b1d9994bd89f",
@@ -275,16 +293,19 @@
         "Implemented materials and finishes to create a premium dining atmosphere",
         "Designed flexible spaces for various dining occasions"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "mr-naeem-khan-rest-id-jutial-gilgit"
+      ]
     },
     {
       "id": "773f8068-7c05-4955-b4e7-0e0e39a9766b",
-      "title": "Mr. Hamza Jalal (1.4 Kanal Arch. G+1) – Jalal Villas, Canal Road Lahore",
+      "title": "1.4 Kanal Modern House Design – Canal Road, Lahore",
       "sub1": "Residential",
       "sub2": "Architecture Design",
       "desc": "Architecture design for a 1.4 kanal, ground-plus-one residence at Jalal Villas, Canal Road, Lahore. The contemporary white facade is layered with warm timber cladding, cantilevered balconies with glass railings and slim horizontal canopies, set behind a landscaped frontage with a covered carport.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5978.Mr.HamzaJalal(1.4KanalArch.G+1)JalalVillas,CanalRoadLahore/CAM01.jpg",
-      "client": "Client",
+      "client": "Mr. Hamza Jalal",
       "location": "Canal Road, Lahore",
       "area": "1.4 Kanal",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -304,16 +325,19 @@
         "Developed innovative floor plans that maximize natural light and ventilation",
         "Selected materials and construction methods that balance cost, durability, and aesthetics"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "mr-hamza-jalal-1-4-kanal-arch-g-1-jalal-villas-canal-road-lahore"
+      ]
     },
     {
       "id": "a4154a84-8cef-4ca0-8eda-1365ded38057",
-      "title": "Ch Nouman Latif (Rest Design) – GA Family, Sialkot",
+      "title": "Restaurant Architecture Design – Sialkot",
       "sub1": "Restaurant",
       "sub2": "Architecture Design",
       "desc": "Architecture design for a restaurant for GA Family in Sialkot, conceived as a two-level pavilion set in landscaped grounds. Long horizontal roof lines, full-height glazing and warm interior lighting open the dining halls to an outdoor lawn with garden seating, palm trees and convenient parking.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5962.ChNoumanLatif(RestDesign)-GAFamily,Sialkot/001.jpg",
-      "client": "Client",
+      "client": "Ch. Nouman Latif (GA Family)",
       "location": "GA Family, Sialkot",
       "area": "N/A",
       "categoryId": "b2b00105-badf-4f18-aa4e-b1d9994bd89f",
@@ -335,16 +359,19 @@
         "Implemented materials and finishes to create a premium dining atmosphere",
         "Designed flexible spaces for various dining occasions"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "ch-nouman-latif-rest-design-ga-family-sialkot"
+      ]
     },
     {
       "id": "6a5ec1ff-93ff-41b4-9260-2c77fd504490",
-      "title": "Mr. Ch. Nouman (Lights & Furniture Showroom E&ID) – Sialkot",
+      "title": "Lights & Furniture Showroom Design – Sialkot",
       "sub1": "Commercial",
       "sub2": "Architecture Design",
       "desc": "Exterior and interior design for a lights and furniture showroom in Sialkot. The two-storey glass building is wrapped in slender white vertical fins that flare into pointed arches at street level, giving the showroom a striking, recognisable frontage while keeping the displays visible from the road.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5949.Mr.Ch.Nouman(Lights&FurnitureShowroomE&ID)-Sialkot/CAM01.jpg",
-      "client": "Client",
+      "client": "Mr. Ch. Nouman",
       "location": "Sialkot",
       "area": "N/A",
       "categoryId": "a44856e5-a050-4404-a66f-ae78992bb6a1",
@@ -365,16 +392,19 @@
         "Designed striking architectural elements that enhance brand visibility",
         "Integrated modern building systems for efficiency and sustainability"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "mr-ch-nouman-lights-and-furniture-showroom-e-and-id-sialkot"
+      ]
     },
     {
       "id": "391e9c72-3198-4e64-aa16-249ef2d44f8c",
-      "title": "Mr. Ismail (5.5 Kanal Arch.) – Bhakkar",
+      "title": "5.5 Kanal Luxury House Design – Bhakkar",
       "sub1": "Residential",
       "sub2": "Architecture Design",
       "desc": "Architecture design for a 5.5 kanal residence in Bhakkar. The contemporary two-storey house combines charcoal steel frames and pergolas with stone and timber cladding and large glazing, with a first-floor terrace lounge, a double carport and generous landscaped lawns behind a timber-screened boundary wall.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5944.Mr.Ismail(5.5KanalArch.)-Bhakkar/A1.jpg",
-      "client": "Client",
+      "client": "Mr. Ismail",
       "location": "Bhakkar",
       "area": "5.5 Kanal",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -394,16 +424,19 @@
         "Developed innovative floor plans that maximize natural light and ventilation",
         "Selected materials and construction methods that balance cost, durability, and aesthetics"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "mr-ismail-5-5-kanal-arch-bhakkar"
+      ]
     },
     {
       "id": "cea576c9-0e5d-4091-9824-70f82849a17e",
-      "title": "Mr. Kashif Rasheed (B+G+2 Exterior & ID) – Johar Town, Lahore",
+      "title": "Modern Building Exterior & Interior Design – Johar Town, Lahore",
       "sub1": "Residential",
       "sub2": "Architecture Design",
       "desc": "Exterior and interior design for a basement-plus-ground-plus-two building in Johar Town, Lahore. The dark, textured facade is punctuated by vertical slot windows and perforated panels, while a fully glazed, double-height ground floor gives the building a strong presence on the street.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5939.Mr.KashifRasheed(B+G+2Exterior&ID)-JoharTown,Lahore/5939.View-1.jpg",
-      "client": "Client",
+      "client": "Mr. Kashif Rasheed",
       "location": "Johar Town, Lahore",
       "area": "N/A",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -422,16 +455,19 @@
         "Developed innovative floor plans that maximize natural light and ventilation",
         "Selected materials and construction methods that balance cost, durability, and aesthetics"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "mr-kashif-rasheed-b-g-2-exterior-and-id-johar-town-lahore"
+      ]
     },
     {
       "id": "7ace79d9-5d19-4074-8a73-a0457ace2a24",
-      "title": "Mr. Aftab Ali Siddiqui (Goldsheff Arch.) – Sundar Industrial State, Lahore",
+      "title": "Industrial Facility Architecture – Sundar Industrial Estate, Lahore",
       "sub1": "Commercial",
       "sub2": "Architecture Design",
       "desc": "Architecture design for the Goldsheff facility at Sundar Industrial Estate, Lahore. A crisp white office block with blue glazing, brand signage and planted terraces fronts the larger production building, giving the industrial site a clean, corporate face towards the road.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5934.Mr.AftabAliSiddiqui(Goldsheff(Arch.)SundarIndustrialState,Lahore/CAM01.jpg",
-      "client": "Client",
+      "client": "Mr. Aftab Ali Siddiqui (Goldsheff)",
       "location": "Sundar Industrial State, Lahore",
       "area": "N/A",
       "categoryId": "a44856e5-a050-4404-a66f-ae78992bb6a1",
@@ -450,16 +486,19 @@
         "Designed striking architectural elements that enhance brand visibility",
         "Integrated modern building systems for efficiency and sustainability"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "mr-aftab-ali-siddiqui-goldsheff-arch-sundar-industrial-state-lahore"
+      ]
     },
     {
       "id": "6ffe6f65-417c-4e6e-8a4e-0606b8bd7deb",
-      "title": "Mr. Rafiullah Khan (1.2 Kanal Arch.) – Bhakkar",
+      "title": "1.2 Kanal Corner House Design – Bhakkar",
       "sub1": "Residential",
       "sub2": "Architecture Design",
       "desc": "Architecture design for a 1.2 kanal corner house in Bhakkar. The white two-storey facade is defined by projecting timber-clad frames around the balconies and upper rooms, with clean flat roofs and a boundary wall detailed with vertical slats.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5932.Mr.RafiullahKhan(1.2KanalArch.)-Bhakkar/View-44.jpg",
-      "client": "Client",
+      "client": "Mr. Rafiullah Khan",
       "location": "Bhakkar",
       "area": "1.2 Kanal",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -478,16 +517,19 @@
         "Developed innovative floor plans that maximize natural light and ventilation",
         "Selected materials and construction methods that balance cost, durability, and aesthetics"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "mr-rafiullah-khan-1-2-kanal-arch-bhakkar"
+      ]
     },
     {
       "id": "71732620-4d84-43ed-ba55-eb683859d5db",
-      "title": "Mr. Suhail Bin Rashid (B+G+4 Plaza Design) – Peoples Colony, Faisalabad",
+      "title": "Commercial Plaza Design (B+G+4) – Peoples Colony, Faisalabad",
       "sub1": "Commercial",
       "sub2": "Architecture Design",
       "desc": "Architecture design for a basement-plus-ground-plus-four commercial plaza in Peoples Colony, Faisalabad. The facade is wrapped in cream vertical fins with planters on every level, creating a green, shaded elevation that stands out on the street while filtering sunlight into the floors behind.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5920.Mr.SuhailBinRashid(B+G+4PlazaDesign)-PeoplesColony,Faisalabad/5920.veiw1.1.jpg",
-      "client": "Client",
+      "client": "Mr. Suhail Bin Rashid",
       "location": "Peoples Colony, Faisalabad",
       "area": "N/A",
       "categoryId": "a44856e5-a050-4404-a66f-ae78992bb6a1",
@@ -507,16 +549,19 @@
         "Designed striking architectural elements that enhance brand visibility",
         "Integrated modern building systems for efficiency and sustainability"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "mr-suhail-bin-rashid-b-g-4-plaza-design-peoples-colony-faisalabad"
+      ]
     },
     {
       "id": "12c75613-b8a6-4a49-ade0-5b71b45903e5",
-      "title": "Mr. Erwin – Apartment Building",
+      "title": "Two-Storey Apartment Building Design",
       "sub1": "Residential",
       "sub2": "Architecture Design",
       "desc": "Architecture design for a two-storey apartment building. Angular dark frames and timber accents contrast with white and beige volumes, while a courtyard with herringbone paving provides parking and rooftop solar panels support energy efficiency.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5918.Mr.Erwin(ApartmentBuilding)/5918.Exterior01.jpg",
-      "client": "Client",
+      "client": "Mr. Erwin",
       "location": "Location",
       "area": "N/A",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -536,16 +581,19 @@
         "Developed innovative floor plans that maximize natural light and ventilation",
         "Selected materials and construction methods that balance cost, durability, and aesthetics"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "mr-erwin-apartment-building"
+      ]
     },
     {
       "id": "02769dae-5d50-45c9-b515-f71bc5b4a6cf",
-      "title": "Rafyl Hotel – London, UK",
+      "title": "Hotel Room & Suite Interior Design – London, UK",
       "sub1": "Restaurant",
       "sub2": "Hospitality",
       "desc": "Interior design for the Rafyl Hotel in London, UK. The guest rooms combine upholstered headboards, sculptural ribbon pendants and bold abstract artwork, the bathrooms are finished in green onyx-effect stone with freestanding tubs, and the suites include living and dining areas with views over the city.",
       "img": "/home_preview/assets/img/Interior_Design/5906.RafylHotel-London,UK/View-1(12).jpg",
-      "client": "Client",
+      "client": "Rafyl Hotel",
       "location": "London, UK",
       "area": "N/A",
       "categoryId": "b2b00105-badf-4f18-aa4e-b1d9994bd89f",
@@ -569,16 +617,19 @@
         "Implemented high-quality materials and finishes to create a premium dining atmosphere",
         "Designed flexible spaces that can accommodate various dining occasions and group sizes"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "rafyl-hotel-london-uk"
+      ]
     },
     {
       "id": "62d35696-c4ab-4759-a767-29a403e546b5",
-      "title": "Sheikh Chargha House, Citi Housing, Jhelum",
+      "title": "Restaurant Interior Design – Citi Housing, Jhelum",
       "sub1": "Residential",
       "sub2": "Interior Design",
       "desc": "Interior design for Sheikh Chargha House, a restaurant in Citi Housing, Jhelum. Terracotta arches, blossom trees and warm neon signage create a lively dining hall with mustard seating, while a softer section with blush booths, illustrated glass screens and a hanging floral canopy offers a more relaxed space for families.",
       "img": "/home_preview/assets/img/Interior_Design/5897.SheikhCharghaHouse,CitiHousing,Jhelum/5897.Autumn/Autumn(1).jpg",
-      "client": "Client",
+      "client": "Sheikh Chargha House",
       "location": "CitiHousing",
       "area": "N/A",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -619,16 +670,19 @@
         "Created modular design elements that can be easily updated for different seasons",
         "Designed a cohesive color palette system that works across all seasonal variations"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "sheikh-chargha-house-citi-housing-jhelum"
+      ]
     },
     {
       "id": "cc35ed17-4b66-4aaa-bd32-ea6546860e0a",
-      "title": "Spice Mystery – Bahria Town, Lahore",
+      "title": "Restaurant Interior Design – Bahria Town, Lahore",
       "sub1": "Interior Design",
       "sub2": "Commercial",
       "desc": "Interior design for Spice Mystery, a restaurant in Bahria Town, Lahore. A dark ceiling scattered with starry lights sits above terracotta walls, porthole-style backlit niches and houndstooth chairs, with a backlit onyx reception counter and neon signage giving the space a bold, modern identity.",
       "img": "/home_preview/assets/img/Interior_Design/5890.SpiceMystery-BahriaTown,Lahore/View-1(6).jpg",
-      "client": "Client",
+      "client": "Spice Mystery",
       "location": "BahriaTown, Lahore",
       "area": "N/A",
       "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
@@ -655,16 +709,19 @@
         "Designed flexible seating arrangements for various group sizes",
         "Created distinct dining zones with appropriate lighting and ambiance"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "spice-mystery-bahria-town-lahore"
+      ]
     },
     {
       "id": "e94a998d-5d07-4e46-ba6c-9ac4d71c473d",
-      "title": "Mr.Hassan – London, UK",
+      "title": "Wellness & Fitness Centre Interior Design – London, UK",
       "sub1": "Interior Design",
       "sub2": "Commercial",
       "desc": "Interior design for a wellness and fitness centre in London, UK. The scheme includes a cycling studio under illuminated rings and hanging greenery, a lounge and library with leather recliners, a calm yoga room framed by arched niches, an indoor swimming pool under a vaulted ceiling and a stone-finished reception.",
       "img": "/home_preview/assets/img/Interior_Design/5858.Mr.Hassan-London,UK/B01.jpg",
-      "client": "Client",
+      "client": "Mr. Hassan",
       "location": "London, UK",
       "area": "N/A",
       "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
@@ -693,16 +750,19 @@
         "Selected materials and finishes that combine durability with visual appeal",
         "Integrated brand elements seamlessly into the overall design concept"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "mr-hassan-london-uk"
+      ]
     },
     {
       "id": "4366f94a-94aa-40b5-adab-18c3492f8b24",
-      "title": "Bakers31 – Bahawalpur Cannt",
+      "title": "Bakery Cafe Interior Design – Bahawalpur Cantt",
       "sub1": "Interior Design",
       "sub2": "Commercial",
       "desc": "Interior design for Bakers31, a bakery and cafe in Bahawalpur Cantt. White arches, an octagonal coffered ceiling with cove lighting and clusters of gold pendants create an elegant dining hall with blush and blue seating, while a green marble counter beneath a canopy of hanging greenery marks the bakery display.",
       "img": "/home_preview/assets/img/Interior_Design/5779.Bakers31-BahawalpurCannt/1/CAM01.jpg",
-      "client": "Client",
+      "client": "Bakers31",
       "location": "BahawalpurCannt",
       "area": "N/A",
       "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
@@ -731,16 +791,19 @@
         "Selected materials and finishes that combine durability with visual appeal",
         "Integrated brand elements seamlessly into the overall design concept"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "bakers31-bahawalpur-cannt"
+      ]
     },
     {
       "id": "0ce5560b-b997-4b54-b107-f70b5b39931a",
-      "title": "Waqas Residence – Multan",
+      "title": "Luxury Bedroom Interior Design – Multan",
       "sub1": "Residential",
       "sub2": "Interior Design",
       "desc": "Interior design for Waqas Residence in Multan, focused on the bedrooms and private spaces. Book-matched marble feature walls, green upholstered panels, fluted timber and ring chandeliers give each room its own character, with glass-fronted wardrobes and vanities with arched mirrors completing the suites.",
       "img": "/home_preview/assets/img/Interior_Design/5777.WaqasResidence-Multan/5777.Bed01&Bed02(1).jpg",
-      "client": "Client",
+      "client": "Waqas Residence",
       "location": "Multan",
       "area": "N/A",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -774,16 +837,20 @@
         "Designed custom solutions for storage, lighting, and spatial flow",
         "Selected durable, family-friendly materials that maintain their appearance over time"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "clientLabel": "Project",
+      "previousSlugs": [
+        "waqas-residence-multan"
+      ]
     },
     {
       "id": "70f426cf-e7ad-4394-9612-83a16154e597",
-      "title": "Shumaila's London – Gulberg, Lahore",
+      "title": "Beauty Salon Interior Design – Gulberg, Lahore",
       "sub1": "Interior Design",
       "sub2": "Commercial",
       "desc": "Interior design for Shumaila's London, a beauty salon in Gulberg, Lahore. A black marble reception and sculptural spiral staircase lead to styling stations with arched gold mirrors, a dedicated bridal zone in blush tones and a colour bar framed by a flowing parametric timber wall.",
       "img": "/home_preview/assets/img/Interior_Design/5767.Shumaila_sLondon-Gulberg,Lahore/CAM01.jpg",
-      "client": "Client",
+      "client": "Shumaila's London",
       "location": "Gulberg, Lahore",
       "area": "N/A",
       "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
@@ -806,16 +873,19 @@
         "Selected materials and finishes that combine durability with visual appeal",
         "Integrated brand elements seamlessly into the overall design concept"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "shumaila-s-london-gulberg-lahore"
+      ]
     },
     {
       "id": "a74fb044-dace-4940-9212-5ed96adbab48",
-      "title": "ONYX Tec – Johar Town, Lahore",
+      "title": "Tech Office Interior Design – Johar Town, Lahore",
       "sub1": "Interior Design",
       "sub2": "Commercial",
       "desc": "Office interior design for ONYX Tec in Johar Town, Lahore. Exposed ceilings, timber slats and greenery create a relaxed tech workplace with a branded reception, a colourful breakout cafe, a lounge, and a games area with table tennis and darts for the team.",
       "img": "/home_preview/assets/img/Interior_Design/5762.ONYXTec-JoharTown,Lahore/CAM01.1.jpg",
-      "client": "Client",
+      "client": "ONYX Tec",
       "location": "JoharTown, Lahore",
       "area": "N/A",
       "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
@@ -838,16 +908,19 @@
         "Selected materials and finishes that combine durability with visual appeal",
         "Integrated brand elements seamlessly into the overall design concept"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "onyx-tec-johar-town-lahore"
+      ]
     },
     {
       "id": "0f507430-8dd7-4e1a-817f-34a010bb96ed",
-      "title": "Bashir Khayre Residence – Somalia",
+      "title": "Luxury Living & Dining Room Interior Design – Somalia",
       "sub1": "Residential",
       "sub2": "Interior Design",
       "desc": "Interior design for the Bashir Khayre Residence in Somalia. The living and dining areas combine emerald green sofas and drapes with walnut ceiling strips, marble feature walls, sculpted wall art, circular mirrors and crystal chandeliers, with a slatted screen separating the lounge from a long formal dining table.",
       "img": "/home_preview/assets/img/Interior_Design/5737.BashirKhayreResidence-Somalia/5737.CAM01(2).jpg",
-      "client": "Client",
+      "client": "Mr. Bashir Khayre",
       "location": "Somalia",
       "area": "N/A",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -868,16 +941,19 @@
         "Designed custom solutions for storage, lighting, and spatial flow",
         "Selected durable, family-friendly materials that maintain their appearance over time"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "bashir-khayre-residence-somalia"
+      ]
     },
     {
       "id": "465ac280-acb2-4a63-8733-af4a7e8f3abd",
-      "title": "Fit Nation Gym – DHA Phase5, Lahore",
+      "title": "Gym Interior Design – DHA Phase 5, Lahore",
       "sub1": "Fitness",
       "sub2": "Commercial",
       "desc": "Interior design for Fit Nation Gym in DHA Phase 5, Lahore. A black and grey industrial palette, hexagonal LED lighting and bold motivational graphics define the training floor, with a branded reception, a merchandise wall and a 'Fuel Bar' juice counter for members.",
       "img": "/home_preview/assets/img/Interior_Design/5705.FitNationGym-DHAPhase5,Lahore/CAM01.jpg",
-      "client": "Client",
+      "client": "Fit Nation Gym",
       "location": "DHAPhase5, Lahore",
       "area": "N/A",
       "categoryId": "20510a8a-21db-4086-a33c-d1041e3a2bc3",
@@ -900,16 +976,19 @@
         "Selected materials and finishes that combine durability with visual appeal",
         "Integrated brand elements seamlessly into the overall design concept"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "fit-nation-gym-dha-phase5-lahore"
+      ]
     },
     {
       "id": "801ec94c-1252-44f8-8a83-ef35f4237399",
-      "title": "Jarikas Complex – Jarikas Cannt",
+      "title": "Gym Interior Design – Jarikas Cantt",
       "sub1": "Interior Design",
       "sub2": "Commercial",
       "desc": "Interior design for a gym at Jarikas Complex, Jarikas Cantt. An energetic teal and charcoal palette, sprint-track floor markings, moss-green walls and bold 'No Pain No Gain' graphics organise the space into strength, cardio and functional training zones.",
       "img": "/home_preview/assets/img/Interior_Design/5675.JarikasComplex-JarikasCannt/CAM001.jpg",
-      "client": "Client",
+      "client": "Jarikas Complex",
       "location": "JarikasCannt",
       "area": "N/A",
       "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
@@ -931,16 +1010,19 @@
         "Selected materials and finishes that combine durability with visual appeal",
         "Integrated brand elements seamlessly into the overall design concept"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "jarikas-complex-jarikas-cannt"
+      ]
     },
     {
       "id": "7ee436e3-bd7a-49d2-bc62-566519b48b3a",
-      "title": "Divine Diva – Lake City, Lahore",
+      "title": "Restaurant Interior Design – Lake City, Lahore",
       "sub1": "Interior Design",
       "sub2": "Commercial",
       "desc": "Interior design for The Dining Diva, a restaurant in Lake City, Lahore. Overhead black steel frames hold planters and lighting above exposed brick and teal velvet seating, food artwork lines the walls, and a glass shopfront and green-lit corridor lead guests into the dining room.",
       "img": "/home_preview/assets/img/Interior_Design/5635.DivineDiva-LakeCity,Lahore/5635.CAM01.jpg",
-      "client": "Client",
+      "client": "The Dining Diva",
       "location": "LakeCity, Lahore",
       "area": "N/A",
       "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
@@ -962,16 +1044,19 @@
         "Selected materials and finishes that combine durability with visual appeal",
         "Integrated brand elements seamlessly into the overall design concept"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "divine-diva-lake-city-lahore"
+      ]
     },
     {
       "id": "76f063a8-6080-408b-aba3-818740ab4538",
-      "title": "Hamza Arcade III – Lahore",
+      "title": "Mixed-Use Commercial Building Design – Lahore",
       "sub1": "Commercial",
       "sub2": "Architecture Design",
       "desc": "Architecture design for Hamza Arcade III in Lahore, a multi-storey mixed-use building with shops at street level. The facade alternates beige and charcoal vertical bands with recessed glazing, and the roof is designed as a landscaped terrace with seating and pergolas.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5881.HamzaArcadeIII-Lahore/5881.DayView001.1.jpg",
-      "client": "Client",
+      "client": "Hamza Arcade III",
       "location": "Lahore",
       "area": "N/A",
       "categoryId": "a44856e5-a050-4404-a66f-ae78992bb6a1",
@@ -993,16 +1078,20 @@
         "Designed striking architectural elements that enhance brand visibility",
         "Integrated modern building systems for efficiency and sustainability"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "clientLabel": "Project",
+      "previousSlugs": [
+        "hamza-arcade-iii-lahore"
+      ]
     },
     {
       "id": "0aab60a2-90bc-4a09-9241-7cc8587b7fd4",
-      "title": "Fahad Residence – Lahore",
+      "title": "Grey & White Modern House Design – Lahore",
       "sub1": "Residential",
       "sub2": "Architecture Design",
       "desc": "Architecture design for Fahad Residence in Lahore. The double-storey house is composed of interlocking grey and white volumes, dark framed openings and vertical fins, set behind a landscaped frontage and a clean boundary wall.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5880.FahadResidence-Lahore/LightTest-1(1).jpg",
-      "client": "Client",
+      "client": "Fahad Residence",
       "location": "Lahore",
       "area": "N/A",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -1023,16 +1112,20 @@
         "Selected materials and construction methods that balance cost, durability, and aesthetics",
         "Incorporated energy-efficient systems and sustainable building practices"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "clientLabel": "Project",
+      "previousSlugs": [
+        "fahad-residence-lahore"
+      ]
     },
     {
       "id": "c579331f-310a-483e-8cb7-729e6c7177b0",
-      "title": "Bilal Residence – Lahore",
+      "title": "Modern House with Timber Facade – Lahore",
       "sub1": "Residential",
       "sub2": "Architecture Design",
       "desc": "Architecture design for Bilal Residence, a corner house in Lahore. White volumes sit inside a strong charcoal frame, with vertical timber cladding, deep balconies and a roof terrace, and a low boundary wall with integrated lighting along both streets.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5878.BilalResidence-Lahore/View-1(8).jpg",
-      "client": "Client",
+      "client": "Bilal Residence",
       "location": "Lahore",
       "area": "N/A",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -1054,16 +1147,20 @@
         "Selected materials and construction methods that balance cost, durability, and aesthetics",
         "Incorporated energy-efficient systems and sustainable building practices"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "clientLabel": "Project",
+      "previousSlugs": [
+        "bilal-residence-lahore"
+      ]
     },
     {
       "id": "6fea57f3-0837-4d8d-abf6-c7d9656a1784",
-      "title": "Bin Umer Height – Lahore",
+      "title": "Residential Tower Design – Lahore",
       "sub1": "Residential",
       "sub2": "Architecture Design",
       "desc": "Architecture design for Bin Umer Height, a residential tower in Lahore. Continuous balconies with glass balustrades and planter boxes wrap the white facade, a glazed edge marks the rooftop amenity level, and tall columns frame the commercial ground floor.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5869.BinUmerHeight-Lahore/EveningView.jpg",
-      "client": "Client",
+      "client": "Bin Umer Height",
       "location": "Lahore",
       "area": "N/A",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -1086,16 +1183,20 @@
         "Selected materials and construction methods that balance cost, durability, and aesthetics",
         "Incorporated energy-efficient systems and sustainable building practices"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "clientLabel": "Project",
+      "previousSlugs": [
+        "bin-umer-height-lahore"
+      ]
     },
     {
       "id": "e4ebb15c-3577-4e3e-bf4d-c09b667aca97",
-      "title": "Vocational Villa – Turks&Caicos Island",
+      "title": "Vacation Villa Interior Design – Turks and Caicos Islands",
       "sub1": "Residential",
       "sub2": "Interior Design",
       "desc": "Interior design for a vacation villa in the Turks and Caicos Islands. Light oak ceilings and joinery, an open-plan kitchen with a white marble island, rattan pendants and linen upholstery give the double-height living spaces and bedrooms a relaxed, coastal feel.",
       "img": "/home_preview/assets/img/Interior_Design/5861.VocationalVilla-Turks&CaicosIsland/01(1).jpg",
-      "client": "Client",
+      "client": "Vacation Villa",
       "location": "Turks&CaicosIsland",
       "area": "N/A",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -1125,16 +1226,20 @@
         "Designed custom solutions for storage, lighting, and spatial flow",
         "Selected durable, family-friendly materials that maintain their appearance over time"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "clientLabel": "Project",
+      "previousSlugs": [
+        "vocational-villa-turks-and-caicos-island"
+      ]
     },
     {
       "id": "68bb4e7c-9472-472d-a08d-8e79003b8b3e",
-      "title": "Abdul Aziz Abdullah – Nairobi, Kenya",
+      "title": "High-Rise Residential Tower Design – Nairobi, Kenya",
       "sub1": "Architecture",
       "sub2": "Architecture Design",
       "desc": "Architecture design for a high-rise residential tower in Nairobi, Kenya. Flowing, curved balcony bands in a bronze tone give the slender tower a distinctive wave-like silhouette, with planted terraces, a glazed podium and a rooftop pool and pergolas.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5832.AbdulAzizAbdullah-Nairobi,Kenya/CAM01.jpg",
-      "client": "Client",
+      "client": "Mr. Abdul Aziz Abdullah",
       "location": "Nairobi, Kenya",
       "area": "N/A",
       "categoryId": "392942fd-0206-4106-b139-a98b94804e07",
@@ -1158,16 +1263,19 @@
         "Conducted site analysis to optimize building placement and orientation",
         "Implemented comprehensive project management systems for smooth execution"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "abdul-aziz-abdullah-nairobi-kenya"
+      ]
     },
     {
       "id": "3c23c5ca-4446-43f1-a73f-5f86504ba45e",
-      "title": "Saleem Albela House – Paragon City, Lahore",
+      "title": "Three-Storey Modern House Design – Paragon City, Lahore",
       "sub1": "Residential",
       "sub2": "Architecture Design",
       "desc": "Architecture design for the Saleem Albela House in Paragon City, Lahore. The three-storey facade on a compact plot combines a dark frame with warm timber, stacked balconies with planters and layered lighting, giving the house a strong presence at night.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5829.SaleemAlbelaHouse-ParagonCity,Lahore/5829.CAM01(1).jpg",
-      "client": "Client",
+      "client": "Mr. Saleem Albela",
       "location": "ParagonCity, Lahore",
       "area": "N/A",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -1189,16 +1297,19 @@
         "Selected materials and construction methods that balance cost, durability, and aesthetics",
         "Incorporated energy-efficient systems and sustainable building practices"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "saleem-albela-house-paragon-city-lahore"
+      ]
     },
     {
       "id": "937c9687-2630-486c-9f5d-546c5e5f9f90",
-      "title": "Asad Residence – Lake City, Lahore",
+      "title": "Modern House with Marble Facade – Lake City, Lahore",
       "sub1": "Residential",
       "sub2": "Architecture Design",
       "desc": "Architecture design for Asad Residence in Lake City, Lahore. The three-storey house features a marble-clad central panel, slender grey vertical fins, cantilevered slab canopies and a timber entrance door, with a double carport at the front.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5810.AsadResidence-LakeCity,Lahore/CAM01.jpg",
-      "client": "Client",
+      "client": "Asad Residence",
       "location": "LakeCity, Lahore",
       "area": "N/A",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -1219,16 +1330,20 @@
         "Selected materials and construction methods that balance cost, durability, and aesthetics",
         "Incorporated energy-efficient systems and sustainable building practices"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "clientLabel": "Project",
+      "previousSlugs": [
+        "asad-residence-lake-city-lahore"
+      ]
     },
     {
       "id": "3c1967df-e50f-4ba5-ae95-71c0877577db",
-      "title": "Ahmad Height – Somalia",
+      "title": "Residential Tower Design – Somalia",
       "sub1": "Residential",
       "sub2": "Architecture Design",
       "desc": "Architecture design for Ahmad Height, a residential tower in Somalia. Its white facade is built from staggered, projecting window frames that create a sculptural, checkerboard rhythm, with planted balconies softening the elevation.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5804.AhmadHeight-Somalia/5804.Renders(1).jpg",
-      "client": "Client",
+      "client": "Ahmad Height",
       "location": "Somalia",
       "area": "N/A",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -1251,16 +1366,20 @@
         "Selected materials and construction methods that balance cost, durability, and aesthetics",
         "Incorporated energy-efficient systems and sustainable building practices"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "clientLabel": "Project",
+      "previousSlugs": [
+        "ahmad-height-somalia"
+      ]
     },
     {
       "id": "6a519456-74c5-489e-bac6-2e15bc2ab9de",
-      "title": "Zil E Huma Residence – Lahore",
+      "title": "Classic Contemporary House Design – Lahore",
       "sub1": "Residential",
       "sub2": "Architecture Design",
       "desc": "Architecture design for Zil E Huma Residence in Lahore. The house blends classical and contemporary elements: banded white plaster, crisp cornices and large black-framed windows, with a covered carport and a shaded garden patio.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5801.ZilEHumaResidence-Lahore/5801.Renders(1).jpg",
-      "client": "Client",
+      "client": "Zil E Huma Residence",
       "location": "Lahore",
       "area": "N/A",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -1281,16 +1400,20 @@
         "Selected materials and construction methods that balance cost, durability, and aesthetics",
         "Incorporated energy-efficient systems and sustainable building practices"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "clientLabel": "Project",
+      "previousSlugs": [
+        "zil-e-huma-residence-lahore"
+      ]
     },
     {
       "id": "12331992-5117-47e7-b1a6-c9b5bcd029d3",
-      "title": "Samad Height – Etihad Town, Lahore",
+      "title": "Mid-Rise Residential Building Design – Etihad Town, Lahore",
       "sub1": "Residential",
       "sub2": "Architecture Design",
       "desc": "Architecture design for Samad Height in Etihad Town, Lahore. The slim mid-rise residential building is wrapped in vertical timber-look fins and cream panels, with narrow glazing strips and planters adding texture and shade.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5785.SamadHeight-EtihadTown,Lahore/5785.Renders(2).jpg",
-      "client": "Client",
+      "client": "Samad Height",
       "location": "EtihadTown, Lahore",
       "area": "N/A",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -1312,16 +1435,20 @@
         "Selected materials and construction methods that balance cost, durability, and aesthetics",
         "Incorporated energy-efficient systems and sustainable building practices"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "clientLabel": "Project",
+      "previousSlugs": [
+        "samad-height-etihad-town-lahore"
+      ]
     },
     {
       "id": "6a75b55a-d326-43c3-90ab-42723a07c425",
-      "title": "Qasim Residence – Lake City, Lahore",
+      "title": "Corner House Design – Lake City, Lahore",
       "sub1": "Residential",
       "sub2": "Architecture Design",
       "desc": "Architecture design for Qasim Residence in Lake City, Lahore. Vertical timber cladding, cream stone fins and dark frames create a layered three-storey facade, with a pergola-covered terrace and a gated carport on the corner plot.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5780.QasimResidence-LakeCity,Lahore/5780.Renders(1).jpg",
-      "client": "Client",
+      "client": "Qasim Residence",
       "location": "LakeCity, Lahore",
       "area": "N/A",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -1343,16 +1470,20 @@
         "Selected materials and construction methods that balance cost, durability, and aesthetics",
         "Incorporated energy-efficient systems and sustainable building practices"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "clientLabel": "Project",
+      "previousSlugs": [
+        "qasim-residence-lake-city-lahore"
+      ]
     },
     {
       "id": "19ec004d-caaa-4346-9c1b-e4eb81e95072",
-      "title": "Abdul Moeed Residence – Lahore",
+      "title": "Modern House with Stone Facade – Lahore",
       "sub1": "Residential",
       "sub2": "Architecture Design",
       "desc": "Architecture design for Abdul Moeed Residence, a corner house in Lahore. Grey stone cladding, deep dark cantilevered roof slabs and a tall timber-and-glass entrance give the house a bold, modern form, with a double carport and planted balconies.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5765.AbdulMoeedResidence-Lahore/CAMERA01.jpg",
-      "client": "Client",
+      "client": "Abdul Moeed Residence",
       "location": "Lahore",
       "area": "N/A",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -1374,16 +1505,20 @@
         "Selected materials and construction methods that balance cost, durability, and aesthetics",
         "Incorporated energy-efficient systems and sustainable building practices"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "clientLabel": "Project",
+      "previousSlugs": [
+        "abdul-moeed-residence-lahore"
+      ]
     },
     {
       "id": "1e35b932-705b-45cd-be27-02b5ff851b44",
-      "title": "Shabbir Residence – Faisal Town, Lahore",
+      "title": "Three-Storey Modern House Design – Faisal Town, Lahore",
       "sub1": "Residential",
       "sub2": "Architecture Design",
       "desc": "Architecture design for Shabbir Residence in Faisal Town, Lahore. A white frame, a tall glazed stair window and vertical timber screens organise the three-storey facade, with a pergola on the top floor, a front lawn and a double carport.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5753.ShabbirResidence-FaisalTown,Lahore/01.jpg",
-      "client": "Client",
+      "client": "Shabbir Residence",
       "location": "FaisalTown, Lahore",
       "area": "N/A",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -1405,16 +1540,20 @@
         "Selected materials and construction methods that balance cost, durability, and aesthetics",
         "Incorporated energy-efficient systems and sustainable building practices"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "clientLabel": "Project",
+      "previousSlugs": [
+        "shabbir-residence-faisal-town-lahore"
+      ]
     },
     {
       "id": "0876a085-35df-4bec-8dc5-01c7ebd6d60a",
-      "title": "Faisal Residence – Lahore",
+      "title": "Modern House with Swimming Pool – Lahore",
       "sub1": "Residential",
       "sub2": "Architecture Design",
       "desc": "Architecture design for Faisal Residence in Lahore. A black steel and glass stair tower and double-height glazing open the house to a private swimming pool and courtyard, with timber soffits and dark cantilevered roofs completing the contemporary design.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5746.FaisalResidence-Lahore/5746.CAM05(1).jpg",
-      "client": "Client",
+      "client": "Faisal Residence",
       "location": "Lahore",
       "area": "N/A",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -1436,16 +1575,20 @@
         "Selected materials and construction methods that balance cost, durability, and aesthetics",
         "Incorporated energy-efficient systems and sustainable building practices"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "clientLabel": "Project",
+      "previousSlugs": [
+        "faisal-residence-lahore"
+      ]
     },
     {
       "id": "5b446cc6-9d50-4ed5-b1d4-fad47e86425e",
-      "title": "Abdullah Residence – Nespak Society, Lahore",
+      "title": "House Interior & Kids' Room Design – Nespak Society, Lahore",
       "sub1": "Residential",
       "sub2": "Interior Design",
       "desc": "Interior design for Abdullah Residence in Nespak Society, Lahore. A double-height lounge with a floating staircase and backlit vertical slats, a gallery corridor with a glass balustrade and crystal chandelier, and a playful children's room with house-shaped headboards in pastel green and yellow.",
       "img": "/home_preview/assets/img/Interior_Design/5702.AbdullahResidence-NespakSociety,Lahore/01.jpg",
-      "client": "Client",
+      "client": "Abdullah Residence",
       "location": "NespakSociety, Lahore",
       "area": "N/A",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -1474,16 +1617,20 @@
         "Created age-appropriate children rooms with playful yet elegant design elements",
         "Designed master bedroom and dining areas with sophisticated finishes and furnishings"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "clientLabel": "Project",
+      "previousSlugs": [
+        "abdullah-residence-nespak-society-lahore"
+      ]
     },
     {
       "id": "610ea9cc-67e9-4570-9e9a-8756748423bd",
-      "title": "US Apparel – Lahore",
+      "title": "Commercial Office Building Design – Lahore",
       "sub1": "Commercial",
       "sub2": "Architecture Design",
       "desc": "Architecture design for the US Apparel building in Lahore. A grey, gridded facade with framed windows, planter boxes and a logo medallion gives the commercial block a clean, corporate look, with a boundary wall detailed in alternating panels and greenery.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5687.USApparel-Lahore/03(2).jpg",
-      "client": "Client",
+      "client": "US Apparel",
       "location": "Lahore",
       "area": "N/A",
       "categoryId": "a44856e5-a050-4404-a66f-ae78992bb6a1",
@@ -1502,16 +1649,19 @@
         "Designed striking architectural elements that enhance brand visibility",
         "Integrated modern building systems for efficiency and sustainability"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "us-apparel-lahore"
+      ]
     },
     {
       "id": "a8ff9d30-bb50-4904-a7fa-a6e8eead15bd",
-      "title": "Masuad Tech – Daroghewala, Lahore",
+      "title": "Corporate Building Facade Design – Daroghewala, Lahore",
       "sub1": "Architecture",
       "sub2": "Architecture Design",
       "desc": "Architecture design for the Masuad Tech building in Daroghewala, Lahore. A new black steel-framed front with timber-look panels, a double-height glazed entrance and an illuminated logo transforms the existing brick building, set behind a landscaped forecourt.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5682.MasuadTech-Daroghewala,Lahore/01.jpg",
-      "client": "Client",
+      "client": "Masuad Tech",
       "location": "Daroghewala, Lahore",
       "area": "N/A",
       "categoryId": "392942fd-0206-4106-b139-a98b94804e07",
@@ -1534,16 +1684,19 @@
         "Conducted site analysis to optimize building placement and orientation",
         "Implemented comprehensive project management systems for smooth execution"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "masuad-tech-daroghewala-lahore"
+      ]
     },
     {
       "id": "4bbae2f8-7d68-4fff-8fcf-0bbb92a5a798",
-      "title": "Ehsan Height – Etihad Town, Lahore",
+      "title": "Classic Residential Building Design – Etihad Town, Lahore",
       "sub1": "Residential",
       "sub2": "Architecture Design",
       "desc": "Architecture design for Ehsan Height in Etihad Town, Lahore. The slender corner building has a classical, Parisian-inspired white facade with cornices, mouldings and tall French windows, warmly lit at night.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5663.EhsanHeight-EtihadTown,Lahore/CAM02.jpg",
-      "client": "Client",
+      "client": "Ehsan Height",
       "location": "EtihadTown, Lahore",
       "area": "N/A",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -1565,16 +1718,20 @@
         "Selected materials and construction methods that balance cost, durability, and aesthetics",
         "Incorporated energy-efficient systems and sustainable building practices"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "clientLabel": "Project",
+      "previousSlugs": [
+        "ehsan-height-etihad-town-lahore"
+      ]
     },
     {
       "id": "8c5ddf2e-2e18-403a-bbfc-bdfe4afe03a5",
-      "title": "Calrom – Askari Tower(Gulberg) – Lahore",
+      "title": "Office Cafeteria & Breakout Interior Design – Gulberg, Lahore",
       "sub1": "Interior Design",
       "sub2": "Commercial",
       "desc": "Office interior design for Calrom at Askari Tower, Gulberg, Lahore, with a focus on team and breakout spaces. Meeting rooms with teal walls and framed art, a cafeteria with long communal tables under rings of hanging greenery, a coffee lounge with neon signage and a games room with table tennis and foosball.",
       "img": "/home_preview/assets/img/Interior_Design/5850.Calrom-AskariTower(Gulberg)-Lahore/BoardRoom(1).jpg",
-      "client": "Client",
+      "client": "Calrom",
       "location": "AskariTower(Gulberg)",
       "area": "N/A",
       "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
@@ -1603,16 +1760,19 @@
         "Designed flexible workspace zones that accommodate different working styles and cultural preferences",
         "Integrated natural lighting and biophilic design elements to enhance productivity and well-being"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "calrom-askari-tower-gulberg-lahore"
+      ]
     },
     {
       "id": "b6c514f1-8bb7-4a1f-975f-9f1ca8012a77",
-      "title": "Ambreen Residence – Lahore",
+      "title": "Home Interior & Kitchen Design – Lahore",
       "sub1": "Residential",
       "sub2": "Interior Design",
       "desc": "Interior design for Ambreen Residence in Lahore. The dining room pairs blush velvet chairs with a round mirror feature and glass pendants, the lounge combines grey sofas with pink accent chairs and ring chandeliers, and the kitchen features walnut cabinetry with a white breakfast bar.",
       "img": "/home_preview/assets/img/Interior_Design/5672.AmbreenResidence-Lahore/5627.GFDINNINGROOM03.jpg",
-      "client": "Client",
+      "client": "Ambreen Residence",
       "location": "Lahore",
       "area": "N/A",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -1633,16 +1793,20 @@
         "Designed custom solutions for storage, lighting, and spatial flow",
         "Selected durable, family-friendly materials that maintain their appearance over time"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "clientLabel": "Project",
+      "previousSlugs": [
+        "ambreen-residence-lahore"
+      ]
     },
     {
       "id": "6f46c886-fae5-411b-acc1-a4d875e77d38",
-      "title": "Momentum Fitness – Johar Town, Lahore",
+      "title": "Gym Interior Design – Johar Town, Lahore",
       "sub1": "Fitness",
       "sub2": "Commercial",
       "desc": "Interior design for Momentum Fitness in Johar Town, Lahore. A black and red palette, large athlete murals and X-pattern LED lighting run through the branded reception, locker area, cardio zone and strength floor with sled-track flooring and red lifting cages.",
       "img": "/home_preview/assets/img/Interior_Design/5561.MomentumFitness-JoharTown,Lahore/5561.(2).jpg",
-      "client": "Client",
+      "client": "Momentum Fitness",
       "location": "JoharTown, Lahore",
       "area": "N/A",
       "categoryId": "20510a8a-21db-4086-a33c-d1041e3a2bc3",
@@ -1665,16 +1829,19 @@
         "Selected materials and finishes that combine durability with visual appeal",
         "Integrated brand elements seamlessly into the overall design concept"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "momentum-fitness-johar-town-lahore"
+      ]
     },
     {
       "id": "6ae275ae-104d-412e-b092-c571071d3f64",
-      "title": "Barka Mall – Oman",
+      "title": "Shopping Mall Architecture Design – Oman",
       "sub1": "Commercial",
       "sub2": "Architecture Design",
       "desc": "Architecture design for Barka Mall in Oman, a single-storey retail centre. A long glazed shopfront colonnade with timber screens and large digital billboards faces palm-lined surface parking, giving every tenant clear visibility from the road.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5645.BarkaMall-Oman/5645.BarkaMall(1).png",
-      "client": "Client",
+      "client": "Barka Mall",
       "location": "Oman",
       "area": "N/A",
       "categoryId": "a44856e5-a050-4404-a66f-ae78992bb6a1",
@@ -1695,16 +1862,19 @@
         "Created distinctive architectural features that serve as landmarks",
         "Collaborated with local consultants to ensure compliance and cultural sensitivity"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "barka-mall-oman"
+      ]
     },
     {
       "id": "9f8a222a-fd73-43ae-b4af-ab71c0c9a510",
-      "title": "Momin Solutions – Abdalian Society, Lahore",
+      "title": "Classic Commercial Building Design – Abdalian Society, Lahore",
       "sub1": "Architecture",
       "sub2": "Architecture Design",
       "desc": "Architecture design for a four-storey building for Momin Solutions in Abdalian Society, Lahore. The cream classical facade features mouldings, pilasters and an arched ground floor, topped by a rooftop pergola and planters.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5662.MominSolutions-AbdalianSociety,Lahore/5662ITOFFICEVIEW02.jpg",
-      "client": "Client",
+      "client": "Momin Solutions",
       "location": "AbdalianSociety, Lahore",
       "area": "N/A",
       "categoryId": "392942fd-0206-4106-b139-a98b94804e07",
@@ -1724,16 +1894,19 @@
         "Conducted site analysis to optimize building placement and orientation",
         "Implemented comprehensive project management systems for smooth execution"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "momin-solutions-abdalian-society-lahore"
+      ]
     },
     {
       "id": "5044c97b-a4c8-425c-b598-52deaaa6b391",
-      "title": "Hamza Arcade – Bahria Town, Lahore",
+      "title": "Commercial Building Design – Bahria Town, Lahore",
       "sub1": "Commercial",
       "sub2": "Architecture Design",
       "desc": "Architecture design for Hamza Arcade in Bahria Town, Lahore, a multi-storey commercial building. A grid facade of deep, angled timber-lined window frames with planters creates a distinctive, textured elevation and shades the floors behind.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5618.HamzaArcade-BahriaTown,Lahore/Waseem_SeecaView1.jpg",
-      "client": "Client",
+      "client": "Hamza Arcade",
       "location": "BahriaTown, Lahore",
       "area": "N/A",
       "categoryId": "a44856e5-a050-4404-a66f-ae78992bb6a1",
@@ -1753,16 +1926,20 @@
         "Designed striking architectural elements that enhance brand visibility",
         "Integrated modern building systems for efficiency and sustainability"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "clientLabel": "Project",
+      "previousSlugs": [
+        "hamza-arcade-bahria-town-lahore"
+      ]
     },
     {
       "id": "5d27431f-e21a-4b8e-aabe-e656ede4079f",
-      "title": "Shahbaz Residence – Lake City, Lahore",
+      "title": "Two-Storey Modern House Design – Lake City, Lahore",
       "sub1": "Residential",
       "sub2": "Architecture Design",
       "desc": "Architecture design for Shahbaz Residence in Lake City, Lahore. The two-storey house combines vertical timber cladding, beige stone and slim black fins, with a carport sheltered under a planted balcony and warm lighting along the facade.",
       "img": "/home_preview/assets/img/Architecture_Deisgn/5607.ShahbazResidence-Lake City,Lahore/5607CAM01.jpg",
-      "client": "Client",
+      "client": "Shahbaz Residence",
       "location": "Lake City, Lahore",
       "area": "N/A",
       "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
@@ -1783,16 +1960,20 @@
         "Selected materials and construction methods that balance cost, durability, and aesthetics",
         "Incorporated energy-efficient systems and sustainable building practices"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "clientLabel": "Project",
+      "previousSlugs": [
+        "shahbaz-residence-lake-city-lahore"
+      ]
     },
     {
       "id": "2655589f-b550-4d44-b036-097a70899285",
-      "title": "Asian Bistro – Islamabad",
+      "title": "Asian Restaurant Interior Design – Islamabad",
       "sub1": "Restaurant",
       "sub2": "Hospitality",
       "desc": "The idea was to design a space along contemporary Asian inspired interior design. It has an ambiance that is raw, elemental, and creative, featuring a live digital mural wall and a unique bar design as well as a life sized cherry blossom tree running along the ceiling. In short, the space is innovative and one of its kind, sure to attract visitors for the value of its exquisite experience.",
       "img": "/home_preview/assets/img/Interior_Design/5761.AsianBistro-Islamabad/06.2.jpg",
-      "client": "Mr. Mian Fahad",
+      "client": "Mr. Mian Fahad (Asian Bistro)",
       "location": "Islamabad",
       "area": "2250 Sqft",
       "categoryId": "b2b00105-badf-4f18-aa4e-b1d9994bd89f",
@@ -1813,16 +1994,19 @@
         "Designed a custom cherry blossom tree installation that runs along the ceiling creating visual drama",
         "Created distinct zones within the compact space to maximize functionality and experience"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "asian-bistro-islamabad"
+      ]
     },
     {
       "id": "6ea07f34-e856-485f-8ed2-bd7de62b0122",
-      "title": "Ignition Pro – Gulberg, Lahore",
+      "title": "Commercial Interior Design – Gulberg, Lahore",
       "sub1": "Interior Design",
       "sub2": "Commercial",
       "desc": "Balancing the colours of the logo with the space to keep it simple and clean while not making it boring is the main idea of the design. Using red as a prominent colour to make the space more vibrant.",
       "img": "/home_preview/assets/img/Interior_Design/5770.IgnitionPro-Gulberg,Lahore/06.jpg",
-      "client": "Mr. Hamza Atiq",
+      "client": "Mr. Hamza Atiq (Ignition Pro)",
       "location": "LAHORE",
       "area": "9000 Sqft",
       "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
@@ -1845,16 +2029,19 @@
         "Designed clean, minimalist spaces with pops of color to maintain energy and engagement",
         "Created distinct zones for classrooms, meeting rooms, and director office with cohesive design language"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "ignition-pro-gulberg-lahore"
+      ]
     },
     {
       "id": "5a363b0c-dc86-4814-a9b1-c9338d85fdfd",
-      "title": "ZAK Shinwari – Sialkot",
+      "title": "Fine Dining Restaurant Interior Design – Sialkot",
       "sub1": "Interior Design",
       "sub2": "Commercial",
       "desc": "The idea behind this luxury fine dine was \"Renaissance\". A fusion of culture with modernism. Culture may or may not directly effect our architecture. It depends upon how we approach it. The food of Afghanistan is now served in modern luxury interior so you can enjoy it whilst forgetting the dark times.",
       "img": "/home_preview/assets/img/Interior_Design/5806.ZAKShinwari-Sialkot/GFCam01.jpg",
-      "client": "Mr. Zulfiqar Butt",
+      "client": "Mr. Zulfiqar Butt (ZAK Shinwari)",
       "location": "Sialkot",
       "area": "6000 Sqft",
       "categoryId": "e4db9bdc-4226-41f1-bb1a-51c8c7e91101",
@@ -1877,16 +2064,19 @@
         "Created a sophisticated color palette that reflects cultural heritage while maintaining luxury appeal",
         "Designed an immersive dining experience that celebrates the cuisine and culture"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "zak-shinwari-sialkot"
+      ]
     },
     {
       "id": "0744f68b-4d66-487d-bd02-5bbd11bead43",
-      "title": "React Outlet – Lahore",
+      "title": "Retail Outlet Interior Design – Lahore",
       "sub1": "Office",
       "sub2": "Commercial",
       "desc": "The idea was to create a contemporary design that is one of its kind. Sharp straight lines in dark tones are used for design which is set against the background of delicately curved panels in softer tones making the display stand out but at the same time balancing it as well. Each frame for display is customized specifically for a purpose making sure to display all varieties of merchandise, from short and long garments to shoes and accessories.",
       "img": "/home_preview/assets/img/Interior_Design/5656.ReactOutlet-Lahore/CAM04.jpg",
-      "client": "Mr. Masroor Bhatti",
+      "client": "Mr. Masroor Bhatti (React Outlet)",
       "location": "LAHORE",
       "area": "3600 Sqft",
       "categoryId": "107aa9fb-f253-4043-a339-0f5d0f2b4b10",
@@ -1907,16 +2097,19 @@
         "Created purpose-built display frames tailored to different product categories ensuring optimal presentation",
         "Implemented strategic lighting to highlight merchandise while maintaining the design aesthetic"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "react-outlet-lahore"
+      ]
     },
     {
       "id": "31a887d2-cc94-480f-9ce8-0f42f0b67c89",
-      "title": "Calrom – Askari Tower, Lahore",
+      "title": "Corporate Office Interior Design – Askari Tower, Lahore",
       "sub1": "Office",
       "sub2": "Commercial",
       "desc": "Introducing the design of the working area of a multi-international office with the concept of cool and calming colors. Where creativity thrives and innovation sparks. Welcome to the epitome of cool office vibes.",
       "img": "/home1/assets/img/projects/calrom.jpg",
-      "client": "Ms Mehwish Fatima",
+      "client": "Ms. Mehwish Fatima (Calrom)",
       "location": "Lahore",
       "area": "18000 Sqft",
       "categoryId": "107aa9fb-f253-4043-a339-0f5d0f2b4b10",
@@ -1941,7 +2134,10 @@
         "Designed flexible workspace zones that accommodate different working styles and cultural preferences",
         "Integrated natural lighting and biophilic design elements to enhance productivity and well-being"
       ],
-      "endingImage": ""
+      "endingImage": "",
+      "previousSlugs": [
+        "calrom-askari-tower-lahore"
+      ]
     }
   ],
   "blogCategories": [
