@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function RelatedPosts({ currentBlog, blogs }) {
   const navigate = useNavigate();
@@ -144,6 +144,33 @@ function RelatedPosts({ currentBlog, blogs }) {
   );
 }
 
+// Inline formatting inside a paragraph: **bold** and [text](/link).
+function renderInline(text) {
+  const parts = [];
+  const pattern = /(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g;
+  let last = 0;
+  let match;
+  let key = 0;
+  while ((match = pattern.exec(text)) !== null) {
+    if (match.index > last) parts.push(text.slice(last, match.index));
+    const token = match[0];
+    if (token.startsWith('**')) {
+      parts.push(<strong key={key++}>{token.slice(2, -2)}</strong>);
+    } else {
+      const label = token.slice(1, token.indexOf(']'));
+      const href = token.slice(token.indexOf('(') + 1, -1);
+      parts.push(
+        href.startsWith('/')
+          ? <Link key={key++} to={href}>{label}</Link>
+          : <a key={key++} href={href} target="_blank" rel="noopener noreferrer">{label}</a>
+      );
+    }
+    last = match.index + token.length;
+  }
+  if (last < text.length) parts.push(text.slice(last));
+  return parts;
+}
+
 function Content({ blog, blogs = [] }) {
   if (!blog) return null;
 
@@ -160,6 +187,11 @@ function Content({ blog, blogs = [] }) {
           padding: 120px 0;
           background-color: #fff;
         }
+        .tc-post-content-style1 .post-heading { font-size: 28px; font-weight: 600; color: #1a1a1a; margin: 50px 0 20px; line-height: 1.3; }
+        .tc-post-content-style1 .post-subheading { font-size: 21px; font-weight: 600; color: #1a1a1a; margin: 30px 0 14px; }
+        .tc-post-content-style1 .post-list { margin: 0 0 30px; padding-left: 22px; color: #666; line-height: 1.8; font-size: 14px; }
+        .tc-post-content-style1 .post-list li { margin-bottom: 8px; }
+        .tc-post-content-style1 .info .text a, .tc-post-content-style1 .post-list a { color: #4e9a2a; text-decoration: underline; }
         .tc-post-content-style1 .breadcromb a {
           color: #666;
           transition: color 0.3s ease;
@@ -216,17 +248,36 @@ function Content({ blog, blogs = [] }) {
                 >
                   {blogData.description || "Discover the latest insights and trends in architecture and design."}
                 </h6>
-                {contentParagraphs.map((paragraph, index) => (
-                  <div
-                    key={index}
-                    className="text fsz-14 color-666 mb-70 wow fadeInUp slow"
-                    data-wow-delay="0.2s"
-                    style={{ whiteSpace: 'pre-line', lineHeight: '1.8' }}
-                  >
-                    {index === 0 && <span className="lg-letter"> {paragraph.charAt(0)} </span>}
-                    {index === 0 ? paragraph.substring(1) : paragraph}
-                  </div>
-                ))}
+                {contentParagraphs.map((paragraph, index) => {
+                  const block = paragraph.trim();
+                  // Simple formatting: "## " heading, "### " sub-heading, "- " list items.
+                  if (block.startsWith('### ')) {
+                    return <h3 key={index} className="post-subheading">{renderInline(block.slice(4))}</h3>;
+                  }
+                  if (block.startsWith('## ')) {
+                    return <h2 key={index} className="post-heading">{renderInline(block.slice(3))}</h2>;
+                  }
+                  const lines = block.split('\n');
+                  if (lines.every((line) => line.trim().startsWith('- '))) {
+                    return (
+                      <ul key={index} className="post-list">
+                        {lines.map((line, i) => <li key={i}>{renderInline(line.trim().slice(2))}</li>)}
+                      </ul>
+                    );
+                  }
+                  const isFirst = index === 0;
+                  return (
+                    <div
+                      key={index}
+                      className={`text fsz-14 color-666 ${isFirst ? 'mb-70' : 'mb-30'}`}
+                      data-wow-delay="0.2s"
+                      style={{ whiteSpace: 'pre-line', lineHeight: '1.8' }}
+                    >
+                      {isFirst && <span className="lg-letter"> {block.charAt(0)} </span>}
+                      {renderInline(isFirst ? block.substring(1) : block)}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
