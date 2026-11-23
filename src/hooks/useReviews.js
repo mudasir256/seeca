@@ -2,8 +2,23 @@ import { useEffect, useState } from 'react';
 import { mergeWithSnapshot, snapshot } from '../lib/cmsFallback';
 import { supabase } from '../lib/supabase';
 
+// Reviews that are not from clients (e.g. the website developer's test review in the CMS).
+const NOT_CLIENT_REVIEW = /clapit|mudasir/i;
+
+/** Client reviews only, and the same review text only once. */
+function uniqueReviews(list) {
+  const seen = new Set();
+  return list.filter((item) => {
+    if (NOT_CLIENT_REVIEW.test(`${item.name || ''} ${item.role || ''}`)) return false;
+    const key = (item.text || '').trim().toLowerCase();
+    if (!key || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
 export default function useReviews() {
-  const [reviews, setReviews] = useState(snapshot.reviews);
+  const [reviews, setReviews] = useState(() => uniqueReviews(snapshot.reviews));
 
   useEffect(() => {
     let active = true;
@@ -18,12 +33,12 @@ export default function useReviews() {
 
       if (result.error) {
         console.error('Could not load reviews:', result.error.message);
-        setReviews(snapshot.reviews);
+        setReviews(uniqueReviews(snapshot.reviews));
         return;
       }
 
       setReviews(
-        mergeWithSnapshot(
+        uniqueReviews(mergeWithSnapshot(
           (result.data || []).map((item) => ({
             id: item.id,
             text: item.review,
@@ -31,7 +46,7 @@ export default function useReviews() {
             role: item.company,
           })),
           snapshot.reviews,
-        ),
+        )),
       );
     }
 

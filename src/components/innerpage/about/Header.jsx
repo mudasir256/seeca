@@ -1,5 +1,6 @@
 import React from 'react';
 import { cdnImage } from '../../../lib/imageCdn';
+import { FOUNDED_YEAR, yearsOfExperience } from '../../../config/company';
 
 function Header() {
   return (
@@ -92,12 +93,12 @@ function Header() {
                       </defs>
                       <text>
                         <textPath xlinkHref="#textcircle" textLength="900">
-                          • Years of experience • since 2018
+                          {`• Years of experience • since ${FOUNDED_YEAR}`}
                         </textPath>
                       </text>
                     </svg>
                   </a>
-                  <span className="num"> 9 </span>
+                  <span className="num"> {yearsOfExperience()} </span>
                 </div>
               </div>
             </div>

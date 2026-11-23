@@ -147,7 +147,7 @@ export const useScrollSmoother = (containerId = 'scrollsmoother-container', enab
         
         try {
           const headingIndex = i + 1;
-          const mySplitText = new window.SplitText(heading, { type: 'chars' });
+          const mySplitText = new window.SplitText(heading, { type: 'words,chars' });
           const chars = mySplitText.chars;
 
           chars.forEach((char, charIndex) => {

@@ -38,6 +38,39 @@
   ],
   "projects": [
     {
+      "id": "968a3738-638c-544d-9c45-4a57efeddfeb",
+      "title": "10 Marla Residence Renovation – Cantt, Jhelum",
+      "sub1": "Renovation",
+      "sub2": "Residential",
+      "desc": "Renovation of a 10 marla single-storey residence in Cantt, Jhelum, for Mr. Afaq. The house has a new identity built from exposed red brick framed by bold grey concrete bands. A terracotta brick jaali screen gives the street side privacy while letting in light and air, and a circular window with planting behind it becomes the signature of the facade. A timber-clad entrance sits under a cantilevered concrete canopy with a concealed light strip. Concrete planters, a terrazzo walkway and a landscaped rear lawn with a timber pergola and stone seating wall complete the renovation.",
+      "img": "/home_preview/assets/img/Renovation/6003.MrAfaq-Cantt,Jhelum/6003.01-10-marla-renovation-jhelum-front-elevation.jpg",
+      "client": "Mr. Afaq",
+      "location": "Cantt, Jhelum",
+      "area": "10 Marla",
+      "categoryId": "6d390e38-eddf-4c7a-893f-36f1a3aeacfc",
+      "images": [
+        "/home_preview/assets/img/Renovation/6003.MrAfaq-Cantt,Jhelum/6003.01-10-marla-renovation-jhelum-front-elevation.jpg",
+        "/home_preview/assets/img/Renovation/6003.MrAfaq-Cantt,Jhelum/6003.02-10-marla-renovation-jhelum-entrance-canopy.jpg",
+        "/home_preview/assets/img/Renovation/6003.MrAfaq-Cantt,Jhelum/6003.03-10-marla-renovation-jhelum-brick-jaali-screen.jpg",
+        "/home_preview/assets/img/Renovation/6003.MrAfaq-Cantt,Jhelum/6003.04-10-marla-renovation-jhelum-street-view.jpg",
+        "/home_preview/assets/img/Renovation/6003.MrAfaq-Cantt,Jhelum/6003.05-10-marla-renovation-jhelum-garden-facade.jpg",
+        "/home_preview/assets/img/Renovation/6003.MrAfaq-Cantt,Jhelum/6003.06-10-marla-renovation-jhelum-rear-lawn-pergola.jpg",
+        "/home_preview/assets/img/Renovation/6003.MrAfaq-Cantt,Jhelum/6003.07-10-marla-renovation-jhelum-side-garden.jpg"
+      ],
+      "challenges": [
+        "Giving an existing 10 marla house a contemporary, distinctive street presence",
+        "Creating privacy along the street without closing the house off from light and air",
+        "Connecting the living spaces with the garden and outdoor areas"
+      ],
+      "solutions": [
+        "Re-cladding the facade in exposed red brick framed by grey concrete bands, with a circular planted window as the focal point",
+        "Adding a terracotta brick jaali screen that filters views, daylight and breeze",
+        "Landscaping the front and rear with planters, a terrazzo walkway, a lawn and a timber pergola with seating"
+      ],
+      "endingImage": "",
+      "previousSlugs": []
+    },
+    {
       "id": "53b25296-3f70-480f-9201-114e7899fe4d",
       "title": "Bakery Interior & Facade Design – Gulshan, Multan",
       "sub1": "Interior Design",

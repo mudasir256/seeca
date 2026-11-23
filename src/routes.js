@@ -45,6 +45,12 @@ export const ApplyInternshipPage = lazyWithPreload(() => import('./pages/innerpa
 export const ApplyJobPage = lazyWithPreload(() => import('./pages/innerpages/apply-job'));
 export const SinglePost = lazyWithPreload(() => import('./pages/innerpages/single_post'));
 export const ProjectPage = lazyWithPreload(() => import('./pages/innerpages/project'));
+export const PrivacyPolicyPage = lazyWithPreload(() =>
+  import('./pages/innerpages/legal').then((m) => ({ default: m.PrivacyPolicyPage })),
+);
+export const TermsPage = lazyWithPreload(() =>
+  import('./pages/innerpages/legal').then((m) => ({ default: m.TermsPage })),
+);
 export const NotFound = lazyWithPreload(() => import('./pages/NotFound'));
 
 const PRELOAD_TABLE = [
@@ -64,6 +70,8 @@ const PRELOAD_TABLE = [
   ['/partners', PartnersPage],
   ['/career/internship', ApplyInternshipPage],
   ['/career/job', ApplyJobPage],
+  ['/privacy-policy', PrivacyPolicyPage],
+  ['/terms', TermsPage],
 ];
 
 /** Load the code for the page at `pathname` (resolves immediately for the homepage). */

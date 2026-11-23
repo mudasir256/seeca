@@ -114,7 +114,7 @@ function ContactPage() {
       `}} />
       <Header
         title="Contact SEECA"
-        description="Want to chat further? We'd love to hear from you, let us opportunity to make your dream become reality"
+        description="Tell us about your house, interior or commercial project. We reply within one business day."
         backgroundImage="/home_preview/assets/img/architecturecontact.jpg"
       />
       <main>

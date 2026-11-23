@@ -9,7 +9,8 @@ function Testimonials() {
   const marqSliderRef = useRef(null);
 
   useEffect(() => {
-    if (testimonialsData.length === 0) return undefined;
+    // No autoplay while pre-rendering (keeps the saved HTML on the first review).
+    if (testimonialsData.length === 0 || window.__PRERENDER__) return undefined;
 
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonialsData.length);
@@ -598,31 +599,31 @@ function Testimonials() {
      <div className="marq-slider d-none d-md-block" ref={marqSliderRef}>
         <div className="swiper-wrapper">
           <div className="swiper-slide">
-            <a href="#"> Creative </a>
+            <span> Creative </span>
           </div>
           <div className="swiper-slide">
-            <a href="#"> Flexiable </a>
+            <span> Flexible </span>
           </div>
           <div className="swiper-slide">
-            <a href="#"> Dedicated </a>
+            <span> Dedicated </span>
           </div>
           <div className="swiper-slide">
-            <a href="#"> Creative </a>
+            <span> Creative </span>
           </div>
           <div className="swiper-slide">
-            <a href="#"> Flexiable </a>
+            <span> Flexible </span>
           </div>
           <div className="swiper-slide">
-            <a href="#"> Dedicated </a>
+            <span> Dedicated </span>
           </div>
           <div className="swiper-slide">
-            <a href="#"> Creative </a>
+            <span> Creative </span>
           </div>
           <div className="swiper-slide">
-            <a href="#"> Flexiable </a>
+            <span> Flexible </span>
           </div>
           <div className="swiper-slide">
-            <a href="#"> Dedicated </a>
+            <span> Dedicated </span>
           </div>
         </div>
       </div>

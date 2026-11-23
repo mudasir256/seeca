@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 function Process() {
   const swiperRef = useRef(null);
@@ -518,15 +519,15 @@ function Process() {
                     </div>
                   </div>
                 </div>
-                <a
-                  href="#"
+                <Link
+                  to="/contact"
                   className="butn bg-white rounded-pill mt-50 hover-bg-green2"
                 >
                   <span>
-                    Get A Free Quotes
+                    Get a Free Quote
                     <i className="ms-2 fal fa-long-arrow-right ico-45"></i>
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="col-lg-7">
