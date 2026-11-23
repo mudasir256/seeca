@@ -2391,7 +2391,8 @@
   display: -ms-flexbox;
   display: flex;
 }
-.about-pg-style1 .tc-projects-style2 .project-card .info .tags a {
+.about-pg-style1 .tc-projects-style2 .project-card .info .tags a,
+.about-pg-style1 .tc-projects-style2 .project-card .info .tags span {
   padding: 8px 20px;
   border-radius: 30px;
   background-color: #fff;

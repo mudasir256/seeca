@@ -1,4 +1,5 @@
 import React from 'react';
+import { OFFICES, yearsOfExperience } from '../../config/company';
 
 function Statistics() {
   return (
@@ -167,13 +168,13 @@ function Statistics() {
             </div>
             <div className="statistics-item">
               <div className="statistics-number">
-                <span>[10+]</span>
+                <span>[{yearsOfExperience()}+]</span>
               </div>
               <div className="statistics-label">YEARS OF EXPERIENCE</div>
             </div>
             <div className="statistics-item">
               <div className="statistics-number">
-                <span>[2+]</span>
+                <span>[{OFFICES.length}]</span>
               </div>
               <div className="statistics-label">OFFICES WORLDWIDE</div>
             </div>

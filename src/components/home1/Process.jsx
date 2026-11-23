@@ -356,7 +356,7 @@ function Process() {
                         data-bs-target="#collapseTwo"
                       >
                         <span className="num"> 2 / </span>
-                        <h3> Design & Perfomance </h3>
+                        <h3> Design & Performance </h3>
                       </button>
                     </div>
                     <div

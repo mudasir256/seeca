@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Footer() {
 
@@ -570,12 +571,12 @@ function Footer() {
           <div className="foot">
             <div className="row">
               <div className="col-12 col-lg-6">
-                <p>Copyright © 2025 SEECA by <span style={{ color: '#73bf44' }}> <a href="https://clapit.solutions" target="_blank" rel="noopener noreferrer"> CLAPIT.SOLUTIONS </a></span> All Rights Reserved.</p>
+                <p>Copyright © {new Date().getFullYear()} SEECA by <span style={{ color: '#73bf44' }}> <a href="https://clapit.solutions" target="_blank" rel="noopener noreferrer"> CLAPIT.SOLUTIONS </a></span> All Rights Reserved.</p>
               </div>
               <div className="col-12 col-lg-6">
                 <div className="foot-links">
-                  <a href="#">Terms of use</a>
-                  <a href="#">Privacy Environmental Policy</a>
+                  <Link to="/terms">Terms of Use</Link>
+                  <Link to="/privacy-policy">Privacy Policy</Link>
                 </div>
               </div>
             </div>

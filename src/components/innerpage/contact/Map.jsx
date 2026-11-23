@@ -1,5 +1,28 @@
 import React from 'react';
 
+// One map per office. Label and map always come from the same entry, so they can't get mixed up.
+export const OFFICE_LOCATIONS = [
+  {
+    name: 'Lahore (Head Office)',
+    address: '903C, Maulana Shaukat Ali Road, Faisal Town, Lahore, Pakistan',
+  },
+  {
+    name: 'Islamabad Office',
+    address: 'Plaza 138, First Floor, Wallayat Complex, Phase 7, Bahria Town, Islamabad, Pakistan',
+  },
+  {
+    name: 'Jhelum Office',
+    address: 'C Block, Bashir Tower, Citi Housing, Jhelum, Pakistan',
+  },
+  {
+    name: 'Somalia Office',
+    address: 'Downtown Hargeisa, Road 01, Office 01, Hargeisa, Somaliland',
+  },
+];
+
+const mapUrl = (address) =>
+  `https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
+
 function Map() {
   return (
     <>
@@ -17,7 +40,7 @@ function Map() {
         }
         .tc-contact-map-section .map-frame {
           position: relative;
-          height: 550px;
+          height: 420px;
           overflow: hidden;
         }
         .tc-contact-map-section .map-frame-label {
@@ -25,8 +48,8 @@ function Map() {
           top: 12px;
           left: 12px;
           z-index: 2;
-          font-size: 10px;
-          font-weight: 600;
+          font-size: 12px;
+          font-weight: 500;
           letter-spacing: 0.02em;
           text-transform: none;
           line-height: 1.4;
@@ -65,26 +88,22 @@ function Map() {
       `}} />
       <section className="tc-contact-map-section">
         <div className="map-grid">
-          <div className="map-frame">
-            <span className="map-frame-label">Lahore</span>
-            <iframe
-              src="https://www.google.com/maps?q=903C,+Maulana+Shaukat+Ali+Road,+Faisal+Town,+Lahore,+Pakistan&output=embed"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="SEECA Lahore Office Location"
-            ></iframe>
-          </div>
-          <div className="map-frame">
-            <span className="map-frame-label">Plaza 138, First Floor, Wallayat Complex, Phase 7, Bahria Town, Islamabad.</span>
-            <iframe
-              src="https://www.google.com/maps?q=Plaza+138,+First+Floor,+Wallayat+Complex,+Phase+7,+Bahria+Town,+Rawalpindi,+Pakistan&output=embed"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="SEECA Rawalpindi Office Location"
-            ></iframe>
-          </div>
+          {OFFICE_LOCATIONS.map((office) => (
+            <div className="map-frame" key={office.name}>
+              <span className="map-frame-label">
+                <strong>{office.name}</strong>
+                <br />
+                {office.address}
+              </span>
+              <iframe
+                src={mapUrl(office.address)}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title={`SEECA ${office.name} location`}
+              ></iframe>
+            </div>
+          ))}
         </div>
       </section>
     </>

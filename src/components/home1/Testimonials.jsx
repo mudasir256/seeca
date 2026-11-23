@@ -598,31 +598,31 @@ function Testimonials() {
      <div className="marq-slider d-none d-md-block" ref={marqSliderRef}>
         <div className="swiper-wrapper">
           <div className="swiper-slide">
-            <a href="#"> Creative </a>
+            <span> Creative </span>
           </div>
           <div className="swiper-slide">
-            <a href="#"> Flexiable </a>
+            <span> Flexible </span>
           </div>
           <div className="swiper-slide">
-            <a href="#"> Dedicated </a>
+            <span> Dedicated </span>
           </div>
           <div className="swiper-slide">
-            <a href="#"> Creative </a>
+            <span> Creative </span>
           </div>
           <div className="swiper-slide">
-            <a href="#"> Flexiable </a>
+            <span> Flexible </span>
           </div>
           <div className="swiper-slide">
-            <a href="#"> Dedicated </a>
+            <span> Dedicated </span>
           </div>
           <div className="swiper-slide">
-            <a href="#"> Creative </a>
+            <span> Creative </span>
           </div>
           <div className="swiper-slide">
-            <a href="#"> Flexiable </a>
+            <span> Flexible </span>
           </div>
           <div className="swiper-slide">
-            <a href="#"> Dedicated </a>
+            <span> Dedicated </span>
           </div>
         </div>
       </div>

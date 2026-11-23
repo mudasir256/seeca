@@ -1380,13 +1380,15 @@
   width: -moz-max-content !important;
   width: max-content !important;
 }
-.tc-testimonials-style1 .marq-slider a {
+.tc-testimonials-style1 .marq-slider a,
+.tc-testimonials-style1 .marq-slider span {
   font-size: 150px;
   font-weight: 500;
   -webkit-text-stroke: 1px #000;
   color: transparent;
 }
-.tc-testimonials-style1 .marq-slider a:hover {
+.tc-testimonials-style1 .marq-slider a:hover,
+.tc-testimonials-style1 .marq-slider span:hover {
   color: #000;
 }
 
@@ -1397,7 +1399,8 @@
   .tc-testimonials-style1 .lg-icon {
     font-size: 120px;
   }
-  .tc-testimonials-style1 .marq-slider a {
+  .tc-testimonials-style1 .marq-slider a,
+.tc-testimonials-style1 .marq-slider span {
     font-size: 50px;
   }
 }

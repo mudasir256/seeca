@@ -6,7 +6,7 @@
   },
   "/about": {
     "title": "About SEECA | Architecture & Construction Firm in Lahore",
-    "description": "SEE Consultants & Architects (SEECA) is a Lahore design-and-build firm of architects, interior designers and engineers, delivering projects since 2018.",
+    "description": "SEE Consultants & Architects (SEECA) is a Lahore design-and-build firm of architects, interior designers and engineers, delivering projects since 2017.",
     "schemaType": "AboutPage"
   },
   "/blog": {
@@ -75,5 +75,15 @@
     "description": "Join SEECA Lahore by applying for roles in architecture, design, engineering, and project operations.",
     "schemaType": "WebPage",
     "robots": "noindex, follow"
+  },
+  "/privacy-policy": {
+    "title": "Privacy Policy | SEECA",
+    "description": "How SEE Consultants & Architects (SEECA) collects, uses and protects the information you share through seeca.pk, our enquiry forms and WhatsApp.",
+    "schemaType": "WebPage"
+  },
+  "/terms": {
+    "title": "Terms of Use | SEECA",
+    "description": "Terms for using seeca.pk, the website of SEE Consultants & Architects (SEECA): content, project images, intellectual property and enquiries.",
+    "schemaType": "WebPage"
   }
 }
