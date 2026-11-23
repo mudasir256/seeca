@@ -9,7 +9,8 @@ function Testimonials() {
   const marqSliderRef = useRef(null);
 
   useEffect(() => {
-    if (testimonialsData.length === 0) return undefined;
+    // No autoplay while pre-rendering (keeps the saved HTML on the first review).
+    if (testimonialsData.length === 0 || window.__PRERENDER__) return undefined;
 
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonialsData.length);

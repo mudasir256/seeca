@@ -16,7 +16,9 @@ const STYLES = `
   .legal-content p, .legal-content li { font-size: 16px; line-height: 1.8; color: #555; }
   .legal-content ul { padding-left: 20px; margin: 0; }
   .legal-content li { margin-bottom: 8px; list-style: disc; }
-  .legal-content a { color: #73bf44; }
+  .legal-content a { color: #2f7a12; }
+  .legal-content .legal-company { margin-top: 50px; padding: 30px; background: #f7f9f5; border-radius: 12px; }
+  .legal-content .legal-company h2 { margin-top: 0; }
 `;
 
 function LegalPage({ doc }) {
@@ -52,10 +54,24 @@ function LegalPage({ doc }) {
                 )}
               </section>
             ))}
-            <p className="mt-50">
-              Contact us at <a href="mailto:info@seeca.pk">info@seeca.pk</a> or through our{' '}
-              <Link to="/contact">contact page</Link>.
-            </p>
+            <section className="legal-company">
+              <h2>Company details</h2>
+              <p>
+                <strong>SEE Consultants &amp; Architects (Private) Limited</strong>
+                <br />
+                Head office: 903C, Maulana Shaukat Ali Road, Faisal Town, Lahore, Pakistan
+                <br />
+                Offices: Lahore, Islamabad, Jhelum and Hargeisa (Somaliland)
+                <br />
+                Phone: <a href="tel:+923331498340">+92 333 1498340</a>
+                <br />
+                Email: <a href="mailto:info@seeca.pk">info@seeca.pk</a>
+              </p>
+              <p>
+                You can also reach us through our <Link to="/contact">contact page</Link>. See also our{' '}
+                {doc === privacyPolicy ? <Link to="/terms">Terms of Use</Link> : <Link to="/privacy-policy">Privacy Policy</Link>}.
+              </p>
+            </section>
           </div>
         </div>
       </main>
