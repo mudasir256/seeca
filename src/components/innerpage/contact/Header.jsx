@@ -10,7 +10,7 @@ function Header({
   minHeight = 500,
   titleClassName = 'js-title'
 }) {
-  const headerImage = cdnImage(backgroundImage, 1600, 70);
+  const headerImage = cdnImage(backgroundImage, 1600, 85);
   return (
     <>
       {/* The header photo is the largest element on screen: start loading it right away. */}
@@ -70,30 +70,19 @@ function Header({
           text-align: center;
           color: #fff;
           padding: 80px 20px;
-          animation: fadeInUp 0.8s ease-out;
-        }
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
         }
         .tc-contact-header .info h1 {
-          font-size: 72px;
           font-weight: 700;
           color: #fff;
           margin-bottom: 25px;
           text-transform: uppercase;
           letter-spacing: 3px;
           text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-          animation: fadeInUp 1s ease-out 0.2s both;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
+          font-size: clamp(32px, 4.6vw, 72px);
+          line-height: 1.15;
+          max-width: 1100px;
+          margin-left: auto;
+          margin-right: auto;
         }
         .tc-contact-header .info .text {
           font-size: 18px;
@@ -101,13 +90,11 @@ function Header({
           line-height: 1.8;
           max-width: 700px;
           margin: 0 auto;
-          animation: fadeInUp 1s ease-out 0.4s both;
           display: -webkit-box;
-          -webkit-line-clamp: 1;
+          -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
           overflow: hidden;
           text-overflow: ellipsis;
-          white-space: nowrap;
         }
         @media (max-width: 991px) {
           .tc-contact-header {
@@ -118,20 +105,18 @@ function Header({
             padding: 60px 20px;
           }
           .tc-contact-header .info h1 {
-            font-size: 56px;
+            font-size: clamp(34px, 6vw, 56px);
             margin-bottom: 20px;
-            white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
           }
           .tc-contact-header .info .text {
             font-size: 16px;
             display: -webkit-box;
-            -webkit-line-clamp: 1;
+            -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
-            white-space: nowrap;
           }
         }
         @media (max-width: 767px) {
@@ -143,10 +128,9 @@ function Header({
             padding: 50px 20px;
           }
           .tc-contact-header .info h1 {
-            font-size: 42px;
+            font-size: clamp(30px, 7vw, 42px);
             margin-bottom: 18px;
             letter-spacing: 2px;
-            white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
           }
@@ -154,11 +138,10 @@ function Header({
             font-size: 15px;
             line-height: 1.7;
             display: -webkit-box;
-            -webkit-line-clamp: 1;
+            -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
-            white-space: nowrap;
           }
         }
         @media (max-width: 575px) {
@@ -170,7 +153,7 @@ function Header({
             padding: 40px 15px;
           }
           .tc-contact-header .info h1 {
-            font-size: 32px;
+            font-size: clamp(26px, 7.5vw, 32px);
             margin-bottom: 15px;
             letter-spacing: 1px;
             white-space: normal;
@@ -181,11 +164,10 @@ function Header({
             font-size: 14px;
             line-height: 1.6;
             display: -webkit-box;
-            -webkit-line-clamp: 1;
+            -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
-            white-space: nowrap;
           }
         }
       `}} />

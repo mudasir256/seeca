@@ -68,7 +68,7 @@ function Header() {
       <div className="slider-card">
         <div className="img">
           <img
-            src={cdnImage('/innerpages/assets/img/about/5918.Exterior04.jpg', 1600, 72)}
+            src={cdnImage('/innerpages/assets/img/about/5918.Exterior04.jpg', 1600, 85)}
             fetchpriority="high"
             alt="Contemporary house exterior designed by SEECA"
             className="img-cover"

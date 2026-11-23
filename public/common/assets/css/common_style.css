@@ -377,6 +377,11 @@ small.text {
   border: 0;
   line-height: 1;
   font-size: 0.8em;
+  /* fixed width so the menu doesn't shift when the icon font finishes loading */
+  width: 1em;
+  text-align: center;
+  overflow: hidden;
+  vertical-align: baseline;
 }
 
 .dropdown-menu {

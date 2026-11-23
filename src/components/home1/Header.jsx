@@ -219,7 +219,7 @@ function Header() {
               <div className="slider-card">
                 <div className="img">
                   <img
-                    src={cdnImage(item.img, 1600, 72)}
+                    src={cdnImage(item.img, 1600, 85)}
                     srcSet={cdnSrcSet(item.img, [800, 1200, 1600, 1920])}
                     sizes="100vw"
                     alt={`${item.title} project by SEECA, Lahore`}
