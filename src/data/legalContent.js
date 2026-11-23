@@ -99,9 +99,5 @@ export const termsOfUse = {
       text:
         'These terms are governed by the laws of Pakistan, and the courts of Lahore have jurisdiction over any dispute.',
     },
-    {
-      heading: 'Contact',
-      text: 'Questions about these terms can be sent to info@seeca.pk.',
-    },
   ],
 };

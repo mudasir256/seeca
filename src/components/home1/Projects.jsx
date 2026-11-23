@@ -42,7 +42,9 @@ function Projects() {
   }, [isAnimating, currentIndex, projectsData.length]);
 
   useEffect(() => {
-    if (projectsData.length === 0) return;
+    // No autoplay while the page is being saved as static HTML: the saved page must show
+    // the first slide, exactly what the browser renders first (otherwise hydration fails).
+    if (projectsData.length === 0 || window.__PRERENDER__) return;
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % projectsData.length);
     }, 4000);
