@@ -17,7 +17,7 @@ function canTransform(src) {
 }
 
 /** URL of `src` resized to `width` pixels wide. */
-export function cdnImage(src, width = 1200, quality = 75) {
+export function cdnImage(src, width = 1200, quality = 82) {
   if (!canTransform(src)) return src;
   return `/.netlify/images?url=${encodeURIComponent(src)}&w=${width}&q=${quality}`;
 }

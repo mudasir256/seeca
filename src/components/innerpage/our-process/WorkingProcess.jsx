@@ -307,9 +307,9 @@ Construction administration: The phase where the construction of the building is
           line-height: 1.9;
           white-space: pre-line;
           letter-spacing: 0.2px;
-          animation: fadeInUp 0.5s ease;
+          animation: seecaStepUp 0.5s ease;
         }
-        @keyframes fadeInUp {
+        @keyframes seecaStepUp {
           from {
             opacity: 0;
             transform: translateY(20px);
