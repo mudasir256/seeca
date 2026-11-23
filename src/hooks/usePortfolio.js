@@ -85,7 +85,8 @@ export default function usePortfolio() {
           title: project.title,
           sub1: category?.name || '',
           sub2: '',
-          desc: project.description,
+          // Some CMS entries start with a pasted "Description" label; drop it.
+          desc: (project.description || '').replace(/^\s*Description\s*:?\s*/i, ''),
           img: getPublicImageUrl('portfolio-images', project.main_image_path),
           client: project.client,
           location: project.location,

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import usePartners from '../../hooks/usePartners';
+import { FOUNDED_YEAR, yearsOfExperience } from '../../config/company';
 
 function Experience() {
   const { partners: logos, loading } = usePartners();
@@ -281,7 +282,7 @@ function Experience() {
               <h5 className="fsz-18 text-uppercase">
                 years of <br /> experience
               </h5>
-              <h2 className="num" style={{ color: '#73bf44' }}> 9 </h2>
+              <h2 className="num" style={{ color: '#73bf44' }}> {yearsOfExperience()} </h2>
             </div>
           </div>
           <div className="col-12 col-md-6 col-lg-3">
@@ -297,7 +298,7 @@ function Experience() {
           </div>
           <div className="col-12 col-md-12 col-lg-3 info-col">
             <div className="info wow fadeInUp" data-wow-delay="0.3s">
-              <h3 className="fsz-45 fw-600 mb-30"> Est. 2017 </h3>
+              <h3 className="fsz-45 fw-600 mb-30"> Est. {FOUNDED_YEAR} </h3>
               <div className="text fsz-15 color-666">
               SEECA (SEE Consultants & Architects) is a multidisciplinary design firm in Lahore delivering premium architectural and interior design services. Our architects and interior designers handle commercial, institutional, residential, and corporate office projects, including malls, spaces, schools, colleges, homes, apartments, farmhouses, and workplaces.
               </div>

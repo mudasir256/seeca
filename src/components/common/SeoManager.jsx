@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { useLocation } from 'react-router-dom';
 import { snapshot } from '../../lib/cmsFallback';
 import routeSeo from '../../config/seoRoutes.json';
+import { FOUNDED_YEAR } from '../../config/company';
 
 const GA_MEASUREMENT_ID = 'G-JMF0RQ1LD0';
 
@@ -163,6 +164,7 @@ export default function SeoManager() {
     logo: `${siteUrl}${LOGO_IMAGE}`,
     email: 'info@seeca.pk',
     telephone: '+92-333-1498340',
+    foundingDate: String(FOUNDED_YEAR),
     sameAs: SOCIAL_PROFILES,
   };
 
@@ -178,6 +180,7 @@ export default function SeoManager() {
     url: siteUrl,
     telephone: '+92-333-1498340',
     email: 'info@seeca.pk',
+    foundingDate: String(FOUNDED_YEAR),
     address: {
       '@type': 'PostalAddress',
       streetAddress: '903C, Maulana Shaukat Ali Road, Faisal Town',

@@ -84,7 +84,7 @@ const Services = memo(function Services({ removeTopPadding = false }) {
               margin: '0 auto',
               lineHeight: '1.7'
             }}>
-             Discover our comprehensive range of professional services that we designed to “Bring Your Vision to Life” 
+             From the first sketch to handover, one team handles design, approvals and construction.
             </p>
           </div>
           
@@ -360,7 +360,7 @@ const Services = memo(function Services({ removeTopPadding = false }) {
                       </div>
                       <h5 className="service-title-compact">Architecture</h5>
                       <p className="service-description-compact">
-                        We will help you to get the result you dreamed of.
+                        Houses, commercial buildings and institutions: planning, elevations and approval-ready drawings.
                       </p>
                       <div className="service-read-more-compact">
                         <span>READ MORE</span>
@@ -388,7 +388,7 @@ const Services = memo(function Services({ removeTopPadding = false }) {
                       </div>
                       <h5 className="service-title-compact">Interior Design</h5>
                       <p className="service-description-compact">
-                        Individual, aesthetically stunning solutions for customers.
+                        Homes, offices, restaurants and retail spaces, with 3D visuals before any work begins.
                       </p>
                       <div className="service-read-more-compact">
                         <span>READ MORE</span>
@@ -416,7 +416,7 @@ const Services = memo(function Services({ removeTopPadding = false }) {
                       </div>
                       <h5 className="service-title-compact">Construction</h5>
                       <p className="service-description-compact">
-                        We create and produce our product design lines.
+                        Turnkey construction and project management, delivered to the approved design.
                       </p>
                       <div className="service-read-more-compact">
                         <span>READ MORE</span>
@@ -445,7 +445,7 @@ const Services = memo(function Services({ removeTopPadding = false }) {
                       </div>
                       <h5 className="service-title-compact">Building Sustainability</h5>
                       <p className="service-description-compact">
-                        We will help you to get the result you dreamed of.
+                        Climate-responsive design that keeps buildings cooler and cuts energy bills.
                       </p>
                       <div className="service-read-more-compact">
                         <span>READ MORE</span>
@@ -473,7 +473,7 @@ const Services = memo(function Services({ removeTopPadding = false }) {
                       </div>
                       <h5 className="service-title-compact">Smart Building Technologies</h5>
                       <p className="service-description-compact">
-                        Individual, aesthetically stunning solutions for customers.
+                        Smart lighting, security and climate control, planned in from the first drawing.
                       </p>
                       <div className="service-read-more-compact">
                         <span>READ MORE</span>

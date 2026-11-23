@@ -23,6 +23,8 @@ import {
   ApplyJobPage,
   SinglePost,
   ProjectPage,
+  PrivacyPolicyPage,
+  TermsPage,
   NotFound,
 } from './routes';
 
@@ -112,6 +114,8 @@ function App() {
         <Route path="/partners" element={<PartnersPage />} />
         <Route path="/career/internship" element={<ApplyInternshipPage />} />
         <Route path="/career/job" element={<ApplyJobPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+        <Route path="/terms" element={<TermsPage />} />
         {/* Redirect old /innerpages/* URLs */}
         <Route path="/innerpages/*" element={<InnerpagesRedirect />} />
         <Route path="*" element={<NotFound />} />

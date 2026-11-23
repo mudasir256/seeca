@@ -2,8 +2,19 @@ import { useEffect, useState } from 'react';
 import { mergeWithSnapshot, snapshot } from '../lib/cmsFallback';
 import { supabase } from '../lib/supabase';
 
+/** The same review text should only be shown once. */
+function uniqueReviews(list) {
+  const seen = new Set();
+  return list.filter((item) => {
+    const key = (item.text || '').trim().toLowerCase();
+    if (!key || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
 export default function useReviews() {
-  const [reviews, setReviews] = useState(snapshot.reviews);
+  const [reviews, setReviews] = useState(() => uniqueReviews(snapshot.reviews));
 
   useEffect(() => {
     let active = true;
@@ -18,12 +29,12 @@ export default function useReviews() {
 
       if (result.error) {
         console.error('Could not load reviews:', result.error.message);
-        setReviews(snapshot.reviews);
+        setReviews(uniqueReviews(snapshot.reviews));
         return;
       }
 
       setReviews(
-        mergeWithSnapshot(
+        uniqueReviews(mergeWithSnapshot(
           (result.data || []).map((item) => ({
             id: item.id,
             text: item.review,
@@ -31,7 +42,7 @@ export default function useReviews() {
             role: item.company,
           })),
           snapshot.reviews,
-        ),
+        )),
       );
     }
 
