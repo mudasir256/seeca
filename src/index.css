@@ -4,3 +4,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Always keep room for the vertical scrollbar. On pages with smooth scrolling, the content
+   is briefly taken out of the page flow while it loads; without this the scrollbar vanished
+   for a moment and the whole page jumped sideways ("shaking"). */
+html {
+  scrollbar-gutter: stable;
+}

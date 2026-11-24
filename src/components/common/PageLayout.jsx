@@ -142,6 +142,9 @@ const PageLayout = memo(({
       document.body.style.left = '';
       document.body.style.right = '';
       document.body.style.width = '';
+      // The page height on <body> belongs to ScrollSmoother while it is running; clearing it
+      // collapsed the page for a moment (scrollbar vanished, page jumped sideways).
+      if (window.scrollSmootherInstance) return;
       document.body.style.height = '';
       document.body.style.overflow = '';
       document.documentElement.style.height = '';

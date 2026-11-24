@@ -304,6 +304,13 @@ export const useScrollSmoother = (containerId = 'scrollsmoother-container', enab
             });
             smootherRef.current = smoother;
             window.scrollSmootherInstance = smoother;
+            // Measure straight away so the page keeps its full height (and scrollbar) instead of
+            // collapsing until images finish loading.
+            try {
+              window.ScrollTrigger.refresh();
+            } catch (e) {
+              // Ignore
+            }
             
             // Setup animations after smoother is created
             setupAnimations(smoother);
