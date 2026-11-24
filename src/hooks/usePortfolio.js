@@ -19,9 +19,28 @@ function asList(value) {
     .filter(Boolean);
 }
 
+/**
+ * Newest projects first. CMS rows carry their created date; projects added to the bundled
+ * snapshot can carry a `createdAt` too. Projects without a date keep their order, after
+ * the dated ones.
+ */
+function newestFirst(list) {
+  return list
+    .map((item, index) => ({ item, index }))
+    .sort((a, b) => {
+      const da = a.item.createdAt || '';
+      const db = b.item.createdAt || '';
+      if (da && db && da !== db) return db.localeCompare(da);
+      if (da && !db) return -1;
+      if (!da && db) return 1;
+      return a.index - b.index;
+    })
+    .map(({ item }) => item);
+}
+
 export default function usePortfolio() {
   const [categories, setCategories] = useState(snapshot.portfolioCategories);
-  const [projects, setProjects] = useState(snapshot.projects);
+  const [projects, setProjects] = useState(() => newestFirst(snapshot.projects));
   const [loading, setLoading] = useState(false);
   const [loaded, setLoaded] = useState(false);
 
@@ -50,7 +69,7 @@ export default function usePortfolio() {
 
       if (shouldUseSnapshot(categoriesResult) || shouldUseSnapshot(projectsResult)) {
         setCategories(snapshot.portfolioCategories);
-        setProjects(snapshot.projects);
+        setProjects(newestFirst(snapshot.projects));
         setLoading(false);
         setLoaded(true);
         return;
@@ -68,7 +87,7 @@ export default function usePortfolio() {
 
       if (projectsResult.error) {
         console.error('Could not load portfolio projects:', projectsResult.error.message);
-        setProjects(snapshot.projects);
+        setProjects(newestFirst(snapshot.projects));
         setLoading(false);
         setLoaded(true);
         return;
@@ -83,6 +102,7 @@ export default function usePortfolio() {
         return {
           id: project.id,
           title: project.title,
+          createdAt: project.created_at || '',
           sub1: category?.name || '',
           sub2: '',
           // Some CMS entries start with a pasted "Description" label; drop it.
@@ -109,7 +129,7 @@ export default function usePortfolio() {
       });
 
       setProjects(
-        mergeWithSnapshot(remoteProjects, snapshot.projects, { remoteFirst: true }),
+        newestFirst(mergeWithSnapshot(remoteProjects, snapshot.projects, { remoteFirst: true })),
       );
       setLoading(false);
         setLoaded(true);
@@ -117,7 +137,7 @@ export default function usePortfolio() {
         if (!active) return;
         console.error('Could not load portfolio projects:', error);
         setCategories(snapshot.portfolioCategories);
-        setProjects(snapshot.projects);
+        setProjects(newestFirst(snapshot.projects));
         setLoading(false);
         setLoaded(true);
       }
