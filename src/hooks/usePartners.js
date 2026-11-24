@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
-import { mergeWithSnapshot, snapshot } from '../lib/cmsFallback';
+import { initialCms, mergeWithSnapshot, rememberCms, snapshot } from '../lib/cmsFallback';
 import { getPublicImageUrl, supabase } from '../lib/supabase';
 
 export default function usePartners() {
-  const [partners, setPartners] = useState(snapshot.partners);
+  const [partners, setPartners] = useState(() => initialCms('partners', snapshot.partners));
   const [loading, setLoading] = useState(false);
+
+  // Pre-render only: record what is shown, so it can be saved into the page.
+  useEffect(() => rememberCms('partners', partners), [partners]);
 
   useEffect(() => {
     let active = true;
@@ -19,7 +22,7 @@ export default function usePartners() {
 
       if (result.error) {
         console.error('Could not load partners:', result.error.message);
-        setPartners(snapshot.partners);
+        setPartners(initialCms('partners', snapshot.partners));
         setLoading(false);
         return;
       }

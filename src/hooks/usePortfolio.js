@@ -4,6 +4,8 @@ import {
   mergeCategories,
   mergeWithSnapshot,
   shouldUseSnapshot,
+  initialCms,
+  rememberCms,
   snapshot,
 } from '../lib/cmsFallback';
 import { getPublicImageUrl, supabase } from '../lib/supabase';
@@ -39,10 +41,14 @@ function newestFirst(list) {
 }
 
 export default function usePortfolio() {
-  const [categories, setCategories] = useState(snapshot.portfolioCategories);
-  const [projects, setProjects] = useState(() => newestFirst(snapshot.projects));
+  const [categories, setCategories] = useState(() => initialCms('portfolioCategories', snapshot.portfolioCategories));
+  const [projects, setProjects] = useState(() => initialCms('projects', newestFirst(snapshot.projects)));
   const [loading, setLoading] = useState(false);
   const [loaded, setLoaded] = useState(false);
+
+  // Pre-render only: record what is shown, so it can be saved into the page.
+  useEffect(() => rememberCms('portfolioCategories', categories), [categories]);
+  useEffect(() => rememberCms('projects', projects), [projects]);
 
   useEffect(() => {
     let active = true;
@@ -68,8 +74,8 @@ export default function usePortfolio() {
       if (!active) return;
 
       if (shouldUseSnapshot(categoriesResult) || shouldUseSnapshot(projectsResult)) {
-        setCategories(snapshot.portfolioCategories);
-        setProjects(newestFirst(snapshot.projects));
+        setCategories(initialCms('portfolioCategories', snapshot.portfolioCategories));
+        setProjects(initialCms('projects', newestFirst(snapshot.projects)));
         setLoading(false);
         setLoaded(true);
         return;
@@ -87,7 +93,7 @@ export default function usePortfolio() {
 
       if (projectsResult.error) {
         console.error('Could not load portfolio projects:', projectsResult.error.message);
-        setProjects(newestFirst(snapshot.projects));
+        setProjects(initialCms('projects', newestFirst(snapshot.projects)));
         setLoading(false);
         setLoaded(true);
         return;
@@ -136,8 +142,8 @@ export default function usePortfolio() {
       } catch (error) {
         if (!active) return;
         console.error('Could not load portfolio projects:', error);
-        setCategories(snapshot.portfolioCategories);
-        setProjects(newestFirst(snapshot.projects));
+        setCategories(initialCms('portfolioCategories', snapshot.portfolioCategories));
+        setProjects(initialCms('projects', newestFirst(snapshot.projects)));
         setLoading(false);
         setLoaded(true);
       }

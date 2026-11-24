@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { mergeWithSnapshot, snapshot } from '../lib/cmsFallback';
+import { initialCms, mergeWithSnapshot, rememberCms, snapshot } from '../lib/cmsFallback';
 import { supabase } from '../lib/supabase';
 
 // Reviews that are not from clients (e.g. the website developer's test review in the CMS).
@@ -18,7 +18,10 @@ function uniqueReviews(list) {
 }
 
 export default function useReviews() {
-  const [reviews, setReviews] = useState(() => uniqueReviews(snapshot.reviews));
+  const [reviews, setReviews] = useState(() => initialCms('reviews', uniqueReviews(snapshot.reviews)));
+
+  // Pre-render only: record what is shown, so it can be saved into the page.
+  useEffect(() => rememberCms('reviews', reviews), [reviews]);
 
   useEffect(() => {
     let active = true;
@@ -33,7 +36,7 @@ export default function useReviews() {
 
       if (result.error) {
         console.error('Could not load reviews:', result.error.message);
-        setReviews(uniqueReviews(snapshot.reviews));
+        setReviews(initialCms('reviews', uniqueReviews(snapshot.reviews)));
         return;
       }
 

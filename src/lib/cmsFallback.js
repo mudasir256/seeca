@@ -2,6 +2,57 @@ import snapshot from '../data/cms-snapshot.json';
 
 export { snapshot };
 
+/*
+ * CMS data saved into each pre-rendered page (window.__SEECA_CMS__).
+ * The pre-render loads the live CMS content and writes it into the HTML, so the browser's
+ * first render uses exactly the same data as the saved page: nothing swaps or jumps when
+ * the live data arrives a moment later.
+ *
+ * To keep pages small, only rows that differ from the bundled snapshot are saved, plus the
+ * order of ids: { ids: [...], rows: { id: row } }.
+ */
+const SNAPSHOT_KEYS = {
+  projects: 'projects',
+  portfolioCategories: 'portfolioCategories',
+  blogs: 'blogs',
+  blogCategories: 'blogCategories',
+  partners: 'partners',
+  reviews: 'reviews',
+};
+
+const builtCms =
+  typeof window !== 'undefined' && window.__SEECA_CMS__ && typeof window.__SEECA_CMS__ === 'object'
+    ? window.__SEECA_CMS__
+    : {};
+
+function snapshotById(key) {
+  const list = snapshot[SNAPSHOT_KEYS[key]] || [];
+  return new Map(list.map((item) => [item.id, item]));
+}
+
+/** Data for `key` saved in this page at build time, or `fallback` (the bundled snapshot). */
+export function initialCms(key, fallback) {
+  const saved = builtCms[key];
+  if (!saved || !Array.isArray(saved.ids)) return fallback;
+  const base = snapshotById(key);
+  const rows = saved.rows || {};
+  const list = saved.ids.map((id) => rows[id] || base.get(id)).filter(Boolean);
+  return list.length === saved.ids.length ? list : fallback;
+}
+
+/** During pre-render, remember the data each hook ended up showing, to save it into the page. */
+export function rememberCms(key, value) {
+  if (typeof window === 'undefined' || !window.__PRERENDER__ || !Array.isArray(value)) return;
+  const base = snapshotById(key);
+  const rows = {};
+  value.forEach((item) => {
+    const original = base.get(item.id);
+    if (!original || JSON.stringify(original) !== JSON.stringify(item)) rows[item.id] = item;
+  });
+  window.__SEECA_CMS_CAPTURE__ = window.__SEECA_CMS_CAPTURE__ || {};
+  window.__SEECA_CMS_CAPTURE__[key] = { ids: value.map((item) => item.id), rows };
+}
+
 function nameKey(value) {
   return String(value || '').trim().toLowerCase();
 }

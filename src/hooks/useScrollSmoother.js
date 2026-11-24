@@ -1,6 +1,29 @@
 import { useEffect, useLayoutEffect, useRef } from 'react';
 
 /**
+ * Give scrolling back to the browser. ScrollSmoother is created with normalizeScroll: true,
+ * which makes GSAP take over mouse-wheel / touch scrolling for the whole page. Killing the
+ * smoother does not switch that off, so after visiting a page with the smoother, pages
+ * without it (like the homepage) could not be scrolled with the mouse wheel.
+ */
+function releaseNativeScroll() {
+  try {
+    if (window.ScrollTrigger && typeof window.ScrollTrigger.normalizeScroll === 'function') {
+      window.ScrollTrigger.normalizeScroll(false);
+    }
+  } catch (e) {
+    // Ignore
+  }
+  [document.documentElement, document.body].forEach((el) => {
+    if (!el) return;
+    el.style.overflow = '';
+    el.style.height = '';
+    el.style.touchAction = '';
+    el.style.overscrollBehavior = '';
+  });
+}
+
+/**
  * Custom hook to initialize and cleanup GSAP ScrollSmoother
  * Prevents multiple instances and ensures proper cleanup on route changes
  */
@@ -109,15 +132,8 @@ export const useScrollSmoother = (containerId = 'scrollsmoother-container', enab
           // Ignore errors
         }
       }
-      // Always restore body/html scroll so the next page can scroll (ScrollSmoother sets overflow: hidden)
-      try {
-        document.body.style.overflow = '';
-        document.body.style.height = '';
-        document.documentElement.style.overflow = '';
-        document.documentElement.style.height = '';
-      } catch (e) {
-        // Ignore
-      }
+      // Always restore native scrolling so the next page can scroll (wheel, touch, overflow).
+      releaseNativeScroll();
       if (smootherRef.current) {
         smootherRef.current = null;
       }
@@ -127,7 +143,12 @@ export const useScrollSmoother = (containerId = 'scrollsmoother-container', enab
   }, [containerId]);
 
   useEffect(() => {
-    if (!enabled || typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return;
+    if (!enabled) {
+      // Pages without the smoother always use the browser's own scrolling.
+      releaseNativeScroll();
+      return;
+    }
 
     let timeoutId = null;
     let isMounted = true;
@@ -257,11 +278,8 @@ export const useScrollSmoother = (containerId = 'scrollsmoother-container', enab
           
           // Completely disable ScrollSmoother on mobile - use native scrolling instead
           if (isMobileDevice) {
-            // Ensure any previous smoother styles don't lock native scrolling.
-            document.body.style.overflow = '';
-            document.body.style.height = '';
-            document.documentElement.style.overflow = '';
-            document.documentElement.style.height = '';
+            // Ensure any previous smoother settings don't lock native scrolling.
+            releaseNativeScroll();
             // On mobile, just use native smooth scrolling via CSS
             // Don't create ScrollSmoother instance at all
             smootherRef.current = null;

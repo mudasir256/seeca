@@ -4,6 +4,8 @@ import {
   mergeCategories,
   mergeWithSnapshot,
   shouldUseSnapshot,
+  initialCms,
+  rememberCms,
   snapshot,
 } from '../lib/cmsFallback';
 import { getPublicImageUrl, supabase } from '../lib/supabase';
@@ -28,10 +30,14 @@ function formatBlogDate(value) {
 }
 
 export default function useBlogs() {
-  const [categories, setCategories] = useState(snapshot.blogCategories);
-  const [blogs, setBlogs] = useState(snapshot.blogs);
+  const [categories, setCategories] = useState(() => initialCms('blogCategories', snapshot.blogCategories));
+  const [blogs, setBlogs] = useState(() => initialCms('blogs', snapshot.blogs));
   const [loading, setLoading] = useState(false);
   const [loaded, setLoaded] = useState(false);
+
+  // Pre-render only: record what is shown, so it can be saved into the page.
+  useEffect(() => rememberCms('blogCategories', categories), [categories]);
+  useEffect(() => rememberCms('blogs', blogs), [blogs]);
 
   useEffect(() => {
     let active = true;
@@ -55,8 +61,8 @@ export default function useBlogs() {
       if (!active) return;
 
       if (shouldUseSnapshot(categoriesResult) || shouldUseSnapshot(blogsResult)) {
-        setCategories(snapshot.blogCategories);
-        setBlogs(snapshot.blogs);
+        setCategories(initialCms('blogCategories', snapshot.blogCategories));
+        setBlogs(initialCms('blogs', snapshot.blogs));
         setLoading(false);
         setLoaded(true);
         return;
@@ -74,7 +80,7 @@ export default function useBlogs() {
 
       if (blogsResult.error) {
         console.error('Could not load blogs:', blogsResult.error.message);
-        setBlogs(snapshot.blogs);
+        setBlogs(initialCms('blogs', snapshot.blogs));
         setLoading(false);
         setLoaded(true);
         return;
@@ -112,7 +118,7 @@ export default function useBlogs() {
       // Network failure: keep the snapshot posts and stop waiting.
       console.error('Could not load blogs:', error?.message || error);
       if (!active) return;
-      setBlogs(snapshot.blogs);
+      setBlogs(initialCms('blogs', snapshot.blogs));
       setLoading(false);
       setLoaded(true);
     });
