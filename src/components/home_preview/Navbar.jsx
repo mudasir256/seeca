@@ -34,6 +34,8 @@ function Navbar() {
       document.body.style.left = '';
       document.body.style.right = '';
       document.body.style.width = '';
+      // Leave the page height alone while ScrollSmoother is running (it sets it).
+      if (window.scrollSmootherInstance) return;
       document.body.style.height = '';
       document.body.style.overflow = '';
       document.body.style.overflowY = '';

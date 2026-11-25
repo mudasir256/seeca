@@ -54,21 +54,6 @@ async function loadProjectsFromCms() {
   }
 }
 
-let snapshotRoutes = new Set();
-
-/** Detail pages whose content is not in the bundled snapshot need live CMS data. */
-function needsLiveCms(route) {
-  if (!/^\/(portfolio|blog)\/./.test(route)) return false;
-  return !snapshotRoutes.has(route);
-}
-
-async function collectSnapshotRoutes() {
-  const lib = await import('../src/lib/projects.js');
-  const snap = cmsSnapshot.projects;
-  snap.forEach((p) => snapshotRoutes.add(lib.projectPath(p, projects)));
-  cmsSnapshot.blogs.forEach((b) => snapshotRoutes.add(`/blog/${b.slug}`));
-}
-
 /** Project pages with their own description (see src/lib/projects.js). */
 async function getProjectRoutes() {
   const lib = await import('../src/lib/projects.js');
@@ -277,6 +262,17 @@ function cleanUpPageInBrowser() {
     if (/this\.rel\s*=/.test(l.getAttribute('onload') || '')) l.setAttribute('rel', 'preload');
   });
   document.documentElement.setAttribute('data-prerendered', 'true');
+  // Save the CMS data this page rendered, so the browser's first render matches the HTML
+  // and nothing changes when live data arrives (src/lib/cmsFallback.js).
+  const captured = window.__SEECA_CMS_CAPTURE__;
+  document.querySelectorAll('script[data-seeca-cms]').forEach((el) => el.remove());
+  if (captured && Object.keys(captured).length) {
+    const script = document.createElement('script');
+    script.setAttribute('data-seeca-cms', '');
+    script.textContent = `window.__SEECA_CMS__=${JSON.stringify(captured).replace(/</g, '\\u003c')};`;
+    const firstScript = document.head.querySelector('script');
+    document.head.insertBefore(script, firstScript || null);
+  }
 }
 
 async function prerenderWithBrowser(routes, shellHtml) {
@@ -293,7 +289,6 @@ async function prerenderWithBrowser(routes, shellHtml) {
         try {
           await page.setViewport({ width: 1366, height: 900 });
           await page.setRequestInterception(true);
-          const allowCms = needsLiveCms(route);
           page.on('request', (req) => {
             const url = req.url();
             if (BLOCKED_HOSTS.some((h) => url.includes(h))) return req.abort();
@@ -301,9 +296,8 @@ async function prerenderWithBrowser(routes, shellHtml) {
             // React renders it. Leave them out so the saved HTML is exactly React's output;
             // the browser can then "hydrate" it instead of redrawing the whole page.
             if (url.includes('/common/assets/js/')) return req.abort();
-            // Use the CMS snapshot the browser starts with, so the HTML matches its first
-            // render. Only pages that exist solely in Supabase load live data.
-            if (!allowCms && url.includes('.supabase.co')) return req.abort();
+            // Live CMS data is allowed: what the page ends up showing is saved into the HTML
+            // (window.__SEECA_CMS__), so the browser starts from the same data. See cmsFallback.js.
             return req.continue();
           });
           await page.evaluateOnNewDocument(() => {
@@ -441,7 +435,6 @@ async function main() {
   await loadBlogPostsFromCms();
   await loadProjectsFromCms();
   const projectRoutes = await getProjectRoutes();
-  await collectSnapshotRoutes();
   log(`Indexable project pages: ${projectRoutes.length}.`);
   // Keep an untouched copy of the app shell (index.html is overwritten with the homepage).
   const shellFile = path.join(BUILD_DIR, 'app-shell.html');
