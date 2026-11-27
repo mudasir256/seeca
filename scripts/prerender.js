@@ -392,6 +392,9 @@ function pageImages(route) {
   const found = new Set();
   for (const m of html.matchAll(/<img[^>]+src="([^"]+)"/g)) {
     let src = m[1].replace(/&amp;/g, '&');
+    // Unwrap Netlify Image CDN URLs to the original file.
+    const cdn = src.match(/^\/\.netlify\/images\?url=([^&]+)/);
+    if (cdn) src = decodeURIComponent(cdn[1]);
     if (!/\.(jpe?g|png|webp)(\?|$)/i.test(src) || SKIP_IMAGE.test(src)) continue;
     if (src.startsWith('/')) src = SITE_URL + encodeURI(decodeURI(src));
     if (!/^https?:/.test(src)) continue;

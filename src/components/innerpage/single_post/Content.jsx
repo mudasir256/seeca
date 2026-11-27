@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import OptimizedImage from '../../common/OptimizedImage';
 
 function RelatedPosts({ currentBlog, blogs }) {
   const navigate = useNavigate();
@@ -171,6 +172,34 @@ function renderInline(text) {
   return parts;
 }
 
+// Image block: ![alt](/src.jpg "Caption") or [![alt](/src.jpg "Caption")](/portfolio/project)
+const IMAGE_BLOCK = /^(?:\[)?!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)(?:\]\(([^)]+)\))?$/;
+
+function PostFigure({ alt, src, caption, href }) {
+  const img = (
+    <OptimizedImage
+      src={src}
+      alt={alt}
+      title={alt}
+      width="1400"
+      height="933"
+      sizes="(max-width: 991px) 100vw, 860px"
+      className="post-figure-img"
+    />
+  );
+  return (
+    <figure className="post-figure">
+      {href ? <Link to={href} aria-label={alt}>{img}</Link> : img}
+      {(caption || href) && (
+        <figcaption>
+          {caption}
+          {href && <> <Link to={href} className="post-figure-link">View project</Link></>}
+        </figcaption>
+      )}
+    </figure>
+  );
+}
+
 function Content({ blog, blogs = [] }) {
   if (!blog) return null;
 
@@ -191,6 +220,10 @@ function Content({ blog, blogs = [] }) {
         .tc-post-content-style1 .post-subheading { font-size: 21px; font-weight: 600; color: #1a1a1a; margin: 30px 0 14px; }
         .tc-post-content-style1 .post-list { margin: 0 0 30px; padding-left: 22px; color: #666; line-height: 1.8; font-size: 14px; }
         .tc-post-content-style1 .post-list li { margin-bottom: 8px; }
+        .tc-post-content-style1 .post-figure { margin: 10px 0 40px; }
+        .tc-post-content-style1 .post-figure-img { width: 100%; height: auto; border-radius: 7px; display: block; aspect-ratio: 1400 / 933; object-fit: cover; background: #f2f2f2; }
+        .tc-post-content-style1 .post-figure figcaption { font-size: 13px; color: #888; line-height: 1.6; margin-top: 12px; }
+        .tc-post-content-style1 .post-figure-link { color: #4e9a2a; text-decoration: underline; white-space: nowrap; }
         .tc-post-content-style1 .info .text a, .tc-post-content-style1 .post-list a { color: #4e9a2a; text-decoration: underline; }
         .tc-post-content-style1 .breadcromb a {
           color: #666;
@@ -250,6 +283,10 @@ function Content({ blog, blogs = [] }) {
                 </h6>
                 {contentParagraphs.map((paragraph, index) => {
                   const block = paragraph.trim();
+                  const image = block.match(IMAGE_BLOCK);
+                  if (image) {
+                    return <PostFigure key={index} alt={image[1]} src={image[2]} caption={image[3]} href={image[4]} />;
+                  }
                   // Simple formatting: "## " heading, "### " sub-heading, "- " list items.
                   if (block.startsWith('### ')) {
                     return <h3 key={index} className="post-subheading">{renderInline(block.slice(4))}</h3>;

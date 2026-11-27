@@ -245,7 +245,17 @@ export default function SeoManager() {
         description: blog.description,
         datePublished: toIsoDate(blog.history),
         dateModified: toIsoDate(blog.history),
-        image: ogImage,
+        image: [
+          ogImage,
+          ...Array.from(String(blog.content || '').matchAll(/!\[([^\]]*)\]\((\/[^)\s]+)(?:\s+"([^"]*)")?\)/g)).map((m) => ({
+            '@type': 'ImageObject',
+            url: `${siteUrl}${m[2]}`,
+            name: m[1],
+            caption: m[3] || m[1],
+            creditText: SITE_NAME,
+            copyrightNotice: LEGAL_NAME,
+          })),
+        ],
         mainEntityOfPage: canonical,
         publisher: {
           '@type': 'Organization',
